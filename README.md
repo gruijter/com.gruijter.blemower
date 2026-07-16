@@ -1,4 +1,4 @@
-https://homey.app/a/com.gruijter.blemower/test/
+[Homey App Store](https://homey.app/a/com.gruijter.blemower) | [Community Forum](https://community.homey.app/t/157241)
 
 # BLE Mower MQTT - Homey App
 
