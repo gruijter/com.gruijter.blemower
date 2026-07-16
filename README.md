@@ -1,3 +1,5 @@
+https://homey.app/a/com.gruijter.blemower/test/
+
 # BLE Mower MQTT - Homey App
 
 Connect Gardena Minimo and Husqvarna BLE mowers locally to Homey via MQTT. This app allows you to integrate your Bluetooth lawnmower with Homey without relying on cloud APIs.
@@ -44,3 +46,6 @@ Please refer to the gateway's GitHub repository for the full guide, Docker-compo
 🔗 **[GardenaMower-BLE-MQTT GitHub Repository](https://github.com/gruijter/GardenaMower-BLE-MQTT)**
 
 Once the gateway is running and publishing data to your MQTT broker, add the mower as a new device in Homey and fill in the MQTT connection details.
+
+DONATE
+If you like the app, don’t hesitate to DONATE here: https://paypal.me/gruijter 

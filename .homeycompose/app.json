@@ -263,6 +263,13 @@
     "name": "Robin de Gruijter",
     "email": "gruijter@hotmail.com"
   },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "gruijter"
+      }
+    }
+  },
   "copyright": "Robin de Gruijter (gruijter@hotmail.com)",
   "license": "GPL-3.0-or-later",
   "homeyCommunityTopicId": 157241,
