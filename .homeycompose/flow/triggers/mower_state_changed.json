@@ -1,0 +1,148 @@
+{
+  "id": "mower_state_changed",
+  "title": {
+    "en": "The mower state changed to",
+    "nl": "De maaier status veranderd naar",
+    "de": "Der Mäherzustand hat sich geändert in",
+    "fr": "L'état de la tondeuse a changé en",
+    "it": "Lo stato del tosaerba è cambiato in",
+    "es": "El estado del cortacésped cambió a",
+    "sv": "Gräsklipparens tillstånd ändrades till",
+    "no": "Klippertilstanden ble endret til",
+    "da": "Plæneklipperens tilstand ændrede sig til",
+    "pl": "Stan kosiarki zmienił się na",
+    "ru": "Состояние косилки изменилось на",
+    "ko": "잔디 깎는 기계 상태가 다음으로 변경됨",
+    "ar": "تغيرت حالة جزازة العشب إلى"
+  },
+  "titleFormatted": {
+    "en": "Mower state changed to [[state]]",
+    "nl": "Maaier status veranderd naar [[state]]",
+    "de": "Mäherzustand geändert in [[state]]",
+    "fr": "L'état de la tondeuse a changé en [[state]]",
+    "it": "Stato del tosaerba modificato in [[state]]",
+    "es": "El estado del cortacésped cambió a [[state]]",
+    "sv": "Gräsklipparens tillstånd ändrades till [[state]]",
+    "no": "Klippertilstand endret til [[state]]",
+    "da": "Plæneklipperens tilstand ændret til [[state]]",
+    "pl": "Stan kosiarki zmienił się na [[state]]",
+    "ru": "Состояние косилки изменилось на [[state]]",
+    "ko": "잔디 깎는 기계의 상태가 [[state]](으)로 변경되었습니다",
+    "ar": "تغيرت حالة جزازة العشب إلى [[state]]"
+  },
+  "hint": {
+    "en": "Triggers when the mower switches between mowing, docked, paused or error.",
+    "nl": "Wordt geactiveerd als de maaier wisselt tussen maaien, in dok, gepauzeerd of fout.",
+    "de": "Wird ausgelöst, wenn der Mäher zwischen Mähen, Angedockt, Pausiert oder Fehler wechselt.",
+    "fr": "Se déclenche lorsque la tondeuse bascule entre tonte, stationnée, en pause ou erreur.",
+    "it": "Si attiva quando il tosaerba passa tra taglio, in dock, in pausa o errore.",
+    "es": "Se activa cuando el cortacésped cambia entre corte, acoplado, pausado o error.",
+    "sv": "Utlöses när gräsklipparen växlar mellan att klippa, dockad, pausad eller fel.",
+    "no": "Utløses når klipperen bytter mellom klipping, dokket, pauset eller feil.",
+    "da": "Udløses, når plæneklipperen skifter mellem klipning, dokket, sat på pause eller fejl.",
+    "pl": "Wyzwala się, gdy kosiarka przełącza się między koszeniem, dokowaniem, wstrzymaniem lub błędem.",
+    "ru": "Активируется при переключении косилки между режимами кошения, док-станции, паузы или ошибки.",
+    "ko": "잔디 깎는 기계가 잔디 깎기, 도킹됨, 일시 중지됨 또는 오류 사이를 전환할 때 트리거됩니다.",
+    "ar": "يتم التشغيل عندما تنتقل جزازة العشب بين القص، أو التوقف في المحطة، أو التوقف المؤقت، أو الخطأ."
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=mower"
+    },
+    {
+      "type": "dropdown",
+      "name": "state",
+      "title": {
+        "en": "State",
+        "nl": "Status",
+        "de": "Zustand",
+        "fr": "État",
+        "it": "Stato",
+        "es": "Estado",
+        "sv": "Status",
+        "no": "Tilstand",
+        "da": "Tilstand",
+        "pl": "Stan",
+        "ru": "Состояние",
+        "ko": "상태",
+        "ar": "الحالة"
+      },
+      "values": [
+        {
+          "id": "mowing",
+          "label": {
+            "en": "Mowing",
+            "nl": "Aan het maaien",
+            "de": "Mähen",
+            "fr": "Tonte",
+            "it": "Taglio",
+            "es": "Cortando",
+            "sv": "Klipper",
+            "no": "Klipper",
+            "da": "Klipper",
+            "pl": "Koszenie",
+            "ru": "Кошение",
+            "ko": "잔디 깎는 중",
+            "ar": "قص العشب"
+          }
+        },
+        {
+          "id": "docked",
+          "label": {
+            "en": "Docked",
+            "nl": "In dok",
+            "de": "Angedockt",
+            "fr": "Stationné",
+            "it": "Nel dock",
+            "es": "Acoplado",
+            "sv": "Dockad",
+            "no": "Dokket",
+            "da": "Dokket",
+            "pl": "W doku",
+            "ru": "В доке",
+            "ko": "도킹됨",
+            "ar": "في المحطة"
+          }
+        },
+        {
+          "id": "paused",
+          "label": {
+            "en": "Paused",
+            "nl": "Gepauzeerd",
+            "de": "Pausiert",
+            "fr": "En pause",
+            "it": "In pausa",
+            "es": "Pausado",
+            "sv": "Pausad",
+            "no": "Pauset",
+            "da": "Sat på pause",
+            "pl": "Wstrzymana",
+            "ru": "На паузе",
+            "ko": "일시 중지됨",
+            "ar": "مؤقتاً"
+          }
+        },
+        {
+          "id": "error",
+          "label": {
+            "en": "Error",
+            "nl": "Fout",
+            "de": "Fehler",
+            "fr": "Erreur",
+            "it": "Errore",
+            "es": "Error",
+            "sv": "Fel",
+            "no": "Feil",
+            "da": "Fejl",
+            "pl": "Błąd",
+            "ru": "Ошибка",
+            "ko": "오류",
+            "ar": "خطأ"
+          }
+        }
+      ]
+    }
+  ]
+}

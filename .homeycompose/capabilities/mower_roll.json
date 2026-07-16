@@ -1,0 +1,38 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Roll",
+    "nl": "Dwarshelling (Roll)",
+    "de": "Querneigung (Roll)",
+    "fr": "Roulis (Roll)",
+    "it": "Rollio (Roll)",
+    "es": "Inclinación transversal (Roll)",
+    "sv": "Lutning (Roll)",
+    "no": "Dwarshelling (Roll)",
+    "da": "Sidehældning (Roll)",
+    "pl": "Nachylenie poprzeczne (Roll)",
+    "ru": "Крен (Roll)",
+    "ko": "롤",
+    "ar": "التمايل الجانبي"
+  },
+  "getable": true,
+  "setable": false,
+  "units": {
+    "en": "°",
+    "nl": "°",
+    "de": "°",
+    "fr": "°",
+    "it": "°",
+    "es": "°",
+    "sv": "°",
+    "no": "°",
+    "da": "°",
+    "pl": "°",
+    "ru": "°",
+    "ko": "°",
+    "ar": "°"
+  },
+  "uiComponent": "sensor",
+  "insights": true,
+  "icon": "/assets/capability_icons/mower_roll.svg"
+}

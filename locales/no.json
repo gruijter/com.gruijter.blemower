@@ -1,0 +1,16 @@
+{
+  "pair": {
+    "title": "MQTT Broker-tilkobling",
+    "text": "Vennligst skriv inn tilkoblingsdetaljene for din MQTT-broker. Base-emnet bør ha samme prefiks som konfigurert i klipperens BLE-gateway.",
+    "host": "Broker-vertsnavn/IP",
+    "port": "Broker-port",
+    "username": "Brukernavn",
+    "password": "Passord",
+    "topic": "Base-emne",
+    "incomplete": "Vertsnavn og base-emne må fylles ut!",
+    "connect": "KOBLE TIL"
+  },
+  "device": {
+    "connectionError": "MQTT-tilkobling mistet, gjenoppretter tilkobling..."
+  }
+}

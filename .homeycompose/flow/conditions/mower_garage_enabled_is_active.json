@@ -1,0 +1,25 @@
+{
+  "id": "mower_garage_enabled_is_active",
+  "title": {
+    "en": "Avoid Garage is enabled",
+    "nl": "Garage Vermijden is ingeschakeld",
+    "de": "Garage vermeiden ist aktiviert",
+    "fr": "Éviter le garage est activé",
+    "it": "Evita garage è abilitato",
+    "es": "Evitar garaje está habilitado",
+    "sv": "Undvik garage är aktiverat",
+    "no": "Unngå garasje er aktivert",
+    "da": "Undgå garage er aktiveret",
+    "pl": "Unikaj garażu jest włączone",
+    "ru": "Функция 'Избегать гаража' включена",
+    "ko": "차고 피하기가 활성화되었습니다",
+    "ar": "تجنب المرآب مفعل"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=mower"
+    }
+  ]
+}

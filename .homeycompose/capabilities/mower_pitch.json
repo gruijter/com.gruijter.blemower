@@ -1,0 +1,38 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Pitch",
+    "nl": "Helling (Pitch)",
+    "de": "Neigung (Pitch)",
+    "fr": "Tangage (Pitch)",
+    "it": "Inclinazione (Pitch)",
+    "es": "Inclinación longitudinal (Pitch)",
+    "sv": "Lutning (Pitch)",
+    "no": "Helling (Pitch)",
+    "da": "Hældning (Pitch)",
+    "pl": "Nachylenie podłużne (Pitch)",
+    "ru": "Тангаж (Pitch)",
+    "ko": "피치",
+    "ar": "الميل الطولي"
+  },
+  "getable": true,
+  "setable": false,
+  "units": {
+    "en": "°",
+    "nl": "°",
+    "de": "°",
+    "fr": "°",
+    "it": "°",
+    "es": "°",
+    "sv": "°",
+    "no": "°",
+    "da": "°",
+    "pl": "°",
+    "ru": "°",
+    "ko": "°",
+    "ar": "°"
+  },
+  "uiComponent": "sensor",
+  "insights": true,
+  "icon": "/assets/capability_icons/mower_pitch.svg"
+}

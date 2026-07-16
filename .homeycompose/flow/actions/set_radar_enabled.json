@@ -1,0 +1,59 @@
+{
+  "id": "set_radar_enabled",
+  "title": {
+    "en": "Set radar enabled",
+    "nl": "Stel radar ingeschakeld in",
+    "de": "Radar einstellen",
+    "fr": "Définir le radar",
+    "it": "Imposta radar abilitato",
+    "es": "Configurar radar",
+    "sv": "Ställ in radar",
+    "no": "Still inn radar",
+    "da": "Indstil radar",
+    "pl": "Ustaw radar",
+    "ru": "Настроить радар",
+    "ko": "레이더 설정",
+    "ar": "ضبط تشغيل الرادار"
+  },
+  "titleFormatted": {
+    "en": "Set radar enabled to [[value]]",
+    "nl": "Stel radar ingeschakeld in op [[value]]",
+    "de": "Radar auf [[value]] einstellen",
+    "fr": "Définir le radar sur [[value]]",
+    "it": "Imposta radar su [[value]]",
+    "es": "Establecer radar en [[value]]",
+    "sv": "Ställ in radar till [[value]]",
+    "no": "Still inn radar til [[value]]",
+    "da": "Indstil radar til [[value]]",
+    "pl": "Ustaw radar na [[value]]",
+    "ru": "Настроить радар на [[value]]",
+    "ko": "레이더를 [[value]](으)로 설정",
+    "ar": "ضبط تشغيل الرادار على [[value]]"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=mower"
+    },
+    {
+      "type": "checkbox",
+      "name": "value",
+      "title": {
+        "en": "Active",
+        "nl": "Actief",
+        "de": "Aktiv",
+        "fr": "Actif",
+        "it": "Attivo",
+        "es": "Activo",
+        "sv": "Aktiv",
+        "no": "Aktiv",
+        "da": "Aktiv",
+        "pl": "Aktywny",
+        "ru": "Активно",
+        "ko": "활성",
+        "ar": "نشط"
+      }
+    }
+  ]
+}

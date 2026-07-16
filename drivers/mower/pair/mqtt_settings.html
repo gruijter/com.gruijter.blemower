@@ -1,0 +1,46 @@
+<script>
+	async function connect() {
+		try {
+			Homey.showLoadingOverlay();
+			const settings = {
+				host: document.getElementById('host').value.trim(),
+				port: Number(document.getElementById('port').value) || 1883,
+				username: document.getElementById('username').value.trim(),
+				password: document.getElementById('password').value,
+				topic: document.getElementById('topic').value.trim(),
+			};
+			if (settings.host === '' || settings.topic === '') throw Error(Homey.__('pair.incomplete'));
+			
+			const result = await Homey.emit('mqtt_login', settings);
+			Homey.hideLoadingOverlay();
+			Homey.showView('list_devices');
+		} catch (error) { 
+			Homey.hideLoadingOverlay();
+			Homey.alert(error, 'error');
+		}
+	}
+</script>
+
+<form class="homey-form">
+	<div class="homey-form-group">
+		<h1 class="homey-title" data-i18n="pair.title"></h1>
+		<p class="homey-subtitle" data-i18n="pair.text"></p>
+
+		<label class="homey-form-label" for="host" data-i18n="pair.host"></label>
+		<input class="homey-form-input" id="host" type="text" placeholder="e.g. 192.168.1.50" value="" />
+
+		<label class="homey-form-label" for="port" data-i18n="pair.port"></label>
+		<input class="homey-form-input" id="port" type="number" value="1883" />
+
+		<label class="homey-form-label" for="username" data-i18n="pair.username"></label>
+		<input class="homey-form-input" id="username" type="text" placeholder="Optional" value="" />
+
+		<label class="homey-form-label" for="password" data-i18n="pair.password"></label>
+		<input class="homey-form-input" id="password" type="password" placeholder="Optional" value="" />
+
+		<label class="homey-form-label" for="topic" data-i18n="pair.topic"></label>
+		<input class="homey-form-input" id="topic" type="text" value="mower_ble" />
+	</div>
+</form>
+<br>
+<button class="homey-button-primary-full" id="connect" onclick="connect()" data-i18n="pair.connect"></button>

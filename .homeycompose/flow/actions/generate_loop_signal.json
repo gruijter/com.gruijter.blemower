@@ -1,0 +1,40 @@
+{
+  "id": "generate_loop_signal",
+  "title": {
+    "en": "Generate new loop signal",
+    "nl": "Genereer nieuw lussignaal",
+    "de": "Neues Schleifensignal erzeugen",
+    "fr": "Générer un nouveau signal de boucle",
+    "it": "Genera nuovo segnale del circuito",
+    "es": "Generar nueva señal de bucle",
+    "sv": "Generera ny slingsignal",
+    "no": "Generer nytt sløyfesignal",
+    "da": "Generer nyt sløjfesignal",
+    "pl": "Generuj nowy sygnał pętli",
+    "ru": "Сгенерировать новый сигнал контура",
+    "ko": "새 루프 신호 생성",
+    "ar": "توليد إشارة حلقة جديدة"
+  },
+  "titleFormatted": {
+    "en": "Generate new loop signal",
+    "nl": "Genereer nieuw lussignaal",
+    "de": "Neues Schleifensignal erzeugen",
+    "fr": "Générer un nouveau signal de boucle",
+    "it": "Genera nuovo segnale del circuito",
+    "es": "Generar nueva señal de bucle",
+    "sv": "Generera ny slingsignal",
+    "no": "Generer nytt sløyfesignal",
+    "da": "Generer nyt sløjfesignal",
+    "pl": "Generuj nowy sygnał pętli",
+    "ru": "Сгенерировать новый сигнал контура",
+    "ko": "새 루프 신호 생성",
+    "ar": "توليد إشارة حلقة جديدة"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=mower"
+    }
+  ]
+}

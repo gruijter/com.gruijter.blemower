@@ -1,0 +1,22 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Avoid Garage",
+    "nl": "Garage Vermijden",
+    "de": "Garage vermeiden",
+    "fr": "Éviter le garage",
+    "it": "Evita garage",
+    "es": "Evitar garaje",
+    "sv": "Undvik garage",
+    "no": "Unngå garasje",
+    "da": "Undgå garage",
+    "pl": "Unikaj garażu",
+    "ru": "Избегать гаража",
+    "ko": "차고 피하기",
+    "ar": "تجنب المرآب"
+  },
+  "getable": true,
+  "setable": true,
+  "uiComponent": "button",
+  "icon": "/assets/capability_icons/mower_garage_enabled.svg"
+}

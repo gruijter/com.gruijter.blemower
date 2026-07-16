@@ -1,0 +1,22 @@
+{
+  "type": "string",
+  "title": {
+    "en": "Activity",
+    "nl": "Activiteit",
+    "de": "Aktivität",
+    "fr": "Activité",
+    "it": "Attività",
+    "es": "Actividad",
+    "sv": "Aktivitet",
+    "no": "Aktivitet",
+    "da": "Aktivitet",
+    "pl": "Aktywność",
+    "ru": "Активность",
+    "ko": "활동",
+    "ar": "النشاط"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "icon": "/assets/capability_icons/mower_activity.svg"
+}

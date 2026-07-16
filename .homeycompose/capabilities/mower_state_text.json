@@ -1,0 +1,22 @@
+{
+  "type": "string",
+  "title": {
+    "en": "Status",
+    "nl": "Status",
+    "de": "Status",
+    "fr": "Statut",
+    "it": "Stato",
+    "es": "Estado",
+    "sv": "Status",
+    "no": "Status",
+    "da": "Status",
+    "pl": "Status",
+    "ru": "Статус",
+    "ko": "상태",
+    "ar": "الحالة"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "icon": "/assets/capability_icons/mower_state_text.svg"
+}

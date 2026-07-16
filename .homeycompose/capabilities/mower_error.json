@@ -1,0 +1,22 @@
+{
+  "type": "string",
+  "title": {
+    "en": "Last error",
+    "nl": "Laatste fout",
+    "de": "Letzter Fehler",
+    "fr": "Dernière erreur",
+    "it": "Ultimo errore",
+    "es": "Último error",
+    "sv": "Senaste fel",
+    "no": "Siste feil",
+    "da": "Seneste fejl",
+    "pl": "Ostatni błąd",
+    "ru": "Последняя ошибка",
+    "ko": "마지막 오류",
+    "ar": "الخطأ الأخير"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "icon": "/assets/capability_icons/mower_error.svg"
+}

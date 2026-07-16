@@ -1,0 +1,39 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Total running time",
+    "nl": "Totale looptijd",
+    "de": "Gesamtlaufzeit",
+    "fr": "Temps de fonctionnement total",
+    "it": "Tempo di funzionamento totale",
+    "es": "Tiempo total de funcionamiento",
+    "sv": "Total drifttid",
+    "no": "Total driftstid",
+    "da": "Samlet driftstid",
+    "pl": "Całkowity czas pracy",
+    "ru": "Общее время работы",
+    "ko": "총 운행 시간",
+    "ar": "إجمالي وقت التشغيل"
+  },
+  "min": 0,
+  "decimals": 1,
+  "units": {
+    "en": "h",
+    "nl": "",
+    "de": "h",
+    "fr": "h",
+    "it": "h",
+    "es": "h",
+    "sv": "h",
+    "no": "h",
+    "da": "h",
+    "pl": "h",
+    "ru": "h",
+    "ko": "h",
+    "ar": "h"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "icon": "/assets/capability_icons/mower_running_time.svg"
+}

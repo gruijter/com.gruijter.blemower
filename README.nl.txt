@@ -1,0 +1,3 @@
+Koppel je Bluetooth-geschikte Gardena (Minimo, City, Life) of Husqvarna (Automower, Aspire) robotmaaier lokaal aan Homey Pro via MQTT. Geen cloud-API's vereist!
+
+Houd je maaier veilig en je gazon gezond door het maaischema te automatiseren in Homey. Stuur de maaier automatisch naar zijn laadstation als het regent, pauzeer het maaien wanneer er mensen of huisdieren in de tuin zijn, laad alleen op tijdens de goedkoopste uren met dynamische energietarieven, of ontvang direct een melding wanneer de maaier wordt opgetild of omvalt. Een BLE-naar-MQTT-gateway (zoals een Raspberry Pi met Docker) is vereist. Zie het communityforum voor volledige instructies.

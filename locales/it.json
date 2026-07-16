@@ -1,0 +1,16 @@
+{
+  "pair": {
+    "title": "Connessione Broker MQTT",
+    "text": "Inserisci i dettagli di connessione per il tuo Broker MQTT. Il topic di base deve avere lo stesso prefisso configurato nel gateway BLE del tosaerba.",
+    "host": "Hostname/IP del Broker",
+    "port": "Porta del Broker",
+    "username": "Nome utente",
+    "password": "Password",
+    "topic": "Topic di base",
+    "incomplete": "L'host e il topic di base devono essere compilati!",
+    "connect": "CONNETTI"
+  },
+  "device": {
+    "connectionError": "Connessione MQTT persa, riconnessione in corso..."
+  }
+}

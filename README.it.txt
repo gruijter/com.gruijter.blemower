@@ -1,0 +1,3 @@
+Collega localmente il tuo robot tagliaerba Bluetooth Gardena (Minimo, City, Life) o Husqvarna (Automower, Aspire) a Homey Pro tramite MQTT. Nessuna API cloud richiesta!
+
+Mantieni il tuo tosaerba al sicuro e il tuo prato in salute automatizzando il programma di taglio in Homey. Metti facilmente in pausa o manda al dock il tosaerba quando inizia a piovere, interrompi le operazioni quando la famiglia o gli animali domestici sono in giardino, ricarica solo durante le ore con tariffe elettriche dinamiche convenienti, o attiva allarmi di sicurezza domestica se il tosaerba viene sollevato o capovolto. È richiesto un gateway da BLE a MQTT (come un Raspberry Pi con Docker). Consulta il forum della community per le istruzioni complete.

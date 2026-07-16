@@ -1,0 +1,22 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Radar Enabled",
+    "nl": "Radar Ingeschakeld",
+    "de": "Radar aktiviert",
+    "fr": "Radar activé",
+    "it": "Radar abilitato",
+    "es": "Radar habilitado",
+    "sv": "Radar aktiverad",
+    "no": "Radar aktivert",
+    "da": "Radar aktiveret",
+    "pl": "Radar włączony",
+    "ru": "Радар включен",
+    "ko": "레이더 활성화",
+    "ar": "الرادار مفعل"
+  },
+  "getable": true,
+  "setable": true,
+  "uiComponent": "button",
+  "icon": "/assets/capability_icons/mower_radar_enabled.svg"
+}

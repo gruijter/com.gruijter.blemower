@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <!-- Flat ground reference line -->
+  <line x1="1" y1="22" x2="23" y2="22" stroke="#000000" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Mower front-view, tilted right to show roll angle -->
+  <g transform="translate(12,15.85) rotate(22)">
+    <!-- Left wheel -->
+    <rect x="-7.5" y="-0.5" width="2" height="4.5" rx="0.8" fill="none" stroke="#000000" stroke-width="1.5"/>
+    <!-- Right wheel -->
+    <rect x="5.5" y="-0.5" width="2" height="4.5" rx="0.8" fill="none" stroke="#000000" stroke-width="1.5"/>
+    <!-- Mower body/chassis -->
+    <path d="M -5.5 -2 Q 0 -5.5 5.5 -2 L 5.5 1.5 C 5.5 2.5 4.5 3 -4.5 3 C -5.5 3 -5.5 2.5 -5.5 1.5 Z" fill="none" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

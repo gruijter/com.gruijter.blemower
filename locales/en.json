@@ -1,0 +1,16 @@
+{
+  "pair": {
+    "title": "MQTT Broker Connection",
+    "text": "Please enter the connection details for your MQTT Broker. The base topic should be the same prefix as configured in your mower BLE gateway.",
+    "host": "Broker Hostname/IP",
+    "port": "Broker Port",
+    "username": "Username",
+    "password": "Password",
+    "topic": "Base Topic",
+    "incomplete": "Host and Base Topic must be filled!",
+    "connect": "CONNECT"
+  },
+  "device": {
+    "connectionError": "MQTT connection lost, reconnecting..."
+  }
+}

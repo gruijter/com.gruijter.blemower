@@ -1,0 +1,16 @@
+{
+  "pair": {
+    "title": "MQTT Broker Verbinding",
+    "text": "Voer de verbindingsgegevens voor je MQTT Broker in. Het base topic moet dezelfde prefix zijn als geconfigureerd in je maaier BLE gateway.",
+    "host": "Broker Hostnaam/IP",
+    "port": "Broker Poort",
+    "username": "Gebruikersnaam",
+    "password": "Wachtwoord",
+    "topic": "Base Topic",
+    "incomplete": "Host en Base Topic moeten ingevuld worden!",
+    "connect": "VERBINDEN"
+  },
+  "device": {
+    "connectionError": "MQTT verbinding verloren, opnieuw verbinden..."
+  }
+}

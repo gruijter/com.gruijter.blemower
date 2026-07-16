@@ -1,0 +1,77 @@
+{
+  "id": "set_drive_past_wire",
+  "title": {
+    "en": "Set drive past wire distance",
+    "nl": "Stel over de draad rijden in",
+    "de": "Überfahrweite einstellen",
+    "fr": "Définir la distance au-delà du fil",
+    "it": "Imposta distanza di guida oltre il filo",
+    "es": "Configurar la distancia más allá del cable",
+    "sv": "Ställ in avstånd för att köra förbi slingan",
+    "no": "Still inn kjør forbi ledning avstand",
+    "da": "Indstil overkørselsafstand for tråd",
+    "pl": "Ustaw odległość przejazdu poza przewód",
+    "ru": "Настроить расстояние проезда за провод",
+    "ko": "와이어 너머 주행 거리 설정",
+    "ar": "ضبط مسافة القيادة وراء السلك"
+  },
+  "titleFormatted": {
+    "en": "Set drive past wire distance to [[distance]] mm",
+    "nl": "Stel over de draad rijden in op [[distance]] mm",
+    "de": "Überfahrweite auf [[distance]] mm einstellen",
+    "fr": "Définir la distance au-delà du fil sur [[distance]] mm",
+    "it": "Imposta distanza di guida oltre il filo su [[distance]] mm",
+    "es": "Establecer la distancia más allá del cable en [[distance]] mm",
+    "sv": "Ställ in avstånd för att köra förbi slingan till [[distance]] mm",
+    "no": "Still inn kjør forbi ledning avstand til [[distance]] mm",
+    "da": "Indstil overkørselsafstand for tråd til [[distance]] mm",
+    "pl": "Ustaw odległość przejazdu poza przewód na [[distance]] mm",
+    "ru": "Настроить расстояние проезда за провод на [[distance]] мм",
+    "ko": "와이어 너머 주행 거리를 [[distance]] mm로 설정",
+    "ar": "ضبط مسافة القيادة وراء السلك على [[distance]] مم"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=mower"
+    },
+    {
+      "type": "number",
+      "name": "distance",
+      "title": {
+        "en": "Distance (mm)",
+        "nl": "Afstand (mm)",
+        "de": "Distanz (mm)",
+        "fr": "Distance (mm)",
+        "it": "Distanza (mm)",
+        "es": "Distancia (mm)",
+        "sv": "Avstånd (mm)",
+        "no": "Avstand (mm)",
+        "da": "Afstand (mm)",
+        "pl": "Odległość (mm)",
+        "ru": "Расстояние (мм)",
+        "ko": "거리 (mm)",
+        "ar": "المسافة (مم)"
+      },
+      "min": 100,
+      "max": 500,
+      "step": 1,
+      "placeholder": {
+        "en": "300",
+        "nl": "300",
+        "de": "300",
+        "fr": "300",
+        "it": "300",
+        "es": "300",
+        "sv": "300",
+        "no": "300",
+        "da": "300",
+        "pl": "300",
+        "ru": "300",
+        "ko": "300",
+        "ar": "300"
+      }
+    }
+  ]
+}

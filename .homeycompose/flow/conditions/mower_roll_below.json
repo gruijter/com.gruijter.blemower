@@ -1,0 +1,77 @@
+{
+  "id": "mower_roll_below",
+  "title": {
+    "en": "Roll is less than",
+    "nl": "Dwarshelling is minder dan",
+    "de": "Querneigung ist weniger als",
+    "fr": "Le roulis est inférieur à",
+    "it": "Il rollio è inferiore a",
+    "es": "La inclinación transversal es inferior a",
+    "sv": "Lutningen (roll) är mindre än",
+    "no": "Dwarshellingen er mindre enn",
+    "da": "Sidehældningen er mindre end",
+    "pl": "Nachylenie poprzeczne jest mniejsze niż",
+    "ru": "Крен меньше",
+    "ko": "롤이 다음보다 낮음",
+    "ar": "التمايل الجانبي أقل من"
+  },
+  "titleFormatted": {
+    "en": "Roll is less than [[angle]] °",
+    "nl": "Dwarshelling is minder dan [[angle]] °",
+    "de": "Querneigung ist weniger als [[angle]] °",
+    "fr": "Le roulis est inférieur à [[angle]] °",
+    "it": "Il rollio è inferiore a [[angle]] °",
+    "es": "La inclinación transversal es inferior a [[angle]] °",
+    "sv": "Lutningen (roll) är mindre än [[angle]] °",
+    "no": "Dwarshellingen er mindre enn [[angle]] °",
+    "da": "Sidehældningen er mindre end [[angle]] °",
+    "pl": "Nachylenie poprzeczne jest mniejsze niż [[angle]] °",
+    "ru": "Крен меньше [[angle]] °",
+    "ko": "롤이 [[angle]] ° 미만입니다",
+    "ar": "التمايل الجانبي أقل من [[angle]] درجة"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=mower"
+    },
+    {
+      "type": "number",
+      "name": "angle",
+      "title": {
+        "en": "Angle",
+        "nl": "Hoek",
+        "de": "Winkel",
+        "fr": "Angle",
+        "it": "Angolo",
+        "es": "Ángulo",
+        "sv": "Vinkel",
+        "no": "Vinkel",
+        "da": "Vinkel",
+        "pl": "Kąt",
+        "ru": "Угол",
+        "ko": "각도",
+        "ar": "الزاوية"
+      },
+      "min": -90,
+      "max": 90,
+      "step": 1,
+      "placeholder": {
+        "en": "0",
+        "nl": "0",
+        "de": "0",
+        "fr": "0",
+        "it": "0",
+        "es": "0",
+        "sv": "0",
+        "no": "0",
+        "da": "0",
+        "pl": "0",
+        "ru": "0",
+        "ko": "0",
+        "ar": "0"
+      }
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "id": "mower_loop_signal_below",
+  "title": {
+    "en": "Loop signal strength is less than",
+    "nl": "Lussignaal sterkte is minder dan",
+    "de": "Schleifensignalstärke ist weniger als",
+    "fr": "La force du signal de boucle est inférieure à",
+    "it": "La forza del segnale del circuito è inferiore a",
+    "es": "La fuerza de la señal del bucle es inferior a",
+    "sv": "Slingans signalstyrka är mindre än",
+    "no": "Sløyfe signalstyrke er mindre enn",
+    "da": "Sløjfe signalstyrke er mindre end",
+    "pl": "Siła sygnału pętli jest mniejsza niż",
+    "ru": "Сила сигнала контура меньше",
+    "ko": "루프 신호 강도가 다음보다 낮음",
+    "ar": "قوة إشارة الحلقة أقل من"
+  },
+  "titleFormatted": {
+    "en": "Loop signal strength is less than [[strength]] %",
+    "nl": "Lussignaal sterkte is minder dan [[strength]] %",
+    "de": "Schleifensignalstärke ist weniger als [[strength]] %",
+    "fr": "La force du signal de boucle est inférieure à [[strength]] %",
+    "it": "La forza del segnale del circuito è inferiore a [[strength]] %",
+    "es": "La fuerza de la señal del bucle es inferior a [[strength]] %",
+    "sv": "Slingans signalstyrka är mindre än [[strength]] %",
+    "no": "Sløyfe signalstyrke er mindre enn [[strength]] %",
+    "da": "Sløjfe signalstyrke er mindre end [[strength]] %",
+    "pl": "Siła sygnału pętli jest mniejsza niż [[strength]] %",
+    "ru": "Сила сигнала контура меньше [[strength]] %",
+    "ko": "루프 신호 강도가 [[strength]] % 미만입니다",
+    "ar": "قوة إشارة الحلقة أقل من [[strength]] %"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=mower"
+    },
+    {
+      "type": "number",
+      "name": "strength",
+      "title": {
+        "en": "Strength",
+        "nl": "Sterkte",
+        "de": "Stärke",
+        "fr": "Force",
+        "it": "Forza",
+        "es": "Fuerza",
+        "sv": "Styrka",
+        "no": "Styrke",
+        "da": "Styrke",
+        "pl": "Siła",
+        "ru": "Сила",
+        "ko": "강도",
+        "ar": "القوة"
+      },
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "placeholder": {
+        "en": "50",
+        "nl": "50",
+        "de": "50",
+        "fr": "50",
+        "it": "50",
+        "es": "50",
+        "sv": "50",
+        "no": "50",
+        "da": "50",
+        "pl": "50",
+        "ru": "50",
+        "ko": "50",
+        "ar": "50"
+      }
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "id": "mower_battery_temperature_below",
+  "title": {
+    "en": "Battery temperature is less than",
+    "nl": "Accu temperatuur is minder dan",
+    "de": "Batterietemperatur ist weniger als",
+    "fr": "La température de la batterie est inférieure à",
+    "it": "La temperatura della batteria è inferiore a",
+    "es": "La temperatura de la batería es inferior a",
+    "sv": "Batteritemperaturen är mindre än",
+    "no": "Batteritemperaturen er mindre enn",
+    "da": "Batteritemperatur er mindre end",
+    "pl": "Temperatura akumulatora jest mniejsza niż",
+    "ru": "Температура батареи меньше",
+    "ko": "배터리 온도가 다음보다 낮음",
+    "ar": "درجة حرارة البطارية أقل من"
+  },
+  "titleFormatted": {
+    "en": "Battery temperature is less than [[temperature]] °C",
+    "nl": "Accu temperatuur is minder dan [[temperature]] °C",
+    "de": "Batterietemperatur ist weniger als [[temperature]] °C",
+    "fr": "La température de la batterie est inférieure à [[temperature]] °C",
+    "it": "La temperatura della batteria è inferiore a [[temperature]] °C",
+    "es": "La temperatura de la batería es inferior a [[temperature]] °C",
+    "sv": "Batteritemperaturen är mindre än [[temperature]] °C",
+    "no": "Batteritemperaturen er mindre enn [[temperature]] °C",
+    "da": "Batteritemperatur er mindre end [[temperature]] °C",
+    "pl": "Temperatura akumulatora jest mniejsza niż [[temperature]] °C",
+    "ru": "Температура батареи меньше [[temperature]] °C",
+    "ko": "배터리 온도가 [[temperature]] °C 미만입니다",
+    "ar": "درجة حرارة البطارية أقل من [[temperature]] درجة مئوية"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=mower"
+    },
+    {
+      "type": "number",
+      "name": "temperature",
+      "title": {
+        "en": "Temperature",
+        "nl": "Temperatuur",
+        "de": "Temperatur",
+        "fr": "Température",
+        "it": "Temperatura",
+        "es": "Temperatura",
+        "sv": "Temperatur",
+        "no": "Temperatur",
+        "da": "Temperatur",
+        "pl": "Temperatura",
+        "ru": "Температура",
+        "ko": "온도",
+        "ar": "درجة الحرارة"
+      },
+      "min": -20,
+      "max": 80,
+      "step": 1,
+      "placeholder": {
+        "en": "20",
+        "nl": "20",
+        "de": "20",
+        "fr": "20",
+        "it": "20",
+        "es": "20",
+        "sv": "20",
+        "no": "20",
+        "da": "20",
+        "pl": "20",
+        "ru": "20",
+        "ko": "20",
+        "ar": "20"
+      }
+    }
+  ]
+}

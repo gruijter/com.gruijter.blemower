@@ -1,0 +1,16 @@
+{
+  "pair": {
+    "title": "Connexion au courtier MQTT",
+    "text": "Veuillez saisir les détails de connexion pour votre courtier MQTT. Le sujet de base doit avoir le même préfixe que celui configuré dans la passerelle BLE de votre tondeuse.",
+    "host": "Nom d'hôte du courtier/IP",
+    "port": "Port du courtier",
+    "username": "Nom d'utilisateur",
+    "password": "Mot de passe",
+    "topic": "Sujet de base",
+    "incomplete": "L'hôte et le sujet de base doivent être remplis !",
+    "connect": "CONNECTER"
+  },
+  "device": {
+    "connectionError": "Connexion MQTT perdue, reconnexion en cours..."
+  }
+}

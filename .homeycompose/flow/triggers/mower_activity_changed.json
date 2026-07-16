@@ -1,0 +1,62 @@
+{
+  "id": "mower_activity_changed",
+  "title": {
+    "en": "The mower activity changed",
+    "nl": "De maaier activiteit is veranderd",
+    "de": "Die Mäheraktivität hat sich geändert",
+    "fr": "L'activité de la tondeuse a changé",
+    "it": "L'attività del tosaerba è cambiata",
+    "es": "La actividad del cortacésped cambió",
+    "sv": "Gräsklipparaktiviteten ändrades",
+    "no": "Klipperaktiviteten ble endret",
+    "da": "Plæneklipperens aktivitet ændrede sig",
+    "pl": "Aktywność kosiarki uległa zmianie",
+    "ru": "Активность косилки изменилась",
+    "ko": "잔디 깎는 기계 활동 변경됨",
+    "ar": "تغير نشاط جزازة العشب"
+  },
+  "hint": {
+    "en": "Triggers when the mower activity changes. The new activity is available as a flow token.",
+    "nl": "Wordt geactiveerd als de maaier activiteit verandert. De nieuwe activiteit is beschikbaar als flow token.",
+    "de": "Wird ausgelöst, wenn sich die Mäheraktivität ändert. Die neue Aktivität ist als Flow-Token verfügbar.",
+    "fr": "Se déclenche lorsque l'activité de la tondeuse change. La nouvelle activité est disponible sous forme de jeton de flux.",
+    "it": "Si attiva quando l'attività del tosaerba cambia. La nuova attività è disponibile come token di flusso.",
+    "es": "Se activa cuando cambia la actividad del cortacésped. La nueva actividad está disponible como un token de flujo.",
+    "sv": "Utlöses när gräsklipparens aktivitet ändras. Den nya aktiviteten finns tillgänglig som en flödestoken.",
+    "no": "Utløses når klipperens aktivitet endres. Den nye aktiviteten er tilgjengelig som et flyttoken.",
+    "da": "Udløses, når plæneklipperens aktivitet ændrer sig. Den nye aktivitet er tilgængelig som et flowtoken.",
+    "pl": "Wyzwala się, gdy zmienia się aktywność kosiarki. Nowa aktywność jest dostępna jako token przepływu.",
+    "ru": "Активируется при изменении активности косилки. Новая активность доступна в качестве токена потока.",
+    "ko": "잔디 깎는 기계의 활동이 변경될 때 트리거됩니다. 새로운 활동은 플로우 토큰으로 사용할 수 있습니다.",
+    "ar": "يتم التشغيل عند تغير نشاط جزازة العشب. النشاط الجديد متاح كرمز تدفق."
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=mower"
+    }
+  ],
+  "tokens": [
+    {
+      "name": "activity",
+      "type": "string",
+      "title": {
+        "en": "Activity",
+        "nl": "Activiteit",
+        "de": "Aktivität",
+        "fr": "Activité",
+        "it": "Attività",
+        "es": "Actividad",
+        "sv": "Aktivitet",
+        "no": "Aktivitet",
+        "da": "Aktivitet",
+        "pl": "Aktywność",
+        "ru": "Активность",
+        "ko": "활동",
+        "ar": "النشاط"
+      },
+      "example": "MOWING"
+    }
+  ]
+}

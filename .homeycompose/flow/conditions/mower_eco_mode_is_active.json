@@ -1,0 +1,25 @@
+{
+  "id": "mower_eco_mode_is_active",
+  "title": {
+    "en": "Eco mode is active",
+    "nl": "Eco stand is actief",
+    "de": "Eco-Modus ist aktiv",
+    "fr": "Le mode éco est actif",
+    "it": "La modalità Eco è attiva",
+    "es": "El modo Eco está activo",
+    "sv": "Eco Mode är aktivt",
+    "no": "Eco-modus er aktiv",
+    "da": "Eco-tilstand er aktiv",
+    "pl": "Tryb Eco jest aktywny",
+    "ru": "Эко-режим активен",
+    "ko": "에코 모드가 활성화되었습니다",
+    "ar": "الوضع الاقتصادي نشط"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=mower"
+    }
+  ]
+}

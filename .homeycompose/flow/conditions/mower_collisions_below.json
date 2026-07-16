@@ -1,0 +1,77 @@
+{
+  "id": "mower_collisions_below",
+  "title": {
+    "en": "Collisions is less than",
+    "nl": "Aantal botsingen is minder dan",
+    "de": "Kollisionen sind weniger als",
+    "fr": "Les collisions sont inférieures à",
+    "it": "Le collisioni sono inferiori a",
+    "es": "Las colisiones son inferiores a",
+    "sv": "Kollisioner är mindre än",
+    "no": "Kollisjoner er mindre enn",
+    "da": "Antal kollisioner er mindre end",
+    "pl": "Liczba kolizji jest mniejsza niż",
+    "ru": "Количество столкновений меньше",
+    "ko": "충돌 횟수가 다음보다 적음",
+    "ar": "الاصطدامات أقل من"
+  },
+  "titleFormatted": {
+    "en": "Collisions is less than [[collisions]]",
+    "nl": "Aantal botsingen is minder dan [[collisions]]",
+    "de": "Kollisionen sind weniger als [[collisions]]",
+    "fr": "Les collisions sont inférieures à [[collisions]]",
+    "it": "Le collisioni sono inferiori a [[collisions]]",
+    "es": "Las colisiones son inferiores a [[collisions]]",
+    "sv": "Kollisioner är mindre än [[collisions]]",
+    "no": "Kollisjoner er mindre enn [[collisions]]",
+    "da": "Antal kollisioner er mindre end [[collisions]]",
+    "pl": "Liczba kolizji jest mniejsza niż [[collisions]]",
+    "ru": "Количество столкновений меньше [[collisions]]",
+    "ko": "충돌 횟수가 [[collisions]] 미만입니다",
+    "ar": "الاصطدامات أقل من [[collisions]]"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=mower"
+    },
+    {
+      "type": "number",
+      "name": "collisions",
+      "title": {
+        "en": "Collisions",
+        "nl": "Botsingen",
+        "de": "Kollisionen",
+        "fr": "Collisions",
+        "it": "Collisioni",
+        "es": "Colisiones",
+        "sv": "Kollisioner",
+        "no": "Kollisjoner",
+        "da": "Kollisioner",
+        "pl": "Kolizje",
+        "ru": "Столкновения",
+        "ko": "충돌 횟수",
+        "ar": "الاصطدامات"
+      },
+      "min": 0,
+      "max": 100000,
+      "step": 1,
+      "placeholder": {
+        "en": "100",
+        "nl": "100",
+        "de": "100",
+        "fr": "100",
+        "it": "100",
+        "es": "100",
+        "sv": "100",
+        "no": "100",
+        "da": "100",
+        "pl": "100",
+        "ru": "100",
+        "ko": "100",
+        "ar": "100"
+      }
+    }
+  ]
+}

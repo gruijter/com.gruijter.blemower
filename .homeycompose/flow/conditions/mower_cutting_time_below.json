@@ -1,0 +1,77 @@
+{
+  "id": "mower_cutting_time_below",
+  "title": {
+    "en": "Cutting time is less than",
+    "nl": "Maaitijd is minder dan",
+    "de": "Mähzeit ist weniger als",
+    "fr": "Le temps de tonte est inférieur à",
+    "it": "Il tempo di taglio è inferiore a",
+    "es": "El tiempo de corte es inferior a",
+    "sv": "Klipptiden är mindre än",
+    "no": "Klippetiden er mindre enn",
+    "da": "Klippetid er mindre end",
+    "pl": "Czas koszenia jest krótszy niż",
+    "ru": "Время кошения меньше",
+    "ko": "잔디 깎기 시간이 다음보다 적음",
+    "ar": "وقت القص أقل من"
+  },
+  "titleFormatted": {
+    "en": "Cutting time is less than [[hours]] hours",
+    "nl": "Maaitijd is minder dan [[hours]] uur",
+    "de": "Mähzeit ist weniger als [[hours]] Stunden",
+    "fr": "Le temps de tonte est inférieur à [[hours]] heures",
+    "it": "Il tempo di taglio è inferiore a [[hours]] ore",
+    "es": "El tiempo de corte es inferior a [[hours]] horas",
+    "sv": "Klipptiden är mindre än [[hours]] timmar",
+    "no": "Klippetiden er mindre enn [[hours]] timer",
+    "da": "Klippetid er mindre end [[hours]] timer",
+    "pl": "Czas koszenia jest krótszy niż [[hours]] godz.",
+    "ru": "Время кошения меньше [[hours]] ч.",
+    "ko": "잔디 깎기 시간이 [[hours]] 시간 미만입니다",
+    "ar": "وقت القص أقل من [[hours]] ساعة"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=mower"
+    },
+    {
+      "type": "number",
+      "name": "hours",
+      "title": {
+        "en": "Hours",
+        "nl": "Uren",
+        "de": "Stunden",
+        "fr": "Heures",
+        "it": "Ore",
+        "es": "Horas",
+        "sv": "Timmar",
+        "no": "Timer",
+        "da": "Timer",
+        "pl": "Godziny",
+        "ru": "Часы",
+        "ko": "시간",
+        "ar": "ساعات"
+      },
+      "min": 0,
+      "max": 100000,
+      "step": 1,
+      "placeholder": {
+        "en": "100",
+        "nl": "100",
+        "de": "100",
+        "fr": "100",
+        "it": "100",
+        "es": "100",
+        "sv": "100",
+        "no": "100",
+        "da": "100",
+        "pl": "100",
+        "ru": "100",
+        "ko": "100",
+        "ar": "100"
+      }
+    }
+  ]
+}

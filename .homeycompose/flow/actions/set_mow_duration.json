@@ -1,0 +1,92 @@
+{
+  "id": "set_mow_duration",
+  "title": {
+    "en": "Set override mow duration",
+    "nl": "Stel handmatige maaitijd in",
+    "de": "Manuelle Mähdauer einstellen",
+    "fr": "Définir la durée de tonte manuelle",
+    "it": "Imposta durata taglio manuale",
+    "es": "Configurar duración de corte manual",
+    "sv": "Ställ in manuell klipptid",
+    "no": "Still inn manuell klippetid",
+    "da": "Indstil manuel klippetid",
+    "pl": "Ustaw ręczny czas koszenia",
+    "ru": "Настроить ручное время кошения",
+    "ko": "수동 잔디 깎기 시간 설정",
+    "ar": "ضبط مدة القص اليدوية"
+  },
+  "titleFormatted": {
+    "en": "Set override mow duration to [[minutes]] minutes",
+    "nl": "Stel handmatige maaitijd in op [[minutes]] minuten",
+    "de": "Manuelle Mähdauer auf [[minutes]] Minuten einstellen",
+    "fr": "Définir la durée de tonte manuelle sur [[minutes]] minutes",
+    "it": "Imposta durata taglio manuale su [[minutes]] minuti",
+    "es": "Establecer la duración de corte manual en [[minutes]] minutos",
+    "sv": "Ställ in manuell klipptid till [[minutes]] minuter",
+    "no": "Still inn manuell klippetid til [[minutes]] minutter",
+    "da": "Indstil manuel klippetid til [[minutes]] minutter",
+    "pl": "Ustaw ręczny czas koszenia na [[minutes]] minut",
+    "ru": "Настроить ручное время кошения на [[minutes]] минут",
+    "ko": "수동 잔디 깎기 시간을 [[minutes]] 분으로 설정",
+    "ar": "ضبط مدة القص اليدوية على [[minutes]] دقيقة"
+  },
+  "hint": {
+    "en": "Sets the duration for manual (override) mowing. This updates the Advanced Settings value and will be used the next time MOW is triggered.",
+    "nl": "Stelt de duur in voor handmatig maaien. Dit werkt de Geavanceerde Instellingen bij en wordt gebruikt de volgende keer dat MOW wordt geactiveerd.",
+    "de": "Stellt die Dauer für manuelles Mähzeit ein. Dies aktualisiert die erweiterten Einstellungen und wird beim nächsten Mähen verwendet.",
+    "fr": "Définit la durée de tonte manuelle. Cela met à jour les paramètres avancés et sera utilisé lors de la prochaine tonte.",
+    "it": "Imposta la durata del taglio manuale. Questo aggiorna le impostazioni avanzate e verrà utilizzato al prossimo taglio.",
+    "es": "Establece la duración del corte manual. Esto actualiza los ajustes avanzados y se utilizará en el próximo corte.",
+    "sv": "Ställer in tiden för manuell klippning. Detta uppdaterar de avancerade inställningarna och används nästa gång klippning startas.",
+    "no": "Stiller inn tiden for manuell klipping. Dette oppdaterer de avanserte innstillingene og brukes neste gang klipping startes.",
+    "da": "Indstiller tiden for manuel klipning. Dette opdaterer de avancerede indstillinger og bruges næste gang klipning startes.",
+    "pl": "Ustawia czas trwania koszenia ręcznego. Aktualizuje to ustawienia zaawansowane i zostanie użyte przy następnym koszeniu.",
+    "ru": "Устанавливает продолжительность ручного кошения. Это обновляет расширенные настройки и будет использовано при следующем кошении.",
+    "ko": "수동 잔디 깎기 시간을 설정합니다. 이 값은 고급 설정을 업데이트하며 다음 잔디 깎기 시 적용됩니다.",
+    "ar": "يحدد مدة القص اليدوي. يعمل هذا على تحديث الإعدادات المتقدمة وسيتم استخدامه في المرة القادمة التي يتم فيها تشغيل القص."
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=mower"
+    },
+    {
+      "type": "number",
+      "name": "minutes",
+      "title": {
+        "en": "Duration (minutes)",
+        "nl": "Duur (minuten)",
+        "de": "Dauer (Minuten)",
+        "fr": "Durée (minutes)",
+        "it": "Durata (minuti)",
+        "es": "Duración (minutos)",
+        "sv": "Varaktighet (minuter)",
+        "no": "Varighet (minutter)",
+        "da": "Varighed (minutter)",
+        "pl": "Czas trwania (minuty)",
+        "ru": "Продолжительность (минут)",
+        "ko": "시간 (분)",
+        "ar": "المدة (بالدقائق)"
+      },
+      "min": 1,
+      "max": 480,
+      "step": 1,
+      "placeholder": {
+        "en": "60",
+        "nl": "60",
+        "de": "60",
+        "fr": "60",
+        "it": "60",
+        "es": "60",
+        "sv": "60",
+        "no": "60",
+        "da": "60",
+        "pl": "60",
+        "ru": "60",
+        "ko": "60",
+        "ar": "60"
+      }
+    }
+  ]
+}

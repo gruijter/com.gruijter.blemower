@@ -1,0 +1,77 @@
+{
+  "id": "mower_running_time_below",
+  "title": {
+    "en": "Running time is less than",
+    "nl": "Totale looptijd is minder dan",
+    "de": "Laufzeit ist weniger als",
+    "fr": "Le temps de fonctionnement est inférieur à",
+    "it": "Il tempo di funzionamento è inferiore a",
+    "es": "El tiempo de funcionamiento es inferior a",
+    "sv": "Drifttiden är mindre än",
+    "no": "Driftstiden er mindre enn",
+    "da": "Driftstid er mindre end",
+    "pl": "Czas pracy jest krótszy niż",
+    "ru": "Время работы меньше",
+    "ko": "운행 시간이 다음보다 적음",
+    "ar": "وقت التشغيل أقل من"
+  },
+  "titleFormatted": {
+    "en": "Running time is less than [[hours]] hours",
+    "nl": "Totale looptijd is minder dan [[hours]] uur",
+    "de": "Laufzeit ist weniger als [[hours]] Stunden",
+    "fr": "Le temps de fonctionnement est inférieur à [[hours]] heures",
+    "it": "Il tempo di funzionamento è inferiore a [[hours]] ore",
+    "es": "El tiempo de funcionamiento es inferior a [[hours]] horas",
+    "sv": "Drifttiden är mindre än [[hours]] timmar",
+    "no": "Driftstiden er mindre enn [[hours]] timer",
+    "da": "Driftstid er mindre end [[hours]] timer",
+    "pl": "Czas pracy jest krótszy niż [[hours]] godz.",
+    "ru": "Время работы меньше [[hours]] ч.",
+    "ko": "운행 시간이 [[hours]] 시간 미만입니다",
+    "ar": "وقت التشغيل أقل من [[hours]] ساعة"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=mower"
+    },
+    {
+      "type": "number",
+      "name": "hours",
+      "title": {
+        "en": "Hours",
+        "nl": "Uren",
+        "de": "Stunden",
+        "fr": "Heures",
+        "it": "Ore",
+        "es": "Horas",
+        "sv": "Timmar",
+        "no": "Timer",
+        "da": "Timer",
+        "pl": "Godziny",
+        "ru": "Часы",
+        "ko": "시간",
+        "ar": "ساعات"
+      },
+      "min": 0,
+      "max": 100000,
+      "step": 1,
+      "placeholder": {
+        "en": "100",
+        "nl": "100",
+        "de": "100",
+        "fr": "100",
+        "it": "100",
+        "es": "100",
+        "sv": "100",
+        "no": "100",
+        "da": "100",
+        "pl": "100",
+        "ru": "100",
+        "ko": "100",
+        "ar": "100"
+      }
+    }
+  ]
+}

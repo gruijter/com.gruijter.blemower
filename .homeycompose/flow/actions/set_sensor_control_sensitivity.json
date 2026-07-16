@@ -1,0 +1,115 @@
+{
+  "id": "set_sensor_control_sensitivity",
+  "title": {
+    "en": "Set SensorControl sensitivity",
+    "nl": "Stel SensorControl gevoeligheid in",
+    "de": "SensorControl-Empfindlichkeit einstellen",
+    "fr": "Définir la sensibilité de SensorControl",
+    "it": "Imposta sensibilità SensorControl",
+    "es": "Configurar sensibilidad de SensorControl",
+    "sv": "Ställ in SensorControl-känslighet",
+    "no": "Still inn følsomhet for SensorControl",
+    "da": "Indstil SensorControl-følsomhed",
+    "pl": "Ustaw czułość SensorControl",
+    "ru": "Настроить чувствительность SensorControl",
+    "ko": "SensorControl 민감도 설정",
+    "ar": "ضبط حساسية التحكم بالاستشعار"
+  },
+  "titleFormatted": {
+    "en": "Set SensorControl sensitivity to [[sensitivity]]",
+    "nl": "Stel SensorControl gevoeligheid in op [[sensitivity]]",
+    "de": "SensorControl-Empfindlichkeit auf [[sensitivity]] einstellen",
+    "fr": "Définir la sensibilité de SensorControl sur [[sensitivity]]",
+    "it": "Imposta sensibilità SensorControl su [[sensitivity]]",
+    "es": "Establecer la sensibilidad de SensorControl en [[sensitivity]]",
+    "sv": "Ställ in SensorControl-känslighet till [[sensitivity]]",
+    "no": "Still inn følsomhet for SensorControl til [[sensitivity]]",
+    "da": "Indstil SensorControl-følsomhed til [[sensitivity]]",
+    "pl": "Ustaw czułość SensorControl na [[sensitivity]]",
+    "ru": "Настроить чувствительность SensorControl на [[sensitivity]]",
+    "ko": "SensorControl 민감도를 [[sensitivity]](으)로 설정",
+    "ar": "ضبط حساسية التحكم بالاستشعار على [[sensitivity]]"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=mower"
+    },
+    {
+      "type": "dropdown",
+      "name": "sensitivity",
+      "title": {
+        "en": "Sensitivity",
+        "nl": "Gevoeligheid",
+        "de": "Empfindlichkeit",
+        "fr": "Sensibilité",
+        "it": "Sensibilità",
+        "es": "Sensibilidad",
+        "sv": "Känslighet",
+        "no": "Følsomhet",
+        "da": "Følsomhed",
+        "pl": "Czułość",
+        "ru": "Чувствительность",
+        "ko": "민감도",
+        "ar": "الحساسية"
+      },
+      "values": [
+        {
+          "id": "LOW",
+          "label": {
+            "en": "Low",
+            "nl": "Laag",
+            "de": "Niedrig",
+            "fr": "Bas",
+            "it": "Basso",
+            "es": "Bajo",
+            "sv": "Låg",
+            "no": "Lav",
+            "da": "Lav",
+            "pl": "Niski",
+            "ru": "Низкий",
+            "ko": "낮음",
+            "ar": "منخفض"
+          }
+        },
+        {
+          "id": "MEDIUM",
+          "label": {
+            "en": "Medium",
+            "nl": "Medium",
+            "de": "Mittel",
+            "fr": "Moyen",
+            "it": "Medio",
+            "es": "Medio",
+            "sv": "Medium",
+            "no": "Medium",
+            "da": "Mellem",
+            "pl": "Średni",
+            "ru": "Средний",
+            "ko": "보통",
+            "ar": "متوسط"
+          }
+        },
+        {
+          "id": "HIGH",
+          "label": {
+            "en": "High",
+            "nl": "Hoog",
+            "de": "Hoch",
+            "fr": "Haut",
+            "it": "Alto",
+            "es": "Alto",
+            "sv": "Hög",
+            "no": "Høy",
+            "da": "Høj",
+            "pl": "Wysoki",
+            "ru": "Высокий",
+            "ko": "높음",
+            "ar": "عالي"
+          }
+        }
+      ]
+    }
+  ]
+}

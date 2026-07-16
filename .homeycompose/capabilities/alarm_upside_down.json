@@ -1,0 +1,53 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Upside Down Alarm",
+    "nl": "Ondersteboven Alarm",
+    "de": "Kopfüber-Alarm",
+    "fr": "Alarme de renversement",
+    "it": "Allarme capovolgimento",
+    "es": "Alarma de vuelco",
+    "sv": "Upp-och-ned-larm",
+    "no": "Opp-ned-alarm",
+    "da": "Alarm for plæneklipper på hovedet",
+    "pl": "Alarm do góry nogami",
+    "ru": "Сигнал переворота",
+    "ko": "뒤집힘 알람",
+    "ar": "إنذار المقلوب"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "icon": "/assets/capability_icons/alarm_upside_down.svg",
+  "insights": true,
+  "insightsTitleTrue": {
+    "en": "Mower upside down",
+    "nl": "Maaier ondersteboven",
+    "de": "Mäher kopfüber",
+    "fr": "Tondeuse à l'envers",
+    "it": "Tosaerba capovolto",
+    "es": "Cortacésped al revés",
+    "sv": "Gräsklipparen upp och ned",
+    "no": "Klipperen opp-ned",
+    "da": "Plæneklipper på hovedet",
+    "pl": "Kosiarka do góry nogami",
+    "ru": "Косилка перевернута",
+    "ko": "잔디 깎는 기계가 뒤집힘",
+    "ar": "جزازة العشب مقلوبة"
+  },
+  "insightsTitleFalse": {
+    "en": "Mower upright",
+    "nl": "Maaier rechtop",
+    "de": "Mäher aufrecht",
+    "fr": "Tondeuse droite",
+    "it": "Tosaerba dritto",
+    "es": "Cortacésped vertical",
+    "sv": "Gräsklipparen upprätt",
+    "no": "Klipperen oppreist",
+    "da": "Plæneklipper oprejst",
+    "pl": "Kosiarka w pionie",
+    "ru": "Косилка стоит ровно",
+    "ko": "잔디 깎는 기계가 정상으로 서 있음",
+    "ar": "جزازة العشب في وضع مستقيم"
+  }
+}

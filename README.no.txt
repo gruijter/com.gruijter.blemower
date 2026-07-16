@@ -1,0 +1,3 @@
+Koble din Bluetooth-aktiverete Gardena (Minimo, City, Life) eller Husqvarna (Automower, Aspire) robotgressklipper lokalt til Homey Pro via MQTT. Ingen sky-API-er kreves!
+
+Hold klipperen din trygg og plenen din sunn ved å automatisere klippeplanen i Homey. Sett enkelt klipperen på pause or send den til dokken når det begynner å regne, pause driften når familie eller kjæledyr er i hagen, lad kun i timer med billige dynamiske strømpriser, eller utløs alarmsignaler hvis klipperen blir løftet eller snudd opp-ned. En BLE-til-MQTT-gateway (som en Raspberry Pi som kjører Docker) kreves. Se community-forumet for fullstendige instruksjoner.

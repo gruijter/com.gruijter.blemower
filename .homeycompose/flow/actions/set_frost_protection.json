@@ -1,0 +1,59 @@
+{
+  "id": "set_frost_protection",
+  "title": {
+    "en": "Set frost protection",
+    "nl": "Stel vorstbeveiliging in",
+    "de": "Frostschutz einstellen",
+    "fr": "Définir la protection antigel",
+    "it": "Imposta protezione antigelo",
+    "es": "Configurar protección contra heladas",
+    "sv": "Ställ in frostskydd",
+    "no": "Still inn frostbeskyttelse",
+    "da": "Indstil frostbeskyttelse",
+    "pl": "Ustaw ochronę przed mrozem",
+    "ru": "Настроить защиту от замерзания",
+    "ko": "성에 방지 설정",
+    "ar": "ضبط الحماية من الصقيع"
+  },
+  "titleFormatted": {
+    "en": "Set frost protection to [[value]]",
+    "nl": "Stel vorstbeveiliging in op [[value]]",
+    "de": "Frostschutz auf [[value]] einstellen",
+    "fr": "Définir la protection antigel sur [[value]]",
+    "it": "Imposta protezione antigelo su [[value]]",
+    "es": "Establecer la protección contra heladas en [[value]]",
+    "sv": "Ställ in frostskydd till [[value]]",
+    "no": "Still inn frostbeskyttelse til [[value]]",
+    "da": "Indstil frostbeskyttelse til [[value]]",
+    "pl": "Ustaw ochronę przed mrozem na [[value]]",
+    "ru": "Настроить защиту от замерзания на [[value]]",
+    "ko": "성에 방지를 [[value]](으)로 설정",
+    "ar": "ضبط الحماية من الصقيع على [[value]]"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=mower"
+    },
+    {
+      "type": "checkbox",
+      "name": "value",
+      "title": {
+        "en": "Active",
+        "nl": "Actief",
+        "de": "Aktiv",
+        "fr": "Actif",
+        "it": "Attivo",
+        "es": "Activo",
+        "sv": "Aktiv",
+        "no": "Aktiv",
+        "da": "Aktiv",
+        "pl": "Aktywny",
+        "ru": "Активно",
+        "ko": "활성",
+        "ar": "نشط"
+      }
+    }
+  ]
+}

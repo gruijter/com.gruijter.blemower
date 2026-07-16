@@ -1,0 +1,16 @@
+{
+  "pair": {
+    "title": "MQTT-Broker-Verbindung",
+    "text": "Bitte geben Sie die Verbindungsdetails für Ihren MQTT-Broker ein. Das Basis-Topic sollte dasselbe Präfix haben wie das in Ihrem Mähroboter-BLE-Gateway konfigurierte.",
+    "host": "Broker-Hostname/IP",
+    "port": "Broker-Port",
+    "username": "Benutzername",
+    "password": "Kennwort",
+    "topic": "Basis-Topic",
+    "incomplete": "Host und Basis-Topic müssen ausgefüllt werden!",
+    "connect": "VERBINDEN"
+  },
+  "device": {
+    "connectionError": "MQTT-Verbindung verloren, Verbindung wird wiederhergestellt..."
+  }
+}

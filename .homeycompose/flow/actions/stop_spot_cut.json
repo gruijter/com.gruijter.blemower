@@ -1,0 +1,40 @@
+{
+  "id": "stop_spot_cut",
+  "title": {
+    "en": "Stop spot cutting",
+    "nl": "Stop spot cutting",
+    "de": "Punktmähen stoppen",
+    "fr": "Arrêter la tonte ciblée",
+    "it": "Arresta taglio localizzato",
+    "es": "Detener corte localizado",
+    "sv": "Stoppa punktklippning",
+    "no": "Stopp punktklipping",
+    "da": "Stop punktklipning",
+    "pl": "Zatrzymaj koszenie punktowe",
+    "ru": "Остановить точечное кошение",
+    "ko": "스팟 컷 중지",
+    "ar": "إيقاف القص الموضعي"
+  },
+  "titleFormatted": {
+    "en": "Stop spot cutting",
+    "nl": "Stop spot cutting",
+    "de": "Punktmähen stoppen",
+    "fr": "Arrêter la tonte ciblée",
+    "it": "Arresta taglio localizzato",
+    "es": "Detener corte localizado",
+    "sv": "Stoppa punktklippning",
+    "no": "Stopp punktklipping",
+    "da": "Stop punktklipning",
+    "pl": "Zatrzymaj koszenie punktowe",
+    "ru": "Остановить точечное кошение",
+    "ko": "스팟 컷 중지",
+    "ar": "إيقاف القص الموضعي"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=mower"
+    }
+  ]
+}

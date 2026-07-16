@@ -1,0 +1,25 @@
+{
+  "id": "alarm_lift_is_active",
+  "title": {
+    "en": "Lift alarm is active",
+    "nl": "Opgeheven alarm is actief",
+    "de": "Hebealarm ist aktiv",
+    "fr": "L'alarme de levage est active",
+    "it": "L'allarme sollevamento è attivo",
+    "es": "La alarma de elevación está activa",
+    "sv": "Lyftlarm är aktivt",
+    "no": "Løftealarm er aktiv",
+    "da": "Løftealarm er aktiv",
+    "pl": "Alarm podniesienia jest aktywny",
+    "ru": "Сигнал подъема активен",
+    "ko": "리프트 알람이 활성화되었습니다",
+    "ar": "إنذار الرفع نشط"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=mower"
+    }
+  ]
+}

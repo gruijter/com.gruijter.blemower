@@ -1,0 +1,25 @@
+{
+  "id": "mower_spot_cut_is_active",
+  "title": {
+    "en": "Spot cutting is active",
+    "nl": "Spot cutting is actief",
+    "de": "Punktmähen ist aktiv",
+    "fr": "La tonte ciblée est active",
+    "it": "Il taglio localizzato è attivo",
+    "es": "El corte localizado está activo",
+    "sv": "Punktklippning är aktiv",
+    "no": "Punktklipping er aktiv",
+    "da": "Punktklipning er aktiv",
+    "pl": "Koszenie punktowe jest aktywne",
+    "ru": "Точечное кошение активно",
+    "ko": "스팟 컷이 활성화되었습니다",
+    "ar": "القص الموضعي نشط"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=mower"
+    }
+  ]
+}

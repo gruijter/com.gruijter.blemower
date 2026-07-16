@@ -1,0 +1,40 @@
+{
+  "id": "start_spot_cut",
+  "title": {
+    "en": "Start spot cutting",
+    "nl": "Start spot cutting",
+    "de": "Punktmähen starten",
+    "fr": "Démarrer la tonte ciblée",
+    "it": "Avvia taglio localizzato",
+    "es": "Iniciar corte localizado",
+    "sv": "Starta punktklippning",
+    "no": "Start punktklipping",
+    "da": "Start punktklipning",
+    "pl": "Uruchom koszenie punktowe",
+    "ru": "Запустить точечное кошение",
+    "ko": "스팟 컷 시작",
+    "ar": "بدء القص الموضعي"
+  },
+  "titleFormatted": {
+    "en": "Start spot cutting",
+    "nl": "Start spot cutting",
+    "de": "Punktmähen starten",
+    "fr": "Démarrer la tonte ciblée",
+    "it": "Avvia taglio localizzato",
+    "es": "Iniciar corte localizado",
+    "sv": "Starta punktklippning",
+    "no": "Start punktklipping",
+    "da": "Start punktklipning",
+    "pl": "Uruchom koszenie punktowe",
+    "ru": "Запустить точечное кошение",
+    "ko": "스팟 컷 시작",
+    "ar": "بدء القص الموضعي"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=mower"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "mower_sensor_control_is_active",
+  "title": {
+    "en": "SensorControl is enabled",
+    "nl": "SensorControl is ingeschakeld",
+    "de": "SensorControl ist aktiviert",
+    "fr": "SensorControl est activé",
+    "it": "SensorControl è abilitato",
+    "es": "SensorControl está habilitado",
+    "sv": "SensorControl är aktiverat",
+    "no": "SensorControl er aktivert",
+    "da": "SensorControl er aktiveret",
+    "pl": "SensorControl jest włączone",
+    "ru": "SensorControl включен",
+    "ko": "SensorControl이 활성화되었습니다",
+    "ar": "التحكم بالاستشعار مفعل"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=mower"
+    }
+  ]
+}

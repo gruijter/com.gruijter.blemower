@@ -1,0 +1,25 @@
+{
+  "id": "alarm_safety_is_active",
+  "title": {
+    "en": "Safety alarm is active",
+    "nl": "Veiligheidsalarm is actief",
+    "de": "Sicherheitsalarm ist aktiv",
+    "fr": "L'alarme de sécurité est active",
+    "it": "L'allarme di sicurezza è attivo",
+    "es": "La alarma de seguridad está activa",
+    "sv": "Säkerhetslarm är aktivt",
+    "no": "Sikkerhetsalarm er aktiv",
+    "da": "Sikkerhedsalarm er aktiv",
+    "pl": "Alarm bezpieczeństwa jest aktywny",
+    "ru": "Сигнал безопасности активен",
+    "ko": "안전 알람이 활성화되었습니다",
+    "ar": "إنذار السلامة نشط"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=mower"
+    }
+  ]
+}

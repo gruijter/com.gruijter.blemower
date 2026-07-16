@@ -1,0 +1,16 @@
+{
+  "pair": {
+    "title": "MQTT Broker-forbindelse",
+    "text": "Indtast venligst forbindelsesoplysningerne til din MQTT-broker. Basis-emnet skal have samme præfiks, som er konfigureret i din plæneklippers BLE-gateway.",
+    "host": "Broker-værtsnavn/IP",
+    "port": "Broker-port",
+    "username": "Brugernavn",
+    "password": "Adgangskode",
+    "topic": "Basis-emne",
+    "incomplete": "Værtsnavn og basis-emne skal udfyldes!",
+    "connect": "FORBIND"
+  },
+  "device": {
+    "connectionError": "MQTT-forbindelse afbrudt, genforbinder..."
+  }
+}

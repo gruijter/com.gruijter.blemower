@@ -1,0 +1,59 @@
+{
+  "id": "set_garage_enabled",
+  "title": {
+    "en": "Set Avoid Garage",
+    "nl": "Stel Garage Vermijden in",
+    "de": "Garage vermeiden einstellen",
+    "fr": "Définir Éviter le garage",
+    "it": "Imposta Evita garage",
+    "es": "Configurar Evitar garaje",
+    "sv": "Ställ in Undvik garage",
+    "no": "Still inn Unngå garasje",
+    "da": "Indstil Undgå garage",
+    "pl": "Ustaw Unikaj garażu",
+    "ru": "Настроить избегание гаража",
+    "ko": "차고 피하기 설정",
+    "ar": "ضبط تجنب المرآب"
+  },
+  "titleFormatted": {
+    "en": "Set Avoid Garage to [[value]]",
+    "nl": "Stel Garage Vermijden in op [[value]]",
+    "de": "Garage vermeiden auf [[value]] einstellen",
+    "fr": "Définir Éviter le garage sur [[value]]",
+    "it": "Imposta Evita garage su [[value]]",
+    "es": "Establecer Evitar garaje en [[value]]",
+    "sv": "Ställ in Undvik garage till [[value]]",
+    "no": "Still inn Unngå garasje til [[value]]",
+    "da": "Indstil Undgå garage til [[value]]",
+    "pl": "Ustaw Unikaj garażu na [[value]]",
+    "ru": "Настроить избегание гаража на [[value]]",
+    "ko": "차고 피하기를 [[value]](으)로 설정",
+    "ar": "ضبط تجنب المرآب على [[value]]"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=mower"
+    },
+    {
+      "type": "checkbox",
+      "name": "value",
+      "title": {
+        "en": "Active",
+        "nl": "Actief",
+        "de": "Aktiv",
+        "fr": "Actif",
+        "it": "Attivo",
+        "es": "Activo",
+        "sv": "Aktiv",
+        "no": "Aktiv",
+        "da": "Aktiv",
+        "pl": "Aktywny",
+        "ru": "Активно",
+        "ko": "활성",
+        "ar": "نشط"
+      }
+    }
+  ]
+}

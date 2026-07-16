@@ -1,0 +1,22 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "SensorControl",
+    "nl": "SensorControl",
+    "de": "SensorControl",
+    "fr": "SensorControl",
+    "it": "SensorControl",
+    "es": "SensorControl",
+    "sv": "SensorControl",
+    "no": "SensorControl",
+    "da": "SensorControl",
+    "pl": "SensorControl",
+    "ru": "SensorControl",
+    "ko": "SensorControl",
+    "ar": "التحكم بالاستشعار"
+  },
+  "getable": true,
+  "setable": true,
+  "uiComponent": "button",
+  "icon": "/assets/capability_icons/mower_sensor_control.svg"
+}

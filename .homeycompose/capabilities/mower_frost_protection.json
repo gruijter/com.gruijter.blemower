@@ -1,0 +1,22 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Frost Protection",
+    "nl": "Vorstbeveiliging",
+    "de": "Frostschutz",
+    "fr": "Protection antigel",
+    "it": "Protezione antigelo",
+    "es": "Protección contra heladas",
+    "sv": "Frostskydd",
+    "no": "Frostbeskyttelse",
+    "da": "Frostbeskyttelse",
+    "pl": "Ochrona przed mrozem",
+    "ru": "Защита от замерзания",
+    "ko": "성에 방지",
+    "ar": "الحماية من الصقيع"
+  },
+  "getable": true,
+  "setable": true,
+  "uiComponent": "button",
+  "icon": "/assets/capability_icons/mower_frost_protection.svg"
+}

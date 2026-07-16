@@ -1,0 +1,52 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Safety Alarm",
+    "nl": "Veiligheidsalarm",
+    "de": "Sicherheitsalarm",
+    "fr": "Alarme de sécurité",
+    "it": "Allarme di sicurezza",
+    "es": "Alarma de seguridad",
+    "sv": "Säkerhetslarm",
+    "no": "Sikkerhetsalarm",
+    "da": "Sikkerhedsalarm",
+    "pl": "Alarm bezpieczeństwa",
+    "ru": "Сигнал безопасности",
+    "ko": "안전 알람",
+    "ar": "إنذار السلامة"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "insights": true,
+  "insightsTitleTrue": {
+    "en": "Safety stop active",
+    "nl": "Veiligheidsstop actief",
+    "de": "Sicherheitsstopp aktiv",
+    "fr": "Arrêt de sécurité actif",
+    "it": "Arresto di sicurezza attivo",
+    "es": "Parada de seguridad activa",
+    "sv": "Säkerhetsstopp aktivt",
+    "no": "Sikkerhetsstopp aktivt",
+    "da": "Sikkerhedsstop aktivt",
+    "pl": "Zatrzymanie bezpieczeństwa aktywne",
+    "ru": "Безопасный останов активен",
+    "ko": "안전 정지 활성화됨",
+    "ar": "توقف السلامة نشط"
+  },
+  "insightsTitleFalse": {
+    "en": "Safety stop cleared",
+    "nl": "Veiligheidsstop hersteld",
+    "de": "Sicherheitsstopp aufgehoben",
+    "fr": "Arrêt de sécurité effacé",
+    "it": "Arresto di sicurezza ripristinato",
+    "es": "Parada de seguridad restablecida",
+    "sv": "Säkerhetsstopp återställt",
+    "no": "Sikkerhetsstopp opphevet",
+    "da": "Sikkerhedsstop ryddet",
+    "pl": "Zatrzymanie bezpieczeństwa usunięte",
+    "ru": "Безопасный останов сброшен",
+    "ko": "안전 정지 해제됨",
+    "ar": "تم إلغاء توقف السلامة"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "id": "mower_error_occurred",
+  "title": {
+    "en": "A mower error occurred",
+    "nl": "Er heeft een maaier fout plaatsgevonden",
+    "de": "Ein Mäherfehler ist aufgetreten",
+    "fr": "Une erreur de tondeuse est survenue",
+    "it": "Si è verificato un errore del tosaerba",
+    "es": "Ocurrió un error en el cortacésped",
+    "sv": "Ett gräsklipparfel har uppstått",
+    "no": "En klipperfeil har oppstått",
+    "da": "Der opstod en fejl på plæneklipperen",
+    "pl": "Wystąpił błąd kosiarki",
+    "ru": "Произошла ошибка косилки",
+    "ko": "잔디 깎는 기계 오류 발생",
+    "ar": "حدث خطأ في جزازة العشب"
+  },
+  "hint": {
+    "en": "Triggers when a new mower error is reported. The error code is available as a flow token.",
+    "nl": "Wordt geactiveerd als een nieuwe maaier fout wordt gemeld. De foutcode is beschikbaar als flow token.",
+    "de": "Wird ausgelöst, wenn ein neuer Mäherfehler gemeldet wird. Der Fehlercode ist als Flow-Token verfügbar.",
+    "fr": "Se déclenche lorsqu'une nouvelle erreur de tondeuse est signalée. Le code d'erreur est disponible sous forme de jeton de flux.",
+    "it": "Si attiva quando viene segnalato un nuovo errore del tosaerba. Il codice di errore è disponibile come token di flusso.",
+    "es": "Se activa cuando se informa de un nuevo error del cortacésped. El código de error está disponible como un token de flujo.",
+    "sv": "Utlöses när ett nytt gräsklipparfel rapporteras. Felkoden finns tillgänglig som en flödestoken.",
+    "no": "Utløses når en ny klipperfeil rapporteres. Feilkoden er tilgjengelig som et flyttoken.",
+    "da": "Udløses, når der rapporteres en ny fejl på plæneklipperen. Fejlkoden er tilgængelig som et flowtoken.",
+    "pl": "Wyzwala się, gdy zgłoszony zostanie nowy błąd kosiarki. Kod błędu jest dostępny jako token przepływu.",
+    "ru": "Активируется при сообщении о новой ошибке косилки. Код ошибки доступен в качестве токена потока.",
+    "ko": "새로운 잔디 깎는 기계 오류가 보고될 때 트리거됩니다. 오류 코드는 플로우 토큰으로 사용할 수 있습니다.",
+    "ar": "يتم التشغيل عند الإبلاغ عن خطأ جديد في جزازة العشب. كود الخطأ متاح كرمز تدفق."
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=mower"
+    }
+  ],
+  "tokens": [
+    {
+      "name": "error",
+      "type": "string",
+      "title": {
+        "en": "Error",
+        "nl": "Fout",
+        "de": "Fehler",
+        "fr": "Erreur",
+        "it": "Errore",
+        "es": "Error",
+        "sv": "Fel",
+        "no": "Feil",
+        "da": "Fejl",
+        "pl": "Błąd",
+        "ru": "Ошибка",
+        "ko": "오류",
+        "ar": "خطأ"
+      },
+      "example": "OUTSIDE_WORKING_AREA"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "id": "mower_charging_cycles_below",
+  "title": {
+    "en": "Charging cycles is less than",
+    "nl": "Aantal laadcycli is minder dan",
+    "de": "Ladezyklen sind weniger als",
+    "fr": "Les cycles de charge sont inférieurs à",
+    "it": "I cicli di ricarica sono inferiori a",
+    "es": "Los ciclos de carga son inferiores a",
+    "sv": "Antal laddningscykler är mindre än",
+    "no": "Ladesykluser er mindre enn",
+    "da": "Antal opladningscyklusser er mindre end",
+    "pl": "Liczba cykli ładowania jest mniejsza niż",
+    "ru": "Количество циклов зарядки меньше",
+    "ko": "충전 사이클이 다음보다 적음",
+    "ar": "دورات الشحن أقل من"
+  },
+  "titleFormatted": {
+    "en": "Charging cycles is less than [[cycles]]",
+    "nl": "Aantal laadcycli is minder dan [[cycles]]",
+    "de": "Ladezyklen sind weniger als [[cycles]]",
+    "fr": "Les cycles de charge sont inférieurs à [[cycles]]",
+    "it": "I cicli di ricarica sono inferiori a [[cycles]]",
+    "es": "Los ciclos de carga son inferiores a [[cycles]]",
+    "sv": "Antal laddningscykler är mindre än [[cycles]]",
+    "no": "Ladesykluser er mindre enn [[cycles]]",
+    "da": "Antal opladningscyklusser er mindre end [[cycles]]",
+    "pl": "Liczba cykli ładowania jest mniejsza niż [[cycles]]",
+    "ru": "Количество циклов зарядки меньше [[cycles]]",
+    "ko": "충전 사이클이 [[cycles]] 미만입니다",
+    "ar": "دورات الشحن أقل من [[cycles]]"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=mower"
+    },
+    {
+      "type": "number",
+      "name": "cycles",
+      "title": {
+        "en": "Cycles",
+        "nl": "Cycli",
+        "de": "Zyklen",
+        "fr": "Cycles",
+        "it": "Cicli",
+        "es": "Ciclos",
+        "sv": "Cykler",
+        "no": "Sykluser",
+        "da": "Cyklusser",
+        "pl": "Cykle",
+        "ru": "Циклы",
+        "ko": "사이클",
+        "ar": "الدورات"
+      },
+      "min": 0,
+      "max": 100000,
+      "step": 1,
+      "placeholder": {
+        "en": "100",
+        "nl": "100",
+        "de": "100",
+        "fr": "100",
+        "it": "100",
+        "es": "100",
+        "sv": "100",
+        "no": "100",
+        "da": "100",
+        "pl": "100",
+        "ru": "100",
+        "ko": "100",
+        "ar": "100"
+      }
+    }
+  ]
+}

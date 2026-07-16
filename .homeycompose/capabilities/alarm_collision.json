@@ -1,0 +1,53 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Collision Alarm",
+    "nl": "Botsing Alarm",
+    "de": "Kollisionsalarm",
+    "fr": "Alarme de collision",
+    "it": "Allarme di collisione",
+    "es": "Alarma de colisión",
+    "sv": "Kollisionslarm",
+    "no": "Kollisjonsalarm",
+    "da": "Kollisionsalarm",
+    "pl": "Alarm kolizji",
+    "ru": "Сигнал столкновения",
+    "ko": "충돌 알람",
+    "ar": "إنذار الاصطدام"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "icon": "/assets/capability_icons/alarm_collision.svg",
+  "insights": true,
+  "insightsTitleTrue": {
+    "en": "Collision detected",
+    "nl": "Botsing gedetecteerd",
+    "de": "Kollision erkannt",
+    "fr": "Collision détectée",
+    "it": "Collisione rilevata",
+    "es": "Colisión detectada",
+    "sv": "Kollision upptäckt",
+    "no": "Kollisjon oppdaget",
+    "da": "Kollision registreret",
+    "pl": "Wykryto kolizję",
+    "ru": "Обнаружено столкновение",
+    "ko": "충돌 감지됨",
+    "ar": "تم اكتشاف اصطدام"
+  },
+  "insightsTitleFalse": {
+    "en": "Collision cleared",
+    "nl": "Geen botsing meer",
+    "de": "Kollision behoben",
+    "fr": "Collision effacée",
+    "it": "Collisione risolta",
+    "es": "Colisión resuelta",
+    "sv": "Kollision åtgärdad",
+    "no": "Kollisjon klarert",
+    "da": "Kollision ryddet",
+    "pl": "Kolizja usunięta",
+    "ru": "Столкновение устранено",
+    "ko": "충돌 해결됨",
+    "ar": "تم مسح الاصطدام"
+  }
+}

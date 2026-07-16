@@ -1,0 +1,16 @@
+{
+  "pair": {
+    "title": "Połączenie z Brokerem MQTT",
+    "text": "Wprowadź dane połączenia dla swojego brokera MQTT. Temat bazowy powinien mieć ten sam prefiks, co skonfigurowany w bramce BLE kosiarki.",
+    "host": "Nazwa hosta/IP brokera",
+    "port": "Port brokera",
+    "username": "Nazwa użytkownika",
+    "password": "Hasło",
+    "topic": "Temat bazowy",
+    "incomplete": "Host i temat bazowy muszą być wypełnione!",
+    "connect": "POŁĄCZ"
+  },
+  "device": {
+    "connectionError": "Utracono połączenie MQTT, ponowne łączenie..."
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Remaining Mow Time",
+    "nl": "Resterende Maaitijd",
+    "de": "Verbleibende Mähzeit",
+    "fr": "Temps de tonte restant",
+    "it": "Tempo di taglio rimanente",
+    "es": "Tiempo de corte restante",
+    "sv": "Återstående klipptid",
+    "no": "Gjenværende klippetid",
+    "da": "Resterende klippetid",
+    "pl": "Pozostały czas koszenia",
+    "ru": "Оставшееся время кошения",
+    "ko": "남은 잔디 깎기 시간",
+    "ar": "وقت القص المتبقي"
+  },
+  "units": {
+    "en": "min",
+    "nl": "min",
+    "de": "min",
+    "fr": "min",
+    "it": "min",
+    "es": "min",
+    "sv": "min",
+    "no": "min",
+    "da": "min",
+    "pl": "min",
+    "ru": "min",
+    "ko": "min",
+    "ar": "min"
+  },
+  "decimals": 0,
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "insights": false,
+  "icon": "/assets/capability_icons/mower_remaining_time.svg"
+}

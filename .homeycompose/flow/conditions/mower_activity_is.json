@@ -1,0 +1,184 @@
+{
+  "id": "mower_activity_is",
+  "title": {
+    "en": "The mower activity is",
+    "nl": "De maaier activiteit is",
+    "de": "Die Mäheraktivität ist",
+    "fr": "L'activité de la tondeuse est",
+    "it": "L'attività del tosaerba è",
+    "es": "La actividad del cortacésped es",
+    "sv": "Gräsklipparaktiviteten är",
+    "no": "Klipperaktiviteten er",
+    "da": "Plæneklipperaktiviteten er",
+    "pl": "Aktywność kosiarki to",
+    "ru": "Активность косилки:",
+    "ko": "잔디 깎는 기계 활동은",
+    "ar": "نشاط جزازة العشب هو"
+  },
+  "titleFormatted": {
+    "en": "Mower activity is [[activity]]",
+    "nl": "Maaier activiteit is [[activity]]",
+    "de": "Mäheraktivität ist [[activity]]",
+    "fr": "L'activité de la tondeuse est [[activity]]",
+    "it": "L'attività del tosaerba è [[activity]]",
+    "es": "La actividad del cortacésped es [[activity]]",
+    "sv": "Gräsklipparaktivitet är [[activity]]",
+    "no": "Klipperaktivitet er [[activity]]",
+    "da": "Plæneklipperaktivitet er [[activity]]",
+    "pl": "Aktywność kosiarki to [[activity]]",
+    "ru": "Активность косилки: [[activity]]",
+    "ko": "잔디 깎는 기계의 활동은 [[activity]]입니다",
+    "ar": "نشاط جزازة العشب هو [[activity]]"
+  },
+  "hint": {
+    "en": "Checks if the mower activity matches the selected value.",
+    "nl": "Controleert of de maaier activiteit overeenkomt met de geselecteerde waarde.",
+    "de": "Prüft, ob die Mäheraktivität mit dem ausgewählten Wert übereinstimmt.",
+    "fr": "Vérifie si l'activité de la tondeuse correspond à la valeur sélectionnée.",
+    "it": "Verifica se l'attività del tosaerba corrisponde al valore selezionato.",
+    "es": "Comprueba si la actividad del cortacésped coincide con el valor seleccionado.",
+    "sv": "Kontrollerar om gräsklipparens aktivitet matchar det valda värdet.",
+    "no": "Sjekker om klipperens aktivitet samsvarer med den valgte verdien.",
+    "da": "Kontrollerer, om plæneklipperens aktivitet matcher den valgte værdi.",
+    "pl": "Sprawdza, czy aktywność kosiarki jest zgodna z wybraną wartością.",
+    "ru": "Проверяет, соответствует ли активность косилки выбранному значению.",
+    "ko": "잔디 깎는 기계의 활동이 선택한 값과 일치하는지 확인합니다.",
+    "ar": "التحقق مما إذا كان نشاط جزازة العشب يتطابق مع القيمة المحددة."
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=mower"
+    },
+    {
+      "type": "dropdown",
+      "name": "activity",
+      "title": {
+        "en": "Activity",
+        "nl": "Activiteit",
+        "de": "Aktivität",
+        "fr": "Activité",
+        "it": "Attività",
+        "es": "Actividad",
+        "sv": "Aktivitet",
+        "no": "Aktivitet",
+        "da": "Aktivitet",
+        "pl": "Aktywność",
+        "ru": "Активность",
+        "ko": "활동",
+        "ar": "النشاط"
+      },
+      "values": [
+        {
+          "id": "MOWING",
+          "label": {
+            "en": "Mowing",
+            "nl": "Aan het maaien",
+            "de": "Mähen",
+            "fr": "Tonte",
+            "it": "Taglio",
+            "es": "Cortando",
+            "sv": "Klipper",
+            "no": "Klipper",
+            "da": "Klipper",
+            "pl": "Koszenie",
+            "ru": "Кошение",
+            "ko": "잔디 깎는 중",
+            "ar": "قص العشب"
+          }
+        },
+        {
+          "id": "GOING_HOME",
+          "label": {
+            "en": "Going home",
+            "nl": "Naar dok",
+            "de": "Fährt nach Hause",
+            "fr": "Retour à la base",
+            "it": "Ritorno alla base",
+            "es": "Volviendo a casa",
+            "sv": "Går hem",
+            "no": "Går hjem",
+            "da": "Går hjem",
+            "pl": "Powrót do bazy",
+            "ru": "Возвращение домой",
+            "ko": "귀가 중",
+            "ar": "العودة للمحطة"
+          }
+        },
+        {
+          "id": "CHARGING",
+          "label": {
+            "en": "Charging",
+            "nl": "Aan het laden",
+            "de": "Wird geladen",
+            "fr": "En charge",
+            "it": "In carica",
+            "es": "Cargando",
+            "sv": "Laddar",
+            "no": "Lader",
+            "da": "Oplader",
+            "pl": "Ładowanie",
+            "ru": "Зарядка",
+            "ko": "충전 중",
+            "ar": "شحن"
+          }
+        },
+        {
+          "id": "LEAVING",
+          "label": {
+            "en": "Leaving",
+            "nl": "Vertrekt",
+            "de": "Verlassen",
+            "fr": "Départ",
+            "it": "In uscita",
+            "es": "Saliendo",
+            "sv": "Lämnar",
+            "no": "Forlater",
+            "da": "Forlader",
+            "pl": "Wychodzenie",
+            "ru": "Выезд",
+            "ko": "출발 중",
+            "ar": "مغادرة"
+          }
+        },
+        {
+          "id": "PARKED",
+          "label": {
+            "en": "Parked",
+            "nl": "Geparkeerd",
+            "de": "Geparkt",
+            "fr": "Stationné",
+            "it": "Parcheggiato",
+            "es": "Estacionado",
+            "sv": "Parkerad",
+            "no": "Parkert",
+            "da": "Parkeret",
+            "pl": "Zaparkowana",
+            "ru": "Припаркована",
+            "ko": "주차됨",
+            "ar": "متوقفة"
+          }
+        },
+        {
+          "id": "STOPPED_IN_GARDEN",
+          "label": {
+            "en": "Stopped in garden",
+            "nl": "Gestopt in tuin",
+            "de": "Im Garten gestoppt",
+            "fr": "Arrêté dans le jardin",
+            "it": "Fermato in giardino",
+            "es": "Detenido en el jardín",
+            "sv": "Stoppad i trädgården",
+            "no": "Stoppet i hagen",
+            "da": "Stoppet i haven",
+            "pl": "Zatrzymany w ogrodzie",
+            "ru": "Остановлен в саду",
+            "ko": "정원에 멈춤",
+            "ar": "متوقف في الحديقة"
+          }
+        }
+      ]
+    }
+  ]
+}

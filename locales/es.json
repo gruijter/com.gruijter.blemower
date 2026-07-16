@@ -1,0 +1,16 @@
+{
+  "pair": {
+    "title": "Conexión al Broker MQTT",
+    "text": "Introduzca los detalles de conexión para su Broker MQTT. El tema base debe tener el mismo prefijo que el configurado en la puerta de enlace BLE del cortacésped.",
+    "host": "Nombre de host/IP del Broker",
+    "port": "Puerto del Broker",
+    "username": "Nombre de usuario",
+    "password": "Contraseña",
+    "topic": "Tema base",
+    "incomplete": "¡El host y el tema base deben estar completos!",
+    "connect": "CONECTAR"
+  },
+  "device": {
+    "connectionError": "Conexión MQTT perdida, reconectando..."
+  }
+}

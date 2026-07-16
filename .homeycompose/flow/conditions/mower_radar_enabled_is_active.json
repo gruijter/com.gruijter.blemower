@@ -1,0 +1,25 @@
+{
+  "id": "mower_radar_enabled_is_active",
+  "title": {
+    "en": "Radar is enabled",
+    "nl": "Radar is ingeschakeld",
+    "de": "Radar ist aktiviert",
+    "fr": "Le radar est activé",
+    "it": "Il radar è abilitato",
+    "es": "El radar está habilitado",
+    "sv": "Radarn är aktiverad",
+    "no": "Radar er aktivert",
+    "da": "Radar er aktiveret",
+    "pl": "Radar jest włączony",
+    "ru": "Радар включен",
+    "ko": "레이더가 활성화되었습니다",
+    "ar": "الرادار مفعل"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=mower"
+    }
+  ]
+}

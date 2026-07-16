@@ -1,0 +1,24 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Collisions",
+    "nl": "Botsingen",
+    "de": "Kollisionen",
+    "fr": "Collisions",
+    "it": "Collisioni",
+    "es": "Colisiones",
+    "sv": "Kollisioner",
+    "no": "Kollisjoner",
+    "da": "Kollisioner",
+    "pl": "Kolizje",
+    "ru": "Столкновения",
+    "ko": "충돌 횟수",
+    "ar": "الاصطدامات"
+  },
+  "min": 0,
+  "decimals": 0,
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "icon": "/assets/capability_icons/mower_collisions.svg"
+}

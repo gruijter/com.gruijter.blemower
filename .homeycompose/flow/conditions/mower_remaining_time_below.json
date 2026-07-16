@@ -1,0 +1,92 @@
+{
+  "id": "mower_remaining_time_below",
+  "title": {
+    "en": "Remaining mow time is less than",
+    "nl": "Resterende maaitijd is minder dan",
+    "de": "Verbleibende Mähzeit ist weniger als",
+    "fr": "Le temps de tonte restant est inférieur à",
+    "it": "Il tempo di taglio rimanente è inferiore a",
+    "es": "El tiempo de corte restante es inferior a",
+    "sv": "Återstående klipptid är mindre än",
+    "no": "Gjenværende klippetid er mindre enn",
+    "da": "Resterende klippetid er mindre end",
+    "pl": "Pozostały czas koszenia jest krótszy niż",
+    "ru": "Оставшееся время кошения меньше",
+    "ko": "남은 잔디 깎기 시간이 다음보다 적음",
+    "ar": "وقت القص المتبقي أقل من"
+  },
+  "titleFormatted": {
+    "en": "Remaining mow time is less than [[minutes]] min",
+    "nl": "Resterende maaitijd is minder dan [[minutes]] min",
+    "de": "Verbleibende Mähzeit ist weniger als [[minutes]] Min.",
+    "fr": "Le temps de tonte restant est inférieur à [[minutes]] min",
+    "it": "Il tempo di taglio rimanente è inferiore a [[minutes]] min",
+    "es": "El tiempo de corte restante es inferior a [[minutes]] min",
+    "sv": "Återstående klipptid är mindre än [[minutes]] min",
+    "no": "Gjenværende klippetid er mindre enn [[minutes]] min",
+    "da": "Resterende klippetid er mindre end [[minutes]] min",
+    "pl": "Pozostały czas koszenia jest krótszy niż [[minutes]] min",
+    "ru": "Оставшееся время кошения меньше [[minutes]] мин",
+    "ko": "남은 잔디 깎기 시간이 [[minutes]] 분 미만입니다",
+    "ar": "وقت القص المتبقي أقل من [[minutes]] دقيقة"
+  },
+  "hint": {
+    "en": "Checks if the remaining mowing time is below the specified number of minutes.",
+    "nl": "Controleert of de resterende maaitijd onder het opgegeven aantal minuten is.",
+    "de": "Prüft, ob die verbleibende Mähzeit unter der angegebenen Anzahl von Minuten liegt.",
+    "fr": "Vérifie si le temps de tonte restant est inférieur au nombre de minutes spécifié.",
+    "it": "Verifica se il tempo di taglio rimanente è inferiore al numero di minuti specificato.",
+    "es": "Comprueba si el tiempo de corte restante es inferior al número especificado de minutos.",
+    "sv": "Kontrollerar om den återstående klipptiden är under det angivna antalet minuter.",
+    "no": "Sjekker om gjenværende klippetid er under det angitte antall minutter.",
+    "da": "Kontrollerer, om den resterende klippetid er under det angivne antal minutter.",
+    "pl": "Sprawdza, czy pozostały czas koszenia jest krótszy niż określona liczba minut.",
+    "ru": "Проверяет, меньше ли оставшееся время кошения указанного количества минут.",
+    "ko": "남은 잔디 깎기 시간이 지정된 분 미만인지 확인합니다.",
+    "ar": "التحقق مما إذا كان وقت القص المتبقي أقل من عدد الدقائق المحدد."
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=mower"
+    },
+    {
+      "type": "number",
+      "name": "minutes",
+      "title": {
+        "en": "Minutes",
+        "nl": "Minuten",
+        "de": "Minuten",
+        "fr": "Minutes",
+        "it": "Minuti",
+        "es": "Minutos",
+        "sv": "Minuter",
+        "no": "Minutter",
+        "da": "Minutter",
+        "pl": "Minuty",
+        "ru": "Минуты",
+        "ko": "분",
+        "ar": "دقائق"
+      },
+      "min": 1,
+      "max": 480,
+      "step": 1,
+      "placeholder": {
+        "en": "30",
+        "nl": "30",
+        "de": "30",
+        "fr": "30",
+        "it": "30",
+        "es": "30",
+        "sv": "30",
+        "no": "30",
+        "da": "30",
+        "pl": "30",
+        "ru": "30",
+        "ko": "30",
+        "ar": "30"
+      }
+    }
+  ]
+}

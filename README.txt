@@ -1,0 +1,3 @@
+Connect your Bluetooth-enabled Gardena (Minimo, City, Life) or Husqvarna (Automower, Aspire) robotic lawnmower locally to Homey Pro via MQTT. No cloud APIs required!
+
+Keep your mower safe and your lawn healthy by automating your mowing schedule in Homey. Easily pause or dock the mower when it starts raining, pause operations when family or pets are in the garden, charge only during hours with cheap dynamic electricity rates, or trigger home security alerts when the mower is lifted or flipped. A BLE to MQTT gateway (such as a Raspberry Pi running Docker) is required. See the community forum for full instructions.

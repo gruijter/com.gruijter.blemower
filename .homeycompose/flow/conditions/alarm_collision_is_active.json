@@ -1,0 +1,25 @@
+{
+  "id": "alarm_collision_is_active",
+  "title": {
+    "en": "Collision alarm is active",
+    "nl": "Botsing alarm is actief",
+    "de": "Kollisionsalarm ist aktiv",
+    "fr": "L'alarme de collision est active",
+    "it": "L'allarme collisione è attivo",
+    "es": "La alarma de colisión está activa",
+    "sv": "Kollisionslarm är aktivt",
+    "no": "Kollisjonsalarm er aktiv",
+    "da": "Kollisionsalarm er aktiv",
+    "pl": "Alarm kolizji jest aktywny",
+    "ru": "Сигнал столкновения активен",
+    "ko": "충돌 알람이 활성화되었습니다",
+    "ar": "إنذار الاصطدام نشط"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=mower"
+    }
+  ]
+}

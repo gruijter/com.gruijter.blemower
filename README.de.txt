@@ -1,0 +1,3 @@
+Verbinden Sie Ihren Bluetooth-fähigen Gardena (Minimo, City, Life) oder Husqvarna (Automower, Aspire) Mähroboter lokal über MQTT mit Homey Pro. Keine Cloud-APIs erforderlich!
+
+Halten Sie Ihren Mäher sicher und Ihren Rasen gesund, indem Sie Ihren Mähplan in Homey automatisieren. Lassen Sie den Mäher bei Regen einfach pausieren oder andocken, unterbrechen Sie den Betrieb, wenn sich Familie oder Haustiere im Garten befinden, laden Sie den Mäher nur zu Zeiten mit günstigen dynamischen Stromtarifen auf oder lösen Sie Sicherheitsalarme aus, wenn der Mäher angehoben oder umgekippt wird. Ein BLE-zu-MQTT-Gateway (wie ein Raspberry Pi mit Docker) ist erforderlich. Weitere Anweisungen finden Sie im Community-Forum.

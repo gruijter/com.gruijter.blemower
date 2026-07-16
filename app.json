@@ -1,0 +1,3796 @@
+{
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
+  "id": "com.gruijter.blemower",
+  "version": "1.0.0",
+  "compatibility": ">=12.4.0",
+  "sdk": 3,
+  "brandColor": "#EC520D",
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "BLE Mower MQTT"
+  },
+  "description": {
+    "en": "Connect Gardena Minimo and Husqvarna BLE mowers via MQTT",
+    "nl": "Verbind Gardena Minimo en Husqvarna BLE maaiers via MQTT",
+    "de": "Gardena Minimo und Husqvarna BLE-Mäher über MQTT verbinden",
+    "fr": "Connectez les tondeuses BLE Gardena Minimo et Husqvarna via MQTT",
+    "it": "Collega i tosaerba BLE Gardena Minimo e Husqvarna tramite MQTT",
+    "es": "Conecte los cortacéspedes BLE Gardena Minimo y Husqvarna a través de MQTT",
+    "sv": "Anslut Gardena Minimo och Husqvarna BLE-gräsklippare via MQTT",
+    "no": "Koble til Gardena Minimo og Husqvarna BLE-klippere via MQTT",
+    "da": "Forbind Gardena Minimo og Husqvarna BLE-plæneklippere via MQTT",
+    "pl": "Połącz kosiarki BLE Gardena Minimo i Husqvarna przez MQTT",
+    "ru": "Подключение косилок Gardena Minimo и Husqvarna BLE через MQTT",
+    "ko": "MQTT를 통해 Gardena Minimo 및 Husqvarna BLE 잔디 깎는 기계 연결",
+    "ar": "توصيل جزازات Gardena Minimo و Husqvarna BLE عبر MQTT"
+  },
+  "category": [
+    "appliances"
+  ],
+  "tags": {
+    "en": [
+      "Mower",
+      "Husqvarna",
+      "Gardena",
+      "Bluetooth",
+      "BLE",
+      "Bluetooth Low Energy",
+      "MQTT",
+      "Lawn Mower",
+      "Lawnmower",
+      "Automower",
+      "Minimo",
+      "Sileno",
+      "Aspire",
+      "Connect@Home",
+      "Connect",
+      "Garden"
+    ],
+    "nl": [
+      "Maaier",
+      "Grasmaaier",
+      "Robotmaaier",
+      "Robotgrasmaaier",
+      "Husqvarna",
+      "Gardena",
+      "Bluetooth",
+      "BLE",
+      "MQTT",
+      "Automower",
+      "Minimo",
+      "Sileno",
+      "Aspire",
+      "Connect@Home",
+      "Tuin",
+      "Gazon"
+    ],
+    "de": [
+      "Mäher",
+      "Rasenmäher",
+      "Mähroboter",
+      "Rasenmähroboter",
+      "Husqvarna",
+      "Gardena",
+      "Bluetooth",
+      "BLE",
+      "MQTT",
+      "Automower",
+      "Minimo",
+      "Sileno",
+      "Aspire",
+      "Connect@Home",
+      "Garten",
+      "Rasen"
+    ],
+    "fr": [
+      "Tondeuse",
+      "Tondeuse à gazon",
+      "Robot tondeuse",
+      "Tondeuse robot",
+      "Husqvarna",
+      "Gardena",
+      "Bluetooth",
+      "BLE",
+      "MQTT",
+      "Automower",
+      "Minimo",
+      "Sileno",
+      "Aspire",
+      "Connect@Home",
+      "Jardin",
+      "Pelouse"
+    ],
+    "it": [
+      "Tosaerba",
+      "Rasaerba",
+      "Robot tagliaerba",
+      "Tagliaerba",
+      "Husqvarna",
+      "Gardena",
+      "Bluetooth",
+      "BLE",
+      "MQTT",
+      "Automower",
+      "Minimo",
+      "Sileno",
+      "Aspire",
+      "Connect@Home",
+      "Giardino",
+      "Prato"
+    ],
+    "es": [
+      "Cortacésped",
+      "Robot cortacésped",
+      "Husqvarna",
+      "Gardena",
+      "Bluetooth",
+      "BLE",
+      "MQTT",
+      "Automower",
+      "Minimo",
+      "Sileno",
+      "Aspire",
+      "Connect@Home",
+      "Jardín",
+      "Césped"
+    ],
+    "sv": [
+      "Gräsklippare",
+      "Robotgräsklippare",
+      "Husqvarna",
+      "Gardena",
+      "Bluetooth",
+      "BLE",
+      "MQTT",
+      "Automower",
+      "Minimo",
+      "Sileno",
+      "Aspire",
+      "Connect@Home",
+      "Trädgård",
+      "Gräsmatta"
+    ],
+    "no": [
+      "Klipper",
+      "Gressklipper",
+      "Robotgressklipper",
+      "Husqvarna",
+      "Gardena",
+      "Bluetooth",
+      "BLE",
+      "MQTT",
+      "Automower",
+      "Minimo",
+      "Sileno",
+      "Aspire",
+      "Connect@Home",
+      "Hage",
+      "Plen"
+    ],
+    "da": [
+      "Plæneklipper",
+      "Robotplæneklipper",
+      "Husqvarna",
+      "Gardena",
+      "Bluetooth",
+      "BLE",
+      "MQTT",
+      "Automower",
+      "Minimo",
+      "Sileno",
+      "Aspire",
+      "Connect@Home",
+      "Have",
+      "Græsplæne"
+    ],
+    "pl": [
+      "Kosiarka",
+      "Robot koszący",
+      "Kosiarka samojezdna",
+      "Husqvarna",
+      "Gardena",
+      "Bluetooth",
+      "BLE",
+      "MQTT",
+      "Automower",
+      "Minimo",
+      "Sileno",
+      "Aspire",
+      "Connect@Home",
+      "Ogród",
+      "Trawnik"
+    ],
+    "ru": [
+      "Косилка",
+      "Газонокосилка",
+      "Робот-газонокосилка",
+      "Husqvarna",
+      "Gardena",
+      "Bluetooth",
+      "BLE",
+      "MQTT",
+      "Automower",
+      "Minimo",
+      "Sileno",
+      "Aspire",
+      "Connect@Home",
+      "Сад",
+      "Газон"
+    ],
+    "ko": [
+      "잔디 깎는 기계",
+      "로봇 잔디깎이",
+      "잔디깎이",
+      "Husqvarna",
+      "Gardena",
+      "Bluetooth",
+      "BLE",
+      "MQTT",
+      "Automower",
+      "Minimo",
+      "Sileno",
+      "Aspire",
+      "Connect@Home",
+      "정원",
+      "잔디"
+    ],
+    "ar": [
+      "جزازة",
+      "جزازة العشب",
+      "روبوت جز العشب",
+      "Husqvarna",
+      "Gardena",
+      "Bluetooth",
+      "BLE",
+      "MQTT",
+      "Automower",
+      "Minimo",
+      "Sileno",
+      "Aspire",
+      "Connect@Home",
+      "حديقة",
+      "عشب"
+    ]
+  },
+  "permissions": [],
+  "images": {
+    "small": "/assets/images/small.jpg",
+    "large": "/assets/images/large.jpg",
+    "xlarge": "/assets/images/xlarge.jpg"
+  },
+  "author": {
+    "name": "Robin de Gruijter",
+    "email": "gruijter@hotmail.com"
+  },
+  "copyright": "Robin de Gruijter (gruijter@hotmail.com)",
+  "license": "GPL-3.0-or-later",
+  "homeyCommunityTopicId": 157241,
+  "support": "https://github.com/gruijter/com.gruijter.blemower/issues",
+  "flow": {
+    "triggers": [
+      {
+        "id": "mower_activity_changed",
+        "title": {
+          "en": "The mower activity changed",
+          "nl": "De maaier activiteit is veranderd",
+          "de": "Die Mäheraktivität hat sich geändert",
+          "fr": "L'activité de la tondeuse a changé",
+          "it": "L'attività del tosaerba è cambiata",
+          "es": "La actividad del cortacésped cambió",
+          "sv": "Gräsklipparaktiviteten ändrades",
+          "no": "Klipperaktiviteten ble endret",
+          "da": "Plæneklipperens aktivitet ændrede sig",
+          "pl": "Aktywność kosiarki uległa zmianie",
+          "ru": "Активность косилки изменилась",
+          "ko": "잔디 깎는 기계 활동 변경됨",
+          "ar": "تغير نشاط جزازة العشب"
+        },
+        "hint": {
+          "en": "Triggers when the mower activity changes. The new activity is available as a flow token.",
+          "nl": "Wordt geactiveerd als de maaier activiteit verandert. De nieuwe activiteit is beschikbaar als flow token.",
+          "de": "Wird ausgelöst, wenn sich die Mäheraktivität ändert. Die neue Aktivität ist als Flow-Token verfügbar.",
+          "fr": "Se déclenche lorsque l'activité de la tondeuse change. La nouvelle activité est disponible sous forme de jeton de flux.",
+          "it": "Si attiva quando l'attività del tosaerba cambia. La nuova attività è disponibile come token di flusso.",
+          "es": "Se activa cuando cambia la actividad del cortacésped. La nueva actividad está disponible como un token de flujo.",
+          "sv": "Utlöses när gräsklipparens aktivitet ändras. Den nya aktiviteten finns tillgänglig som en flödestoken.",
+          "no": "Utløses når klipperens aktivitet endres. Den nye aktiviteten er tilgjengelig som et flyttoken.",
+          "da": "Udløses, når plæneklipperens aktivitet ændrer sig. Den nye aktivitet er tilgængelig som et flowtoken.",
+          "pl": "Wyzwala się, gdy zmienia się aktywność kosiarki. Nowa aktywność jest dostępna jako token przepływu.",
+          "ru": "Активируется при изменении активности косилки. Новая активность доступна в качестве токена потока.",
+          "ko": "잔디 깎는 기계의 활동이 변경될 때 트리거됩니다. 새로운 활동은 플로우 토큰으로 사용할 수 있습니다.",
+          "ar": "يتم التشغيل عند تغير نشاط جزازة العشب. النشاط الجديد متاح كرمز تدفق."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mower"
+          }
+        ],
+        "tokens": [
+          {
+            "name": "activity",
+            "type": "string",
+            "title": {
+              "en": "Activity",
+              "nl": "Activiteit",
+              "de": "Aktivität",
+              "fr": "Activité",
+              "it": "Attività",
+              "es": "Actividad",
+              "sv": "Aktivitet",
+              "no": "Aktivitet",
+              "da": "Aktivitet",
+              "pl": "Aktywność",
+              "ru": "Активность",
+              "ko": "활동",
+              "ar": "النشاط"
+            },
+            "example": "MOWING"
+          }
+        ]
+      },
+      {
+        "id": "mower_error_occurred",
+        "title": {
+          "en": "A mower error occurred",
+          "nl": "Er heeft een maaier fout plaatsgevonden",
+          "de": "Ein Mäherfehler ist aufgetreten",
+          "fr": "Une erreur de tondeuse est survenue",
+          "it": "Si è verificato un errore del tosaerba",
+          "es": "Ocurrió un error en el cortacésped",
+          "sv": "Ett gräsklipparfel har uppstått",
+          "no": "En klipperfeil har oppstått",
+          "da": "Der opstod en fejl på plæneklipperen",
+          "pl": "Wystąpił błąd kosiarki",
+          "ru": "Произошла ошибка косилки",
+          "ko": "잔디 깎는 기계 오류 발생",
+          "ar": "حدث خطأ في جزازة العشب"
+        },
+        "hint": {
+          "en": "Triggers when a new mower error is reported. The error code is available as a flow token.",
+          "nl": "Wordt geactiveerd als een nieuwe maaier fout wordt gemeld. De foutcode is beschikbaar als flow token.",
+          "de": "Wird ausgelöst, wenn ein neuer Mäherfehler gemeldet wird. Der Fehlercode ist als Flow-Token verfügbar.",
+          "fr": "Se déclenche lorsqu'une nouvelle erreur de tondeuse est signalée. Le code d'erreur est disponible sous forme de jeton de flux.",
+          "it": "Si attiva quando viene segnalato un nuovo errore del tosaerba. Il codice di errore è disponibile come token di flusso.",
+          "es": "Se activa cuando se informa de un nuevo error del cortacésped. El código de error está disponible como un token de flujo.",
+          "sv": "Utlöses när ett nytt gräsklipparfel rapporteras. Felkoden finns tillgänglig som en flödestoken.",
+          "no": "Utløses når en ny klipperfeil rapporteres. Feilkoden er tilgjengelig som et flyttoken.",
+          "da": "Udløses, når der rapporteres en ny fejl på plæneklipperen. Fejlkoden er tilgængelig som et flowtoken.",
+          "pl": "Wyzwala się, gdy zgłoszony zostanie nowy błąd kosiarki. Kod błędu jest dostępny jako token przepływu.",
+          "ru": "Активируется при сообщении о новой ошибке косилки. Код ошибки доступен в качестве токена потока.",
+          "ko": "새로운 잔디 깎는 기계 오류가 보고될 때 트리거됩니다. 오류 코드는 플로우 토큰으로 사용할 수 있습니다.",
+          "ar": "يتم التشغيل عند الإبلاغ عن خطأ جديد في جزازة العشب. كود الخطأ متاح كرمز تدفق."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mower"
+          }
+        ],
+        "tokens": [
+          {
+            "name": "error",
+            "type": "string",
+            "title": {
+              "en": "Error",
+              "nl": "Fout",
+              "de": "Fehler",
+              "fr": "Erreur",
+              "it": "Errore",
+              "es": "Error",
+              "sv": "Fel",
+              "no": "Feil",
+              "da": "Fejl",
+              "pl": "Błąd",
+              "ru": "Ошибка",
+              "ko": "오류",
+              "ar": "خطأ"
+            },
+            "example": "OUTSIDE_WORKING_AREA"
+          }
+        ]
+      },
+      {
+        "id": "mower_state_changed",
+        "title": {
+          "en": "The mower state changed to",
+          "nl": "De maaier status veranderd naar",
+          "de": "Der Mäherzustand hat sich geändert in",
+          "fr": "L'état de la tondeuse a changé en",
+          "it": "Lo stato del tosaerba è cambiato in",
+          "es": "El estado del cortacésped cambió a",
+          "sv": "Gräsklipparens tillstånd ändrades till",
+          "no": "Klippertilstanden ble endret til",
+          "da": "Plæneklipperens tilstand ændrede sig til",
+          "pl": "Stan kosiarki zmienił się na",
+          "ru": "Состояние косилки изменилось на",
+          "ko": "잔디 깎는 기계 상태가 다음으로 변경됨",
+          "ar": "تغيرت حالة جزازة العشب إلى"
+        },
+        "titleFormatted": {
+          "en": "Mower state changed to [[state]]",
+          "nl": "Maaier status veranderd naar [[state]]",
+          "de": "Mäherzustand geändert in [[state]]",
+          "fr": "L'état de la tondeuse a changé en [[state]]",
+          "it": "Stato del tosaerba modificato in [[state]]",
+          "es": "El estado del cortacésped cambió a [[state]]",
+          "sv": "Gräsklipparens tillstånd ändrades till [[state]]",
+          "no": "Klippertilstand endret til [[state]]",
+          "da": "Plæneklipperens tilstand ændret til [[state]]",
+          "pl": "Stan kosiarki zmienił się na [[state]]",
+          "ru": "Состояние косилки изменилось на [[state]]",
+          "ko": "잔디 깎는 기계의 상태가 [[state]](으)로 변경되었습니다",
+          "ar": "تغيرت حالة جزازة العشب إلى [[state]]"
+        },
+        "hint": {
+          "en": "Triggers when the mower switches between mowing, docked, paused or error.",
+          "nl": "Wordt geactiveerd als de maaier wisselt tussen maaien, in dok, gepauzeerd of fout.",
+          "de": "Wird ausgelöst, wenn der Mäher zwischen Mähen, Angedockt, Pausiert oder Fehler wechselt.",
+          "fr": "Se déclenche lorsque la tondeuse bascule entre tonte, stationnée, en pause ou erreur.",
+          "it": "Si attiva quando il tosaerba passa tra taglio, in dock, in pausa o errore.",
+          "es": "Se activa cuando el cortacésped cambia entre corte, acoplado, pausado o error.",
+          "sv": "Utlöses när gräsklipparen växlar mellan att klippa, dockad, pausad eller fel.",
+          "no": "Utløses når klipperen bytter mellom klipping, dokket, pauset eller feil.",
+          "da": "Udløses, når plæneklipperen skifter mellem klipning, dokket, sat på pause eller fejl.",
+          "pl": "Wyzwala się, gdy kosiarka przełącza się między koszeniem, dokowaniem, wstrzymaniem lub błędem.",
+          "ru": "Активируется при переключении косилки между режимами кошения, док-станции, паузы или ошибки.",
+          "ko": "잔디 깎는 기계가 잔디 깎기, 도킹됨, 일시 중지됨 또는 오류 사이를 전환할 때 트리거됩니다.",
+          "ar": "يتم التشغيل عندما تنتقل جزازة العشب بين القص، أو التوقف في المحطة، أو التوقف المؤقت، أو الخطأ."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mower"
+          },
+          {
+            "type": "dropdown",
+            "name": "state",
+            "title": {
+              "en": "State",
+              "nl": "Status",
+              "de": "Zustand",
+              "fr": "État",
+              "it": "Stato",
+              "es": "Estado",
+              "sv": "Status",
+              "no": "Tilstand",
+              "da": "Tilstand",
+              "pl": "Stan",
+              "ru": "Состояние",
+              "ko": "상태",
+              "ar": "الحالة"
+            },
+            "values": [
+              {
+                "id": "mowing",
+                "label": {
+                  "en": "Mowing",
+                  "nl": "Aan het maaien",
+                  "de": "Mähen",
+                  "fr": "Tonte",
+                  "it": "Taglio",
+                  "es": "Cortando",
+                  "sv": "Klipper",
+                  "no": "Klipper",
+                  "da": "Klipper",
+                  "pl": "Koszenie",
+                  "ru": "Кошение",
+                  "ko": "잔디 깎는 중",
+                  "ar": "قص العشب"
+                }
+              },
+              {
+                "id": "docked",
+                "label": {
+                  "en": "Docked",
+                  "nl": "In dok",
+                  "de": "Angedockt",
+                  "fr": "Stationné",
+                  "it": "Nel dock",
+                  "es": "Acoplado",
+                  "sv": "Dockad",
+                  "no": "Dokket",
+                  "da": "Dokket",
+                  "pl": "W doku",
+                  "ru": "В доке",
+                  "ko": "도킹됨",
+                  "ar": "في المحطة"
+                }
+              },
+              {
+                "id": "paused",
+                "label": {
+                  "en": "Paused",
+                  "nl": "Gepauzeerd",
+                  "de": "Pausiert",
+                  "fr": "En pause",
+                  "it": "In pausa",
+                  "es": "Pausado",
+                  "sv": "Pausad",
+                  "no": "Pauset",
+                  "da": "Sat på pause",
+                  "pl": "Wstrzymana",
+                  "ru": "На паузе",
+                  "ko": "일시 중지됨",
+                  "ar": "مؤقتاً"
+                }
+              },
+              {
+                "id": "error",
+                "label": {
+                  "en": "Error",
+                  "nl": "Fout",
+                  "de": "Fehler",
+                  "fr": "Erreur",
+                  "it": "Errore",
+                  "es": "Error",
+                  "sv": "Fel",
+                  "no": "Feil",
+                  "da": "Fejl",
+                  "pl": "Błąd",
+                  "ru": "Ошибка",
+                  "ko": "오류",
+                  "ar": "خطأ"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "conditions": [
+      {
+        "id": "alarm_collision_is_active",
+        "title": {
+          "en": "Collision alarm is active",
+          "nl": "Botsing alarm is actief",
+          "de": "Kollisionsalarm ist aktiv",
+          "fr": "L'alarme de collision est active",
+          "it": "L'allarme collisione è attivo",
+          "es": "La alarma de colisión está activa",
+          "sv": "Kollisionslarm är aktivt",
+          "no": "Kollisjonsalarm er aktiv",
+          "da": "Kollisionsalarm er aktiv",
+          "pl": "Alarm kolizji jest aktywny",
+          "ru": "Сигнал столкновения активен",
+          "ko": "충돌 알람이 활성화되었습니다",
+          "ar": "إنذار الاصطدام نشط"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mower"
+          }
+        ]
+      },
+      {
+        "id": "alarm_lift_is_active",
+        "title": {
+          "en": "Lift alarm is active",
+          "nl": "Opgeheven alarm is actief",
+          "de": "Hebealarm ist aktiv",
+          "fr": "L'alarme de levage est active",
+          "it": "L'allarme sollevamento è attivo",
+          "es": "La alarma de elevación está activa",
+          "sv": "Lyftlarm är aktivt",
+          "no": "Løftealarm er aktiv",
+          "da": "Løftealarm er aktiv",
+          "pl": "Alarm podniesienia jest aktywny",
+          "ru": "Сигнал подъема активен",
+          "ko": "리프트 알람이 활성화되었습니다",
+          "ar": "إنذار الرفع نشط"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mower"
+          }
+        ]
+      },
+      {
+        "id": "alarm_safety_is_active",
+        "title": {
+          "en": "Safety alarm is active",
+          "nl": "Veiligheidsalarm is actief",
+          "de": "Sicherheitsalarm ist aktiv",
+          "fr": "L'alarme de sécurité est active",
+          "it": "L'allarme di sicurezza è attivo",
+          "es": "La alarma de seguridad está activa",
+          "sv": "Säkerhetslarm är aktivt",
+          "no": "Sikkerhetsalarm er aktiv",
+          "da": "Sikkerhedsalarm er aktiv",
+          "pl": "Alarm bezpieczeństwa jest aktywny",
+          "ru": "Сигнал безопасности активен",
+          "ko": "안전 알람이 활성화되었습니다",
+          "ar": "إنذار السلامة نشط"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mower"
+          }
+        ]
+      },
+      {
+        "id": "alarm_upside_down_is_active",
+        "title": {
+          "en": "Upside Down alarm is active",
+          "nl": "Ondersteboven alarm is actief",
+          "de": "Kopfüber-Alarm ist aktiv",
+          "fr": "L'alarme de renversement est active",
+          "it": "L'allarme capovolgimento è attivo",
+          "es": "La alarma de vuelco está activa",
+          "sv": "Upp-och-ned-larm är aktivt",
+          "no": "Opp-ned-alarm er aktiv",
+          "da": "Alarm for plæneklipper på hovedet er aktiv",
+          "pl": "Alarm do góry nogami jest aktywny",
+          "ru": "Сигнал переворота активен",
+          "ko": "뒤집힘 알람이 활성화되었습니다",
+          "ar": "إنذار المقلوب نشط"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mower"
+          }
+        ]
+      },
+      {
+        "id": "mower_activity_is",
+        "title": {
+          "en": "The mower activity is",
+          "nl": "De maaier activiteit is",
+          "de": "Die Mäheraktivität ist",
+          "fr": "L'activité de la tondeuse est",
+          "it": "L'attività del tosaerba è",
+          "es": "La actividad del cortacésped es",
+          "sv": "Gräsklipparaktiviteten är",
+          "no": "Klipperaktiviteten er",
+          "da": "Plæneklipperaktiviteten er",
+          "pl": "Aktywność kosiarki to",
+          "ru": "Активность косилки:",
+          "ko": "잔디 깎는 기계 활동은",
+          "ar": "نشاط جزازة العشب هو"
+        },
+        "titleFormatted": {
+          "en": "Mower activity is [[activity]]",
+          "nl": "Maaier activiteit is [[activity]]",
+          "de": "Mäheraktivität ist [[activity]]",
+          "fr": "L'activité de la tondeuse est [[activity]]",
+          "it": "L'attività del tosaerba è [[activity]]",
+          "es": "La actividad del cortacésped es [[activity]]",
+          "sv": "Gräsklipparaktivitet är [[activity]]",
+          "no": "Klipperaktivitet er [[activity]]",
+          "da": "Plæneklipperaktivitet er [[activity]]",
+          "pl": "Aktywność kosiarki to [[activity]]",
+          "ru": "Активность косилки: [[activity]]",
+          "ko": "잔디 깎는 기계의 활동은 [[activity]]입니다",
+          "ar": "نشاط جزازة العشب هو [[activity]]"
+        },
+        "hint": {
+          "en": "Checks if the mower activity matches the selected value.",
+          "nl": "Controleert of de maaier activiteit overeenkomt met de geselecteerde waarde.",
+          "de": "Prüft, ob die Mäheraktivität mit dem ausgewählten Wert übereinstimmt.",
+          "fr": "Vérifie si l'activité de la tondeuse correspond à la valeur sélectionnée.",
+          "it": "Verifica se l'attività del tosaerba corrisponde al valore selezionato.",
+          "es": "Comprueba si la actividad del cortacésped coincide con el valor seleccionado.",
+          "sv": "Kontrollerar om gräsklipparens aktivitet matchar det valda värdet.",
+          "no": "Sjekker om klipperens aktivitet samsvarer med den valgte verdien.",
+          "da": "Kontrollerer, om plæneklipperens aktivitet matcher den valgte værdi.",
+          "pl": "Sprawdza, czy aktywność kosiarki jest zgodna z wybraną wartością.",
+          "ru": "Проверяет, соответствует ли активность косилки выбранному значению.",
+          "ko": "잔디 깎는 기계의 활동이 선택한 값과 일치하는지 확인합니다.",
+          "ar": "التحقق مما إذا كان نشاط جزازة العشب يتطابق مع القيمة المحددة."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mower"
+          },
+          {
+            "type": "dropdown",
+            "name": "activity",
+            "title": {
+              "en": "Activity",
+              "nl": "Activiteit",
+              "de": "Aktivität",
+              "fr": "Activité",
+              "it": "Attività",
+              "es": "Actividad",
+              "sv": "Aktivitet",
+              "no": "Aktivitet",
+              "da": "Aktivitet",
+              "pl": "Aktywność",
+              "ru": "Активность",
+              "ko": "활동",
+              "ar": "النشاط"
+            },
+            "values": [
+              {
+                "id": "MOWING",
+                "label": {
+                  "en": "Mowing",
+                  "nl": "Aan het maaien",
+                  "de": "Mähen",
+                  "fr": "Tonte",
+                  "it": "Taglio",
+                  "es": "Cortando",
+                  "sv": "Klipper",
+                  "no": "Klipper",
+                  "da": "Klipper",
+                  "pl": "Koszenie",
+                  "ru": "Кошение",
+                  "ko": "잔디 깎는 중",
+                  "ar": "قص العشب"
+                }
+              },
+              {
+                "id": "GOING_HOME",
+                "label": {
+                  "en": "Going home",
+                  "nl": "Naar dok",
+                  "de": "Fährt nach Hause",
+                  "fr": "Retour à la base",
+                  "it": "Ritorno alla base",
+                  "es": "Volviendo a casa",
+                  "sv": "Går hem",
+                  "no": "Går hjem",
+                  "da": "Går hjem",
+                  "pl": "Powrót do bazy",
+                  "ru": "Возвращение домой",
+                  "ko": "귀가 중",
+                  "ar": "العودة للمحطة"
+                }
+              },
+              {
+                "id": "CHARGING",
+                "label": {
+                  "en": "Charging",
+                  "nl": "Aan het laden",
+                  "de": "Wird geladen",
+                  "fr": "En charge",
+                  "it": "In carica",
+                  "es": "Cargando",
+                  "sv": "Laddar",
+                  "no": "Lader",
+                  "da": "Oplader",
+                  "pl": "Ładowanie",
+                  "ru": "Зарядка",
+                  "ko": "충전 중",
+                  "ar": "شحن"
+                }
+              },
+              {
+                "id": "LEAVING",
+                "label": {
+                  "en": "Leaving",
+                  "nl": "Vertrekt",
+                  "de": "Verlassen",
+                  "fr": "Départ",
+                  "it": "In uscita",
+                  "es": "Saliendo",
+                  "sv": "Lämnar",
+                  "no": "Forlater",
+                  "da": "Forlader",
+                  "pl": "Wychodzenie",
+                  "ru": "Выезд",
+                  "ko": "출발 중",
+                  "ar": "مغادرة"
+                }
+              },
+              {
+                "id": "PARKED",
+                "label": {
+                  "en": "Parked",
+                  "nl": "Geparkeerd",
+                  "de": "Geparkt",
+                  "fr": "Stationné",
+                  "it": "Parcheggiato",
+                  "es": "Estacionado",
+                  "sv": "Parkerad",
+                  "no": "Parkert",
+                  "da": "Parkeret",
+                  "pl": "Zaparkowana",
+                  "ru": "Припаркована",
+                  "ko": "주차됨",
+                  "ar": "متوقفة"
+                }
+              },
+              {
+                "id": "STOPPED_IN_GARDEN",
+                "label": {
+                  "en": "Stopped in garden",
+                  "nl": "Gestopt in tuin",
+                  "de": "Im Garten gestoppt",
+                  "fr": "Arrêté dans le jardin",
+                  "it": "Fermato in giardino",
+                  "es": "Detenido en el jardín",
+                  "sv": "Stoppad i trädgården",
+                  "no": "Stoppet i hagen",
+                  "da": "Stoppet i haven",
+                  "pl": "Zatrzymany w ogrodzie",
+                  "ru": "Остановлен в саду",
+                  "ko": "정원에 멈춤",
+                  "ar": "متوقف في الحديقة"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "mower_battery_temperature_below",
+        "title": {
+          "en": "Battery temperature is less than",
+          "nl": "Accu temperatuur is minder dan",
+          "de": "Batterietemperatur ist weniger als",
+          "fr": "La température de la batterie est inférieure à",
+          "it": "La temperatura della batteria è inferiore a",
+          "es": "La temperatura de la batería es inferior a",
+          "sv": "Batteritemperaturen är mindre än",
+          "no": "Batteritemperaturen er mindre enn",
+          "da": "Batteritemperatur er mindre end",
+          "pl": "Temperatura akumulatora jest mniejsza niż",
+          "ru": "Температура батареи меньше",
+          "ko": "배터리 온도가 다음보다 낮음",
+          "ar": "درجة حرارة البطارية أقل من"
+        },
+        "titleFormatted": {
+          "en": "Battery temperature is less than [[temperature]] °C",
+          "nl": "Accu temperatuur is minder dan [[temperature]] °C",
+          "de": "Batterietemperatur ist weniger als [[temperature]] °C",
+          "fr": "La température de la batterie est inférieure à [[temperature]] °C",
+          "it": "La temperatura della batteria è inferiore a [[temperature]] °C",
+          "es": "La temperatura de la batería es inferior a [[temperature]] °C",
+          "sv": "Batteritemperaturen är mindre än [[temperature]] °C",
+          "no": "Batteritemperaturen er mindre enn [[temperature]] °C",
+          "da": "Batteritemperatur er mindre end [[temperature]] °C",
+          "pl": "Temperatura akumulatora jest mniejsza niż [[temperature]] °C",
+          "ru": "Температура батареи меньше [[temperature]] °C",
+          "ko": "배터리 온도가 [[temperature]] °C 미만입니다",
+          "ar": "درجة حرارة البطارية أقل من [[temperature]] درجة مئوية"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mower"
+          },
+          {
+            "type": "number",
+            "name": "temperature",
+            "title": {
+              "en": "Temperature",
+              "nl": "Temperatuur",
+              "de": "Temperatur",
+              "fr": "Température",
+              "it": "Temperatura",
+              "es": "Temperatura",
+              "sv": "Temperatur",
+              "no": "Temperatur",
+              "da": "Temperatur",
+              "pl": "Temperatura",
+              "ru": "Температура",
+              "ko": "온도",
+              "ar": "درجة الحرارة"
+            },
+            "min": -20,
+            "max": 80,
+            "step": 1,
+            "placeholder": {
+              "en": "20",
+              "nl": "20",
+              "de": "20",
+              "fr": "20",
+              "it": "20",
+              "es": "20",
+              "sv": "20",
+              "no": "20",
+              "da": "20",
+              "pl": "20",
+              "ru": "20",
+              "ko": "20",
+              "ar": "20"
+            }
+          }
+        ]
+      },
+      {
+        "id": "mower_charging_cycles_below",
+        "title": {
+          "en": "Charging cycles is less than",
+          "nl": "Aantal laadcycli is minder dan",
+          "de": "Ladezyklen sind weniger als",
+          "fr": "Les cycles de charge sont inférieurs à",
+          "it": "I cicli di ricarica sono inferiori a",
+          "es": "Los ciclos de carga son inferiores a",
+          "sv": "Antal laddningscykler är mindre än",
+          "no": "Ladesykluser er mindre enn",
+          "da": "Antal opladningscyklusser er mindre end",
+          "pl": "Liczba cykli ładowania jest mniejsza niż",
+          "ru": "Количество циклов зарядки меньше",
+          "ko": "충전 사이클이 다음보다 적음",
+          "ar": "دورات الشحن أقل من"
+        },
+        "titleFormatted": {
+          "en": "Charging cycles is less than [[cycles]]",
+          "nl": "Aantal laadcycli is minder dan [[cycles]]",
+          "de": "Ladezyklen sind weniger als [[cycles]]",
+          "fr": "Les cycles de charge sont inférieurs à [[cycles]]",
+          "it": "I cicli di ricarica sono inferiori a [[cycles]]",
+          "es": "Los ciclos de carga son inferiores a [[cycles]]",
+          "sv": "Antal laddningscykler är mindre än [[cycles]]",
+          "no": "Ladesykluser er mindre enn [[cycles]]",
+          "da": "Antal opladningscyklusser er mindre end [[cycles]]",
+          "pl": "Liczba cykli ładowania jest mniejsza niż [[cycles]]",
+          "ru": "Количество циклов зарядки меньше [[cycles]]",
+          "ko": "충전 사이클이 [[cycles]] 미만입니다",
+          "ar": "دورات الشحن أقل من [[cycles]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mower"
+          },
+          {
+            "type": "number",
+            "name": "cycles",
+            "title": {
+              "en": "Cycles",
+              "nl": "Cycli",
+              "de": "Zyklen",
+              "fr": "Cycles",
+              "it": "Cicli",
+              "es": "Ciclos",
+              "sv": "Cykler",
+              "no": "Sykluser",
+              "da": "Cyklusser",
+              "pl": "Cykle",
+              "ru": "Циклы",
+              "ko": "사이클",
+              "ar": "الدورات"
+            },
+            "min": 0,
+            "max": 100000,
+            "step": 1,
+            "placeholder": {
+              "en": "100",
+              "nl": "100",
+              "de": "100",
+              "fr": "100",
+              "it": "100",
+              "es": "100",
+              "sv": "100",
+              "no": "100",
+              "da": "100",
+              "pl": "100",
+              "ru": "100",
+              "ko": "100",
+              "ar": "100"
+            }
+          }
+        ]
+      },
+      {
+        "id": "mower_collisions_below",
+        "title": {
+          "en": "Collisions is less than",
+          "nl": "Aantal botsingen is minder dan",
+          "de": "Kollisionen sind weniger als",
+          "fr": "Les collisions sont inférieures à",
+          "it": "Le collisioni sono inferiori a",
+          "es": "Las colisiones son inferiores a",
+          "sv": "Kollisioner är mindre än",
+          "no": "Kollisjoner er mindre enn",
+          "da": "Antal kollisioner er mindre end",
+          "pl": "Liczba kolizji jest mniejsza niż",
+          "ru": "Количество столкновений меньше",
+          "ko": "충돌 횟수가 다음보다 적음",
+          "ar": "الاصطدامات أقل من"
+        },
+        "titleFormatted": {
+          "en": "Collisions is less than [[collisions]]",
+          "nl": "Aantal botsingen is minder dan [[collisions]]",
+          "de": "Kollisionen sind weniger als [[collisions]]",
+          "fr": "Les collisions sont inférieures à [[collisions]]",
+          "it": "Le collisioni sono inferiori a [[collisions]]",
+          "es": "Las colisiones son inferiores a [[collisions]]",
+          "sv": "Kollisioner är mindre än [[collisions]]",
+          "no": "Kollisjoner er mindre enn [[collisions]]",
+          "da": "Antal kollisioner er mindre end [[collisions]]",
+          "pl": "Liczba kolizji jest mniejsza niż [[collisions]]",
+          "ru": "Количество столкновений меньше [[collisions]]",
+          "ko": "충돌 횟수가 [[collisions]] 미만입니다",
+          "ar": "الاصطدامات أقل من [[collisions]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mower"
+          },
+          {
+            "type": "number",
+            "name": "collisions",
+            "title": {
+              "en": "Collisions",
+              "nl": "Botsingen",
+              "de": "Kollisionen",
+              "fr": "Collisions",
+              "it": "Collisioni",
+              "es": "Colisiones",
+              "sv": "Kollisioner",
+              "no": "Kollisjoner",
+              "da": "Kollisioner",
+              "pl": "Kolizje",
+              "ru": "Столкновения",
+              "ko": "충돌 횟수",
+              "ar": "الاصطدامات"
+            },
+            "min": 0,
+            "max": 100000,
+            "step": 1,
+            "placeholder": {
+              "en": "100",
+              "nl": "100",
+              "de": "100",
+              "fr": "100",
+              "it": "100",
+              "es": "100",
+              "sv": "100",
+              "no": "100",
+              "da": "100",
+              "pl": "100",
+              "ru": "100",
+              "ko": "100",
+              "ar": "100"
+            }
+          }
+        ]
+      },
+      {
+        "id": "mower_cutting_time_below",
+        "title": {
+          "en": "Cutting time is less than",
+          "nl": "Maaitijd is minder dan",
+          "de": "Mähzeit ist weniger als",
+          "fr": "Le temps de tonte est inférieur à",
+          "it": "Il tempo di taglio è inferiore a",
+          "es": "El tiempo de corte es inferior a",
+          "sv": "Klipptiden är mindre än",
+          "no": "Klippetiden er mindre enn",
+          "da": "Klippetid er mindre end",
+          "pl": "Czas koszenia jest krótszy niż",
+          "ru": "Время кошения меньше",
+          "ko": "잔디 깎기 시간이 다음보다 적음",
+          "ar": "وقت القص أقل من"
+        },
+        "titleFormatted": {
+          "en": "Cutting time is less than [[hours]] hours",
+          "nl": "Maaitijd is minder dan [[hours]] uur",
+          "de": "Mähzeit ist weniger als [[hours]] Stunden",
+          "fr": "Le temps de tonte est inférieur à [[hours]] heures",
+          "it": "Il tempo di taglio è inferiore a [[hours]] ore",
+          "es": "El tiempo de corte es inferior a [[hours]] horas",
+          "sv": "Klipptiden är mindre än [[hours]] timmar",
+          "no": "Klippetiden er mindre enn [[hours]] timer",
+          "da": "Klippetid er mindre end [[hours]] timer",
+          "pl": "Czas koszenia jest krótszy niż [[hours]] godz.",
+          "ru": "Время кошения меньше [[hours]] ч.",
+          "ko": "잔디 깎기 시간이 [[hours]] 시간 미만입니다",
+          "ar": "وقت القص أقل من [[hours]] ساعة"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mower"
+          },
+          {
+            "type": "number",
+            "name": "hours",
+            "title": {
+              "en": "Hours",
+              "nl": "Uren",
+              "de": "Stunden",
+              "fr": "Heures",
+              "it": "Ore",
+              "es": "Horas",
+              "sv": "Timmar",
+              "no": "Timer",
+              "da": "Timer",
+              "pl": "Godziny",
+              "ru": "Часы",
+              "ko": "시간",
+              "ar": "ساعات"
+            },
+            "min": 0,
+            "max": 100000,
+            "step": 1,
+            "placeholder": {
+              "en": "100",
+              "nl": "100",
+              "de": "100",
+              "fr": "100",
+              "it": "100",
+              "es": "100",
+              "sv": "100",
+              "no": "100",
+              "da": "100",
+              "pl": "100",
+              "ru": "100",
+              "ko": "100",
+              "ar": "100"
+            }
+          }
+        ]
+      },
+      {
+        "id": "mower_eco_mode_is_active",
+        "title": {
+          "en": "Eco mode is active",
+          "nl": "Eco stand is actief",
+          "de": "Eco-Modus ist aktiv",
+          "fr": "Le mode éco est actif",
+          "it": "La modalità Eco è attiva",
+          "es": "El modo Eco está activo",
+          "sv": "Eco Mode är aktivt",
+          "no": "Eco-modus er aktiv",
+          "da": "Eco-tilstand er aktiv",
+          "pl": "Tryb Eco jest aktywny",
+          "ru": "Эко-режим активен",
+          "ko": "에코 모드가 활성화되었습니다",
+          "ar": "الوضع الاقتصادي نشط"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mower"
+          }
+        ]
+      },
+      {
+        "id": "mower_frost_protection_is_active",
+        "title": {
+          "en": "Frost protection is active",
+          "nl": "Vorstbeveiliging is actief",
+          "de": "Frostschutz ist aktiv",
+          "fr": "La protection antigel est active",
+          "it": "La protezione antigelo è attiva",
+          "es": "La protección contra heladas está activa",
+          "sv": "Frostskydd är aktivt",
+          "no": "Frostbeskyttelse er aktiv",
+          "da": "Frostbeskyttelse er aktiv",
+          "pl": "Ochrona przed mrozem jest aktywna",
+          "ru": "Защита от замерзания активна",
+          "ko": "성에 방지가 활성화되었습니다",
+          "ar": "الحماية من الصقيع نشطة"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mower"
+          }
+        ]
+      },
+      {
+        "id": "mower_garage_enabled_is_active",
+        "title": {
+          "en": "Avoid Garage is enabled",
+          "nl": "Garage Vermijden is ingeschakeld",
+          "de": "Garage vermeiden ist aktiviert",
+          "fr": "Éviter le garage est activé",
+          "it": "Evita garage è abilitato",
+          "es": "Evitar garaje está habilitado",
+          "sv": "Undvik garage är aktiverat",
+          "no": "Unngå garasje er aktivert",
+          "da": "Undgå garage er aktiveret",
+          "pl": "Unikaj garażu jest włączone",
+          "ru": "Функция 'Избегать гаража' включена",
+          "ko": "차고 피하기가 활성화되었습니다",
+          "ar": "تجنب المرآب مفعل"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mower"
+          }
+        ]
+      },
+      {
+        "id": "mower_loop_signal_below",
+        "title": {
+          "en": "Loop signal strength is less than",
+          "nl": "Lussignaal sterkte is minder dan",
+          "de": "Schleifensignalstärke ist weniger als",
+          "fr": "La force du signal de boucle est inférieure à",
+          "it": "La forza del segnale del circuito è inferiore a",
+          "es": "La fuerza de la señal del bucle es inferior a",
+          "sv": "Slingans signalstyrka är mindre än",
+          "no": "Sløyfe signalstyrke er mindre enn",
+          "da": "Sløjfe signalstyrke er mindre end",
+          "pl": "Siła sygnału pętli jest mniejsza niż",
+          "ru": "Сила сигнала контура меньше",
+          "ko": "루프 신호 강도가 다음보다 낮음",
+          "ar": "قوة إشارة الحلقة أقل من"
+        },
+        "titleFormatted": {
+          "en": "Loop signal strength is less than [[strength]] %",
+          "nl": "Lussignaal sterkte is minder dan [[strength]] %",
+          "de": "Schleifensignalstärke ist weniger als [[strength]] %",
+          "fr": "La force du signal de boucle est inférieure à [[strength]] %",
+          "it": "La forza del segnale del circuito è inferiore a [[strength]] %",
+          "es": "La fuerza de la señal del bucle es inferior a [[strength]] %",
+          "sv": "Slingans signalstyrka är mindre än [[strength]] %",
+          "no": "Sløyfe signalstyrke er mindre enn [[strength]] %",
+          "da": "Sløjfe signalstyrke er mindre end [[strength]] %",
+          "pl": "Siła sygnału pętli jest mniejsza niż [[strength]] %",
+          "ru": "Сила сигнала контура меньше [[strength]] %",
+          "ko": "루프 신호 강도가 [[strength]] % 미만입니다",
+          "ar": "قوة إشارة الحلقة أقل من [[strength]] %"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mower"
+          },
+          {
+            "type": "number",
+            "name": "strength",
+            "title": {
+              "en": "Strength",
+              "nl": "Sterkte",
+              "de": "Stärke",
+              "fr": "Force",
+              "it": "Forza",
+              "es": "Fuerza",
+              "sv": "Styrka",
+              "no": "Styrke",
+              "da": "Styrke",
+              "pl": "Siła",
+              "ru": "Сила",
+              "ko": "강도",
+              "ar": "القوة"
+            },
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "placeholder": {
+              "en": "50",
+              "nl": "50",
+              "de": "50",
+              "fr": "50",
+              "it": "50",
+              "es": "50",
+              "sv": "50",
+              "no": "50",
+              "da": "50",
+              "pl": "50",
+              "ru": "50",
+              "ko": "50",
+              "ar": "50"
+            }
+          }
+        ]
+      },
+      {
+        "id": "mower_pitch_below",
+        "title": {
+          "en": "Pitch is less than",
+          "nl": "Helling is minder dan",
+          "de": "Neigung ist weniger als",
+          "fr": "Le tangage est inférieur à",
+          "it": "L'inclinazione è inferiore a",
+          "es": "La inclinación longitudinal es inferior a",
+          "sv": "Lutningen (pitch) är mindre än",
+          "no": "Hellingen er mindre enn",
+          "da": "Hældningen er mindre end",
+          "pl": "Nachylenie podłużne jest mniejsze niż",
+          "ru": "Тангаж меньше",
+          "ko": "피치가 다음보다 낮음",
+          "ar": "الميل الطولي أقل من"
+        },
+        "titleFormatted": {
+          "en": "Pitch is less than [[angle]] °",
+          "nl": "Helling is minder dan [[angle]] °",
+          "de": "Neigung ist weniger als [[angle]] °",
+          "fr": "Le tangage est inférieur à [[angle]] °",
+          "it": "L'inclinazione è inferiore a [[angle]] °",
+          "es": "La inclinación longitudinal es inferior a [[angle]] °",
+          "sv": "Lutningen (pitch) är mindre än [[angle]] °",
+          "no": "Hellingen er mindre enn [[angle]] °",
+          "da": "Hældningen er mindre end [[angle]] °",
+          "pl": "Nachylenie podłużne jest mniejsze niż [[angle]] °",
+          "ru": "Тангаж меньше [[angle]] °",
+          "ko": "피치가 [[angle]] ° 미만입니다",
+          "ar": "الميل الطولي أقل من [[angle]] درجة"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mower"
+          },
+          {
+            "type": "number",
+            "name": "angle",
+            "title": {
+              "en": "Angle",
+              "nl": "Hoek",
+              "de": "Winkel",
+              "fr": "Angle",
+              "it": "Angolo",
+              "es": "Ángulo",
+              "sv": "Vinkel",
+              "no": "Vinkel",
+              "da": "Vinkel",
+              "pl": "Kąt",
+              "ru": "Угол",
+              "ko": "각도",
+              "ar": "الزاوية"
+            },
+            "min": -90,
+            "max": 90,
+            "step": 1,
+            "placeholder": {
+              "en": "0",
+              "nl": "0",
+              "de": "0",
+              "fr": "0",
+              "it": "0",
+              "es": "0",
+              "sv": "0",
+              "no": "0",
+              "da": "0",
+              "pl": "0",
+              "ru": "0",
+              "ko": "0",
+              "ar": "0"
+            }
+          }
+        ]
+      },
+      {
+        "id": "mower_radar_enabled_is_active",
+        "title": {
+          "en": "Radar is enabled",
+          "nl": "Radar is ingeschakeld",
+          "de": "Radar ist aktiviert",
+          "fr": "Le radar est activé",
+          "it": "Il radar è abilitato",
+          "es": "El radar está habilitado",
+          "sv": "Radarn är aktiverad",
+          "no": "Radar er aktivert",
+          "da": "Radar er aktiveret",
+          "pl": "Radar jest włączony",
+          "ru": "Радар включен",
+          "ko": "레이더가 활성화되었습니다",
+          "ar": "الرادار مفعل"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mower"
+          }
+        ]
+      },
+      {
+        "id": "mower_remaining_time_below",
+        "title": {
+          "en": "Remaining mow time is less than",
+          "nl": "Resterende maaitijd is minder dan",
+          "de": "Verbleibende Mähzeit ist weniger als",
+          "fr": "Le temps de tonte restant est inférieur à",
+          "it": "Il tempo di taglio rimanente è inferiore a",
+          "es": "El tiempo de corte restante es inferior a",
+          "sv": "Återstående klipptid är mindre än",
+          "no": "Gjenværende klippetid er mindre enn",
+          "da": "Resterende klippetid er mindre end",
+          "pl": "Pozostały czas koszenia jest krótszy niż",
+          "ru": "Оставшееся время кошения меньше",
+          "ko": "남은 잔디 깎기 시간이 다음보다 적음",
+          "ar": "وقت القص المتبقي أقل من"
+        },
+        "titleFormatted": {
+          "en": "Remaining mow time is less than [[minutes]] min",
+          "nl": "Resterende maaitijd is minder dan [[minutes]] min",
+          "de": "Verbleibende Mähzeit ist weniger als [[minutes]] Min.",
+          "fr": "Le temps de tonte restant est inférieur à [[minutes]] min",
+          "it": "Il tempo di taglio rimanente è inferiore a [[minutes]] min",
+          "es": "El tiempo de corte restante es inferior a [[minutes]] min",
+          "sv": "Återstående klipptid är mindre än [[minutes]] min",
+          "no": "Gjenværende klippetid er mindre enn [[minutes]] min",
+          "da": "Resterende klippetid er mindre end [[minutes]] min",
+          "pl": "Pozostały czas koszenia jest krótszy niż [[minutes]] min",
+          "ru": "Оставшееся время кошения меньше [[minutes]] мин",
+          "ko": "남은 잔디 깎기 시간이 [[minutes]] 분 미만입니다",
+          "ar": "وقت القص المتبقي أقل من [[minutes]] دقيقة"
+        },
+        "hint": {
+          "en": "Checks if the remaining mowing time is below the specified number of minutes.",
+          "nl": "Controleert of de resterende maaitijd onder het opgegeven aantal minuten is.",
+          "de": "Prüft, ob die verbleibende Mähzeit unter der angegebenen Anzahl von Minuten liegt.",
+          "fr": "Vérifie si le temps de tonte restant est inférieur au nombre de minutes spécifié.",
+          "it": "Verifica se il tempo di taglio rimanente è inferiore al numero di minuti specificato.",
+          "es": "Comprueba si el tiempo de corte restante es inferior al número especificado de minutos.",
+          "sv": "Kontrollerar om den återstående klipptiden är under det angivna antalet minuter.",
+          "no": "Sjekker om gjenværende klippetid er under det angitte antall minutter.",
+          "da": "Kontrollerer, om den resterende klippetid er under det angivne antal minutter.",
+          "pl": "Sprawdza, czy pozostały czas koszenia jest krótszy niż określona liczba minut.",
+          "ru": "Проверяет, меньше ли оставшееся время кошения указанного количества минут.",
+          "ko": "남은 잔디 깎기 시간이 지정된 분 미만인지 확인합니다.",
+          "ar": "التحقق مما إذا كان وقت القص المتبقي أقل من عدد الدقائق المحدد."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mower"
+          },
+          {
+            "type": "number",
+            "name": "minutes",
+            "title": {
+              "en": "Minutes",
+              "nl": "Minuten",
+              "de": "Minuten",
+              "fr": "Minutes",
+              "it": "Minuti",
+              "es": "Minutos",
+              "sv": "Minuter",
+              "no": "Minutter",
+              "da": "Minutter",
+              "pl": "Minuty",
+              "ru": "Минуты",
+              "ko": "분",
+              "ar": "دقائق"
+            },
+            "min": 1,
+            "max": 480,
+            "step": 1,
+            "placeholder": {
+              "en": "30",
+              "nl": "30",
+              "de": "30",
+              "fr": "30",
+              "it": "30",
+              "es": "30",
+              "sv": "30",
+              "no": "30",
+              "da": "30",
+              "pl": "30",
+              "ru": "30",
+              "ko": "30",
+              "ar": "30"
+            }
+          }
+        ]
+      },
+      {
+        "id": "mower_roll_below",
+        "title": {
+          "en": "Roll is less than",
+          "nl": "Dwarshelling is minder dan",
+          "de": "Querneigung ist weniger als",
+          "fr": "Le roulis est inférieur à",
+          "it": "Il rollio è inferiore a",
+          "es": "La inclinación transversal es inferior a",
+          "sv": "Lutningen (roll) är mindre än",
+          "no": "Dwarshellingen er mindre enn",
+          "da": "Sidehældningen er mindre end",
+          "pl": "Nachylenie poprzeczne jest mniejsze niż",
+          "ru": "Крен меньше",
+          "ko": "롤이 다음보다 낮음",
+          "ar": "التمايل الجانبي أقل من"
+        },
+        "titleFormatted": {
+          "en": "Roll is less than [[angle]] °",
+          "nl": "Dwarshelling is minder dan [[angle]] °",
+          "de": "Querneigung ist weniger als [[angle]] °",
+          "fr": "Le roulis est inférieur à [[angle]] °",
+          "it": "Il rollio è inferiore a [[angle]] °",
+          "es": "La inclinación transversal es inferior a [[angle]] °",
+          "sv": "Lutningen (roll) är mindre än [[angle]] °",
+          "no": "Dwarshellingen er mindre enn [[angle]] °",
+          "da": "Sidehældningen er mindre end [[angle]] °",
+          "pl": "Nachylenie poprzeczne jest mniejsze niż [[angle]] °",
+          "ru": "Крен меньше [[angle]] °",
+          "ko": "롤이 [[angle]] ° 미만입니다",
+          "ar": "التمايل الجانبي أقل من [[angle]] درجة"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mower"
+          },
+          {
+            "type": "number",
+            "name": "angle",
+            "title": {
+              "en": "Angle",
+              "nl": "Hoek",
+              "de": "Winkel",
+              "fr": "Angle",
+              "it": "Angolo",
+              "es": "Ángulo",
+              "sv": "Vinkel",
+              "no": "Vinkel",
+              "da": "Vinkel",
+              "pl": "Kąt",
+              "ru": "Угол",
+              "ko": "각도",
+              "ar": "الزاوية"
+            },
+            "min": -90,
+            "max": 90,
+            "step": 1,
+            "placeholder": {
+              "en": "0",
+              "nl": "0",
+              "de": "0",
+              "fr": "0",
+              "it": "0",
+              "es": "0",
+              "sv": "0",
+              "no": "0",
+              "da": "0",
+              "pl": "0",
+              "ru": "0",
+              "ko": "0",
+              "ar": "0"
+            }
+          }
+        ]
+      },
+      {
+        "id": "mower_running_time_below",
+        "title": {
+          "en": "Running time is less than",
+          "nl": "Totale looptijd is minder dan",
+          "de": "Laufzeit ist weniger als",
+          "fr": "Le temps de fonctionnement est inférieur à",
+          "it": "Il tempo di funzionamento è inferiore a",
+          "es": "El tiempo de funcionamiento es inferior a",
+          "sv": "Drifttiden är mindre än",
+          "no": "Driftstiden er mindre enn",
+          "da": "Driftstid er mindre end",
+          "pl": "Czas pracy jest krótszy niż",
+          "ru": "Время работы меньше",
+          "ko": "운행 시간이 다음보다 적음",
+          "ar": "وقت التشغيل أقل من"
+        },
+        "titleFormatted": {
+          "en": "Running time is less than [[hours]] hours",
+          "nl": "Totale looptijd is minder dan [[hours]] uur",
+          "de": "Laufzeit ist weniger als [[hours]] Stunden",
+          "fr": "Le temps de fonctionnement est inférieur à [[hours]] heures",
+          "it": "Il tempo di funzionamento è inferiore a [[hours]] ore",
+          "es": "El tiempo de funcionamiento es inferior a [[hours]] horas",
+          "sv": "Drifttiden är mindre än [[hours]] timmar",
+          "no": "Driftstiden er mindre enn [[hours]] timer",
+          "da": "Driftstid er mindre end [[hours]] timer",
+          "pl": "Czas pracy jest krótszy niż [[hours]] godz.",
+          "ru": "Время работы меньше [[hours]] ч.",
+          "ko": "운행 시간이 [[hours]] 시간 미만입니다",
+          "ar": "وقت التشغيل أقل من [[hours]] ساعة"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mower"
+          },
+          {
+            "type": "number",
+            "name": "hours",
+            "title": {
+              "en": "Hours",
+              "nl": "Uren",
+              "de": "Stunden",
+              "fr": "Heures",
+              "it": "Ore",
+              "es": "Horas",
+              "sv": "Timmar",
+              "no": "Timer",
+              "da": "Timer",
+              "pl": "Godziny",
+              "ru": "Часы",
+              "ko": "시간",
+              "ar": "ساعات"
+            },
+            "min": 0,
+            "max": 100000,
+            "step": 1,
+            "placeholder": {
+              "en": "100",
+              "nl": "100",
+              "de": "100",
+              "fr": "100",
+              "it": "100",
+              "es": "100",
+              "sv": "100",
+              "no": "100",
+              "da": "100",
+              "pl": "100",
+              "ru": "100",
+              "ko": "100",
+              "ar": "100"
+            }
+          }
+        ]
+      },
+      {
+        "id": "mower_sensor_control_is_active",
+        "title": {
+          "en": "SensorControl is enabled",
+          "nl": "SensorControl is ingeschakeld",
+          "de": "SensorControl ist aktiviert",
+          "fr": "SensorControl est activé",
+          "it": "SensorControl è abilitato",
+          "es": "SensorControl está habilitado",
+          "sv": "SensorControl är aktiverat",
+          "no": "SensorControl er aktivert",
+          "da": "SensorControl er aktiveret",
+          "pl": "SensorControl jest włączone",
+          "ru": "SensorControl включен",
+          "ko": "SensorControl이 활성화되었습니다",
+          "ar": "التحكم بالاستشعار مفعل"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mower"
+          }
+        ]
+      },
+      {
+        "id": "mower_spot_cut_is_active",
+        "title": {
+          "en": "Spot cutting is active",
+          "nl": "Spot cutting is actief",
+          "de": "Punktmähen ist aktiv",
+          "fr": "La tonte ciblée est active",
+          "it": "Il taglio localizzato è attivo",
+          "es": "El corte localizado está activo",
+          "sv": "Punktklippning är aktiv",
+          "no": "Punktklipping er aktiv",
+          "da": "Punktklipning er aktiv",
+          "pl": "Koszenie punktowe jest aktywne",
+          "ru": "Точечное кошение активно",
+          "ko": "스팟 컷이 활성화되었습니다",
+          "ar": "القص الموضعي نشط"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mower"
+          }
+        ]
+      },
+      {
+        "id": "mower_state_is",
+        "title": {
+          "en": "The mower state is",
+          "nl": "De maaier status is",
+          "de": "Der Mäherzustand ist",
+          "fr": "L'état de la tondeuse est",
+          "it": "Lo stato del tosaerba è",
+          "es": "El estado del cortacésped es",
+          "sv": "Gräsklipparens tillstånd är",
+          "no": "Klippertilstanden er",
+          "da": "Plæneklipperens tilstand er",
+          "pl": "Stan kosiarki to",
+          "ru": "Состояние косилки:",
+          "ko": "잔디 깎는 기계 상태는",
+          "ar": "حالة جزازة العشب هي"
+        },
+        "titleFormatted": {
+          "en": "Mower state is [[state]]",
+          "nl": "Maaier status is [[state]]",
+          "de": "Mäherzustand ist [[state]]",
+          "fr": "L'état de la tondeuse est [[state]]",
+          "it": "Lo stato del tosaerba è [[state]]",
+          "es": "El estado del cortacésped es [[state]]",
+          "sv": "Gräsklipparens tillstånd är [[state]]",
+          "no": "Klippertilstand er [[state]]",
+          "da": "Plæneklipperens tilstand er [[state]]",
+          "pl": "Stan kosiarki to [[state]]",
+          "ru": "Состояние косилки: [[state]]",
+          "ko": "잔디 깎는 기계의 상태는 [[state]]입니다",
+          "ar": "حالة جزازة العشب هي [[state]]"
+        },
+        "hint": {
+          "en": "Checks if the mower is currently in the selected state.",
+          "nl": "Controleert of de maaier momenteel in de geselecteerde status is.",
+          "de": "Prüft, ob sich der Mäher aktuell im ausgewählten Zustand befindet.",
+          "fr": "Vérifie si la tondeuse est actuellement dans l'état sélectionné.",
+          "it": "Verifica se il tosaerba è attualmente nello stato selezionato.",
+          "es": "Comprueba si el cortacésped está actualmente en el estado seleccionado.",
+          "sv": "Kontrollerar om gräsklipparen för närvarande är i det valda tillståndet.",
+          "no": "Sjekker om klipperen for øyeblikket er i den valgte tilstanden.",
+          "da": "Kontrollerer, om plæneklipperen i øjeblikket er i den valgte tilstand.",
+          "pl": "Sprawdza, czy kosiarka znajduje się obecnie w wybranym stanie.",
+          "ru": "Проверяет, находится ли косилка в выбранном состоянии в данный момент.",
+          "ko": "잔디 깎는 기계가 현재 선택한 상태인지 확인합니다.",
+          "ar": "التحقق مما إذا كانت جزازة العشب في الحالة المحددة حاليًا."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mower"
+          },
+          {
+            "type": "dropdown",
+            "name": "state",
+            "title": {
+              "en": "State",
+              "nl": "Status",
+              "de": "Zustand",
+              "fr": "État",
+              "it": "Stato",
+              "es": "Estado",
+              "sv": "Status",
+              "no": "Tilstand",
+              "da": "Tilstand",
+              "pl": "Stan",
+              "ru": "Состояние",
+              "ko": "상태",
+              "ar": "الحالة"
+            },
+            "values": [
+              {
+                "id": "mowing",
+                "label": {
+                  "en": "Mowing",
+                  "nl": "Aan het maaien",
+                  "de": "Mähen",
+                  "fr": "Tonte",
+                  "it": "Taglio",
+                  "es": "Cortando",
+                  "sv": "Klipper",
+                  "no": "Klipper",
+                  "da": "Klipper",
+                  "pl": "Koszenie",
+                  "ru": "Кошение",
+                  "ko": "잔디 깎는 중",
+                  "ar": "قص العشب"
+                }
+              },
+              {
+                "id": "docked",
+                "label": {
+                  "en": "Docked",
+                  "nl": "In dok",
+                  "de": "Angedockt",
+                  "fr": "Stationné",
+                  "it": "Nel dock",
+                  "es": "Acoplado",
+                  "sv": "Dockad",
+                  "no": "Dokket",
+                  "da": "Dokket",
+                  "pl": "W doku",
+                  "ru": "В доке",
+                  "ko": "도킹됨",
+                  "ar": "في المحطة"
+                }
+              },
+              {
+                "id": "paused",
+                "label": {
+                  "en": "Paused",
+                  "nl": "Gepauzeerd",
+                  "de": "Pausiert",
+                  "fr": "En pause",
+                  "it": "In pausa",
+                  "es": "Pausado",
+                  "sv": "Pausad",
+                  "no": "Pauset",
+                  "da": "Sat på pause",
+                  "pl": "Wstrzymana",
+                  "ru": "На паузе",
+                  "ko": "일시 중지됨",
+                  "ar": "مؤقتاً"
+                }
+              },
+              {
+                "id": "error",
+                "label": {
+                  "en": "Error",
+                  "nl": "Fout",
+                  "de": "Fehler",
+                  "fr": "Erreur",
+                  "it": "Errore",
+                  "es": "Error",
+                  "sv": "Fel",
+                  "no": "Feil",
+                  "da": "Fejl",
+                  "pl": "Błąd",
+                  "ru": "Ошибка",
+                  "ko": "오류",
+                  "ar": "خطأ"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "id": "generate_loop_signal",
+        "title": {
+          "en": "Generate new loop signal",
+          "nl": "Genereer nieuw lussignaal",
+          "de": "Neues Schleifensignal erzeugen",
+          "fr": "Générer un nouveau signal de boucle",
+          "it": "Genera nuovo segnale del circuito",
+          "es": "Generar nueva señal de bucle",
+          "sv": "Generera ny slingsignal",
+          "no": "Generer nytt sløyfesignal",
+          "da": "Generer nyt sløjfesignal",
+          "pl": "Generuj nowy sygnał pętli",
+          "ru": "Сгенерировать новый сигнал контура",
+          "ko": "새 루프 신호 생성",
+          "ar": "توليد إشارة حلقة جديدة"
+        },
+        "titleFormatted": {
+          "en": "Generate new loop signal",
+          "nl": "Genereer nieuw lussignaal",
+          "de": "Neues Schleifensignal erzeugen",
+          "fr": "Générer un nouveau signal de boucle",
+          "it": "Genera nuovo segnale del circuito",
+          "es": "Generar nueva señal de bucle",
+          "sv": "Generera ny slingsignal",
+          "no": "Generer nytt sløyfesignal",
+          "da": "Generer nyt sløjfesignal",
+          "pl": "Generuj nowy sygnał pętli",
+          "ru": "Сгенерировать новый сигнал контура",
+          "ko": "새 루프 신호 생성",
+          "ar": "توليد إشارة حلقة جديدة"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mower"
+          }
+        ]
+      },
+      {
+        "id": "set_drive_past_wire",
+        "title": {
+          "en": "Set drive past wire distance",
+          "nl": "Stel over de draad rijden in",
+          "de": "Überfahrweite einstellen",
+          "fr": "Définir la distance au-delà du fil",
+          "it": "Imposta distanza di guida oltre il filo",
+          "es": "Configurar la distancia más allá del cable",
+          "sv": "Ställ in avstånd för att köra förbi slingan",
+          "no": "Still inn kjør forbi ledning avstand",
+          "da": "Indstil overkørselsafstand for tråd",
+          "pl": "Ustaw odległość przejazdu poza przewód",
+          "ru": "Настроить расстояние проезда за провод",
+          "ko": "와이어 너머 주행 거리 설정",
+          "ar": "ضبط مسافة القيادة وراء السلك"
+        },
+        "titleFormatted": {
+          "en": "Set drive past wire distance to [[distance]] mm",
+          "nl": "Stel over de draad rijden in op [[distance]] mm",
+          "de": "Überfahrweite auf [[distance]] mm einstellen",
+          "fr": "Définir la distance au-delà du fil sur [[distance]] mm",
+          "it": "Imposta distanza di guida oltre il filo su [[distance]] mm",
+          "es": "Establecer la distancia más allá del cable en [[distance]] mm",
+          "sv": "Ställ in avstånd för att köra förbi slingan till [[distance]] mm",
+          "no": "Still inn kjør forbi ledning avstand til [[distance]] mm",
+          "da": "Indstil overkørselsafstand for tråd til [[distance]] mm",
+          "pl": "Ustaw odległość przejazdu poza przewód na [[distance]] mm",
+          "ru": "Настроить расстояние проезда за провод на [[distance]] мм",
+          "ko": "와이어 너머 주행 거리를 [[distance]] mm로 설정",
+          "ar": "ضبط مسافة القيادة وراء السلك على [[distance]] مم"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mower"
+          },
+          {
+            "type": "number",
+            "name": "distance",
+            "title": {
+              "en": "Distance (mm)",
+              "nl": "Afstand (mm)",
+              "de": "Distanz (mm)",
+              "fr": "Distance (mm)",
+              "it": "Distanza (mm)",
+              "es": "Distancia (mm)",
+              "sv": "Avstånd (mm)",
+              "no": "Avstand (mm)",
+              "da": "Afstand (mm)",
+              "pl": "Odległość (mm)",
+              "ru": "Расстояние (мм)",
+              "ko": "거리 (mm)",
+              "ar": "المسافة (مم)"
+            },
+            "min": 100,
+            "max": 500,
+            "step": 1,
+            "placeholder": {
+              "en": "300",
+              "nl": "300",
+              "de": "300",
+              "fr": "300",
+              "it": "300",
+              "es": "300",
+              "sv": "300",
+              "no": "300",
+              "da": "300",
+              "pl": "300",
+              "ru": "300",
+              "ko": "300",
+              "ar": "300"
+            }
+          }
+        ]
+      },
+      {
+        "id": "set_eco_mode",
+        "title": {
+          "en": "Set eco stand",
+          "nl": "Stel eco stand in",
+          "de": "Eco-Modus einstellen",
+          "fr": "Définir le mode éco",
+          "it": "Imposta modalità Eco",
+          "es": "Configurar modo Eco",
+          "sv": "Ställ in Eco-läge",
+          "no": "Still inn Eco-modus",
+          "da": "Indstil Eco-tilstand",
+          "pl": "Ustaw tryb Eco",
+          "ru": "Настроить эко-режим",
+          "ko": "에코 모드 설정",
+          "ar": "ضبط الوضع الاقتصادي"
+        },
+        "titleFormatted": {
+          "en": "Set eco stand to [[value]]",
+          "nl": "Stel eco stand in op [[value]]",
+          "de": "Eco-Modus auf [[value]] einstellen",
+          "fr": "Définir le mode éco sur [[value]]",
+          "it": "Imposta modalità Eco su [[value]]",
+          "es": "Establecer modo Eco en [[value]]",
+          "sv": "Ställ in Eco-läge till [[value]]",
+          "no": "Still inn Eco-modus til [[value]]",
+          "da": "Indstil Eco-tilstand til [[value]]",
+          "pl": "Ustaw tryb Eco na [[value]]",
+          "ru": "Настроить эко-режим на [[value]]",
+          "ko": "에코 모드를 [[value]](으)로 설정",
+          "ar": "ضبط الوضع الاقتصادي على [[value]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mower"
+          },
+          {
+            "type": "checkbox",
+            "name": "value",
+            "title": {
+              "en": "Active",
+              "nl": "Actief",
+              "de": "Aktiv",
+              "fr": "Actif",
+              "it": "Attivo",
+              "es": "Activo",
+              "sv": "Aktiv",
+              "no": "Aktiv",
+              "da": "Aktiv",
+              "pl": "Aktywny",
+              "ru": "Активно",
+              "ko": "활성",
+              "ar": "نشط"
+            }
+          }
+        ]
+      },
+      {
+        "id": "set_frost_protection",
+        "title": {
+          "en": "Set frost protection",
+          "nl": "Stel vorstbeveiliging in",
+          "de": "Frostschutz einstellen",
+          "fr": "Définir la protection antigel",
+          "it": "Imposta protezione antigelo",
+          "es": "Configurar protección contra heladas",
+          "sv": "Ställ in frostskydd",
+          "no": "Still inn frostbeskyttelse",
+          "da": "Indstil frostbeskyttelse",
+          "pl": "Ustaw ochronę przed mrozem",
+          "ru": "Настроить защиту от замерзания",
+          "ko": "성에 방지 설정",
+          "ar": "ضبط الحماية من الصقيع"
+        },
+        "titleFormatted": {
+          "en": "Set frost protection to [[value]]",
+          "nl": "Stel vorstbeveiliging in op [[value]]",
+          "de": "Frostschutz auf [[value]] einstellen",
+          "fr": "Définir la protection antigel sur [[value]]",
+          "it": "Imposta protezione antigelo su [[value]]",
+          "es": "Establecer la protección contra heladas en [[value]]",
+          "sv": "Ställ in frostskydd till [[value]]",
+          "no": "Still inn frostbeskyttelse til [[value]]",
+          "da": "Indstil frostbeskyttelse til [[value]]",
+          "pl": "Ustaw ochronę przed mrozem na [[value]]",
+          "ru": "Настроить защиту от замерзания на [[value]]",
+          "ko": "성에 방지를 [[value]](으)로 설정",
+          "ar": "ضبط الحماية من الصقيع على [[value]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mower"
+          },
+          {
+            "type": "checkbox",
+            "name": "value",
+            "title": {
+              "en": "Active",
+              "nl": "Actief",
+              "de": "Aktiv",
+              "fr": "Actif",
+              "it": "Attivo",
+              "es": "Activo",
+              "sv": "Aktiv",
+              "no": "Aktiv",
+              "da": "Aktiv",
+              "pl": "Aktywny",
+              "ru": "Активно",
+              "ko": "활성",
+              "ar": "نشط"
+            }
+          }
+        ]
+      },
+      {
+        "id": "set_garage_enabled",
+        "title": {
+          "en": "Set Avoid Garage",
+          "nl": "Stel Garage Vermijden in",
+          "de": "Garage vermeiden einstellen",
+          "fr": "Définir Éviter le garage",
+          "it": "Imposta Evita garage",
+          "es": "Configurar Evitar garaje",
+          "sv": "Ställ in Undvik garage",
+          "no": "Still inn Unngå garasje",
+          "da": "Indstil Undgå garage",
+          "pl": "Ustaw Unikaj garażu",
+          "ru": "Настроить избегание гаража",
+          "ko": "차고 피하기 설정",
+          "ar": "ضبط تجنب المرآب"
+        },
+        "titleFormatted": {
+          "en": "Set Avoid Garage to [[value]]",
+          "nl": "Stel Garage Vermijden in op [[value]]",
+          "de": "Garage vermeiden auf [[value]] einstellen",
+          "fr": "Définir Éviter le garage sur [[value]]",
+          "it": "Imposta Evita garage su [[value]]",
+          "es": "Establecer Evitar garaje en [[value]]",
+          "sv": "Ställ in Undvik garage till [[value]]",
+          "no": "Still inn Unngå garasje til [[value]]",
+          "da": "Indstil Undgå garage til [[value]]",
+          "pl": "Ustaw Unikaj garażu na [[value]]",
+          "ru": "Настроить избегание гаража на [[value]]",
+          "ko": "차고 피하기를 [[value]](으)로 설정",
+          "ar": "ضبط تجنب المرآب على [[value]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mower"
+          },
+          {
+            "type": "checkbox",
+            "name": "value",
+            "title": {
+              "en": "Active",
+              "nl": "Actief",
+              "de": "Aktiv",
+              "fr": "Actif",
+              "it": "Attivo",
+              "es": "Activo",
+              "sv": "Aktiv",
+              "no": "Aktiv",
+              "da": "Aktiv",
+              "pl": "Aktywny",
+              "ru": "Активно",
+              "ko": "활성",
+              "ar": "نشط"
+            }
+          }
+        ]
+      },
+      {
+        "id": "set_mow_duration",
+        "title": {
+          "en": "Set override mow duration",
+          "nl": "Stel handmatige maaitijd in",
+          "de": "Manuelle Mähdauer einstellen",
+          "fr": "Définir la durée de tonte manuelle",
+          "it": "Imposta durata taglio manuale",
+          "es": "Configurar duración de corte manual",
+          "sv": "Ställ in manuell klipptid",
+          "no": "Still inn manuell klippetid",
+          "da": "Indstil manuel klippetid",
+          "pl": "Ustaw ręczny czas koszenia",
+          "ru": "Настроить ручное время кошения",
+          "ko": "수동 잔디 깎기 시간 설정",
+          "ar": "ضبط مدة القص اليدوية"
+        },
+        "titleFormatted": {
+          "en": "Set override mow duration to [[minutes]] minutes",
+          "nl": "Stel handmatige maaitijd in op [[minutes]] minuten",
+          "de": "Manuelle Mähdauer auf [[minutes]] Minuten einstellen",
+          "fr": "Définir la durée de tonte manuelle sur [[minutes]] minutes",
+          "it": "Imposta durata taglio manuale su [[minutes]] minuti",
+          "es": "Establecer la duración de corte manual en [[minutes]] minutos",
+          "sv": "Ställ in manuell klipptid till [[minutes]] minuter",
+          "no": "Still inn manuell klippetid til [[minutes]] minutter",
+          "da": "Indstil manuel klippetid til [[minutes]] minutter",
+          "pl": "Ustaw ręczny czas koszenia na [[minutes]] minut",
+          "ru": "Настроить ручное время кошения на [[minutes]] минут",
+          "ko": "수동 잔디 깎기 시간을 [[minutes]] 분으로 설정",
+          "ar": "ضبط مدة القص اليدوية على [[minutes]] دقيقة"
+        },
+        "hint": {
+          "en": "Sets the duration for manual (override) mowing. This updates the Advanced Settings value and will be used the next time MOW is triggered.",
+          "nl": "Stelt de duur in voor handmatig maaien. Dit werkt de Geavanceerde Instellingen bij en wordt gebruikt de volgende keer dat MOW wordt geactiveerd.",
+          "de": "Stellt die Dauer für manuelles Mähzeit ein. Dies aktualisiert die erweiterten Einstellungen und wird beim nächsten Mähen verwendet.",
+          "fr": "Définit la durée de tonte manuelle. Cela met à jour les paramètres avancés et sera utilisé lors de la prochaine tonte.",
+          "it": "Imposta la durata del taglio manuale. Questo aggiorna le impostazioni avanzate e verrà utilizzato al prossimo taglio.",
+          "es": "Establece la duración del corte manual. Esto actualiza los ajustes avanzados y se utilizará en el próximo corte.",
+          "sv": "Ställer in tiden för manuell klippning. Detta uppdaterar de avancerade inställningarna och används nästa gång klippning startas.",
+          "no": "Stiller inn tiden for manuell klipping. Dette oppdaterer de avanserte innstillingene og brukes neste gang klipping startes.",
+          "da": "Indstiller tiden for manuel klipning. Dette opdaterer de avancerede indstillinger og bruges næste gang klipning startes.",
+          "pl": "Ustawia czas trwania koszenia ręcznego. Aktualizuje to ustawienia zaawansowane i zostanie użyte przy następnym koszeniu.",
+          "ru": "Устанавливает продолжительность ручного кошения. Это обновляет расширенные настройки и будет использовано при следующем кошении.",
+          "ko": "수동 잔디 깎기 시간을 설정합니다. 이 값은 고급 설정을 업데이트하며 다음 잔디 깎기 시 적용됩니다.",
+          "ar": "يحدد مدة القص اليدوي. يعمل هذا على تحديث الإعدادات المتقدمة وسيتم استخدامه في المرة القادمة التي يتم فيها تشغيل القص."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mower"
+          },
+          {
+            "type": "number",
+            "name": "minutes",
+            "title": {
+              "en": "Duration (minutes)",
+              "nl": "Duur (minuten)",
+              "de": "Dauer (Minuten)",
+              "fr": "Durée (minutes)",
+              "it": "Durata (minuti)",
+              "es": "Duración (minutos)",
+              "sv": "Varaktighet (minuter)",
+              "no": "Varighet (minutter)",
+              "da": "Varighed (minutter)",
+              "pl": "Czas trwania (minuty)",
+              "ru": "Продолжительность (минут)",
+              "ko": "시간 (분)",
+              "ar": "المدة (بالدقائق)"
+            },
+            "min": 1,
+            "max": 480,
+            "step": 1,
+            "placeholder": {
+              "en": "60",
+              "nl": "60",
+              "de": "60",
+              "fr": "60",
+              "it": "60",
+              "es": "60",
+              "sv": "60",
+              "no": "60",
+              "da": "60",
+              "pl": "60",
+              "ru": "60",
+              "ko": "60",
+              "ar": "60"
+            }
+          }
+        ]
+      },
+      {
+        "id": "set_radar_enabled",
+        "title": {
+          "en": "Set radar enabled",
+          "nl": "Stel radar ingeschakeld in",
+          "de": "Radar einstellen",
+          "fr": "Définir le radar",
+          "it": "Imposta radar abilitato",
+          "es": "Configurar radar",
+          "sv": "Ställ in radar",
+          "no": "Still inn radar",
+          "da": "Indstil radar",
+          "pl": "Ustaw radar",
+          "ru": "Настроить радар",
+          "ko": "레이더 설정",
+          "ar": "ضبط تشغيل الرادار"
+        },
+        "titleFormatted": {
+          "en": "Set radar enabled to [[value]]",
+          "nl": "Stel radar ingeschakeld in op [[value]]",
+          "de": "Radar auf [[value]] einstellen",
+          "fr": "Définir le radar sur [[value]]",
+          "it": "Imposta radar su [[value]]",
+          "es": "Establecer radar en [[value]]",
+          "sv": "Ställ in radar till [[value]]",
+          "no": "Still inn radar til [[value]]",
+          "da": "Indstil radar til [[value]]",
+          "pl": "Ustaw radar na [[value]]",
+          "ru": "Настроить радар на [[value]]",
+          "ko": "레이더를 [[value]](으)로 설정",
+          "ar": "ضبط تشغيل الرادار على [[value]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mower"
+          },
+          {
+            "type": "checkbox",
+            "name": "value",
+            "title": {
+              "en": "Active",
+              "nl": "Actief",
+              "de": "Aktiv",
+              "fr": "Actif",
+              "it": "Attivo",
+              "es": "Activo",
+              "sv": "Aktiv",
+              "no": "Aktiv",
+              "da": "Aktiv",
+              "pl": "Aktywny",
+              "ru": "Активно",
+              "ko": "활성",
+              "ar": "نشط"
+            }
+          }
+        ]
+      },
+      {
+        "id": "set_sensor_control",
+        "title": {
+          "en": "Set SensorControl",
+          "nl": "Stel SensorControl in",
+          "de": "SensorControl einstellen",
+          "fr": "Définir SensorControl",
+          "it": "Imposta SensorControl",
+          "es": "Configurar SensorControl",
+          "sv": "Ställ in SensorControl",
+          "no": "Still inn SensorControl",
+          "da": "Indstil SensorControl",
+          "pl": "Ustaw SensorControl",
+          "ru": "Настроить SensorControl",
+          "ko": "SensorControl 설정",
+          "ar": "ضبط التحكم بالاستشعار"
+        },
+        "titleFormatted": {
+          "en": "Set SensorControl to [[value]]",
+          "nl": "Stel SensorControl in op [[value]]",
+          "de": "SensorControl auf [[value]] einstellen",
+          "fr": "Définir SensorControl sur [[value]]",
+          "it": "Imposta SensorControl su [[value]]",
+          "es": "Establecer SensorControl en [[value]]",
+          "sv": "Ställ in SensorControl till [[value]]",
+          "no": "Still inn SensorControl til [[value]]",
+          "da": "Indstil SensorControl to [[value]]",
+          "pl": "Ustaw SensorControl na [[value]]",
+          "ru": "Настроить SensorControl на [[value]]",
+          "ko": "SensorControl을 [[value]](으)로 설정",
+          "ar": "ضبط التحكم بالاستشعار على [[value]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mower"
+          },
+          {
+            "type": "checkbox",
+            "name": "value",
+            "title": {
+              "en": "Active",
+              "nl": "Actief",
+              "de": "Aktiv",
+              "fr": "Actif",
+              "it": "Attivo",
+              "es": "Activo",
+              "sv": "Aktiv",
+              "no": "Aktiv",
+              "da": "Aktiv",
+              "pl": "Aktywny",
+              "ru": "Активно",
+              "ko": "활성",
+              "ar": "نشط"
+            }
+          }
+        ]
+      },
+      {
+        "id": "set_sensor_control_sensitivity",
+        "title": {
+          "en": "Set SensorControl sensitivity",
+          "nl": "Stel SensorControl gevoeligheid in",
+          "de": "SensorControl-Empfindlichkeit einstellen",
+          "fr": "Définir la sensibilité de SensorControl",
+          "it": "Imposta sensibilità SensorControl",
+          "es": "Configurar sensibilidad de SensorControl",
+          "sv": "Ställ in SensorControl-känslighet",
+          "no": "Still inn følsomhet for SensorControl",
+          "da": "Indstil SensorControl-følsomhed",
+          "pl": "Ustaw czułość SensorControl",
+          "ru": "Настроить чувствительность SensorControl",
+          "ko": "SensorControl 민감도 설정",
+          "ar": "ضبط حساسية التحكم بالاستشعار"
+        },
+        "titleFormatted": {
+          "en": "Set SensorControl sensitivity to [[sensitivity]]",
+          "nl": "Stel SensorControl gevoeligheid in op [[sensitivity]]",
+          "de": "SensorControl-Empfindlichkeit auf [[sensitivity]] einstellen",
+          "fr": "Définir la sensibilité de SensorControl sur [[sensitivity]]",
+          "it": "Imposta sensibilità SensorControl su [[sensitivity]]",
+          "es": "Establecer la sensibilidad de SensorControl en [[sensitivity]]",
+          "sv": "Ställ in SensorControl-känslighet till [[sensitivity]]",
+          "no": "Still inn følsomhet for SensorControl til [[sensitivity]]",
+          "da": "Indstil SensorControl-følsomhed til [[sensitivity]]",
+          "pl": "Ustaw czułość SensorControl na [[sensitivity]]",
+          "ru": "Настроить чувствительность SensorControl на [[sensitivity]]",
+          "ko": "SensorControl 민감도를 [[sensitivity]](으)로 설정",
+          "ar": "ضبط حساسية التحكم بالاستشعار على [[sensitivity]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mower"
+          },
+          {
+            "type": "dropdown",
+            "name": "sensitivity",
+            "title": {
+              "en": "Sensitivity",
+              "nl": "Gevoeligheid",
+              "de": "Empfindlichkeit",
+              "fr": "Sensibilité",
+              "it": "Sensibilità",
+              "es": "Sensibilidad",
+              "sv": "Känslighet",
+              "no": "Følsomhet",
+              "da": "Følsomhed",
+              "pl": "Czułość",
+              "ru": "Чувствительность",
+              "ko": "민감도",
+              "ar": "الحساسية"
+            },
+            "values": [
+              {
+                "id": "LOW",
+                "label": {
+                  "en": "Low",
+                  "nl": "Laag",
+                  "de": "Niedrig",
+                  "fr": "Bas",
+                  "it": "Basso",
+                  "es": "Bajo",
+                  "sv": "Låg",
+                  "no": "Lav",
+                  "da": "Lav",
+                  "pl": "Niski",
+                  "ru": "Низкий",
+                  "ko": "낮음",
+                  "ar": "منخفض"
+                }
+              },
+              {
+                "id": "MEDIUM",
+                "label": {
+                  "en": "Medium",
+                  "nl": "Medium",
+                  "de": "Mittel",
+                  "fr": "Moyen",
+                  "it": "Medio",
+                  "es": "Medio",
+                  "sv": "Medium",
+                  "no": "Medium",
+                  "da": "Mellem",
+                  "pl": "Średni",
+                  "ru": "Средний",
+                  "ko": "보통",
+                  "ar": "متوسط"
+                }
+              },
+              {
+                "id": "HIGH",
+                "label": {
+                  "en": "High",
+                  "nl": "Hoog",
+                  "de": "Hoch",
+                  "fr": "Haut",
+                  "it": "Alto",
+                  "es": "Alto",
+                  "sv": "Hög",
+                  "no": "Høy",
+                  "da": "Høj",
+                  "pl": "Wysoki",
+                  "ru": "Высокий",
+                  "ko": "높음",
+                  "ar": "عالي"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "start_spot_cut",
+        "title": {
+          "en": "Start spot cutting",
+          "nl": "Start spot cutting",
+          "de": "Punktmähen starten",
+          "fr": "Démarrer la tonte ciblée",
+          "it": "Avvia taglio localizzato",
+          "es": "Iniciar corte localizado",
+          "sv": "Starta punktklippning",
+          "no": "Start punktklipping",
+          "da": "Start punktklipning",
+          "pl": "Uruchom koszenie punktowe",
+          "ru": "Запустить точечное кошение",
+          "ko": "스팟 컷 시작",
+          "ar": "بدء القص الموضعي"
+        },
+        "titleFormatted": {
+          "en": "Start spot cutting",
+          "nl": "Start spot cutting",
+          "de": "Punktmähen starten",
+          "fr": "Démarrer la tonte ciblée",
+          "it": "Avvia taglio localizzato",
+          "es": "Iniciar corte localizado",
+          "sv": "Starta punktklippning",
+          "no": "Start punktklipping",
+          "da": "Start punktklipning",
+          "pl": "Uruchom koszenie punktowe",
+          "ru": "Запустить точечное кошение",
+          "ko": "스팟 컷 시작",
+          "ar": "بدء القص الموضعي"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mower"
+          }
+        ]
+      },
+      {
+        "id": "stop_spot_cut",
+        "title": {
+          "en": "Stop spot cutting",
+          "nl": "Stop spot cutting",
+          "de": "Punktmähen stoppen",
+          "fr": "Arrêter la tonte ciblée",
+          "it": "Arresta taglio localizzato",
+          "es": "Detener corte localizado",
+          "sv": "Stoppa punktklippning",
+          "no": "Stopp punktklipping",
+          "da": "Stop punktklipning",
+          "pl": "Zatrzymaj koszenie punktowe",
+          "ru": "Остановить точечное кошение",
+          "ko": "스팟 컷 중지",
+          "ar": "إيقاف القص الموضعي"
+        },
+        "titleFormatted": {
+          "en": "Stop spot cutting",
+          "nl": "Stop spot cutting",
+          "de": "Punktmähen stoppen",
+          "fr": "Arrêter la tonte ciblée",
+          "it": "Arresta taglio localizzato",
+          "es": "Detener corte localizado",
+          "sv": "Stoppa punktklippning",
+          "no": "Stopp punktklipping",
+          "da": "Stop punktklipning",
+          "pl": "Zatrzymaj koszenie punktowe",
+          "ru": "Остановить точечное кошение",
+          "ko": "스팟 컷 중지",
+          "ar": "إيقاف القص الموضعي"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mower"
+          }
+        ]
+      }
+    ]
+  },
+  "drivers": [
+    {
+      "name": {
+        "en": "Mower",
+        "nl": "Maaier",
+        "de": "Mäher",
+        "fr": "Tondeuse",
+        "it": "Tosaerba",
+        "es": "Cortacésped",
+        "sv": "Gräsklippare",
+        "no": "Klipper",
+        "da": "Plæneklipper",
+        "pl": "Kosiarka",
+        "ru": "Газонокосилка",
+        "ko": "잔디 깎는 기계",
+        "ar": "جزازة العشب"
+      },
+      "class": "lawnmower",
+      "capabilities": [
+        "mower_spot_cut",
+        "mower_garage_enabled",
+        "mower_radar_enabled",
+        "mower_frost_protection",
+        "mower_sensor_control",
+        "mower_eco_mode",
+        "mower_state",
+        "mower_activity",
+        "mower_state_text",
+        "next_start_schedule",
+        "mower_remaining_time",
+        "mower_pitch",
+        "mower_roll",
+        "measure_battery",
+        "measure_temperature",
+        "measure_temperature.battery",
+        "measure_voltage",
+        "measure_current",
+        "battery_charging_state",
+        "mower_charging_cycles",
+        "measure_signal_strength.loop",
+        "measure_signal_strength",
+        "mower_collisions",
+        "mower_running_time",
+        "mower_cutting_time",
+        "mower_error",
+        "alarm_collision",
+        "alarm_lift",
+        "alarm_upside_down",
+        "alarm_safety",
+        "alarm_stuck",
+        "alarm_connectivity",
+        "alarm_battery"
+      ],
+      "capabilitiesOptions": {
+        "measure_temperature.battery": {
+          "title": {
+            "en": "Battery Temperature",
+            "nl": "Accu Temperatuur",
+            "de": "Batterietemperatur",
+            "fr": "Température de la batterie",
+            "it": "Temperatura della batteria",
+            "es": "Temperatura de la batería",
+            "sv": "Batteritemperatur",
+            "no": "Batteritemperatur",
+            "da": "Batteritemperatur",
+            "pl": "Temperatura akumulatora",
+            "ru": "Температура батареи",
+            "ko": "배터리 온도",
+            "ar": "درجة حرارة البطارية"
+          }
+        },
+        "measure_signal_strength.loop": {
+          "title": {
+            "en": "Loop Signal Strength",
+            "nl": "Lussignaal Sterkte",
+            "de": "Schleifensignalstärke",
+            "fr": "Force du signal de boucle",
+            "it": "Forza del segnale del circuito",
+            "es": "Fuerza de la señal del bucle",
+            "sv": "Slingans signalstyrka",
+            "no": "Sløyfe signalstyrke",
+            "da": "Sløjfe signalstyrke",
+            "pl": "Siła sygnału pętli",
+            "ru": "Сила сигнала контура",
+            "ko": "루프 신호 강도",
+            "ar": "قوة إشارة الحلقة"
+          },
+          "units": "%"
+        },
+        "measure_signal_strength": {
+          "title": {
+            "en": "BLE Signal Strength",
+            "nl": "BLE Signaalsterkte",
+            "de": "BLE-Signalstärke",
+            "fr": "Force du signal BLE",
+            "it": "Forza del segnale BLE",
+            "es": "Fuerza de la señal BLE",
+            "sv": "BLE signalstyrka",
+            "no": "BLE-signalstyrke",
+            "da": "BLE-signalstyrke",
+            "pl": "Siła sygnału BLE",
+            "ru": "Сила сигнала BLE",
+            "ko": "BLE 신호 강도",
+            "ar": "قوة إشارة BLE"
+          }
+        }
+      },
+      "pair": [
+        {
+          "id": "mqtt_settings"
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "options": {
+            "singular": false
+          },
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "energy": {
+        "batteries": [
+          "INTERNAL"
+        ]
+      },
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "MQTT Broker Settings",
+            "nl": "MQTT Broker Instellingen",
+            "de": "MQTT-Broker-Einstellungen",
+            "fr": "Paramètres du courtier MQTT",
+            "it": "Impostazioni del Broker MQTT",
+            "es": "Configuración del Broker MQTT",
+            "sv": "MQTT-brokerinställningar",
+            "no": "MQTT Broker-innstillinger",
+            "da": "MQTT Broker-indstillinger",
+            "pl": "Ustawienia brokera MQTT",
+            "ru": "Настройки брокера MQTT",
+            "ko": "MQTT 브로커 설정",
+            "ar": "إعدادات وسيط MQTT"
+          },
+          "children": [
+            {
+              "id": "host",
+              "type": "text",
+              "label": {
+                "en": "Broker Hostname/IP",
+                "nl": "Broker Hostnaam/IP",
+                "de": "Broker-Hostname/IP",
+                "fr": "Nom d'hôte du courtier/IP",
+                "it": "Hostname/IP del Broker",
+                "es": "Nombre de host/IP del Broker",
+                "sv": "Broker-värdnamn/IP",
+                "no": "Broker-vertsnavn/IP",
+                "da": "Broker-værtsnavn/IP",
+                "pl": "Nazwa hosta/IP brokera",
+                "ru": "Имя хоста/IP-адрес брокера",
+                "ko": "브로커 호스트 이름/IP",
+                "ar": "اسم مضيف الوسيط/IP"
+              },
+              "value": ""
+            },
+            {
+              "id": "port",
+              "type": "number",
+              "label": {
+                "en": "Broker Port",
+                "nl": "Broker Poort",
+                "de": "Broker-Port",
+                "fr": "Port du courtier",
+                "it": "Porta del Broker",
+                "es": "Puerto del Broker",
+                "sv": "Broker-port",
+                "no": "Broker-port",
+                "da": "Broker-port",
+                "pl": "Port brokera",
+                "ru": "Порт брокера",
+                "ko": "브로커 포트",
+                "ar": "منفذ الوسيط"
+              },
+              "value": 1883
+            },
+            {
+              "id": "username",
+              "type": "text",
+              "label": {
+                "en": "Username",
+                "nl": "Gebruikersnaam",
+                "de": "Benutzername",
+                "fr": "Nom d'utilisateur",
+                "it": "Nome utente",
+                "es": "Nombre de usuario",
+                "sv": "Användarnamn",
+                "no": "Brukernavn",
+                "da": "Brugernavn",
+                "pl": "Nazwa użytkownika",
+                "ru": "Имя пользователя",
+                "ko": "사용자 이름",
+                "ar": "اسم المستخدم"
+              },
+              "value": ""
+            },
+            {
+              "id": "password",
+              "type": "password",
+              "label": {
+                "en": "Password",
+                "nl": "Wachtwoord",
+                "de": "Kennwort",
+                "fr": "Mot de passe",
+                "it": "Password",
+                "es": "Contraseña",
+                "sv": "Lösenord",
+                "no": "Passord",
+                "da": "Adgangskode",
+                "pl": "Hasło",
+                "ru": "Пароль",
+                "ko": "비밀번호",
+                "ar": "كلمة المرور"
+              },
+              "value": ""
+            },
+            {
+              "id": "topic",
+              "type": "text",
+              "label": {
+                "en": "Base Topic",
+                "nl": "Base Topic",
+                "de": "Basis-Topic",
+                "fr": "Sujet de base",
+                "it": "Topic di base",
+                "es": "Tema base",
+                "sv": "Bas-ämne (Topic)",
+                "no": "Base-emne",
+                "da": "Basis-emne",
+                "pl": "Temat bazowy",
+                "ru": "Базовый топик",
+                "ko": "기본 토픽",
+                "ar": "الموضوع الأساسي"
+              },
+              "value": "mower_ble"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Mower Information",
+            "nl": "Maaier Informatie",
+            "de": "Mäherinformationen",
+            "fr": "Informations sur la tondeuse",
+            "it": "Informazioni sul tosaerba",
+            "es": "Información del cortacésped",
+            "sv": "Information om gräsklipparen",
+            "no": "Klipperinformasjon",
+            "da": "Information om plæneklipper",
+            "pl": "Informacje o kosiarce",
+            "ru": "Информация о косилке",
+            "ko": "잔디 깎는 기계 정보",
+            "ar": "معلومات جزازة العشب"
+          },
+          "children": [
+            {
+              "id": "manufacturer",
+              "type": "label",
+              "label": {
+                "en": "Manufacturer",
+                "nl": "Fabrikant",
+                "de": "Hersteller",
+                "fr": "Fabricant",
+                "it": "Produttore",
+                "es": "Fabricante",
+                "sv": "Tillverkare",
+                "no": "Produsent",
+                "da": "Producent",
+                "pl": "Producent",
+                "ru": "Производитель",
+                "ko": "제조사",
+                "ar": "الشركة المصنعة"
+              },
+              "value": "-"
+            },
+            {
+              "id": "model",
+              "type": "label",
+              "label": {
+                "en": "Model",
+                "nl": "Model",
+                "de": "Modell",
+                "fr": "Modèle",
+                "it": "Modello",
+                "es": "Modelo",
+                "sv": "Modell",
+                "no": "Modell",
+                "da": "Model",
+                "pl": "Model",
+                "ru": "Модель",
+                "ko": "모델",
+                "ar": "الموديل"
+              },
+              "value": "-"
+            },
+            {
+              "id": "serialNumber",
+              "type": "label",
+              "label": {
+                "en": "Serial Number",
+                "nl": "Serienummer",
+                "de": "Seriennummer",
+                "fr": "Numéro de série",
+                "it": "Numero di serie",
+                "es": "Número de serie",
+                "sv": "Serienummer",
+                "no": "Serienummer",
+                "da": "Serienummer",
+                "pl": "Numer seryjny",
+                "ru": "Серийный номер",
+                "ko": "일련 번호",
+                "ar": "الرقم التسلسلي"
+              },
+              "value": "-"
+            },
+            {
+              "id": "schedule",
+              "type": "label",
+              "label": {
+                "en": "Weekly Schedule",
+                "nl": "Wekelijks Schema",
+                "de": "Wochenplan",
+                "fr": "Programme hebdomadaire",
+                "it": "Programma settimanale",
+                "es": "Programa semanal",
+                "sv": "Veckoschema",
+                "no": "Ukeplan",
+                "da": "Ugeplan",
+                "pl": "Harmonogram tygodniowy",
+                "ru": "Еженедельное расписание",
+                "ko": "주간 일정",
+                "ar": "الجدول الأسبوعي"
+              },
+              "value": "-"
+            },
+            {
+              "id": "software_platform",
+              "type": "label",
+              "label": {
+                "en": "Software Platform",
+                "nl": "Software Platform",
+                "de": "Softwareplattform",
+                "fr": "Plateforme logicielle",
+                "it": "Piattaforma software",
+                "es": "Plataforma de software",
+                "sv": "Programvaruplattform",
+                "no": "Programvareplattform",
+                "da": "Softwareplatform",
+                "pl": "Platforma oprogramowania",
+                "ru": "Программная платформа",
+                "ko": "소프트웨어 플랫폼",
+                "ar": "منصة البرمجيات"
+              },
+              "value": "-"
+            },
+            {
+              "id": "software_version",
+              "type": "label",
+              "label": {
+                "en": "Software Version",
+                "nl": "Software Versie",
+                "de": "Softwareversion",
+                "fr": "Version du logiciel",
+                "it": "Versione del software",
+                "es": "Versión del software",
+                "sv": "Programvaruversion",
+                "no": "Programvareversjon",
+                "da": "Softwareversion",
+                "pl": "Wersja oprogramowania",
+                "ru": "Версия ПО",
+                "ko": "소프트웨어 버전",
+                "ar": "إصدار البرمجيات"
+              },
+              "value": "-"
+            },
+            {
+              "id": "software_bundle",
+              "type": "label",
+              "label": {
+                "en": "Software Bundle",
+                "nl": "Software Pakket",
+                "de": "Softwarepaket",
+                "fr": "Pack logiciel",
+                "it": "Pacchetto software",
+                "es": "Paquete de software",
+                "sv": "Programvarupaket",
+                "no": "Programvarepakke",
+                "da": "Softwarepakke",
+                "pl": "Pakiet oprogramowania",
+                "ru": "Пакет ПО",
+                "ko": "소프트웨어 번들",
+                "ar": "حزمة البرمجيات"
+              },
+              "value": "-"
+            },
+            {
+              "id": "hardware_revision",
+              "type": "label",
+              "label": {
+                "en": "Hardware Revision",
+                "nl": "Hardware Revisie",
+                "de": "Hardware-Revision",
+                "fr": "Révision matérielle",
+                "it": "Revisione hardware",
+                "es": "Revisión de hardware",
+                "sv": "Maskinvarurevision",
+                "no": "Maskinvarurevisjon",
+                "da": "Hardware-revision",
+                "pl": "Rewizja sprzętowa",
+                "ru": "Ревизия оборудования",
+                "ko": "하드웨어 버전",
+                "ar": "مراجعة الأجهزة"
+              },
+              "value": "-"
+            },
+            {
+              "id": "production_time",
+              "type": "label",
+              "label": {
+                "en": "Production Time",
+                "nl": "Productietijd",
+                "de": "Produktionszeit",
+                "fr": "Temps de production",
+                "it": "Tempo di produzione",
+                "es": "Tiempo de producción",
+                "sv": "Produktionstid",
+                "no": "Produksjonstid",
+                "da": "Produktionstid",
+                "pl": "Czas produkcji",
+                "ru": "Время производства",
+                "ko": "생산 시간",
+                "ar": "وقت الإنتاج"
+              },
+              "value": "-"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Mower Control Settings",
+            "nl": "Maaier Beheer Instellingen",
+            "de": "Mäher-Steuerungseinstellungen",
+            "fr": "Paramètres de contrôle de la tondeuse",
+            "it": "Impostazioni di controllo del tosaerba",
+            "es": "Configuración de control del cortacésped",
+            "sv": "Inställningar för gräsklipparstyrning",
+            "no": "Kontrollinnstillinger for klipper",
+            "da": "Indstillinger for plæneklipperstyring",
+            "pl": "Ustawienia sterowania kosiarką",
+            "ru": "Настройки управления косилкой",
+            "ko": "잔디 깎는 기계 제어 설정",
+            "ar": "إعدادات التحكم في جزازة العشب"
+          },
+          "children": [
+            {
+              "id": "mow_duration",
+              "type": "number",
+              "label": {
+                "en": "Override Mow Duration (minutes)",
+                "nl": "Handmatige maaitijd (minuten)",
+                "de": "Mähdauer überschreiben (Minuten)",
+                "fr": "Remplacer la durée de tonte (minutes)",
+                "it": "Ignora durata taglio (minuti)",
+                "es": "Anular duración de corte (minutos)",
+                "sv": "Överskrid klipptid (minuter)",
+                "no": "Overstyr klippetid (minutter)",
+                "da": "Tilsidesæt klippetid (minutter)",
+                "pl": "Zastąp czas koszenia (minuty)",
+                "ru": "Изменить время кошения (минут)",
+                "ko": "잔디 깎기 시간 재설정 (분)",
+                "ar": "تجاوز مدة القص (بالدقائق)"
+              },
+              "value": 60,
+              "min": 1,
+              "max": 480
+            },
+            {
+              "id": "drive_past_wire",
+              "type": "number",
+              "label": {
+                "en": "Drive Past Wire (mm)",
+                "nl": "Over de draad rijden (mm)",
+                "de": "Über das Begrenzungskabel fahren (mm)",
+                "fr": "Rouler au-delà du fil (mm)",
+                "it": "Guida oltre il filo (mm)",
+                "es": "Conducir más allá del cable (mm)",
+                "sv": "Kör förbi slingan (mm)",
+                "no": "Kjør forbi ledningen (mm)",
+                "da": "Kør forbi tråden (mm)",
+                "pl": "Przejazd poza przewód (mm)",
+                "ru": "Проезд за ограничительный провод (мм)",
+                "ko": "와이어 너머 주행 (mm)",
+                "ar": "القيادة وراء السلك (مم)"
+              },
+              "value": 300,
+              "min": 100,
+              "max": 500
+            },
+            {
+              "id": "reversing_distance",
+              "type": "number",
+              "label": {
+                "en": "Reversing Distance (mm)",
+                "nl": "Achteruitrij-afstand (mm)",
+                "de": "Rückwärtsfahrdistanz (mm)",
+                "fr": "Distance de recul (mm)",
+                "it": "Distanza di retromarcia (mm)",
+                "es": "Distancia de marcha atrás (mm)",
+                "sv": "Backningsavstånd (mm)",
+                "no": "Ryggeavstand (mm)",
+                "da": "Bakke-afstand (mm)",
+                "pl": "Odległość cofania (mm)",
+                "ru": "Расстояние заднего хода (мм)",
+                "ko": "후진 거리 (mm)",
+                "ar": "مسافة الرجوع للخلف (مم)"
+              },
+              "value": 600,
+              "min": 100,
+              "max": 1000
+            }
+          ]
+        }
+      ],
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
+      "images": {
+        "small": "/drivers/mower/assets/images/small.jpg",
+        "large": "/drivers/mower/assets/images/large.jpg",
+        "xlarge": "/drivers/mower/assets/images/xlarge.jpg"
+      },
+      "id": "mower"
+    }
+  ],
+  "capabilities": {
+    "alarm_collision": {
+      "type": "boolean",
+      "title": {
+        "en": "Collision Alarm",
+        "nl": "Botsing Alarm",
+        "de": "Kollisionsalarm",
+        "fr": "Alarme de collision",
+        "it": "Allarme di collisione",
+        "es": "Alarma de colisión",
+        "sv": "Kollisionslarm",
+        "no": "Kollisjonsalarm",
+        "da": "Kollisionsalarm",
+        "pl": "Alarm kolizji",
+        "ru": "Сигнал столкновения",
+        "ko": "충돌 알람",
+        "ar": "إنذار الاصطدام"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/capability_icons/alarm_collision.svg",
+      "insights": true,
+      "insightsTitleTrue": {
+        "en": "Collision detected",
+        "nl": "Botsing gedetecteerd",
+        "de": "Kollision erkannt",
+        "fr": "Collision détectée",
+        "it": "Collisione rilevata",
+        "es": "Colisión detectada",
+        "sv": "Kollision upptäckt",
+        "no": "Kollisjon oppdaget",
+        "da": "Kollision registreret",
+        "pl": "Wykryto kolizję",
+        "ru": "Обнаружено столкновение",
+        "ko": "충돌 감지됨",
+        "ar": "تم اكتشاف اصطدام"
+      },
+      "insightsTitleFalse": {
+        "en": "Collision cleared",
+        "nl": "Geen botsing meer",
+        "de": "Kollision behoben",
+        "fr": "Collision effacée",
+        "it": "Collisione risolta",
+        "es": "Colisión resuelta",
+        "sv": "Kollision åtgärdad",
+        "no": "Kollisjon klarert",
+        "da": "Kollision ryddet",
+        "pl": "Kolizja usunięta",
+        "ru": "Столкновение устранено",
+        "ko": "충돌 해결됨",
+        "ar": "تم مسح الاصطدام"
+      }
+    },
+    "alarm_lift": {
+      "type": "boolean",
+      "title": {
+        "en": "Lift Alarm",
+        "nl": "Opgeheven Alarm",
+        "de": "Hebealarm",
+        "fr": "Alarme de levage",
+        "it": "Allarme sollevamento",
+        "es": "Alarma de elevación",
+        "sv": "Lyftlarm",
+        "no": "Løftealarm",
+        "da": "Løftealarm",
+        "pl": "Alarm podniesienia",
+        "ru": "Сигнал подъема",
+        "ko": "리프트 알람",
+        "ar": "إنذار الرفع"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/capability_icons/alarm_lift.svg",
+      "insights": true,
+      "insightsTitleTrue": {
+        "en": "Mower lifted",
+        "nl": "Maaier opgetild",
+        "de": "Mäher angehoben",
+        "fr": "Tondeuse soulevée",
+        "it": "Tosaerba sollevato",
+        "es": "Cortacésped levantado",
+        "sv": "Gräsklipparen lyft",
+        "no": "Klipperen løftet",
+        "da": "Plæneklipper løftet",
+        "pl": "Kosiarka podniesiona",
+        "ru": "Косилка поднята",
+        "ko": "잔디 깎는 기계가 들어 올려짐",
+        "ar": "تم رفع جزازة العشب"
+      },
+      "insightsTitleFalse": {
+        "en": "Mower placed back",
+        "nl": "Maaier hersteld",
+        "de": "Mäher zurückgestellt",
+        "fr": "Tondeuse reposée",
+        "it": "Tosaerba riposizionato",
+        "es": "Cortacésped colocado de nuevo",
+        "sv": "Gräsklipparen nedsatt",
+        "no": "Klipperen satt tilbake",
+        "da": "Plæneklipper sat tilbage",
+        "pl": "Kosiarka odstawiona",
+        "ru": "Косилка возвращена",
+        "ko": "잔디 깎는 기계가 다시 내려짐",
+        "ar": "تم إرجاع جزازة العشب"
+      }
+    },
+    "alarm_safety": {
+      "type": "boolean",
+      "title": {
+        "en": "Safety Alarm",
+        "nl": "Veiligheidsalarm",
+        "de": "Sicherheitsalarm",
+        "fr": "Alarme de sécurité",
+        "it": "Allarme di sicurezza",
+        "es": "Alarma de seguridad",
+        "sv": "Säkerhetslarm",
+        "no": "Sikkerhetsalarm",
+        "da": "Sikkerhedsalarm",
+        "pl": "Alarm bezpieczeństwa",
+        "ru": "Сигнал безопасности",
+        "ko": "안전 알람",
+        "ar": "إنذار السلامة"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "insights": true,
+      "insightsTitleTrue": {
+        "en": "Safety stop active",
+        "nl": "Veiligheidsstop actief",
+        "de": "Sicherheitsstopp aktiv",
+        "fr": "Arrêt de sécurité actif",
+        "it": "Arresto di sicurezza attivo",
+        "es": "Parada de seguridad activa",
+        "sv": "Säkerhetsstopp aktivt",
+        "no": "Sikkerhetsstopp aktivt",
+        "da": "Sikkerhedsstop aktivt",
+        "pl": "Zatrzymanie bezpieczeństwa aktywne",
+        "ru": "Безопасный останов активен",
+        "ko": "안전 정지 활성화됨",
+        "ar": "توقف السلامة نشط"
+      },
+      "insightsTitleFalse": {
+        "en": "Safety stop cleared",
+        "nl": "Veiligheidsstop hersteld",
+        "de": "Sicherheitsstopp aufgehoben",
+        "fr": "Arrêt de sécurité effacé",
+        "it": "Arresto di sicurezza ripristinato",
+        "es": "Parada de seguridad restablecida",
+        "sv": "Säkerhetsstopp återställt",
+        "no": "Sikkerhetsstopp opphevet",
+        "da": "Sikkerhedsstop ryddet",
+        "pl": "Zatrzymanie bezpieczeństwa usunięte",
+        "ru": "Безопасный останов сброшен",
+        "ko": "안전 정지 해제됨",
+        "ar": "تم إلغاء توقف السلامة"
+      }
+    },
+    "alarm_upside_down": {
+      "type": "boolean",
+      "title": {
+        "en": "Upside Down Alarm",
+        "nl": "Ondersteboven Alarm",
+        "de": "Kopfüber-Alarm",
+        "fr": "Alarme de renversement",
+        "it": "Allarme capovolgimento",
+        "es": "Alarma de vuelco",
+        "sv": "Upp-och-ned-larm",
+        "no": "Opp-ned-alarm",
+        "da": "Alarm for plæneklipper på hovedet",
+        "pl": "Alarm do góry nogami",
+        "ru": "Сигнал переворота",
+        "ko": "뒤집힘 알람",
+        "ar": "إنذار المقلوب"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/capability_icons/alarm_upside_down.svg",
+      "insights": true,
+      "insightsTitleTrue": {
+        "en": "Mower upside down",
+        "nl": "Maaier ondersteboven",
+        "de": "Mäher kopfüber",
+        "fr": "Tondeuse à l'envers",
+        "it": "Tosaerba capovolto",
+        "es": "Cortacésped al revés",
+        "sv": "Gräsklipparen upp och ned",
+        "no": "Klipperen opp-ned",
+        "da": "Plæneklipper på hovedet",
+        "pl": "Kosiarka do góry nogami",
+        "ru": "Косилка перевернута",
+        "ko": "잔디 깎는 기계가 뒤집힘",
+        "ar": "جزازة العشب مقلوبة"
+      },
+      "insightsTitleFalse": {
+        "en": "Mower upright",
+        "nl": "Maaier rechtop",
+        "de": "Mäher aufrecht",
+        "fr": "Tondeuse droite",
+        "it": "Tosaerba dritto",
+        "es": "Cortacésped vertical",
+        "sv": "Gräsklipparen upprätt",
+        "no": "Klipperen oppreist",
+        "da": "Plæneklipper oprejst",
+        "pl": "Kosiarka w pionie",
+        "ru": "Косилка стоит ровно",
+        "ko": "잔디 깎는 기계가 정상으로 서 있음",
+        "ar": "جزازة العشب في وضع مستقيم"
+      }
+    },
+    "mower_activity": {
+      "type": "string",
+      "title": {
+        "en": "Activity",
+        "nl": "Activiteit",
+        "de": "Aktivität",
+        "fr": "Activité",
+        "it": "Attività",
+        "es": "Actividad",
+        "sv": "Aktivitet",
+        "no": "Aktivitet",
+        "da": "Aktivitet",
+        "pl": "Aktywność",
+        "ru": "Активность",
+        "ko": "활동",
+        "ar": "النشاط"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/capability_icons/mower_activity.svg"
+    },
+    "mower_charging_cycles": {
+      "type": "number",
+      "title": {
+        "en": "Charging cycles",
+        "nl": "Laadcycli",
+        "de": "Ladezyklen",
+        "fr": "Cycles de charge",
+        "it": "Cicli di ricarica",
+        "es": "Ciclos de carga",
+        "sv": "Laddningscykler",
+        "no": "Ladesykluser",
+        "da": "Opladningscyklusser",
+        "pl": "Cykle ładowania",
+        "ru": "Циклы зарядки",
+        "ko": "충전 사이클",
+        "ar": "دورات الشحن"
+      },
+      "min": 0,
+      "decimals": 0,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/capability_icons/mower_charging_cycles.svg"
+    },
+    "mower_collisions": {
+      "type": "number",
+      "title": {
+        "en": "Collisions",
+        "nl": "Botsingen",
+        "de": "Kollisionen",
+        "fr": "Collisions",
+        "it": "Collisioni",
+        "es": "Colisiones",
+        "sv": "Kollisioner",
+        "no": "Kollisjoner",
+        "da": "Kollisioner",
+        "pl": "Kolizje",
+        "ru": "Столкновения",
+        "ko": "충돌 횟수",
+        "ar": "الاصطدامات"
+      },
+      "min": 0,
+      "decimals": 0,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/capability_icons/mower_collisions.svg"
+    },
+    "mower_cutting_time": {
+      "type": "number",
+      "title": {
+        "en": "Total cutting time",
+        "nl": "Totale maaitijd",
+        "de": "Gesamte Mähzeit",
+        "fr": "Temps de tonte total",
+        "it": "Tempo di taglio totale",
+        "es": "Tiempo total de corte",
+        "sv": "Total klipptid",
+        "no": "Total klippetid",
+        "da": "Samlet klippetid",
+        "pl": "Całkowity czas koszenia",
+        "ru": "Общее время кошения",
+        "ko": "총 잔디 깎기 시간",
+        "ar": "إجمالي وقت القص"
+      },
+      "min": 0,
+      "decimals": 1,
+      "units": {
+        "en": "h",
+        "nl": "",
+        "de": "h",
+        "fr": "h",
+        "it": "h",
+        "es": "h",
+        "sv": "h",
+        "no": "h",
+        "da": "h",
+        "pl": "h",
+        "ru": "h",
+        "ko": "h",
+        "ar": "h"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/capability_icons/mower_cutting_time.svg"
+    },
+    "mower_eco_mode": {
+      "type": "boolean",
+      "title": {
+        "en": "Eco Mode",
+        "nl": "Eco Modus",
+        "de": "Eco-Modus",
+        "fr": "Mode éco",
+        "it": "Modalità Eco",
+        "es": "Modo Eco",
+        "sv": "Eco Mode",
+        "no": "Eco-modus",
+        "da": "Eco-tilstand",
+        "pl": "Tryb Eco",
+        "ru": "Эко-режим",
+        "ko": "에코 모드",
+        "ar": "الوضع الاقتصادي"
+      },
+      "getable": true,
+      "setable": true,
+      "uiComponent": "button",
+      "icon": "/assets/capability_icons/mower_eco_mode.svg"
+    },
+    "mower_error": {
+      "type": "string",
+      "title": {
+        "en": "Last error",
+        "nl": "Laatste fout",
+        "de": "Letzter Fehler",
+        "fr": "Dernière erreur",
+        "it": "Ultimo errore",
+        "es": "Último error",
+        "sv": "Senaste fel",
+        "no": "Siste feil",
+        "da": "Seneste fejl",
+        "pl": "Ostatni błąd",
+        "ru": "Последняя ошибка",
+        "ko": "마지막 오류",
+        "ar": "الخطأ الأخير"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/capability_icons/mower_error.svg"
+    },
+    "mower_frost_protection": {
+      "type": "boolean",
+      "title": {
+        "en": "Frost Protection",
+        "nl": "Vorstbeveiliging",
+        "de": "Frostschutz",
+        "fr": "Protection antigel",
+        "it": "Protezione antigelo",
+        "es": "Protección contra heladas",
+        "sv": "Frostskydd",
+        "no": "Frostbeskyttelse",
+        "da": "Frostbeskyttelse",
+        "pl": "Ochrona przed mrozem",
+        "ru": "Защита от замерзания",
+        "ko": "성에 방지",
+        "ar": "الحماية من الصقيع"
+      },
+      "getable": true,
+      "setable": true,
+      "uiComponent": "button",
+      "icon": "/assets/capability_icons/mower_frost_protection.svg"
+    },
+    "mower_garage_enabled": {
+      "type": "boolean",
+      "title": {
+        "en": "Avoid Garage",
+        "nl": "Garage Vermijden",
+        "de": "Garage vermeiden",
+        "fr": "Éviter le garage",
+        "it": "Evita garage",
+        "es": "Evitar garaje",
+        "sv": "Undvik garage",
+        "no": "Unngå garasje",
+        "da": "Undgå garage",
+        "pl": "Unikaj garażu",
+        "ru": "Избегать гаража",
+        "ko": "차고 피하기",
+        "ar": "تجنب المرآب"
+      },
+      "getable": true,
+      "setable": true,
+      "uiComponent": "button",
+      "icon": "/assets/capability_icons/mower_garage_enabled.svg"
+    },
+    "mower_pitch": {
+      "type": "number",
+      "title": {
+        "en": "Pitch",
+        "nl": "Helling (Pitch)",
+        "de": "Neigung (Pitch)",
+        "fr": "Tangage (Pitch)",
+        "it": "Inclinazione (Pitch)",
+        "es": "Inclinación longitudinal (Pitch)",
+        "sv": "Lutning (Pitch)",
+        "no": "Helling (Pitch)",
+        "da": "Hældning (Pitch)",
+        "pl": "Nachylenie podłużne (Pitch)",
+        "ru": "Тангаж (Pitch)",
+        "ko": "피치",
+        "ar": "الميل الطولي"
+      },
+      "getable": true,
+      "setable": false,
+      "units": {
+        "en": "°",
+        "nl": "°",
+        "de": "°",
+        "fr": "°",
+        "it": "°",
+        "es": "°",
+        "sv": "°",
+        "no": "°",
+        "da": "°",
+        "pl": "°",
+        "ru": "°",
+        "ko": "°",
+        "ar": "°"
+      },
+      "uiComponent": "sensor",
+      "insights": true,
+      "icon": "/assets/capability_icons/mower_pitch.svg"
+    },
+    "mower_radar_enabled": {
+      "type": "boolean",
+      "title": {
+        "en": "Radar Enabled",
+        "nl": "Radar Ingeschakeld",
+        "de": "Radar aktiviert",
+        "fr": "Radar activé",
+        "it": "Radar abilitato",
+        "es": "Radar habilitado",
+        "sv": "Radar aktiverad",
+        "no": "Radar aktivert",
+        "da": "Radar aktiveret",
+        "pl": "Radar włączony",
+        "ru": "Радар включен",
+        "ko": "레이더 활성화",
+        "ar": "الرادار مفعل"
+      },
+      "getable": true,
+      "setable": true,
+      "uiComponent": "button",
+      "icon": "/assets/capability_icons/mower_radar_enabled.svg"
+    },
+    "mower_remaining_time": {
+      "type": "number",
+      "title": {
+        "en": "Remaining Mow Time",
+        "nl": "Resterende Maaitijd",
+        "de": "Verbleibende Mähzeit",
+        "fr": "Temps de tonte restant",
+        "it": "Tempo di taglio rimanente",
+        "es": "Tiempo de corte restante",
+        "sv": "Återstående klipptid",
+        "no": "Gjenværende klippetid",
+        "da": "Resterende klippetid",
+        "pl": "Pozostały czas koszenia",
+        "ru": "Оставшееся время кошения",
+        "ko": "남은 잔디 깎기 시간",
+        "ar": "وقت القص المتبقي"
+      },
+      "units": {
+        "en": "min",
+        "nl": "min",
+        "de": "min",
+        "fr": "min",
+        "it": "min",
+        "es": "min",
+        "sv": "min",
+        "no": "min",
+        "da": "min",
+        "pl": "min",
+        "ru": "min",
+        "ko": "min",
+        "ar": "min"
+      },
+      "decimals": 0,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "insights": false,
+      "icon": "/assets/capability_icons/mower_remaining_time.svg"
+    },
+    "mower_roll": {
+      "type": "number",
+      "title": {
+        "en": "Roll",
+        "nl": "Dwarshelling (Roll)",
+        "de": "Querneigung (Roll)",
+        "fr": "Roulis (Roll)",
+        "it": "Rollio (Roll)",
+        "es": "Inclinación transversal (Roll)",
+        "sv": "Lutning (Roll)",
+        "no": "Dwarshelling (Roll)",
+        "da": "Sidehældning (Roll)",
+        "pl": "Nachylenie poprzeczne (Roll)",
+        "ru": "Крен (Roll)",
+        "ko": "롤",
+        "ar": "التمايل الجانبي"
+      },
+      "getable": true,
+      "setable": false,
+      "units": {
+        "en": "°",
+        "nl": "°",
+        "de": "°",
+        "fr": "°",
+        "it": "°",
+        "es": "°",
+        "sv": "°",
+        "no": "°",
+        "da": "°",
+        "pl": "°",
+        "ru": "°",
+        "ko": "°",
+        "ar": "°"
+      },
+      "uiComponent": "sensor",
+      "insights": true,
+      "icon": "/assets/capability_icons/mower_roll.svg"
+    },
+    "mower_running_time": {
+      "type": "number",
+      "title": {
+        "en": "Total running time",
+        "nl": "Totale looptijd",
+        "de": "Gesamtlaufzeit",
+        "fr": "Temps de fonctionnement total",
+        "it": "Tempo di funzionamento totale",
+        "es": "Tiempo total de funcionamiento",
+        "sv": "Total drifttid",
+        "no": "Total driftstid",
+        "da": "Samlet driftstid",
+        "pl": "Całkowity czas pracy",
+        "ru": "Общее время работы",
+        "ko": "총 운행 시간",
+        "ar": "إجمالي وقت التشغيل"
+      },
+      "min": 0,
+      "decimals": 1,
+      "units": {
+        "en": "h",
+        "nl": "",
+        "de": "h",
+        "fr": "h",
+        "it": "h",
+        "es": "h",
+        "sv": "h",
+        "no": "h",
+        "da": "h",
+        "pl": "h",
+        "ru": "h",
+        "ko": "h",
+        "ar": "h"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/capability_icons/mower_running_time.svg"
+    },
+    "mower_sensor_control": {
+      "type": "boolean",
+      "title": {
+        "en": "SensorControl",
+        "nl": "SensorControl",
+        "de": "SensorControl",
+        "fr": "SensorControl",
+        "it": "SensorControl",
+        "es": "SensorControl",
+        "sv": "SensorControl",
+        "no": "SensorControl",
+        "da": "SensorControl",
+        "pl": "SensorControl",
+        "ru": "SensorControl",
+        "ko": "SensorControl",
+        "ar": "التحكم بالاستشعار"
+      },
+      "getable": true,
+      "setable": true,
+      "uiComponent": "button",
+      "icon": "/assets/capability_icons/mower_sensor_control.svg"
+    },
+    "mower_spot_cut": {
+      "type": "boolean",
+      "title": {
+        "en": "Spot Cutting",
+        "nl": "Spot Cutting",
+        "de": "Punktmähen (Spot Cutting)",
+        "fr": "Tonte ciblée (Spot Cutting)",
+        "it": "Taglio localizzato (Spot Cutting)",
+        "es": "Corte localizado (Spot Cutting)",
+        "sv": "Punktklippning (Spot Cutting)",
+        "no": "Punktklipping (Spot Cutting)",
+        "da": "Punktklipning (Spot Cutting)",
+        "pl": "Koszenie punktowe (Spot Cutting)",
+        "ru": "Точечное кошение (Spot Cutting)",
+        "ko": "스팟 컷 (Spot Cutting)",
+        "ar": "القص الموضعي (Spot Cutting)"
+      },
+      "getable": true,
+      "setable": true,
+      "uiComponent": "button",
+      "insights": true,
+      "insightsTitleTrue": {
+        "en": "Spot cutting started",
+        "nl": "Spot cutting gestart",
+        "de": "Punktmähen gestartet",
+        "fr": "Tonte ciblée démarrée",
+        "it": "Taglio localizzato avviato",
+        "es": "Corte localizado iniciado",
+        "sv": "Punktklippning startad",
+        "no": "Punktklipping startet",
+        "da": "Punktklipning startet",
+        "pl": "Koszenie punktowe rozpoczęte",
+        "ru": "Точечное кошение запущено",
+        "ko": "스팟 컷 시작됨",
+        "ar": "بدأ القص الموضعي"
+      },
+      "insightsTitleFalse": {
+        "en": "Spot cutting stopped",
+        "nl": "Spot cutting gestopt",
+        "de": "Punktmähen gestoppt",
+        "fr": "Tonte ciblée arrêtée",
+        "it": "Taglio localizzato arrestato",
+        "es": "Corte localizado detenido",
+        "sv": "Punktklippning stoppad",
+        "no": "Punktklipping stoppet",
+        "da": "Punktklipning stoppet",
+        "pl": "Koszenie punktowe zatrzymane",
+        "ru": "Точечное кошение остановлено",
+        "ko": "스팟 컷 중지됨",
+        "ar": "تم إيقاف القص الموضعي"
+      },
+      "icon": "/assets/capability_icons/mower_spot_cut.svg"
+    },
+    "mower_state_text": {
+      "type": "string",
+      "title": {
+        "en": "Status",
+        "nl": "Status",
+        "de": "Status",
+        "fr": "Statut",
+        "it": "Stato",
+        "es": "Estado",
+        "sv": "Status",
+        "no": "Status",
+        "da": "Status",
+        "pl": "Status",
+        "ru": "Статус",
+        "ko": "상태",
+        "ar": "الحالة"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/capability_icons/mower_state_text.svg"
+    },
+    "next_start_schedule": {
+      "type": "string",
+      "title": {
+        "en": "Next start",
+        "nl": "Volgende star",
+        "de": "Nächster Start",
+        "fr": "Prochain départ",
+        "it": "Prossimo avvio",
+        "es": "Siguiente inicio",
+        "sv": "Nästa start",
+        "no": "Neste start",
+        "da": "Næste start",
+        "pl": "Następny start",
+        "ru": "Следующий запуск",
+        "ko": "다음 시작",
+        "ar": "البدء التالي"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/capability_icons/next_start_schedule.svg"
+    }
+  }
+}

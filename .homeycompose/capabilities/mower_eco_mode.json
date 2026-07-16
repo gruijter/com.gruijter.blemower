@@ -1,0 +1,22 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Eco Mode",
+    "nl": "Eco Modus",
+    "de": "Eco-Modus",
+    "fr": "Mode éco",
+    "it": "Modalità Eco",
+    "es": "Modo Eco",
+    "sv": "Eco Mode",
+    "no": "Eco-modus",
+    "da": "Eco-tilstand",
+    "pl": "Tryb Eco",
+    "ru": "Эко-режим",
+    "ko": "에코 모드",
+    "ar": "الوضع الاقتصادي"
+  },
+  "getable": true,
+  "setable": true,
+  "uiComponent": "button",
+  "icon": "/assets/capability_icons/mower_eco_mode.svg"
+}

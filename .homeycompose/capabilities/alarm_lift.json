@@ -1,0 +1,53 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Lift Alarm",
+    "nl": "Opgeheven Alarm",
+    "de": "Hebealarm",
+    "fr": "Alarme de levage",
+    "it": "Allarme sollevamento",
+    "es": "Alarma de elevación",
+    "sv": "Lyftlarm",
+    "no": "Løftealarm",
+    "da": "Løftealarm",
+    "pl": "Alarm podniesienia",
+    "ru": "Сигнал подъема",
+    "ko": "리프트 알람",
+    "ar": "إنذار الرفع"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "icon": "/assets/capability_icons/alarm_lift.svg",
+  "insights": true,
+  "insightsTitleTrue": {
+    "en": "Mower lifted",
+    "nl": "Maaier opgetild",
+    "de": "Mäher angehoben",
+    "fr": "Tondeuse soulevée",
+    "it": "Tosaerba sollevato",
+    "es": "Cortacésped levantado",
+    "sv": "Gräsklipparen lyft",
+    "no": "Klipperen løftet",
+    "da": "Plæneklipper løftet",
+    "pl": "Kosiarka podniesiona",
+    "ru": "Косилка поднята",
+    "ko": "잔디 깎는 기계가 들어 올려짐",
+    "ar": "تم رفع جزازة العشب"
+  },
+  "insightsTitleFalse": {
+    "en": "Mower placed back",
+    "nl": "Maaier hersteld",
+    "de": "Mäher zurückgestellt",
+    "fr": "Tondeuse reposée",
+    "it": "Tosaerba riposizionato",
+    "es": "Cortacésped colocado de nuevo",
+    "sv": "Gräsklipparen nedsatt",
+    "no": "Klipperen satt tilbake",
+    "da": "Plæneklipper sat tilbage",
+    "pl": "Kosiarka odstawiona",
+    "ru": "Косилка возвращена",
+    "ko": "잔디 깎는 기계가 다시 내려짐",
+    "ar": "تم إرجاع جزازة العشب"
+  }
+}

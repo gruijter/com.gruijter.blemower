@@ -1,0 +1,148 @@
+{
+  "id": "mower_state_is",
+  "title": {
+    "en": "The mower state is",
+    "nl": "De maaier status is",
+    "de": "Der Mäherzustand ist",
+    "fr": "L'état de la tondeuse est",
+    "it": "Lo stato del tosaerba è",
+    "es": "El estado del cortacésped es",
+    "sv": "Gräsklipparens tillstånd är",
+    "no": "Klippertilstanden er",
+    "da": "Plæneklipperens tilstand er",
+    "pl": "Stan kosiarki to",
+    "ru": "Состояние косилки:",
+    "ko": "잔디 깎는 기계 상태는",
+    "ar": "حالة جزازة العشب هي"
+  },
+  "titleFormatted": {
+    "en": "Mower state is [[state]]",
+    "nl": "Maaier status is [[state]]",
+    "de": "Mäherzustand ist [[state]]",
+    "fr": "L'état de la tondeuse est [[state]]",
+    "it": "Lo stato del tosaerba è [[state]]",
+    "es": "El estado del cortacésped es [[state]]",
+    "sv": "Gräsklipparens tillstånd är [[state]]",
+    "no": "Klippertilstand er [[state]]",
+    "da": "Plæneklipperens tilstand er [[state]]",
+    "pl": "Stan kosiarki to [[state]]",
+    "ru": "Состояние косилки: [[state]]",
+    "ko": "잔디 깎는 기계의 상태는 [[state]]입니다",
+    "ar": "حالة جزازة العشب هي [[state]]"
+  },
+  "hint": {
+    "en": "Checks if the mower is currently in the selected state.",
+    "nl": "Controleert of de maaier momenteel in de geselecteerde status is.",
+    "de": "Prüft, ob sich der Mäher aktuell im ausgewählten Zustand befindet.",
+    "fr": "Vérifie si la tondeuse est actuellement dans l'état sélectionné.",
+    "it": "Verifica se il tosaerba è attualmente nello stato selezionato.",
+    "es": "Comprueba si el cortacésped está actualmente en el estado seleccionado.",
+    "sv": "Kontrollerar om gräsklipparen för närvarande är i det valda tillståndet.",
+    "no": "Sjekker om klipperen for øyeblikket er i den valgte tilstanden.",
+    "da": "Kontrollerer, om plæneklipperen i øjeblikket er i den valgte tilstand.",
+    "pl": "Sprawdza, czy kosiarka znajduje się obecnie w wybranym stanie.",
+    "ru": "Проверяет, находится ли косилка в выбранном состоянии в данный момент.",
+    "ko": "잔디 깎는 기계가 현재 선택한 상태인지 확인합니다.",
+    "ar": "التحقق مما إذا كانت جزازة العشب في الحالة المحددة حاليًا."
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=mower"
+    },
+    {
+      "type": "dropdown",
+      "name": "state",
+      "title": {
+        "en": "State",
+        "nl": "Status",
+        "de": "Zustand",
+        "fr": "État",
+        "it": "Stato",
+        "es": "Estado",
+        "sv": "Status",
+        "no": "Tilstand",
+        "da": "Tilstand",
+        "pl": "Stan",
+        "ru": "Состояние",
+        "ko": "상태",
+        "ar": "الحالة"
+      },
+      "values": [
+        {
+          "id": "mowing",
+          "label": {
+            "en": "Mowing",
+            "nl": "Aan het maaien",
+            "de": "Mähen",
+            "fr": "Tonte",
+            "it": "Taglio",
+            "es": "Cortando",
+            "sv": "Klipper",
+            "no": "Klipper",
+            "da": "Klipper",
+            "pl": "Koszenie",
+            "ru": "Кошение",
+            "ko": "잔디 깎는 중",
+            "ar": "قص العشب"
+          }
+        },
+        {
+          "id": "docked",
+          "label": {
+            "en": "Docked",
+            "nl": "In dok",
+            "de": "Angedockt",
+            "fr": "Stationné",
+            "it": "Nel dock",
+            "es": "Acoplado",
+            "sv": "Dockad",
+            "no": "Dokket",
+            "da": "Dokket",
+            "pl": "W doku",
+            "ru": "В доке",
+            "ko": "도킹됨",
+            "ar": "في المحطة"
+          }
+        },
+        {
+          "id": "paused",
+          "label": {
+            "en": "Paused",
+            "nl": "Gepauzeerd",
+            "de": "Pausiert",
+            "fr": "En pause",
+            "it": "In pausa",
+            "es": "Pausado",
+            "sv": "Pausad",
+            "no": "Pauset",
+            "da": "Sat på pause",
+            "pl": "Wstrzymana",
+            "ru": "На паузе",
+            "ko": "일시 중지됨",
+            "ar": "مؤقتاً"
+          }
+        },
+        {
+          "id": "error",
+          "label": {
+            "en": "Error",
+            "nl": "Fout",
+            "de": "Fehler",
+            "fr": "Erreur",
+            "it": "Errore",
+            "es": "Error",
+            "sv": "Fel",
+            "no": "Feil",
+            "da": "Fejl",
+            "pl": "Błąd",
+            "ru": "Ошибка",
+            "ko": "오류",
+            "ar": "خطأ"
+          }
+        }
+      ]
+    }
+  ]
+}

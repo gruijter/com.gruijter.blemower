@@ -1,0 +1,24 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Charging cycles",
+    "nl": "Laadcycli",
+    "de": "Ladezyklen",
+    "fr": "Cycles de charge",
+    "it": "Cicli di ricarica",
+    "es": "Ciclos de carga",
+    "sv": "Laddningscykler",
+    "no": "Ladesykluser",
+    "da": "Opladningscyklusser",
+    "pl": "Cykle ładowania",
+    "ru": "Циклы зарядки",
+    "ko": "충전 사이클",
+    "ar": "دورات الشحن"
+  },
+  "min": 0,
+  "decimals": 0,
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "icon": "/assets/capability_icons/mower_charging_cycles.svg"
+}

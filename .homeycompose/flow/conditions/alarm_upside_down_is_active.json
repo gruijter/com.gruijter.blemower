@@ -1,0 +1,25 @@
+{
+  "id": "alarm_upside_down_is_active",
+  "title": {
+    "en": "Upside Down alarm is active",
+    "nl": "Ondersteboven alarm is actief",
+    "de": "Kopfüber-Alarm ist aktiv",
+    "fr": "L'alarme de renversement est active",
+    "it": "L'allarme capovolgimento è attivo",
+    "es": "La alarma de vuelco está activa",
+    "sv": "Upp-och-ned-larm är aktivt",
+    "no": "Opp-ned-alarm er aktiv",
+    "da": "Alarm for plæneklipper på hovedet er aktiv",
+    "pl": "Alarm do góry nogami jest aktywny",
+    "ru": "Сигнал переворота активен",
+    "ko": "뒤집힘 알람이 활성화되었습니다",
+    "ar": "إنذار المقلوب نشط"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=mower"
+    }
+  ]
+}

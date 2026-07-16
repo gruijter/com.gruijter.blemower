@@ -1,0 +1,53 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Spot Cutting",
+    "nl": "Spot Cutting",
+    "de": "Punktmähen (Spot Cutting)",
+    "fr": "Tonte ciblée (Spot Cutting)",
+    "it": "Taglio localizzato (Spot Cutting)",
+    "es": "Corte localizado (Spot Cutting)",
+    "sv": "Punktklippning (Spot Cutting)",
+    "no": "Punktklipping (Spot Cutting)",
+    "da": "Punktklipning (Spot Cutting)",
+    "pl": "Koszenie punktowe (Spot Cutting)",
+    "ru": "Точечное кошение (Spot Cutting)",
+    "ko": "스팟 컷 (Spot Cutting)",
+    "ar": "القص الموضعي (Spot Cutting)"
+  },
+  "getable": true,
+  "setable": true,
+  "uiComponent": "button",
+  "insights": true,
+  "insightsTitleTrue": {
+    "en": "Spot cutting started",
+    "nl": "Spot cutting gestart",
+    "de": "Punktmähen gestartet",
+    "fr": "Tonte ciblée démarrée",
+    "it": "Taglio localizzato avviato",
+    "es": "Corte localizado iniciado",
+    "sv": "Punktklippning startad",
+    "no": "Punktklipping startet",
+    "da": "Punktklipning startet",
+    "pl": "Koszenie punktowe rozpoczęte",
+    "ru": "Точечное кошение запущено",
+    "ko": "스팟 컷 시작됨",
+    "ar": "بدأ القص الموضعي"
+  },
+  "insightsTitleFalse": {
+    "en": "Spot cutting stopped",
+    "nl": "Spot cutting gestopt",
+    "de": "Punktmähen gestoppt",
+    "fr": "Tonte ciblée arrêtée",
+    "it": "Taglio localizzato arrestato",
+    "es": "Corte localizado detenido",
+    "sv": "Punktklippning stoppad",
+    "no": "Punktklipping stoppet",
+    "da": "Punktklipning stoppet",
+    "pl": "Koszenie punktowe zatrzymane",
+    "ru": "Точечное кошение остановлено",
+    "ko": "스팟 컷 중지됨",
+    "ar": "تم إيقاف القص الموضعي"
+  },
+  "icon": "/assets/capability_icons/mower_spot_cut.svg"
+}

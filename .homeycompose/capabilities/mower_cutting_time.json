@@ -1,0 +1,39 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Total cutting time",
+    "nl": "Totale maaitijd",
+    "de": "Gesamte Mähzeit",
+    "fr": "Temps de tonte total",
+    "it": "Tempo di taglio totale",
+    "es": "Tiempo total de corte",
+    "sv": "Total klipptid",
+    "no": "Total klippetid",
+    "da": "Samlet klippetid",
+    "pl": "Całkowity czas koszenia",
+    "ru": "Общее время кошения",
+    "ko": "총 잔디 깎기 시간",
+    "ar": "إجمالي وقت القص"
+  },
+  "min": 0,
+  "decimals": 1,
+  "units": {
+    "en": "h",
+    "nl": "",
+    "de": "h",
+    "fr": "h",
+    "it": "h",
+    "es": "h",
+    "sv": "h",
+    "no": "h",
+    "da": "h",
+    "pl": "h",
+    "ru": "h",
+    "ko": "h",
+    "ar": "h"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "icon": "/assets/capability_icons/mower_cutting_time.svg"
+}

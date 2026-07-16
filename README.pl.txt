@@ -1,0 +1,3 @@
+Połącz swoją kosiarkę automatyczną Bluetooth Gardena (Minimo, City, Life) lub Husqvarna (Automower, Aspire) lokalnie z Homey Pro przez MQTT. Nie są wymagane żadne interfejsy API w chmurze!
+
+Dbaj o bezpieczeństwo kosiarki i zdrowie trawnika, automatyzując harmonogram koszenia w Homey. Łatwo wstrzymuj lub kieruj kosiarkę do stacji dokującej, gdy zaczyna padać deszcz, wstrzymuj pracę, gdy rodzina lub zwierzęta są w ogrodzie, ładuj tylko w godzinach z tanimi taryfami dynamicznymi, lub wyzwalaj alerty bezpieczeństwa, gdy kosiarka zostanie podniesiona lub wywrócona. Wymagana jest bramka BLE na MQTT (np. Raspberry Pi z Dockerem). Pełne instrukcje można znaleźć na forum społeczności.

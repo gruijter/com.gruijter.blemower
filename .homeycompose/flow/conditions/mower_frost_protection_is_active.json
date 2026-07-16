@@ -1,0 +1,25 @@
+{
+  "id": "mower_frost_protection_is_active",
+  "title": {
+    "en": "Frost protection is active",
+    "nl": "Vorstbeveiliging is actief",
+    "de": "Frostschutz ist aktiv",
+    "fr": "La protection antigel est active",
+    "it": "La protezione antigelo è attiva",
+    "es": "La protección contra heladas está activa",
+    "sv": "Frostskydd är aktivt",
+    "no": "Frostbeskyttelse er aktiv",
+    "da": "Frostbeskyttelse er aktiv",
+    "pl": "Ochrona przed mrozem jest aktywna",
+    "ru": "Защита от замерзания активна",
+    "ko": "성에 방지가 활성화되었습니다",
+    "ar": "الحماية من الصقيع نشطة"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=mower"
+    }
+  ]
+}

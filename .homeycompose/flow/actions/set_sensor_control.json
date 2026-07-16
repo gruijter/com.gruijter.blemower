@@ -1,0 +1,59 @@
+{
+  "id": "set_sensor_control",
+  "title": {
+    "en": "Set SensorControl",
+    "nl": "Stel SensorControl in",
+    "de": "SensorControl einstellen",
+    "fr": "Définir SensorControl",
+    "it": "Imposta SensorControl",
+    "es": "Configurar SensorControl",
+    "sv": "Ställ in SensorControl",
+    "no": "Still inn SensorControl",
+    "da": "Indstil SensorControl",
+    "pl": "Ustaw SensorControl",
+    "ru": "Настроить SensorControl",
+    "ko": "SensorControl 설정",
+    "ar": "ضبط التحكم بالاستشعار"
+  },
+  "titleFormatted": {
+    "en": "Set SensorControl to [[value]]",
+    "nl": "Stel SensorControl in op [[value]]",
+    "de": "SensorControl auf [[value]] einstellen",
+    "fr": "Définir SensorControl sur [[value]]",
+    "it": "Imposta SensorControl su [[value]]",
+    "es": "Establecer SensorControl en [[value]]",
+    "sv": "Ställ in SensorControl till [[value]]",
+    "no": "Still inn SensorControl til [[value]]",
+    "da": "Indstil SensorControl to [[value]]",
+    "pl": "Ustaw SensorControl na [[value]]",
+    "ru": "Настроить SensorControl на [[value]]",
+    "ko": "SensorControl을 [[value]](으)로 설정",
+    "ar": "ضبط التحكم بالاستشعار على [[value]]"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=mower"
+    },
+    {
+      "type": "checkbox",
+      "name": "value",
+      "title": {
+        "en": "Active",
+        "nl": "Actief",
+        "de": "Aktiv",
+        "fr": "Actif",
+        "it": "Attivo",
+        "es": "Activo",
+        "sv": "Aktiv",
+        "no": "Aktiv",
+        "da": "Aktiv",
+        "pl": "Aktywny",
+        "ru": "Активно",
+        "ko": "활성",
+        "ar": "نشط"
+      }
+    }
+  ]
+}

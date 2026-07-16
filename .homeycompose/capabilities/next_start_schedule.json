@@ -1,0 +1,22 @@
+{
+  "type": "string",
+  "title": {
+    "en": "Next start",
+    "nl": "Volgende star",
+    "de": "Nächster Start",
+    "fr": "Prochain départ",
+    "it": "Prossimo avvio",
+    "es": "Siguiente inicio",
+    "sv": "Nästa start",
+    "no": "Neste start",
+    "da": "Næste start",
+    "pl": "Następny start",
+    "ru": "Следующий запуск",
+    "ko": "다음 시작",
+    "ar": "البدء التالي"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "icon": "/assets/capability_icons/next_start_schedule.svg"
+}

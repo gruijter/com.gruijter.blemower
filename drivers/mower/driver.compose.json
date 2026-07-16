@@ -1,0 +1,548 @@
+{
+  "name": {
+    "en": "Mower",
+    "nl": "Maaier",
+    "de": "Mäher",
+    "fr": "Tondeuse",
+    "it": "Tosaerba",
+    "es": "Cortacésped",
+    "sv": "Gräsklippare",
+    "no": "Klipper",
+    "da": "Plæneklipper",
+    "pl": "Kosiarka",
+    "ru": "Газонокосилка",
+    "ko": "잔디 깎는 기계",
+    "ar": "جزازة العشب"
+  },
+  "class": "lawnmower",
+  "capabilities": [
+    "mower_spot_cut",
+    "mower_garage_enabled",
+    "mower_radar_enabled",
+    "mower_frost_protection",
+    "mower_sensor_control",
+    "mower_eco_mode",
+    "mower_state",
+    "mower_activity",
+    "mower_state_text",
+    "next_start_schedule",
+    "mower_remaining_time",
+    "mower_pitch",
+    "mower_roll",
+    "measure_battery",
+    "measure_temperature",
+    "measure_temperature.battery",
+    "measure_voltage",
+    "measure_current",
+    "battery_charging_state",
+    "mower_charging_cycles",
+    "measure_signal_strength.loop",
+    "measure_signal_strength",
+    "mower_collisions",
+    "mower_running_time",
+    "mower_cutting_time",
+    "mower_error",
+    "alarm_collision",
+    "alarm_lift",
+    "alarm_upside_down",
+    "alarm_safety",
+    "alarm_stuck",
+    "alarm_connectivity",
+    "alarm_battery"
+  ],
+  "capabilitiesOptions": {
+    "measure_temperature.battery": {
+      "title": {
+        "en": "Battery Temperature",
+        "nl": "Accu Temperatuur",
+        "de": "Batterietemperatur",
+        "fr": "Température de la batterie",
+        "it": "Temperatura della batteria",
+        "es": "Temperatura de la batería",
+        "sv": "Batteritemperatur",
+        "no": "Batteritemperatur",
+        "da": "Batteritemperatur",
+        "pl": "Temperatura akumulatora",
+        "ru": "Температура батареи",
+        "ko": "배터리 온도",
+        "ar": "درجة حرارة البطارية"
+      }
+    },
+    "measure_signal_strength.loop": {
+      "title": {
+        "en": "Loop Signal Strength",
+        "nl": "Lussignaal Sterkte",
+        "de": "Schleifensignalstärke",
+        "fr": "Force du signal de boucle",
+        "it": "Forza del segnale del circuito",
+        "es": "Fuerza de la señal del bucle",
+        "sv": "Slingans signalstyrka",
+        "no": "Sløyfe signalstyrke",
+        "da": "Sløjfe signalstyrke",
+        "pl": "Siła sygnału pętli",
+        "ru": "Сила сигнала контура",
+        "ko": "루프 신호 강도",
+        "ar": "قوة إشارة الحلقة"
+      },
+      "units": "%"
+    },
+    "measure_signal_strength": {
+      "title": {
+        "en": "BLE Signal Strength",
+        "nl": "BLE Signaalsterkte",
+        "de": "BLE-Signalstärke",
+        "fr": "Force du signal BLE",
+        "it": "Forza del segnale BLE",
+        "es": "Fuerza de la señal BLE",
+        "sv": "BLE signalstyrka",
+        "no": "BLE-signalstyrke",
+        "da": "BLE-signalstyrke",
+        "pl": "Siła sygnału BLE",
+        "ru": "Сила сигнала BLE",
+        "ko": "BLE 신호 강도",
+        "ar": "قوة إشارة BLE"
+      }
+    }
+  },
+  "pair": [
+    {
+      "id": "mqtt_settings"
+    },
+    {
+      "id": "list_devices",
+      "template": "list_devices",
+      "options": {
+        "singular": false
+      },
+      "navigation": {
+        "next": "add_devices"
+      }
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
+    }
+  ],
+  "energy": {
+    "batteries": [
+      "INTERNAL"
+    ]
+  },
+  "settings": [
+    {
+      "type": "group",
+      "label": {
+        "en": "MQTT Broker Settings",
+        "nl": "MQTT Broker Instellingen",
+        "de": "MQTT-Broker-Einstellungen",
+        "fr": "Paramètres du courtier MQTT",
+        "it": "Impostazioni del Broker MQTT",
+        "es": "Configuración del Broker MQTT",
+        "sv": "MQTT-brokerinställningar",
+        "no": "MQTT Broker-innstillinger",
+        "da": "MQTT Broker-indstillinger",
+        "pl": "Ustawienia brokera MQTT",
+        "ru": "Настройки брокера MQTT",
+        "ko": "MQTT 브로커 설정",
+        "ar": "إعدادات وسيط MQTT"
+      },
+      "children": [
+        {
+          "id": "host",
+          "type": "text",
+          "label": {
+            "en": "Broker Hostname/IP",
+            "nl": "Broker Hostnaam/IP",
+            "de": "Broker-Hostname/IP",
+            "fr": "Nom d'hôte du courtier/IP",
+            "it": "Hostname/IP del Broker",
+            "es": "Nombre de host/IP del Broker",
+            "sv": "Broker-värdnamn/IP",
+            "no": "Broker-vertsnavn/IP",
+            "da": "Broker-værtsnavn/IP",
+            "pl": "Nazwa hosta/IP brokera",
+            "ru": "Имя хоста/IP-адрес брокера",
+            "ko": "브로커 호스트 이름/IP",
+            "ar": "اسم مضيف الوسيط/IP"
+          },
+          "value": ""
+        },
+        {
+          "id": "port",
+          "type": "number",
+          "label": {
+            "en": "Broker Port",
+            "nl": "Broker Poort",
+            "de": "Broker-Port",
+            "fr": "Port du courtier",
+            "it": "Porta del Broker",
+            "es": "Puerto del Broker",
+            "sv": "Broker-port",
+            "no": "Broker-port",
+            "da": "Broker-port",
+            "pl": "Port brokera",
+            "ru": "Порт брокера",
+            "ko": "브로커 포트",
+            "ar": "منفذ الوسيط"
+          },
+          "value": 1883
+        },
+        {
+          "id": "username",
+          "type": "text",
+          "label": {
+            "en": "Username",
+            "nl": "Gebruikersnaam",
+            "de": "Benutzername",
+            "fr": "Nom d'utilisateur",
+            "it": "Nome utente",
+            "es": "Nombre de usuario",
+            "sv": "Användarnamn",
+            "no": "Brukernavn",
+            "da": "Brugernavn",
+            "pl": "Nazwa użytkownika",
+            "ru": "Имя пользователя",
+            "ko": "사용자 이름",
+            "ar": "اسم المستخدم"
+          },
+          "value": ""
+        },
+        {
+          "id": "password",
+          "type": "password",
+          "label": {
+            "en": "Password",
+            "nl": "Wachtwoord",
+            "de": "Kennwort",
+            "fr": "Mot de passe",
+            "it": "Password",
+            "es": "Contraseña",
+            "sv": "Lösenord",
+            "no": "Passord",
+            "da": "Adgangskode",
+            "pl": "Hasło",
+            "ru": "Пароль",
+            "ko": "비밀번호",
+            "ar": "كلمة المرور"
+          },
+          "value": ""
+        },
+        {
+          "id": "topic",
+          "type": "text",
+          "label": {
+            "en": "Base Topic",
+            "nl": "Base Topic",
+            "de": "Basis-Topic",
+            "fr": "Sujet de base",
+            "it": "Topic di base",
+            "es": "Tema base",
+            "sv": "Bas-ämne (Topic)",
+            "no": "Base-emne",
+            "da": "Basis-emne",
+            "pl": "Temat bazowy",
+            "ru": "Базовый топик",
+            "ko": "기본 토픽",
+            "ar": "الموضوع الأساسي"
+          },
+          "value": "mower_ble"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "label": {
+        "en": "Mower Information",
+        "nl": "Maaier Informatie",
+        "de": "Mäherinformationen",
+        "fr": "Informations sur la tondeuse",
+        "it": "Informazioni sul tosaerba",
+        "es": "Información del cortacésped",
+        "sv": "Information om gräsklipparen",
+        "no": "Klipperinformasjon",
+        "da": "Information om plæneklipper",
+        "pl": "Informacje o kosiarce",
+        "ru": "Информация о косилке",
+        "ko": "잔디 깎는 기계 정보",
+        "ar": "معلومات جزازة العشب"
+      },
+      "children": [
+        {
+          "id": "manufacturer",
+          "type": "label",
+          "label": {
+            "en": "Manufacturer",
+            "nl": "Fabrikant",
+            "de": "Hersteller",
+            "fr": "Fabricant",
+            "it": "Produttore",
+            "es": "Fabricante",
+            "sv": "Tillverkare",
+            "no": "Produsent",
+            "da": "Producent",
+            "pl": "Producent",
+            "ru": "Производитель",
+            "ko": "제조사",
+            "ar": "الشركة المصنعة"
+          },
+          "value": "-"
+        },
+        {
+          "id": "model",
+          "type": "label",
+          "label": {
+            "en": "Model",
+            "nl": "Model",
+            "de": "Modell",
+            "fr": "Modèle",
+            "it": "Modello",
+            "es": "Modelo",
+            "sv": "Modell",
+            "no": "Modell",
+            "da": "Model",
+            "pl": "Model",
+            "ru": "Модель",
+            "ko": "모델",
+            "ar": "الموديل"
+          },
+          "value": "-"
+        },
+        {
+          "id": "serialNumber",
+          "type": "label",
+          "label": {
+            "en": "Serial Number",
+            "nl": "Serienummer",
+            "de": "Seriennummer",
+            "fr": "Numéro de série",
+            "it": "Numero di serie",
+            "es": "Número de serie",
+            "sv": "Serienummer",
+            "no": "Serienummer",
+            "da": "Serienummer",
+            "pl": "Numer seryjny",
+            "ru": "Серийный номер",
+            "ko": "일련 번호",
+            "ar": "الرقم التسلسلي"
+          },
+          "value": "-"
+        },
+        {
+          "id": "schedule",
+          "type": "label",
+          "label": {
+            "en": "Weekly Schedule",
+            "nl": "Wekelijks Schema",
+            "de": "Wochenplan",
+            "fr": "Programme hebdomadaire",
+            "it": "Programma settimanale",
+            "es": "Programa semanal",
+            "sv": "Veckoschema",
+            "no": "Ukeplan",
+            "da": "Ugeplan",
+            "pl": "Harmonogram tygodniowy",
+            "ru": "Еженедельное расписание",
+            "ko": "주간 일정",
+            "ar": "الجدول الأسبوعي"
+          },
+          "value": "-"
+        },
+        {
+          "id": "software_platform",
+          "type": "label",
+          "label": {
+            "en": "Software Platform",
+            "nl": "Software Platform",
+            "de": "Softwareplattform",
+            "fr": "Plateforme logicielle",
+            "it": "Piattaforma software",
+            "es": "Plataforma de software",
+            "sv": "Programvaruplattform",
+            "no": "Programvareplattform",
+            "da": "Softwareplatform",
+            "pl": "Platforma oprogramowania",
+            "ru": "Программная платформа",
+            "ko": "소프트웨어 플랫폼",
+            "ar": "منصة البرمجيات"
+          },
+          "value": "-"
+        },
+        {
+          "id": "software_version",
+          "type": "label",
+          "label": {
+            "en": "Software Version",
+            "nl": "Software Versie",
+            "de": "Softwareversion",
+            "fr": "Version du logiciel",
+            "it": "Versione del software",
+            "es": "Versión del software",
+            "sv": "Programvaruversion",
+            "no": "Programvareversjon",
+            "da": "Softwareversion",
+            "pl": "Wersja oprogramowania",
+            "ru": "Версия ПО",
+            "ko": "소프트웨어 버전",
+            "ar": "إصدار البرمجيات"
+          },
+          "value": "-"
+        },
+        {
+          "id": "software_bundle",
+          "type": "label",
+          "label": {
+            "en": "Software Bundle",
+            "nl": "Software Pakket",
+            "de": "Softwarepaket",
+            "fr": "Pack logiciel",
+            "it": "Pacchetto software",
+            "es": "Paquete de software",
+            "sv": "Programvarupaket",
+            "no": "Programvarepakke",
+            "da": "Softwarepakke",
+            "pl": "Pakiet oprogramowania",
+            "ru": "Пакет ПО",
+            "ko": "소프트웨어 번들",
+            "ar": "حزمة البرمجيات"
+          },
+          "value": "-"
+        },
+        {
+          "id": "hardware_revision",
+          "type": "label",
+          "label": {
+            "en": "Hardware Revision",
+            "nl": "Hardware Revisie",
+            "de": "Hardware-Revision",
+            "fr": "Révision matérielle",
+            "it": "Revisione hardware",
+            "es": "Revisión de hardware",
+            "sv": "Maskinvarurevision",
+            "no": "Maskinvarurevisjon",
+            "da": "Hardware-revision",
+            "pl": "Rewizja sprzętowa",
+            "ru": "Ревизия оборудования",
+            "ko": "하드웨어 버전",
+            "ar": "مراجعة الأجهزة"
+          },
+          "value": "-"
+        },
+        {
+          "id": "production_time",
+          "type": "label",
+          "label": {
+            "en": "Production Time",
+            "nl": "Productietijd",
+            "de": "Produktionszeit",
+            "fr": "Temps de production",
+            "it": "Tempo di produzione",
+            "es": "Tiempo de producción",
+            "sv": "Produktionstid",
+            "no": "Produksjonstid",
+            "da": "Produktionstid",
+            "pl": "Czas produkcji",
+            "ru": "Время производства",
+            "ko": "생산 시간",
+            "ar": "وقت الإنتاج"
+          },
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "label": {
+        "en": "Mower Control Settings",
+        "nl": "Maaier Beheer Instellingen",
+        "de": "Mäher-Steuerungseinstellungen",
+        "fr": "Paramètres de contrôle de la tondeuse",
+        "it": "Impostazioni di controllo del tosaerba",
+        "es": "Configuración de control del cortacésped",
+        "sv": "Inställningar för gräsklipparstyrning",
+        "no": "Kontrollinnstillinger for klipper",
+        "da": "Indstillinger for plæneklipperstyring",
+        "pl": "Ustawienia sterowania kosiarką",
+        "ru": "Настройки управления косилкой",
+        "ko": "잔디 깎는 기계 제어 설정",
+        "ar": "إعدادات التحكم في جزازة العشب"
+      },
+      "children": [
+        {
+          "id": "mow_duration",
+          "type": "number",
+          "label": {
+            "en": "Override Mow Duration (minutes)",
+            "nl": "Handmatige maaitijd (minuten)",
+            "de": "Mähdauer überschreiben (Minuten)",
+            "fr": "Remplacer la durée de tonte (minutes)",
+            "it": "Ignora durata taglio (minuti)",
+            "es": "Anular duración de corte (minutos)",
+            "sv": "Överskrid klipptid (minuter)",
+            "no": "Overstyr klippetid (minutter)",
+            "da": "Tilsidesæt klippetid (minutter)",
+            "pl": "Zastąp czas koszenia (minuty)",
+            "ru": "Изменить время кошения (минут)",
+            "ko": "잔디 깎기 시간 재설정 (분)",
+            "ar": "تجاوز مدة القص (بالدقائق)"
+          },
+          "value": 60,
+          "min": 1,
+          "max": 480
+        },
+        {
+          "id": "drive_past_wire",
+          "type": "number",
+          "label": {
+            "en": "Drive Past Wire (mm)",
+            "nl": "Over de draad rijden (mm)",
+            "de": "Über das Begrenzungskabel fahren (mm)",
+            "fr": "Rouler au-delà du fil (mm)",
+            "it": "Guida oltre il filo (mm)",
+            "es": "Conducir más allá del cable (mm)",
+            "sv": "Kör förbi slingan (mm)",
+            "no": "Kjør forbi ledningen (mm)",
+            "da": "Kør forbi tråden (mm)",
+            "pl": "Przejazd poza przewód (mm)",
+            "ru": "Проезд за ограничительный провод (мм)",
+            "ko": "와이어 너머 주행 (mm)",
+            "ar": "القيادة وراء السلك (مم)"
+          },
+          "value": 300,
+          "min": 100,
+          "max": 500
+        },
+        {
+          "id": "reversing_distance",
+          "type": "number",
+          "label": {
+            "en": "Reversing Distance (mm)",
+            "nl": "Achteruitrij-afstand (mm)",
+            "de": "Rückwärtsfahrdistanz (mm)",
+            "fr": "Distance de recul (mm)",
+            "it": "Distanza di retromarcia (mm)",
+            "es": "Distancia de marcha atrás (mm)",
+            "sv": "Backningsavstånd (mm)",
+            "no": "Ryggeavstand (mm)",
+            "da": "Bakke-afstand (mm)",
+            "pl": "Odległość cofania (mm)",
+            "ru": "Расстояние заднего хода (мм)",
+            "ko": "후진 거리 (mm)",
+            "ar": "مسافة الرجوع للخلف (مم)"
+          },
+          "value": 600,
+          "min": 100,
+          "max": 1000
+        }
+      ]
+    }
+  ],
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [],
+  "images": {
+    "small": "{{driverAssetsPath}}/images/small.jpg",
+    "large": "{{driverAssetsPath}}/images/large.jpg",
+    "xlarge": "{{driverAssetsPath}}/images/xlarge.jpg"
+  }
+}

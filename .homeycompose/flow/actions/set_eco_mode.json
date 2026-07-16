@@ -1,0 +1,59 @@
+{
+  "id": "set_eco_mode",
+  "title": {
+    "en": "Set eco stand",
+    "nl": "Stel eco stand in",
+    "de": "Eco-Modus einstellen",
+    "fr": "Définir le mode éco",
+    "it": "Imposta modalità Eco",
+    "es": "Configurar modo Eco",
+    "sv": "Ställ in Eco-läge",
+    "no": "Still inn Eco-modus",
+    "da": "Indstil Eco-tilstand",
+    "pl": "Ustaw tryb Eco",
+    "ru": "Настроить эко-режим",
+    "ko": "에코 모드 설정",
+    "ar": "ضبط الوضع الاقتصادي"
+  },
+  "titleFormatted": {
+    "en": "Set eco stand to [[value]]",
+    "nl": "Stel eco stand in op [[value]]",
+    "de": "Eco-Modus auf [[value]] einstellen",
+    "fr": "Définir le mode éco sur [[value]]",
+    "it": "Imposta modalità Eco su [[value]]",
+    "es": "Establecer modo Eco en [[value]]",
+    "sv": "Ställ in Eco-läge till [[value]]",
+    "no": "Still inn Eco-modus til [[value]]",
+    "da": "Indstil Eco-tilstand til [[value]]",
+    "pl": "Ustaw tryb Eco na [[value]]",
+    "ru": "Настроить эко-режим на [[value]]",
+    "ko": "에코 모드를 [[value]](으)로 설정",
+    "ar": "ضبط الوضع الاقتصادي على [[value]]"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=mower"
+    },
+    {
+      "type": "checkbox",
+      "name": "value",
+      "title": {
+        "en": "Active",
+        "nl": "Actief",
+        "de": "Aktiv",
+        "fr": "Actif",
+        "it": "Attivo",
+        "es": "Activo",
+        "sv": "Aktiv",
+        "no": "Aktiv",
+        "da": "Aktiv",
+        "pl": "Aktywny",
+        "ru": "Активно",
+        "ko": "활성",
+        "ar": "نشط"
+      }
+    }
+  ]
+}

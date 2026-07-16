@@ -1,0 +1,3 @@
+Conecte su robot cortacésped Bluetooth Gardena (Minimo, City, Life) o Husqvarna (Automower, Aspire) localmente a Homey Pro a través de MQTT. ¡No se requieren APIs en la nube!
+
+Mantenga su cortacésped seguro y su césped saludable automatizando su programa de corte en Homey. Pausa o acopla fácilmente el cortacésped cuando empieza a llover, interrumpe el funcionamiento cuando la familia o las mascotas están en el jardín, carga solo durante las horas con tarifas eléctricas dinámicas baratas, o activa alertas de seguridad en el hogar cuando el cortacésped se levante o se vuelque. Se requiere una puerta de enlace BLE a MQTT (como una Raspberry Pi con Docker). Consulte el foro de la comunidad para obtener instrucciones completas.

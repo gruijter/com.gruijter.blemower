@@ -1,0 +1,16 @@
+{
+  "pair": {
+    "title": "MQTT-brokeranslutning",
+    "text": "Ange anslutningsdetaljer för din MQTT-broker. Bas-ämnet (topic) bör ha samma prefix som det som konfigurerats i gräsklipparens BLE-gateway.",
+    "host": "Broker-värdnamn/IP",
+    "port": "Broker-port",
+    "username": "Användarnamn",
+    "password": "Lösenord",
+    "topic": "Bas-ämne (Topic)",
+    "incomplete": "Värdnamn och bas-ämne måste fyllas i!",
+    "connect": "ANSLUT"
+  },
+  "device": {
+    "connectionError": "MQTT-anslutning förlorad, återansluter..."
+  }
+}
