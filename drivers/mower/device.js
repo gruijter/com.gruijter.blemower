@@ -278,8 +278,10 @@ module.exports = class MyDevice extends Homey.Device {
           // Update next_start_schedule (formatted string in Homey local time, e.g. "Jul 07 15:00")
           if (data.NextStartSchedule !== undefined) {
             try {
-              const startDate = new Date(data.NextStartSchedule);
-              if (!Number.isNaN(startDate.getTime()) && startDate.getTime() > Date.now()) {
+              const rawDate = new Date(data.NextStartSchedule);
+              if (!Number.isNaN(rawDate.getTime()) && rawDate.getTime() > Date.now() - 60000) {
+                // Round to nearest minute (e.g. 14:59:41 UTC -> 15:00 local time)
+                const startDate = new Date(Math.round(rawDate.getTime() / 60000) * 60000);
                 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
                 const monthName = months[startDate.getMonth()];
                 const day = String(startDate.getDate()).padStart(2, '0');
