@@ -275,19 +275,36 @@ module.exports = class MyDevice extends Homey.Device {
             this.setCapabilityValue('mower_state_text', data.State).catch((err) => this.error(err));
           }
 
-          // Update next_start_schedule (formatted string in Homey local time, e.g. "Jul 07 15:00")
+          // Update next_start_schedule (formatted string in Homey local timezone, e.g. "Jul 07 15:00")
           if (data.NextStartSchedule !== undefined) {
             try {
               const rawDate = new Date(data.NextStartSchedule);
               if (!Number.isNaN(rawDate.getTime()) && rawDate.getTime() > Date.now() - 60000) {
-                // Round to nearest minute (e.g. 14:59:41 UTC -> 15:00 local time)
+                // Round to nearest minute (e.g. 12:59:41 UTC -> 13:00:00 UTC)
                 const startDate = new Date(Math.round(rawDate.getTime() / 60000) * 60000);
-                const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-                const monthName = months[startDate.getMonth()];
-                const day = String(startDate.getDate()).padStart(2, '0');
-                const hours = String(startDate.getHours()).padStart(2, '0');
-                const minutes = String(startDate.getMinutes()).padStart(2, '0');
-                const formatted = `${monthName} ${day} ${hours}:${minutes}`;
+
+                let timeZone = 'UTC';
+                try {
+                  timeZone = this.homey.clock.getTimezone();
+                } catch (e) {
+                  // Fallback if clock API is unavailable
+                }
+
+                const parts = new Intl.DateTimeFormat('en-US', {
+                  timeZone,
+                  month: 'short',
+                  day: '2-digit',
+                  hour: '2-digit',
+                  minute: '2-digit',
+                  hourCycle: 'h23',
+                }).formatToParts(startDate);
+
+                const partMap = {};
+                for (const p of parts) {
+                  partMap[p.type] = p.value;
+                }
+
+                const formatted = `${partMap.month} ${partMap.day} ${partMap.hour}:${partMap.minute}`;
                 this.setCapabilityValue('next_start_schedule', formatted).catch((err) => this.error(err));
               }
             } catch (err) {
