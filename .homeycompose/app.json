@@ -11,19 +11,19 @@
     "en": "BLE Mower MQTT"
   },
   "description": {
-    "en": "Connect Gardena Minimo and Husqvarna BLE mowers via MQTT",
-    "nl": "Verbind Gardena Minimo en Husqvarna BLE maaiers via MQTT",
-    "de": "Gardena Minimo und Husqvarna BLE-Mäher über MQTT verbinden",
-    "fr": "Connectez les tondeuses BLE Gardena Minimo et Husqvarna via MQTT",
-    "it": "Collega i tosaerba BLE Gardena Minimo e Husqvarna tramite MQTT",
-    "es": "Conecte los cortacéspedes BLE Gardena Minimo y Husqvarna a través de MQTT",
-    "sv": "Anslut Gardena Minimo och Husqvarna BLE-gräsklippare via MQTT",
-    "no": "Koble til Gardena Minimo og Husqvarna BLE-klippere via MQTT",
-    "da": "Forbind Gardena Minimo og Husqvarna BLE-plæneklippere via MQTT",
-    "pl": "Połącz kosiarki BLE Gardena Minimo i Husqvarna przez MQTT",
-    "ru": "Подключение косилок Gardena Minimo и Husqvarna BLE через MQTT",
-    "ko": "MQTT를 통해 Gardena Minimo 및 Husqvarna BLE 잔디 깎는 기계 연결",
-    "ar": "توصيل جزازات Gardena Minimo و Husqvarna BLE عبر MQTT"
+    "en": "Mowing your lawn the bluetooth way!",
+    "nl": "Je gazon maaien via bluetooth!",
+    "de": "Rasenmähen per Bluetooth!",
+    "fr": "Tondre votre pelouse via bluetooth !",
+    "it": "Tagliare il prato via bluetooth!",
+    "es": "¡Corta tu césped vía bluetooth!",
+    "sv": "Klipp gräsmattan via bluetooth!",
+    "no": "Klipp plenen via bluetooth!",
+    "da": "Slå græsplænen via bluetooth!",
+    "pl": "Koszenie trawnika przez bluetooth!",
+    "ru": "Стрижка газона через bluetooth!",
+    "ko": "블루투스로 잔디를 깎아보세요!",
+    "ar": "جز العشب عن طريق البلوتوث!"
   },
   "category": [
     "appliances"
