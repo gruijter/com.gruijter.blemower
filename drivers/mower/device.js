@@ -38,6 +38,7 @@ module.exports = class MyDevice extends Homey.Device {
       this.bridgeOnline = undefined;
       this.mowerOnline = undefined;
 
+      await this.initTimezone();
       await this.migrate();
       await this.connectMQTT();
       this.registerListeners();
@@ -283,15 +284,17 @@ module.exports = class MyDevice extends Homey.Device {
                 // Round to nearest minute (e.g. 12:59:41 UTC -> 13:00:00 UTC)
                 const startDate = new Date(Math.round(rawDate.getTime() / 60000) * 60000);
 
-                let timeZone = 'UTC';
-                try {
-                  timeZone = this.homey.clock.getTimezone();
-                } catch (e) {
-                  // Fallback if clock API is unavailable
+                let timeZone = this.timezone;
+                if (!timeZone && this.homey.clock && typeof this.homey.clock.getTimezone === 'function') {
+                  try {
+                    timeZone = await this.homey.clock.getTimezone();
+                  } catch (e) {
+                    timeZone = 'UTC';
+                  }
                 }
 
                 const parts = new Intl.DateTimeFormat('en-US', {
-                  timeZone,
+                  timeZone: timeZone || 'UTC',
                   month: 'short',
                   day: '2-digit',
                   hour: '2-digit',
@@ -785,6 +788,25 @@ module.exports = class MyDevice extends Homey.Device {
         `${this.settings.topic}/command`,
         `DRIVE_PAST_WIRE ${distance}`,
       );
+    }
+  }
+
+  /**
+   * Asynchronously fetches and caches the Homey configured timezone
+   */
+  async initTimezone() {
+    try {
+      if (this.homey.clock && typeof this.homey.clock.getTimezone === 'function') {
+        this.timezone = await this.homey.clock.getTimezone();
+        this.log(`Device retrieved Homey timezone: ${this.timezone}`);
+        this.homey.clock.on('timezoneChange', (tz) => {
+          this.log(`Homey timezone updated to: ${tz}`);
+          this.timezone = tz;
+        });
+      }
+    } catch (err) {
+      this.error('Failed to initialize Homey timezone:', err);
+      this.timezone = 'UTC';
     }
   }
 
