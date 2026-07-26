@@ -275,19 +275,18 @@ module.exports = class MyDevice extends Homey.Device {
             this.setCapabilityValue('mower_state_text', data.State).catch((err) => this.error(err));
           }
 
-          // Update next_start_schedule (formatted string, e.g. "Jul 07 15:00")
+          // Update next_start_schedule (formatted string in Homey local time, e.g. "Jul 07 15:00")
           if (data.NextStartSchedule !== undefined) {
             try {
-              const match = data.NextStartSchedule.match(/^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})/);
-              if (match) {
-                const [, year, month, day, hour, minute] = match;
-                const localDate = new Date(`${year}-${month}-${day}T${hour}:${minute}:00`);
-                if (!Number.isNaN(localDate.getTime()) && localDate.getTime() > Date.now()) {
-                  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-                  const monthName = months[parseInt(month, 10) - 1];
-                  const formatted = `${monthName} ${day} ${hour}:${minute}`;
-                  this.setCapabilityValue('next_start_schedule', formatted).catch((err) => this.error(err));
-                }
+              const startDate = new Date(data.NextStartSchedule);
+              if (!Number.isNaN(startDate.getTime()) && startDate.getTime() > Date.now()) {
+                const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+                const monthName = months[startDate.getMonth()];
+                const day = String(startDate.getDate()).padStart(2, '0');
+                const hours = String(startDate.getHours()).padStart(2, '0');
+                const minutes = String(startDate.getMinutes()).padStart(2, '0');
+                const formatted = `${monthName} ${day} ${hours}:${minutes}`;
+                this.setCapabilityValue('next_start_schedule', formatted).catch((err) => this.error(err));
               }
             } catch (err) {
               this.error('Failed to parse NextStartSchedule:', err);
