@@ -228,11 +228,12 @@ module.exports = class MyDevice extends Homey.Device {
           // Update alarm_safety (boolean)
           this.setCapabilityValue('alarm_safety', safetyStop).catch((err) => this.error(err));
 
+          // Determine if an active error is present
+          const hasError = !!(data.LastError && data.LastError !== 'UNKNOWN' && data.LastError !== 'NO_ERROR' && data.LastError !== 'NONE');
+
           // Update mower_state (picker: "mowing", "docked", "paused", "error")
           let mowerState = 'paused';
-          if (safetyStop) {
-            mowerState = 'error';
-          } else if (data.LastError && data.LastError !== 'UNKNOWN') {
+          if (safetyStop || hasError) {
             mowerState = 'error';
           } else if (data.Activity === 'MOWING') {
             mowerState = 'mowing';
@@ -254,8 +255,7 @@ module.exports = class MyDevice extends Homey.Device {
           }
 
           // Update alarm_stuck (boolean)
-          const stuck = !!(data.LastError && data.LastError !== 'UNKNOWN');
-          this.setCapabilityValue('alarm_stuck', stuck).catch((err) => this.error(err));
+          this.setCapabilityValue('alarm_stuck', hasError).catch((err) => this.error(err));
 
           // Update mower_activity (custom text capability)
           if (data.Activity !== undefined) {
