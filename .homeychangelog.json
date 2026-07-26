@@ -1,4 +1,7 @@
 {
+  "1.1.0": {
+    "en": "Fixed alarm_stuck false positives. Fixed scheduling timezone. Fixed appstore compliancy."
+  },
   "1.0.0": {
     "en": "First version!"
   }
