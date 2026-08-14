@@ -21,7 +21,7 @@
 
 const { promisify } = require('util');
 const Homey = require('homey');
-const MQTT = require('async-mqtt');
+const mqtt = require('mqtt');
 const { scheduleTasksToWeekFields } = require('../../lib/schedule');
 
 const sleep = promisify(setTimeout);
@@ -251,7 +251,7 @@ module.exports = class MyDriver extends Homey.Driver {
         };
 
         client.on('message', messageListener);
-        await client.subscribe(statusTopicWildcard);
+        await client.subscribeAsync(statusTopicWildcard);
 
         // Wait 3 seconds for retained status messages to arrive
         for (let i = 0; i < 30; i++) {
@@ -260,9 +260,9 @@ module.exports = class MyDriver extends Homey.Driver {
 
         // Clean up
         try {
-          await client.unsubscribe(statusTopicWildcard);
+          await client.unsubscribeAsync(statusTopicWildcard);
           client.removeListener('message', messageListener);
-          await client.end();
+          await client.endAsync();
         } catch (cleanupError) {
           this.error('[onPair] Cleanup error:', cleanupError.message);
         }
@@ -336,7 +336,7 @@ module.exports = class MyDriver extends Homey.Driver {
         clean: true,
         queueQoSZero: false,
       };
-      const mqttClient = await MQTT.connectAsync(host, options);
+      const mqttClient = await mqtt.connectAsync(host, options);
       return mqttClient;
     } catch (error) {
       this.error('MQTT connection error:', error);

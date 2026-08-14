@@ -97,19 +97,19 @@ module.exports = class MyDevice extends Homey.Device {
     if (changedKeys.includes('mow_duration') && this.client && this.client.connected) {
       const seconds = newSettings.mow_duration * 60;
       this.log(`Publishing new custom mow duration: ${seconds} seconds`);
-      this.client.publish(`${this.settings.topic}/command`, `MOW_DURATION ${seconds}`)
+      this.client.publishAsync(`${this.settings.topic}/command`, `MOW_DURATION ${seconds}`)
         .catch((err) => this.error('Failed to publish custom mow duration:', err));
     }
 
     if (changedKeys.includes('drive_past_wire') && this.client && this.client.connected) {
       this.log(`Publishing new drive past wire distance: ${newSettings.drive_past_wire} mm`);
-      this.client.publish(`${this.settings.topic}/command`, `DRIVE_PAST_WIRE ${newSettings.drive_past_wire}`)
+      this.client.publishAsync(`${this.settings.topic}/command`, `DRIVE_PAST_WIRE ${newSettings.drive_past_wire}`)
         .catch((err) => this.error('Failed to publish drive past wire:', err));
     }
 
     if (changedKeys.includes('reversing_distance') && this.client && this.client.connected) {
       this.log(`Publishing new reversing distance: ${newSettings.reversing_distance} mm`);
-      this.client.publish(`${this.settings.topic}/command`, `REVERSING_DISTANCE ${newSettings.reversing_distance}`)
+      this.client.publishAsync(`${this.settings.topic}/command`, `REVERSING_DISTANCE ${newSettings.reversing_distance}`)
         .catch((err) => this.error('Failed to publish reversing distance:', err));
     }
 
@@ -133,7 +133,7 @@ module.exports = class MyDevice extends Homey.Device {
     this.log('MyDevice has been deleted');
     if (this.client) {
       try {
-        await this.client.end();
+        await this.client.endAsync();
       } catch (err) {
         this.error('Error ending MQTT client on delete:', err);
       }
@@ -147,7 +147,7 @@ module.exports = class MyDevice extends Homey.Device {
     this.log('MyDevice has been uninitialized');
     if (this.client) {
       try {
-        await this.client.end();
+        await this.client.endAsync();
       } catch (err) {
         this.error('Error ending MQTT client on uninit:', err);
       }
@@ -165,7 +165,7 @@ module.exports = class MyDevice extends Homey.Device {
 
     if (this.client) {
       try {
-        await this.client.end();
+        await this.client.endAsync();
       } catch (err) {
         this.error('Error ending client on restart:', err);
       }
@@ -184,7 +184,7 @@ module.exports = class MyDevice extends Homey.Device {
     try {
       if (!this.settings.host) throw new Error('No MQTT server configured');
       if (this.client) {
-        await this.client.end();
+        await this.client.endAsync();
         this.client = null;
       }
 
@@ -547,15 +547,15 @@ module.exports = class MyDevice extends Homey.Device {
       const subscribeTopics = async () => {
         try {
           this.log(`Subscribing to ${this.statusTopic}`);
-          await this.client.subscribe(this.statusTopic);
+          await this.client.subscribeAsync(this.statusTopic);
 
           const availabilityTopic = `${this.settings.topic}/availability`;
           this.log(`Subscribing to ${availabilityTopic}`);
-          await this.client.subscribe(availabilityTopic);
+          await this.client.subscribeAsync(availabilityTopic);
 
           const mowerTopic = `${this.settings.topic}/mower`;
           this.log(`Subscribing to ${mowerTopic}`);
-          await this.client.subscribe(mowerTopic);
+          await this.client.subscribeAsync(mowerTopic);
 
           this.log('MQTT subscriptions successful');
         } catch (error) {
@@ -662,7 +662,7 @@ module.exports = class MyDevice extends Homey.Device {
     }
 
     this.log(`Sending command: ${command} to ${this.commandTopic}`);
-    await this.client.publish(this.commandTopic, command);
+    await this.client.publishAsync(this.commandTopic, command);
   }
 
   /**
@@ -678,7 +678,7 @@ module.exports = class MyDevice extends Homey.Device {
 
     // Publish to MQTT so the bridge updates immediately
     if (this.client && this.client.connected) {
-      await this.client.publish(
+      await this.client.publishAsync(
         `${this.settings.topic}/command`,
         `MOW_DURATION ${seconds}`,
       );
@@ -815,7 +815,7 @@ module.exports = class MyDevice extends Homey.Device {
   async setSensorControlSensitivity(sensitivity) {
     this.log(`setSensorControlSensitivity: ${sensitivity}`);
     if (this.client && this.client.connected) {
-      await this.client.publish(
+      await this.client.publishAsync(
         `${this.settings.topic}/command`,
         `SENSOR_CONTROL_SENSITIVITY ${sensitivity}`,
       );
@@ -826,7 +826,7 @@ module.exports = class MyDevice extends Homey.Device {
     this.log(`setDrivePastWire: ${distance} mm`);
     await this.setSetting('drive_past_wire', distance);
     if (this.client && this.client.connected) {
-      await this.client.publish(
+      await this.client.publishAsync(
         `${this.settings.topic}/command`,
         `DRIVE_PAST_WIRE ${distance}`,
       );
