@@ -1,6 +1,6 @@
 {
   "1.2.0": {
-    "en": "Added a weekly mowing schedule editor to the device settings (one field per day), a 'Reset blade usage time' flow action, and a 'Set weekly schedule' flow action."
+    "en": "Added set mowing schedule. Added reset blade usage. Migrated async-mqtt to mqtt."
   },
   "1.1.0": {
     "en": "Fixed alarm_stuck false positives. Fixed scheduling timezone. Fixed appstore compliancy."
