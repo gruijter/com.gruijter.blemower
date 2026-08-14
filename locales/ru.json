@@ -11,6 +11,7 @@
     "connect": "ПОДКЛЮЧИТЬСЯ"
   },
   "device": {
-    "connectionError": "Соединение MQTT потеряно, переподключение..."
+    "connectionError": "Соединение MQTT потеряно, переподключение...",
+    "notSupportedByBridge": "Не поддерживается мостом. Обновите ваш GardenaMower-BLE-MQTT."
   }
 }

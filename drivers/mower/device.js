@@ -33,6 +33,25 @@ const {
 
 const sleep = promisify(setTimeout);
 
+// Status JSON fields used by assertFieldSupported() to detect whether the bridge is
+// running a version new enough to understand the corresponding command. Only fields
+// that were introduced after the app's initial release are listed here — a command
+// with no matching field (MOW/PARK/PAUSE, RESET_BLADE_USAGE, GENERATE_LOOP_SIGNAL) has
+// no reliable signal to check and is intentionally left unguarded.
+const FEATURE_STATUS_FIELDS = [
+  'ecoMode',
+  'garageEnabled',
+  'radarEnabled',
+  'frostSensorEnabled',
+  'sensorControlEnabled',
+  'sensorControlSensitivity',
+  'drivePastWire',
+  'reversingDistance',
+  'spotCuttingState',
+  'customMowDuration',
+  'ScheduleTasks',
+];
+
 module.exports = class MyDevice extends Homey.Device {
 
   /**
@@ -46,6 +65,12 @@ module.exports = class MyDevice extends Homey.Device {
       this.commandTopic = `${this.settings.topic}/command`;
       this.bridgeOnline = undefined;
       this.mowerOnline = undefined;
+      // Status JSON fields actually seen from the bridge at least once, persisted so it
+      // survives restarts. A command whose feature was added to the bridge after the
+      // user's currently-running bridge version never has its field appear at all, so
+      // that field stays unseen and guards the corresponding write from silently
+      // no-opping on the real mower (see assertFieldSupported()).
+      this.seenStatusFields = new Set(this.getStoreValue('seenStatusFields') || []);
 
       await this.initTimezone();
       await this.migrate();
@@ -95,6 +120,7 @@ module.exports = class MyDevice extends Homey.Device {
     }
 
     if (changedKeys.includes('mow_duration') && this.client && this.client.connected) {
+      this.assertFieldSupported('customMowDuration');
       const seconds = newSettings.mow_duration * 60;
       this.log(`Publishing new custom mow duration: ${seconds} seconds`);
       this.client.publishAsync(`${this.settings.topic}/command`, `MOW_DURATION ${seconds}`)
@@ -102,27 +128,43 @@ module.exports = class MyDevice extends Homey.Device {
     }
 
     if (changedKeys.includes('drive_past_wire') && this.client && this.client.connected) {
+      this.assertFieldSupported('drivePastWire');
       this.log(`Publishing new drive past wire distance: ${newSettings.drive_past_wire} mm`);
       this.client.publishAsync(`${this.settings.topic}/command`, `DRIVE_PAST_WIRE ${newSettings.drive_past_wire}`)
         .catch((err) => this.error('Failed to publish drive past wire:', err));
     }
 
     if (changedKeys.includes('reversing_distance') && this.client && this.client.connected) {
+      this.assertFieldSupported('reversingDistance');
       this.log(`Publishing new reversing distance: ${newSettings.reversing_distance} mm`);
       this.client.publishAsync(`${this.settings.topic}/command`, `REVERSING_DISTANCE ${newSettings.reversing_distance}`)
         .catch((err) => this.error('Failed to publish reversing distance:', err));
     }
 
     if (changedKeys.some((key) => SCHEDULE_SETTING_KEYS.includes(key))) {
+      // Throwing here blocks the settings save and shows the message to the user.
+      this.assertFieldSupported('ScheduleTasks');
       let tasks;
       try {
         tasks = buildWeekTasksFromSettings(newSettings);
       } catch (err) {
-        // Throwing here blocks the settings save and shows the message to the user.
         throw new Error(`Invalid weekly schedule: ${err.message}`);
       }
       this.writeWeekSchedule(tasks)
         .catch((err) => this.error('Failed to publish weekly schedule:', err));
+    }
+  }
+
+  /**
+   * Throws if the bridge has never sent the given status field, meaning it predates
+   * the feature that field represents. Writing to an unsupported feature would
+   * otherwise appear to succeed in Homey (settings saved, flow ran fine) while
+   * silently doing nothing on the real mower, with no way to ever detect or correct
+   * the mismatch (sendCommand() is fire-and-forget and the bridge never acks).
+   */
+  assertFieldSupported(field) {
+    if (!this.seenStatusFields.has(field)) {
+      throw new Error(this.homey.__('device.notSupportedByBridge'));
     }
   }
 
@@ -210,6 +252,19 @@ module.exports = class MyDevice extends Homey.Device {
 
           this.log('Received status update:', payloadStr);
           const data = JSON.parse(payloadStr);
+
+          // Track which version-gated status fields this bridge actually sends, so
+          // assertFieldSupported() can tell a genuinely unsupported command apart from
+          // one that would work fine. Fields present since the very first bridge version
+          // (Battery, State, Activity, ...) aren't tracked — there's nothing to gain by
+          // guarding commands that have always worked.
+          FEATURE_STATUS_FIELDS.forEach((field) => {
+            if (data[field] !== undefined && !this.seenStatusFields.has(field)) {
+              this.seenStatusFields.add(field);
+              this.setStoreValue('seenStatusFields', [...this.seenStatusFields])
+                .catch((err) => this.error('Failed to persist seenStatusFields:', err));
+            }
+          });
 
           // Update customMowDuration if present in status JSON
           if (data.customMowDuration !== undefined) {
@@ -614,36 +669,42 @@ module.exports = class MyDevice extends Homey.Device {
     });
 
     this.registerCapabilityListener('mower_eco_mode', async (value) => {
+      this.assertFieldSupported('ecoMode');
       this.log('mower_eco_mode set to:', value);
       const payload = value ? 'ON' : 'OFF';
       await this.sendCommand(`ECO_MODE ${payload}`);
     });
 
     this.registerCapabilityListener('mower_garage_enabled', async (value) => {
+      this.assertFieldSupported('garageEnabled');
       this.log('mower_garage_enabled set to:', value);
       const payload = value ? 'ON' : 'OFF';
       await this.sendCommand(`GARAGE_ENABLED ${payload}`);
     });
 
     this.registerCapabilityListener('mower_radar_enabled', async (value) => {
+      this.assertFieldSupported('radarEnabled');
       this.log('mower_radar_enabled set to:', value);
       const payload = value ? 'ON' : 'OFF';
       await this.sendCommand(`RADAR_ENABLED ${payload}`);
     });
 
     this.registerCapabilityListener('mower_frost_protection', async (value) => {
+      this.assertFieldSupported('frostSensorEnabled');
       this.log('mower_frost_protection set to:', value);
       const payload = value ? 'ON' : 'OFF';
       await this.sendCommand(`FROST_SENSOR ${payload}`);
     });
 
     this.registerCapabilityListener('mower_sensor_control', async (value) => {
+      this.assertFieldSupported('sensorControlEnabled');
       this.log('mower_sensor_control set to:', value);
       const payload = value ? 'ON' : 'OFF';
       await this.sendCommand(`SENSOR_CONTROL ${payload}`);
     });
 
     this.registerCapabilityListener('mower_spot_cut', async (value) => {
+      this.assertFieldSupported('spotCuttingState');
       this.log('mower_spot_cut set to:', value);
       if (value) {
         await this.sendCommand('SPOT_CUT');
@@ -670,6 +731,7 @@ module.exports = class MyDevice extends Homey.Device {
    * and publishes the new value to MQTT so the Python bridge picks it up.
    */
   async setMowDuration(minutes) {
+    this.assertFieldSupported('customMowDuration');
     const seconds = minutes * 60;
     this.log(`setMowDuration: ${minutes} min (${seconds}s)`);
 
@@ -813,6 +875,7 @@ module.exports = class MyDevice extends Homey.Device {
   }
 
   async setSensorControlSensitivity(sensitivity) {
+    this.assertFieldSupported('sensorControlSensitivity');
     this.log(`setSensorControlSensitivity: ${sensitivity}`);
     if (this.client && this.client.connected) {
       await this.client.publishAsync(
@@ -823,6 +886,7 @@ module.exports = class MyDevice extends Homey.Device {
   }
 
   async setDrivePastWire(distance) {
+    this.assertFieldSupported('drivePastWire');
     this.log(`setDrivePastWire: ${distance} mm`);
     await this.setSetting('drive_past_wire', distance);
     if (this.client && this.client.connected) {
@@ -856,6 +920,7 @@ module.exports = class MyDevice extends Homey.Device {
    * selected days, overwriting the entire weekly schedule (see the flow card hint).
    */
   async setWeekScheduleFromFlow(days, fromRaw, toRaw) {
+    this.assertFieldSupported('ScheduleTasks');
     if (!Array.isArray(days) || !days.length) {
       throw new Error('Select at least one day');
     }

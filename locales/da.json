@@ -11,6 +11,7 @@
     "connect": "FORBIND"
   },
   "device": {
-    "connectionError": "MQTT-forbindelse afbrudt, genforbinder..."
+    "connectionError": "MQTT-forbindelse afbrudt, genforbinder...",
+    "notSupportedByBridge": "Understøttes ikke af broen. Opdater din GardenaMower-BLE-MQTT."
   }
 }

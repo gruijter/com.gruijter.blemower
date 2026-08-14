@@ -11,6 +11,7 @@
     "connect": "VERBINDEN"
   },
   "device": {
-    "connectionError": "MQTT verbinding verloren, opnieuw verbinden..."
+    "connectionError": "MQTT verbinding verloren, opnieuw verbinden...",
+    "notSupportedByBridge": "Niet ondersteund door bridge. Update je GardenaMower-BLE-MQTT."
   }
 }

@@ -11,6 +11,7 @@
     "connect": "KOBLE TIL"
   },
   "device": {
-    "connectionError": "MQTT-tilkobling mistet, gjenoppretter tilkobling..."
+    "connectionError": "MQTT-tilkobling mistet, gjenoppretter tilkobling...",
+    "notSupportedByBridge": "Støttes ikke av broen. Oppdater din GardenaMower-BLE-MQTT."
   }
 }

@@ -11,6 +11,7 @@
     "connect": "CONNECTER"
   },
   "device": {
-    "connectionError": "Connexion MQTT perdue, reconnexion en cours..."
+    "connectionError": "Connexion MQTT perdue, reconnexion en cours...",
+    "notSupportedByBridge": "Non pris en charge par le pont. Mettez à jour votre GardenaMower-BLE-MQTT."
   }
 }

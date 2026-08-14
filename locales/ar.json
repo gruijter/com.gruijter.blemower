@@ -11,6 +11,7 @@
     "connect": "اتصال"
   },
   "device": {
-    "connectionError": "تم فقد اتصال MQTT، جاري إعادة الاتصال..."
+    "connectionError": "تم فقد اتصال MQTT، جاري إعادة الاتصال...",
+    "notSupportedByBridge": "غير مدعوم من الجسر. حدّث GardenaMower-BLE-MQTT الخاص بك."
   }
 }
