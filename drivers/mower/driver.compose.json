@@ -328,26 +328,6 @@
           "value": "-"
         },
         {
-          "id": "schedule",
-          "type": "label",
-          "label": {
-            "en": "Weekly Schedule",
-            "nl": "Wekelijks Schema",
-            "de": "Wochenplan",
-            "fr": "Programme hebdomadaire",
-            "it": "Programma settimanale",
-            "es": "Programa semanal",
-            "sv": "Veckoschema",
-            "no": "Ukeplan",
-            "da": "Ugeplan",
-            "pl": "Harmonogram tygodniowy",
-            "ru": "Еженедельное расписание",
-            "ko": "주간 일정",
-            "ar": "الجدول الأسبوعي"
-          },
-          "value": "-"
-        },
-        {
           "id": "software_platform",
           "type": "label",
           "label": {
@@ -532,6 +512,271 @@
           "value": 600,
           "min": 100,
           "max": 1000
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "label": {
+        "en": "Weekly Schedule",
+        "nl": "Wekelijks Schema",
+        "de": "Wochenplan",
+        "fr": "Programme hebdomadaire",
+        "it": "Programma settimanale",
+        "es": "Programa semanal",
+        "sv": "Veckoschema",
+        "no": "Ukeplan",
+        "da": "Ugeplan",
+        "pl": "Harmonogram tygodniowy",
+        "ru": "Еженедельное расписание",
+        "ko": "주간 일정",
+        "ar": "الجدول الأسبوعي"
+      },
+      "children": [
+        {
+          "id": "schedule_monday",
+          "type": "text",
+          "label": {
+            "en": "Monday",
+            "nl": "Maandag",
+            "de": "Montag",
+            "fr": "Lundi",
+            "it": "Lunedì",
+            "es": "Lunes",
+            "sv": "Måndag",
+            "no": "Mandag",
+            "da": "Mandag",
+            "pl": "Poniedziałek",
+            "ru": "Понедельник",
+            "ko": "월요일",
+            "ar": "الاثنين"
+          },
+          "hint": {
+            "en": "Time ranges for this day, e.g. 10:00-11:00,15:00-16:30 for two mowing sessions. Leave empty for no mowing on this day. Separators are flexible: '-', '–' or 'to' between start and end time, ',' or ';' between ranges.",
+            "nl": "Tijdvakken voor deze dag, bijv. 10:00-11:00,15:00-16:30 voor twee maaisessies. Laat leeg voor geen maaien op deze dag. Scheidingstekens zijn flexibel: '-', '–' of 'tot' tussen start- en eindtijd, ',' of ';' tussen tijdvakken.",
+            "de": "Zeitfenster für diesen Tag, z. B. 10:00-11:00,15:00-16:30 für zwei Mähdurchgänge. Leer lassen für kein Mähen an diesem Tag. Trennzeichen sind flexibel: '-', '–' oder 'bis' zwischen Start- und Endzeit, ',' oder ';' zwischen Zeitfenstern.",
+            "fr": "Plages horaires pour ce jour, ex. 10:00-11:00,15:00-16:30 pour deux sessions de tonte. Laissez vide pour ne pas tondre ce jour-là. Les séparateurs sont flexibles : '-', '–' ou 'à' entre l'heure de début et de fin, ',' ou ';' entre les plages.",
+            "it": "Fasce orarie per questo giorno, es. 10:00-11:00,15:00-16:30 per due sessioni di taglio. Lascia vuoto per non tagliare questo giorno. I separatori sono flessibili: '-', '–' o 'alle' tra ora di inizio e fine, ',' o ';' tra le fasce.",
+            "es": "Franjas horarias para este día, ej. 10:00-11:00,15:00-16:30 para dos sesiones de corte. Deja vacío para no cortar este día. Los separadores son flexibles: '-', '–' o 'a' entre hora de inicio y fin, ',' o ';' entre franjas.",
+            "sv": "Tidsintervall för denna dag, t.ex. 10:00-11:00,15:00-16:30 för två klippsessioner. Lämna tomt för ingen klippning denna dag. Avgränsare är flexibla: '-', '–' eller 'till' mellan start- och sluttid, ',' eller ';' mellan intervall.",
+            "no": "Tidsintervaller for denne dagen, f.eks. 10:00-11:00,15:00-16:30 for to klippeøkter. La stå tomt for ingen klipping denne dagen. Skilletegn er fleksible: '-', '–' eller 'til' mellom start- og sluttid, ',' eller ';' mellom intervaller.",
+            "da": "Tidsintervaller for denne dag, f.eks. 10:00-11:00,15:00-16:30 for to klippesessioner. Lad stå tomt for ingen klipning denne dag. Skilletegn er fleksible: '-', '–' eller 'til' mellem start- og sluttid, ',' eller ';' mellem intervaller.",
+            "pl": "Przedziały czasowe dla tego dnia, np. 10:00-11:00,15:00-16:30 dla dwóch sesji koszenia. Pozostaw puste, aby nie kosić tego dnia. Separatory są elastyczne: '-', '–' lub 'do' między godziną początkową a końcową, ',' lub ';' między przedziałami.",
+            "ru": "Временные интервалы для этого дня, напр. 10:00-11:00,15:00-16:30 для двух сеансов кошения. Оставьте пустым, чтобы не косить в этот день. Разделители гибкие: '-', '–' или 'до' между временем начала и окончания, ',' или ';' между интервалами.",
+            "ko": "이 요일의 시간대, 예: 10:00-11:00,15:00-16:30 (두 번의 작업). 이 날 작업하지 않으려면 비워두세요. 구분자는 유연합니다: 시작/종료 시간 사이는 '-', '–' 또는 'to', 시간대 사이는 ',' 또는 ';'.",
+            "ar": "النطاقات الزمنية لهذا اليوم، مثال 10:00-11:00,15:00-16:30 لجلستي قص. اتركه فارغًا لعدم القص في هذا اليوم. الفواصل مرنة: '-' أو '–' أو 'to' بين وقت البدء والانتهاء، و ',' أو ';' بين النطاقات."
+          },
+          "value": ""
+        },
+        {
+          "id": "schedule_tuesday",
+          "type": "text",
+          "label": {
+            "en": "Tuesday",
+            "nl": "Dinsdag",
+            "de": "Dienstag",
+            "fr": "Mardi",
+            "it": "Martedì",
+            "es": "Martes",
+            "sv": "Tisdag",
+            "no": "Tirsdag",
+            "da": "Tirsdag",
+            "pl": "Wtorek",
+            "ru": "Вторник",
+            "ko": "화요일",
+            "ar": "الثلاثاء"
+          },
+          "hint": {
+            "en": "Time ranges for this day, e.g. 10:00-11:00,15:00-16:30 for two mowing sessions. Leave empty for no mowing on this day. Separators are flexible: '-', '–' or 'to' between start and end time, ',' or ';' between ranges.",
+            "nl": "Tijdvakken voor deze dag, bijv. 10:00-11:00,15:00-16:30 voor twee maaisessies. Laat leeg voor geen maaien op deze dag. Scheidingstekens zijn flexibel: '-', '–' of 'tot' tussen start- en eindtijd, ',' of ';' tussen tijdvakken.",
+            "de": "Zeitfenster für diesen Tag, z. B. 10:00-11:00,15:00-16:30 für zwei Mähdurchgänge. Leer lassen für kein Mähen an diesem Tag. Trennzeichen sind flexibel: '-', '–' oder 'bis' zwischen Start- und Endzeit, ',' oder ';' zwischen Zeitfenstern.",
+            "fr": "Plages horaires pour ce jour, ex. 10:00-11:00,15:00-16:30 pour deux sessions de tonte. Laissez vide pour ne pas tondre ce jour-là. Les séparateurs sont flexibles : '-', '–' ou 'à' entre l'heure de début et de fin, ',' ou ';' entre les plages.",
+            "it": "Fasce orarie per questo giorno, es. 10:00-11:00,15:00-16:30 per due sessioni di taglio. Lascia vuoto per non tagliare questo giorno. I separatori sono flessibili: '-', '–' o 'alle' tra ora di inizio e fine, ',' o ';' tra le fasce.",
+            "es": "Franjas horarias para este día, ej. 10:00-11:00,15:00-16:30 para dos sesiones de corte. Deja vacío para no cortar este día. Los separadores son flexibles: '-', '–' o 'a' entre hora de inicio y fin, ',' o ';' entre franjas.",
+            "sv": "Tidsintervall för denna dag, t.ex. 10:00-11:00,15:00-16:30 för två klippsessioner. Lämna tomt för ingen klippning denna dag. Avgränsare är flexibla: '-', '–' eller 'till' mellan start- och sluttid, ',' eller ';' mellan intervall.",
+            "no": "Tidsintervaller for denne dagen, f.eks. 10:00-11:00,15:00-16:30 for to klippeøkter. La stå tomt for ingen klipping denne dagen. Skilletegn er fleksible: '-', '–' eller 'til' mellom start- og sluttid, ',' eller ';' mellom intervaller.",
+            "da": "Tidsintervaller for denne dag, f.eks. 10:00-11:00,15:00-16:30 for to klippesessioner. Lad stå tomt for ingen klipning denne dag. Skilletegn er fleksible: '-', '–' eller 'til' mellem start- og sluttid, ',' eller ';' mellem intervaller.",
+            "pl": "Przedziały czasowe dla tego dnia, np. 10:00-11:00,15:00-16:30 dla dwóch sesji koszenia. Pozostaw puste, aby nie kosić tego dnia. Separatory są elastyczne: '-', '–' lub 'do' między godziną początkową a końcową, ',' lub ';' między przedziałami.",
+            "ru": "Временные интервалы для этого дня, напр. 10:00-11:00,15:00-16:30 для двух сеансов кошения. Оставьте пустым, чтобы не косить в этот день. Разделители гибкие: '-', '–' или 'до' между временем начала и окончания, ',' или ';' между интервалами.",
+            "ko": "이 요일의 시간대, 예: 10:00-11:00,15:00-16:30 (두 번의 작업). 이 날 작업하지 않으려면 비워두세요. 구분자는 유연합니다: 시작/종료 시간 사이는 '-', '–' 또는 'to', 시간대 사이는 ',' 또는 ';'.",
+            "ar": "النطاقات الزمنية لهذا اليوم، مثال 10:00-11:00,15:00-16:30 لجلستي قص. اتركه فارغًا لعدم القص في هذا اليوم. الفواصل مرنة: '-' أو '–' أو 'to' بين وقت البدء والانتهاء، و ',' أو ';' بين النطاقات."
+          },
+          "value": ""
+        },
+        {
+          "id": "schedule_wednesday",
+          "type": "text",
+          "label": {
+            "en": "Wednesday",
+            "nl": "Woensdag",
+            "de": "Mittwoch",
+            "fr": "Mercredi",
+            "it": "Mercoledì",
+            "es": "Miércoles",
+            "sv": "Onsdag",
+            "no": "Onsdag",
+            "da": "Onsdag",
+            "pl": "Środa",
+            "ru": "Среда",
+            "ko": "수요일",
+            "ar": "الأربعاء"
+          },
+          "hint": {
+            "en": "Time ranges for this day, e.g. 10:00-11:00,15:00-16:30 for two mowing sessions. Leave empty for no mowing on this day. Separators are flexible: '-', '–' or 'to' between start and end time, ',' or ';' between ranges.",
+            "nl": "Tijdvakken voor deze dag, bijv. 10:00-11:00,15:00-16:30 voor twee maaisessies. Laat leeg voor geen maaien op deze dag. Scheidingstekens zijn flexibel: '-', '–' of 'tot' tussen start- en eindtijd, ',' of ';' tussen tijdvakken.",
+            "de": "Zeitfenster für diesen Tag, z. B. 10:00-11:00,15:00-16:30 für zwei Mähdurchgänge. Leer lassen für kein Mähen an diesem Tag. Trennzeichen sind flexibel: '-', '–' oder 'bis' zwischen Start- und Endzeit, ',' oder ';' zwischen Zeitfenstern.",
+            "fr": "Plages horaires pour ce jour, ex. 10:00-11:00,15:00-16:30 pour deux sessions de tonte. Laissez vide pour ne pas tondre ce jour-là. Les séparateurs sont flexibles : '-', '–' ou 'à' entre l'heure de début et de fin, ',' ou ';' entre les plages.",
+            "it": "Fasce orarie per questo giorno, es. 10:00-11:00,15:00-16:30 per due sessioni di taglio. Lascia vuoto per non tagliare questo giorno. I separatori sono flessibili: '-', '–' o 'alle' tra ora di inizio e fine, ',' o ';' tra le fasce.",
+            "es": "Franjas horarias para este día, ej. 10:00-11:00,15:00-16:30 para dos sesiones de corte. Deja vacío para no cortar este día. Los separadores son flexibles: '-', '–' o 'a' entre hora de inicio y fin, ',' o ';' entre franjas.",
+            "sv": "Tidsintervall för denna dag, t.ex. 10:00-11:00,15:00-16:30 för två klippsessioner. Lämna tomt för ingen klippning denna dag. Avgränsare är flexibla: '-', '–' eller 'till' mellan start- och sluttid, ',' eller ';' mellan intervall.",
+            "no": "Tidsintervaller for denne dagen, f.eks. 10:00-11:00,15:00-16:30 for to klippeøkter. La stå tomt for ingen klipping denne dagen. Skilletegn er fleksible: '-', '–' eller 'til' mellom start- og sluttid, ',' eller ';' mellom intervaller.",
+            "da": "Tidsintervaller for denne dag, f.eks. 10:00-11:00,15:00-16:30 for to klippesessioner. Lad stå tomt for ingen klipning denne dag. Skilletegn er fleksible: '-', '–' eller 'til' mellem start- og sluttid, ',' eller ';' mellem intervaller.",
+            "pl": "Przedziały czasowe dla tego dnia, np. 10:00-11:00,15:00-16:30 dla dwóch sesji koszenia. Pozostaw puste, aby nie kosić tego dnia. Separatory są elastyczne: '-', '–' lub 'do' między godziną początkową a końcową, ',' lub ';' między przedziałami.",
+            "ru": "Временные интервалы для этого дня, напр. 10:00-11:00,15:00-16:30 для двух сеансов кошения. Оставьте пустым, чтобы не косить в этот день. Разделители гибкие: '-', '–' или 'до' между временем начала и окончания, ',' или ';' между интервалами.",
+            "ko": "이 요일의 시간대, 예: 10:00-11:00,15:00-16:30 (두 번의 작업). 이 날 작업하지 않으려면 비워두세요. 구분자는 유연합니다: 시작/종료 시간 사이는 '-', '–' 또는 'to', 시간대 사이는 ',' 또는 ';'.",
+            "ar": "النطاقات الزمنية لهذا اليوم، مثال 10:00-11:00,15:00-16:30 لجلستي قص. اتركه فارغًا لعدم القص في هذا اليوم. الفواصل مرنة: '-' أو '–' أو 'to' بين وقت البدء والانتهاء، و ',' أو ';' بين النطاقات."
+          },
+          "value": ""
+        },
+        {
+          "id": "schedule_thursday",
+          "type": "text",
+          "label": {
+            "en": "Thursday",
+            "nl": "Donderdag",
+            "de": "Donnerstag",
+            "fr": "Jeudi",
+            "it": "Giovedì",
+            "es": "Jueves",
+            "sv": "Torsdag",
+            "no": "Torsdag",
+            "da": "Torsdag",
+            "pl": "Czwartek",
+            "ru": "Четверг",
+            "ko": "목요일",
+            "ar": "الخميس"
+          },
+          "hint": {
+            "en": "Time ranges for this day, e.g. 10:00-11:00,15:00-16:30 for two mowing sessions. Leave empty for no mowing on this day. Separators are flexible: '-', '–' or 'to' between start and end time, ',' or ';' between ranges.",
+            "nl": "Tijdvakken voor deze dag, bijv. 10:00-11:00,15:00-16:30 voor twee maaisessies. Laat leeg voor geen maaien op deze dag. Scheidingstekens zijn flexibel: '-', '–' of 'tot' tussen start- en eindtijd, ',' of ';' tussen tijdvakken.",
+            "de": "Zeitfenster für diesen Tag, z. B. 10:00-11:00,15:00-16:30 für zwei Mähdurchgänge. Leer lassen für kein Mähen an diesem Tag. Trennzeichen sind flexibel: '-', '–' oder 'bis' zwischen Start- und Endzeit, ',' oder ';' zwischen Zeitfenstern.",
+            "fr": "Plages horaires pour ce jour, ex. 10:00-11:00,15:00-16:30 pour deux sessions de tonte. Laissez vide pour ne pas tondre ce jour-là. Les séparateurs sont flexibles : '-', '–' ou 'à' entre l'heure de début et de fin, ',' ou ';' entre les plages.",
+            "it": "Fasce orarie per questo giorno, es. 10:00-11:00,15:00-16:30 per due sessioni di taglio. Lascia vuoto per non tagliare questo giorno. I separatori sono flessibili: '-', '–' o 'alle' tra ora di inizio e fine, ',' o ';' tra le fasce.",
+            "es": "Franjas horarias para este día, ej. 10:00-11:00,15:00-16:30 para dos sesiones de corte. Deja vacío para no cortar este día. Los separadores son flexibles: '-', '–' o 'a' entre hora de inicio y fin, ',' o ';' entre franjas.",
+            "sv": "Tidsintervall för denna dag, t.ex. 10:00-11:00,15:00-16:30 för två klippsessioner. Lämna tomt för ingen klippning denna dag. Avgränsare är flexibla: '-', '–' eller 'till' mellan start- och sluttid, ',' eller ';' mellan intervall.",
+            "no": "Tidsintervaller for denne dagen, f.eks. 10:00-11:00,15:00-16:30 for to klippeøkter. La stå tomt for ingen klipping denne dagen. Skilletegn er fleksible: '-', '–' eller 'til' mellom start- og sluttid, ',' eller ';' mellom intervaller.",
+            "da": "Tidsintervaller for denne dag, f.eks. 10:00-11:00,15:00-16:30 for to klippesessioner. Lad stå tomt for ingen klipning denne dag. Skilletegn er fleksible: '-', '–' eller 'til' mellem start- og sluttid, ',' eller ';' mellem intervaller.",
+            "pl": "Przedziały czasowe dla tego dnia, np. 10:00-11:00,15:00-16:30 dla dwóch sesji koszenia. Pozostaw puste, aby nie kosić tego dnia. Separatory są elastyczne: '-', '–' lub 'do' między godziną początkową a końcową, ',' lub ';' między przedziałami.",
+            "ru": "Временные интервалы для этого дня, напр. 10:00-11:00,15:00-16:30 для двух сеансов кошения. Оставьте пустым, чтобы не косить в этот день. Разделители гибкие: '-', '–' или 'до' между временем начала и окончания, ',' или ';' между интервалами.",
+            "ko": "이 요일의 시간대, 예: 10:00-11:00,15:00-16:30 (두 번의 작업). 이 날 작업하지 않으려면 비워두세요. 구분자는 유연합니다: 시작/종료 시간 사이는 '-', '–' 또는 'to', 시간대 사이는 ',' 또는 ';'.",
+            "ar": "النطاقات الزمنية لهذا اليوم، مثال 10:00-11:00,15:00-16:30 لجلستي قص. اتركه فارغًا لعدم القص في هذا اليوم. الفواصل مرنة: '-' أو '–' أو 'to' بين وقت البدء والانتهاء، و ',' أو ';' بين النطاقات."
+          },
+          "value": ""
+        },
+        {
+          "id": "schedule_friday",
+          "type": "text",
+          "label": {
+            "en": "Friday",
+            "nl": "Vrijdag",
+            "de": "Freitag",
+            "fr": "Vendredi",
+            "it": "Venerdì",
+            "es": "Viernes",
+            "sv": "Fredag",
+            "no": "Fredag",
+            "da": "Fredag",
+            "pl": "Piątek",
+            "ru": "Пятница",
+            "ko": "금요일",
+            "ar": "الجمعة"
+          },
+          "hint": {
+            "en": "Time ranges for this day, e.g. 10:00-11:00,15:00-16:30 for two mowing sessions. Leave empty for no mowing on this day. Separators are flexible: '-', '–' or 'to' between start and end time, ',' or ';' between ranges.",
+            "nl": "Tijdvakken voor deze dag, bijv. 10:00-11:00,15:00-16:30 voor twee maaisessies. Laat leeg voor geen maaien op deze dag. Scheidingstekens zijn flexibel: '-', '–' of 'tot' tussen start- en eindtijd, ',' of ';' tussen tijdvakken.",
+            "de": "Zeitfenster für diesen Tag, z. B. 10:00-11:00,15:00-16:30 für zwei Mähdurchgänge. Leer lassen für kein Mähen an diesem Tag. Trennzeichen sind flexibel: '-', '–' oder 'bis' zwischen Start- und Endzeit, ',' oder ';' zwischen Zeitfenstern.",
+            "fr": "Plages horaires pour ce jour, ex. 10:00-11:00,15:00-16:30 pour deux sessions de tonte. Laissez vide pour ne pas tondre ce jour-là. Les séparateurs sont flexibles : '-', '–' ou 'à' entre l'heure de début et de fin, ',' ou ';' entre les plages.",
+            "it": "Fasce orarie per questo giorno, es. 10:00-11:00,15:00-16:30 per due sessioni di taglio. Lascia vuoto per non tagliare questo giorno. I separatori sono flessibili: '-', '–' o 'alle' tra ora di inizio e fine, ',' o ';' tra le fasce.",
+            "es": "Franjas horarias para este día, ej. 10:00-11:00,15:00-16:30 para dos sesiones de corte. Deja vacío para no cortar este día. Los separadores son flexibles: '-', '–' o 'a' entre hora de inicio y fin, ',' o ';' entre franjas.",
+            "sv": "Tidsintervall för denna dag, t.ex. 10:00-11:00,15:00-16:30 för två klippsessioner. Lämna tomt för ingen klippning denna dag. Avgränsare är flexibla: '-', '–' eller 'till' mellan start- och sluttid, ',' eller ';' mellan intervall.",
+            "no": "Tidsintervaller for denne dagen, f.eks. 10:00-11:00,15:00-16:30 for to klippeøkter. La stå tomt for ingen klipping denne dagen. Skilletegn er fleksible: '-', '–' eller 'til' mellom start- og sluttid, ',' eller ';' mellom intervaller.",
+            "da": "Tidsintervaller for denne dag, f.eks. 10:00-11:00,15:00-16:30 for to klippesessioner. Lad stå tomt for ingen klipning denne dag. Skilletegn er fleksible: '-', '–' eller 'til' mellem start- og sluttid, ',' eller ';' mellem intervaller.",
+            "pl": "Przedziały czasowe dla tego dnia, np. 10:00-11:00,15:00-16:30 dla dwóch sesji koszenia. Pozostaw puste, aby nie kosić tego dnia. Separatory są elastyczne: '-', '–' lub 'do' między godziną początkową a końcową, ',' lub ';' między przedziałami.",
+            "ru": "Временные интервалы для этого дня, напр. 10:00-11:00,15:00-16:30 для двух сеансов кошения. Оставьте пустым, чтобы не косить в этот день. Разделители гибкие: '-', '–' или 'до' между временем начала и окончания, ',' или ';' между интервалами.",
+            "ko": "이 요일의 시간대, 예: 10:00-11:00,15:00-16:30 (두 번의 작업). 이 날 작업하지 않으려면 비워두세요. 구분자는 유연합니다: 시작/종료 시간 사이는 '-', '–' 또는 'to', 시간대 사이는 ',' 또는 ';'.",
+            "ar": "النطاقات الزمنية لهذا اليوم، مثال 10:00-11:00,15:00-16:30 لجلستي قص. اتركه فارغًا لعدم القص في هذا اليوم. الفواصل مرنة: '-' أو '–' أو 'to' بين وقت البدء والانتهاء، و ',' أو ';' بين النطاقات."
+          },
+          "value": ""
+        },
+        {
+          "id": "schedule_saturday",
+          "type": "text",
+          "label": {
+            "en": "Saturday",
+            "nl": "Zaterdag",
+            "de": "Samstag",
+            "fr": "Samedi",
+            "it": "Sabato",
+            "es": "Sábado",
+            "sv": "Lördag",
+            "no": "Lørdag",
+            "da": "Lørdag",
+            "pl": "Sobota",
+            "ru": "Суббота",
+            "ko": "토요일",
+            "ar": "السبت"
+          },
+          "hint": {
+            "en": "Time ranges for this day, e.g. 10:00-11:00,15:00-16:30 for two mowing sessions. Leave empty for no mowing on this day. Separators are flexible: '-', '–' or 'to' between start and end time, ',' or ';' between ranges.",
+            "nl": "Tijdvakken voor deze dag, bijv. 10:00-11:00,15:00-16:30 voor twee maaisessies. Laat leeg voor geen maaien op deze dag. Scheidingstekens zijn flexibel: '-', '–' of 'tot' tussen start- en eindtijd, ',' of ';' tussen tijdvakken.",
+            "de": "Zeitfenster für diesen Tag, z. B. 10:00-11:00,15:00-16:30 für zwei Mähdurchgänge. Leer lassen für kein Mähen an diesem Tag. Trennzeichen sind flexibel: '-', '–' oder 'bis' zwischen Start- und Endzeit, ',' oder ';' zwischen Zeitfenstern.",
+            "fr": "Plages horaires pour ce jour, ex. 10:00-11:00,15:00-16:30 pour deux sessions de tonte. Laissez vide pour ne pas tondre ce jour-là. Les séparateurs sont flexibles : '-', '–' ou 'à' entre l'heure de début et de fin, ',' ou ';' entre les plages.",
+            "it": "Fasce orarie per questo giorno, es. 10:00-11:00,15:00-16:30 per due sessioni di taglio. Lascia vuoto per non tagliare questo giorno. I separatori sono flessibili: '-', '–' o 'alle' tra ora di inizio e fine, ',' o ';' tra le fasce.",
+            "es": "Franjas horarias para este día, ej. 10:00-11:00,15:00-16:30 para dos sesiones de corte. Deja vacío para no cortar este día. Los separadores son flexibles: '-', '–' o 'a' entre hora de inicio y fin, ',' o ';' entre franjas.",
+            "sv": "Tidsintervall för denna dag, t.ex. 10:00-11:00,15:00-16:30 för två klippsessioner. Lämna tomt för ingen klippning denna dag. Avgränsare är flexibla: '-', '–' eller 'till' mellan start- och sluttid, ',' eller ';' mellan intervall.",
+            "no": "Tidsintervaller for denne dagen, f.eks. 10:00-11:00,15:00-16:30 for to klippeøkter. La stå tomt for ingen klipping denne dagen. Skilletegn er fleksible: '-', '–' eller 'til' mellom start- og sluttid, ',' eller ';' mellom intervaller.",
+            "da": "Tidsintervaller for denne dag, f.eks. 10:00-11:00,15:00-16:30 for to klippesessioner. Lad stå tomt for ingen klipning denne dag. Skilletegn er fleksible: '-', '–' eller 'til' mellem start- og sluttid, ',' eller ';' mellem intervaller.",
+            "pl": "Przedziały czasowe dla tego dnia, np. 10:00-11:00,15:00-16:30 dla dwóch sesji koszenia. Pozostaw puste, aby nie kosić tego dnia. Separatory są elastyczne: '-', '–' lub 'do' między godziną początkową a końcową, ',' lub ';' między przedziałami.",
+            "ru": "Временные интервалы для этого дня, напр. 10:00-11:00,15:00-16:30 для двух сеансов кошения. Оставьте пустым, чтобы не косить в этот день. Разделители гибкие: '-', '–' или 'до' между временем начала и окончания, ',' или ';' между интервалами.",
+            "ko": "이 요일의 시간대, 예: 10:00-11:00,15:00-16:30 (두 번의 작업). 이 날 작업하지 않으려면 비워두세요. 구분자는 유연합니다: 시작/종료 시간 사이는 '-', '–' 또는 'to', 시간대 사이는 ',' 또는 ';'.",
+            "ar": "النطاقات الزمنية لهذا اليوم، مثال 10:00-11:00,15:00-16:30 لجلستي قص. اتركه فارغًا لعدم القص في هذا اليوم. الفواصل مرنة: '-' أو '–' أو 'to' بين وقت البدء والانتهاء، و ',' أو ';' بين النطاقات."
+          },
+          "value": ""
+        },
+        {
+          "id": "schedule_sunday",
+          "type": "text",
+          "label": {
+            "en": "Sunday",
+            "nl": "Zondag",
+            "de": "Sonntag",
+            "fr": "Dimanche",
+            "it": "Domenica",
+            "es": "Domingo",
+            "sv": "Söndag",
+            "no": "Søndag",
+            "da": "Søndag",
+            "pl": "Niedziela",
+            "ru": "Воскресенье",
+            "ko": "일요일",
+            "ar": "الأحد"
+          },
+          "hint": {
+            "en": "Time ranges for this day, e.g. 10:00-11:00,15:00-16:30 for two mowing sessions. Leave empty for no mowing on this day. Separators are flexible: '-', '–' or 'to' between start and end time, ',' or ';' between ranges.",
+            "nl": "Tijdvakken voor deze dag, bijv. 10:00-11:00,15:00-16:30 voor twee maaisessies. Laat leeg voor geen maaien op deze dag. Scheidingstekens zijn flexibel: '-', '–' of 'tot' tussen start- en eindtijd, ',' of ';' tussen tijdvakken.",
+            "de": "Zeitfenster für diesen Tag, z. B. 10:00-11:00,15:00-16:30 für zwei Mähdurchgänge. Leer lassen für kein Mähen an diesem Tag. Trennzeichen sind flexibel: '-', '–' oder 'bis' zwischen Start- und Endzeit, ',' oder ';' zwischen Zeitfenstern.",
+            "fr": "Plages horaires pour ce jour, ex. 10:00-11:00,15:00-16:30 pour deux sessions de tonte. Laissez vide pour ne pas tondre ce jour-là. Les séparateurs sont flexibles : '-', '–' ou 'à' entre l'heure de début et de fin, ',' ou ';' entre les plages.",
+            "it": "Fasce orarie per questo giorno, es. 10:00-11:00,15:00-16:30 per due sessioni di taglio. Lascia vuoto per non tagliare questo giorno. I separatori sono flessibili: '-', '–' o 'alle' tra ora di inizio e fine, ',' o ';' tra le fasce.",
+            "es": "Franjas horarias para este día, ej. 10:00-11:00,15:00-16:30 para dos sesiones de corte. Deja vacío para no cortar este día. Los separadores son flexibles: '-', '–' o 'a' entre hora de inicio y fin, ',' o ';' entre franjas.",
+            "sv": "Tidsintervall för denna dag, t.ex. 10:00-11:00,15:00-16:30 för två klippsessioner. Lämna tomt för ingen klippning denna dag. Avgränsare är flexibla: '-', '–' eller 'till' mellan start- och sluttid, ',' eller ';' mellan intervall.",
+            "no": "Tidsintervaller for denne dagen, f.eks. 10:00-11:00,15:00-16:30 for to klippeøkter. La stå tomt for ingen klipping denne dagen. Skilletegn er fleksible: '-', '–' eller 'til' mellom start- og sluttid, ',' eller ';' mellom intervaller.",
+            "da": "Tidsintervaller for denne dag, f.eks. 10:00-11:00,15:00-16:30 for to klippesessioner. Lad stå tomt for ingen klipning denne dag. Skilletegn er fleksible: '-', '–' eller 'til' mellem start- og sluttid, ',' eller ';' mellem intervaller.",
+            "pl": "Przedziały czasowe dla tego dnia, np. 10:00-11:00,15:00-16:30 dla dwóch sesji koszenia. Pozostaw puste, aby nie kosić tego dnia. Separatory są elastyczne: '-', '–' lub 'do' między godziną początkową a końcową, ',' lub ';' między przedziałami.",
+            "ru": "Временные интервалы для этого дня, напр. 10:00-11:00,15:00-16:30 для двух сеансов кошения. Оставьте пустым, чтобы не косить в этот день. Разделители гибкие: '-', '–' или 'до' между временем начала и окончания, ',' или ';' между интервалами.",
+            "ko": "이 요일의 시간대, 예: 10:00-11:00,15:00-16:30 (두 번의 작업). 이 날 작업하지 않으려면 비워두세요. 구분자는 유연합니다: 시작/종료 시간 사이는 '-', '–' 또는 'to', 시간대 사이는 ',' 또는 ';'.",
+            "ar": "النطاقات الزمنية لهذا اليوم، مثال 10:00-11:00,15:00-16:30 لجلستي قص. اتركه فارغًا لعدم القص في هذا اليوم. الفواصل مرنة: '-' أو '–' أو 'to' بين وقت البدء والانتهاء، و ',' أو ';' بين النطاقات."
+          },
+          "value": ""
         }
       ]
     }

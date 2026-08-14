@@ -1,0 +1,172 @@
+{
+  "id": "set_week_schedule",
+  "title": {
+    "en": "Set weekly schedule",
+    "nl": "Stel wekelijks schema in",
+    "de": "Wochenplan einstellen",
+    "fr": "Définir le programme hebdomadaire",
+    "it": "Imposta programma settimanale",
+    "es": "Establecer programa semanal",
+    "sv": "Ställ in veckoschema",
+    "no": "Still inn ukeplan",
+    "da": "Indstil ugeplan",
+    "pl": "Ustaw harmonogram tygodniowy",
+    "ru": "Настроить еженедельное расписание",
+    "ko": "주간 일정 설정",
+    "ar": "ضبط الجدول الأسبوعي"
+  },
+  "titleFormatted": {
+    "en": "Set weekly schedule on [[days]] from [[from]] to [[to]]",
+    "nl": "Stel wekelijks schema in op [[days]] van [[from]] tot [[to]]",
+    "de": "Wochenplan einstellen an [[days]] von [[from]] bis [[to]]",
+    "fr": "Définir le programme hebdomadaire le [[days]] de [[from]] à [[to]]",
+    "it": "Imposta programma settimanale il [[days]] dalle [[from]] alle [[to]]",
+    "es": "Establecer programa semanal el [[days]] de [[from]] a [[to]]",
+    "sv": "Ställ in veckoschema på [[days]] från [[from]] till [[to]]",
+    "no": "Still inn ukeplan på [[days]] fra [[from]] til [[to]]",
+    "da": "Indstil ugeplan på [[days]] fra [[from]] til [[to]]",
+    "pl": "Ustaw harmonogram tygodniowy w [[days]] od [[from]] do [[to]]",
+    "ru": "Настроить еженедельное расписание в [[days]] с [[from]] до [[to]]",
+    "ko": "[[days]]에 [[from]]부터 [[to]]까지 주간 일정 설정",
+    "ar": "ضبط الجدول الأسبوعي في [[days]] من [[from]] إلى [[to]]"
+  },
+  "hint": {
+    "en": "Sets a single mowing time range on the selected days. This REPLACES the entire weekly schedule — any days or time ranges not covered by this action are removed, including schedules with different times per day or multiple sessions per day. Only simple, identical-for-every-selected-day schedules are possible this way. For more complex schedules (different times per day, multiple sessions on one day), use the device's Advanced Settings instead. 'From'/'To' are text fields (not time pickers) so you can insert values from flow tags, e.g. 09:00.",
+    "nl": "Stelt één maaitijdvak in op de geselecteerde dagen. Dit VERVANGT het volledige wekelijkse schema — dagen of tijdvakken die niet door deze actie worden gedekt, worden verwijderd, inclusief schema's met verschillende tijden per dag of meerdere sessies per dag. Op deze manier zijn alleen eenvoudige schema's mogelijk, gelijk voor elke geselecteerde dag. Gebruik voor complexere schema's (verschillende tijden per dag, meerdere sessies op één dag) de Geavanceerde Instellingen van het apparaat. 'Van'/'Tot' zijn tekstvelden (geen tijdkiezers) zodat je waarden uit flow-tags kunt invoegen, bijv. 09:00.",
+    "de": "Stellt ein einzelnes Mähzeitfenster an den ausgewählten Tagen ein. Dies ERSETZT den gesamten Wochenplan — Tage oder Zeitfenster, die nicht von dieser Aktion abgedeckt werden, werden entfernt, einschließlich Plänen mit unterschiedlichen Zeiten pro Tag oder mehreren Durchgängen pro Tag. Auf diese Weise sind nur einfache, für jeden ausgewählten Tag identische Pläne möglich. Verwenden Sie für komplexere Pläne (unterschiedliche Zeiten pro Tag, mehrere Durchgänge an einem Tag) stattdessen die erweiterten Einstellungen des Geräts. 'Von'/'Bis' sind Textfelder (keine Zeitauswahl), sodass Sie Werte aus Flow-Tags einfügen können, z. B. 09:00.",
+    "fr": "Définit une seule plage horaire de tonte pour les jours sélectionnés. Ceci REMPLACE l'intégralité du programme hebdomadaire — les jours ou plages horaires non couverts par cette action sont supprimés, y compris les programmes avec des horaires différents par jour ou plusieurs sessions par jour. Seuls des programmes simples, identiques pour chaque jour sélectionné, sont possibles de cette manière. Pour des programmes plus complexes (horaires différents par jour, plusieurs sessions un même jour), utilisez plutôt les paramètres avancés de l'appareil. 'De'/'À' sont des champs texte (pas des sélecteurs d'heure) afin de pouvoir insérer des valeurs depuis des tags de flux, ex. 09:00.",
+    "it": "Imposta un'unica fascia oraria di taglio nei giorni selezionati. Questo SOSTITUISCE l'intero programma settimanale — i giorni o le fasce orarie non coperti da questa azione vengono rimossi, inclusi programmi con orari diversi per giorno o più sessioni al giorno. In questo modo sono possibili solo programmi semplici, identici per ogni giorno selezionato. Per programmi più complessi (orari diversi per giorno, più sessioni in un giorno), usa invece le Impostazioni avanzate del dispositivo. 'Da'/'A' sono campi di testo (non selettori orario) per poter inserire valori dai tag del flusso, es. 09:00.",
+    "es": "Establece una única franja horaria de corte en los días seleccionados. Esto REEMPLAZA todo el programa semanal — los días o franjas horarias no cubiertos por esta acción se eliminan, incluidos programas con horarios diferentes por día o varias sesiones por día. De esta forma solo son posibles programas simples, idénticos para cada día seleccionado. Para programas más complejos (horarios diferentes por día, varias sesiones en un día), usa en su lugar la Configuración avanzada del dispositivo. 'Desde'/'Hasta' son campos de texto (no selectores de hora) para poder insertar valores desde etiquetas de flujo, ej. 09:00.",
+    "sv": "Ställer in ett enda klipptidsintervall på de valda dagarna. Detta ERSÄTTER hela veckoschemat — dagar eller tidsintervall som inte täcks av denna åtgärd tas bort, inklusive scheman med olika tider per dag eller flera sessioner per dag. På detta sätt är endast enkla scheman möjliga, identiska för varje vald dag. Använd enhetens avancerade inställningar för mer komplexa scheman (olika tider per dag, flera sessioner på en dag). 'Från'/'Till' är textfält (inga tidsväljare) så du kan infoga värden från flödestaggar, t.ex. 09:00.",
+    "no": "Stiller inn ett enkelt klippetidsintervall på de valgte dagene. Dette ERSTATTER hele ukeplanen — dager eller tidsintervaller som ikke dekkes av denne handlingen fjernes, inkludert planer med ulike tider per dag eller flere økter per dag. På denne måten er kun enkle planer mulig, identiske for hver valgte dag. Bruk enhetens avanserte innstillinger for mer komplekse planer (ulike tider per dag, flere økter på én dag). 'Fra'/'Til' er tekstfelt (ikke tidsvelgere) slik at du kan sette inn verdier fra flyt-tagger, f.eks. 09:00.",
+    "da": "Indstiller ét enkelt klippetidsinterval på de valgte dage. Dette ERSTATTER hele ugeplanen — dage eller tidsintervaller, der ikke er dækket af denne handling, fjernes, inklusive planer med forskellige tider pr. dag eller flere sessioner pr. dag. På denne måde er kun enkle planer mulige, identiske for hver valgte dag. Brug enhedens avancerede indstillinger til mere komplekse planer (forskellige tider pr. dag, flere sessioner på én dag). 'Fra'/'Til' er tekstfelter (ikke tidsvælgere), så du kan indsætte værdier fra flow-tags, f.eks. 09:00.",
+    "pl": "Ustawia jeden przedział czasu koszenia w wybrane dni. Ta akcja ZASTĘPUJE cały harmonogram tygodniowy — dni lub przedziały czasowe nieobjęte tą akcją są usuwane, w tym harmonogramy z różnymi godzinami dla poszczególnych dni lub wieloma sesjami dziennie. W ten sposób możliwe są tylko proste harmonogramy, identyczne dla każdego wybranego dnia. W przypadku bardziej złożonych harmonogramów (różne godziny w różne dni, wiele sesji w jednym dniu) użyj zamiast tego Ustawień zaawansowanych urządzenia. Pola „Od”/„Do” to pola tekstowe (nie selektory czasu), dzięki czemu można wstawiać wartości z tagów przepływu, np. 09:00.",
+    "ru": "Устанавливает один временной интервал кошения в выбранные дни. Это ЗАМЕНЯЕТ весь еженедельный график — дни или интервалы, не охваченные этим действием, удаляются, включая графики с разным временем по дням или несколькими сеансами в день. Таким образом возможны только простые графики, одинаковые для каждого выбранного дня. Для более сложных графиков (разное время по дням, несколько сеансов в один день) используйте вместо этого расширенные настройки устройства. Поля «С»/«До» — текстовые (не выбор времени), поэтому в них можно вставлять значения из тегов потока, например 09:00.",
+    "ko": "선택한 요일에 하나의 작업 시간대를 설정합니다. 이 작업은 전체 주간 일정을 대체합니다 — 이 작업에 포함되지 않은 요일이나 시간대는 삭제되며, 요일마다 다른 시간이나 하루에 여러 세션이 있는 일정도 포함됩니다. 이 방법으로는 선택한 모든 요일에 동일한 단순 일정만 가능합니다. 더 복잡한 일정(요일마다 다른 시간, 하루에 여러 세션)은 기기의 고급 설정을 사용하세요. '시작'/'종료'는 시간 선택기가 아닌 텍스트 필드이므로 플로우 태그의 값을 삽입할 수 있습니다 (예: 09:00).",
+    "ar": "يضبط نطاقًا زمنيًا واحدًا للقص في الأيام المحددة. هذا الإجراء يستبدل الجدول الأسبوعي بالكامل — يتم حذف أي أيام أو نطاقات زمنية غير مشمولة بهذا الإجراء، بما في ذلك الجداول ذات الأوقات المختلفة لكل يوم أو الجلسات المتعددة في اليوم. بهذه الطريقة، يمكن فقط إنشاء جداول بسيطة ومتطابقة لكل يوم محدد. للجداول الأكثر تعقيدًا (أوقات مختلفة لكل يوم، جلسات متعددة في يوم واحد)، استخدم بدلاً من ذلك الإعدادات المتقدمة للجهاز. حقلا 'من'/'إلى' هما حقلا نص (وليسا أداة اختيار وقت) بحيث يمكنك إدراج قيم من وسوم التدفق، مثال 09:00."
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=mower"
+    },
+    {
+      "type": "multiselect",
+      "name": "days",
+      "title": {
+        "en": "Days",
+        "nl": "Dagen",
+        "de": "Tage",
+        "fr": "Jours",
+        "it": "Giorni",
+        "es": "Días",
+        "sv": "Dagar",
+        "no": "Dager",
+        "da": "Dage",
+        "pl": "Dni",
+        "ru": "Дни",
+        "ko": "요일",
+        "ar": "الأيام"
+      },
+      "conjunction": "and",
+      "values": [
+        {
+          "id": "mon",
+          "title": {
+            "en": "Monday", "nl": "Maandag", "de": "Montag", "fr": "Lundi", "it": "Lunedì", "es": "Lunes",
+            "sv": "Måndag", "no": "Mandag", "da": "Mandag", "pl": "Poniedziałek", "ru": "Понедельник", "ko": "월요일", "ar": "الاثنين"
+          }
+        },
+        {
+          "id": "tue",
+          "title": {
+            "en": "Tuesday", "nl": "Dinsdag", "de": "Dienstag", "fr": "Mardi", "it": "Martedì", "es": "Martes",
+            "sv": "Tisdag", "no": "Tirsdag", "da": "Tirsdag", "pl": "Wtorek", "ru": "Вторник", "ko": "화요일", "ar": "الثلاثاء"
+          }
+        },
+        {
+          "id": "wed",
+          "title": {
+            "en": "Wednesday", "nl": "Woensdag", "de": "Mittwoch", "fr": "Mercredi", "it": "Mercoledì", "es": "Miércoles",
+            "sv": "Onsdag", "no": "Onsdag", "da": "Onsdag", "pl": "Środa", "ru": "Среда", "ko": "수요일", "ar": "الأربعاء"
+          }
+        },
+        {
+          "id": "thu",
+          "title": {
+            "en": "Thursday", "nl": "Donderdag", "de": "Donnerstag", "fr": "Jeudi", "it": "Giovedì", "es": "Jueves",
+            "sv": "Torsdag", "no": "Torsdag", "da": "Torsdag", "pl": "Czwartek", "ru": "Четверг", "ko": "목요일", "ar": "الخميس"
+          }
+        },
+        {
+          "id": "fri",
+          "title": {
+            "en": "Friday", "nl": "Vrijdag", "de": "Freitag", "fr": "Vendredi", "it": "Venerdì", "es": "Viernes",
+            "sv": "Fredag", "no": "Fredag", "da": "Fredag", "pl": "Piątek", "ru": "Пятница", "ko": "금요일", "ar": "الجمعة"
+          }
+        },
+        {
+          "id": "sat",
+          "title": {
+            "en": "Saturday", "nl": "Zaterdag", "de": "Samstag", "fr": "Samedi", "it": "Sabato", "es": "Sábado",
+            "sv": "Lördag", "no": "Lørdag", "da": "Lørdag", "pl": "Sobota", "ru": "Суббота", "ko": "토요일", "ar": "السبت"
+          }
+        },
+        {
+          "id": "sun",
+          "title": {
+            "en": "Sunday", "nl": "Zondag", "de": "Sonntag", "fr": "Dimanche", "it": "Domenica", "es": "Domingo",
+            "sv": "Söndag", "no": "Søndag", "da": "Søndag", "pl": "Niedziela", "ru": "Воскресенье", "ko": "일요일", "ar": "الأحد"
+          }
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "from",
+      "title": {
+        "en": "From (HH:MM)",
+        "nl": "Van (UU:MM)",
+        "de": "Von (SS:MM)",
+        "fr": "De (HH:MM)",
+        "it": "Da (HH:MM)",
+        "es": "Desde (HH:MM)",
+        "sv": "Från (TT:MM)",
+        "no": "Fra (TT:MM)",
+        "da": "Fra (TT:MM)",
+        "pl": "Od (GG:MM)",
+        "ru": "С (ЧЧ:ММ)",
+        "ko": "시작 (HH:MM)",
+        "ar": "من (HH:MM)"
+      },
+      "placeholder": {
+        "en": "09:00", "nl": "09:00", "de": "09:00", "fr": "09:00", "it": "09:00", "es": "09:00",
+        "sv": "09:00", "no": "09:00", "da": "09:00", "pl": "09:00", "ru": "09:00", "ko": "09:00", "ar": "09:00"
+      }
+    },
+    {
+      "type": "text",
+      "name": "to",
+      "title": {
+        "en": "To (HH:MM)",
+        "nl": "Tot (UU:MM)",
+        "de": "Bis (SS:MM)",
+        "fr": "À (HH:MM)",
+        "it": "A (HH:MM)",
+        "es": "Hasta (HH:MM)",
+        "sv": "Till (TT:MM)",
+        "no": "Til (TT:MM)",
+        "da": "Til (TT:MM)",
+        "pl": "Do (GG:MM)",
+        "ru": "До (ЧЧ:ММ)",
+        "ko": "종료 (HH:MM)",
+        "ar": "إلى (HH:MM)"
+      },
+      "placeholder": {
+        "en": "11:00", "nl": "11:00", "de": "11:00", "fr": "11:00", "it": "11:00", "es": "11:00",
+        "sv": "11:00", "no": "11:00", "da": "11:00", "pl": "11:00", "ru": "11:00", "ko": "11:00", "ar": "11:00"
+      }
+    }
+  ]
+}

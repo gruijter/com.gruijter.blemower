@@ -21,6 +21,15 @@
 
 const { promisify } = require('util');
 const Homey = require('homey');
+const {
+  SCHEDULE_SETTING_KEYS,
+  SCHEDULE_WRITE_GRACE_MS,
+  parseTimeToMinutes,
+  minutesToHHMM,
+  buildWeekTasksFromSettings,
+  scheduleTasksToWeekFields,
+  normalizeTasks,
+} = require('../../lib/schedule');
 
 const sleep = promisify(setTimeout);
 
@@ -102,6 +111,18 @@ module.exports = class MyDevice extends Homey.Device {
       this.log(`Publishing new reversing distance: ${newSettings.reversing_distance} mm`);
       this.client.publish(`${this.settings.topic}/command`, `REVERSING_DISTANCE ${newSettings.reversing_distance}`)
         .catch((err) => this.error('Failed to publish reversing distance:', err));
+    }
+
+    if (changedKeys.some((key) => SCHEDULE_SETTING_KEYS.includes(key))) {
+      let tasks;
+      try {
+        tasks = buildWeekTasksFromSettings(newSettings);
+      } catch (err) {
+        // Throwing here blocks the settings save and shows the message to the user.
+        throw new Error(`Invalid weekly schedule: ${err.message}`);
+      }
+      this.writeWeekSchedule(tasks)
+        .catch((err) => this.error('Failed to publish weekly schedule:', err));
     }
   }
 
@@ -462,8 +483,29 @@ module.exports = class MyDevice extends Homey.Device {
           if (data.SerialNumber && this.settings.serialNumber !== String(data.SerialNumber)) {
             this.setSetting('serialNumber', String(data.SerialNumber));
           }
-          if (data.Schedule && this.settings.schedule !== String(data.Schedule)) {
-            this.setSetting('schedule', String(data.Schedule));
+          // Sync the schedule_<weekday> settings fields from the fetched ScheduleTasks,
+          // unless a Homey-initiated write is still pending confirmation (avoids a stale
+          // fetch, in flight before the write, clobbering what was just saved). If the
+          // pending write hasn't been confirmed within SCHEDULE_WRITE_GRACE_MS, assume it
+          // was overtaken (e.g. changed from the official app) and trust the fetch again.
+          if (Array.isArray(data.ScheduleTasks)) {
+            const pending = this._pendingScheduleWrite;
+            const incomingKey = normalizeTasks(data.ScheduleTasks);
+            const isPendingConfirmed = pending && incomingKey === pending.key;
+            const isPendingExpired = pending && (Date.now() - pending.since) > SCHEDULE_WRITE_GRACE_MS;
+
+            if (!pending || isPendingConfirmed || isPendingExpired) {
+              if (pending) this._pendingScheduleWrite = null;
+              const fields = scheduleTasksToWeekFields(data.ScheduleTasks);
+              const changed = {};
+              Object.keys(fields).forEach((key) => {
+                if (this.settings[key] !== fields[key]) changed[key] = fields[key];
+              });
+              if (Object.keys(changed).length) {
+                Object.assign(this.settings, changed);
+                this.setSettings(changed).catch((err) => this.error('Failed to sync schedule settings from device:', err));
+              }
+            }
           }
           if (data.SoftwarePlatform && this.settings.software_platform !== String(data.SoftwarePlatform)) {
             this.setSetting('software_platform', String(data.SoftwarePlatform));
@@ -789,6 +831,46 @@ module.exports = class MyDevice extends Homey.Device {
         `DRIVE_PAST_WIRE ${distance}`,
       );
     }
+  }
+
+  /**
+   * Writes a full weekly schedule (array of {days, start, duration_minutes} tasks)
+   * to the mower: arms the pending-write guard (so a stale fetched status doesn't
+   * clobber this write before the bridge's confirmation arrives, see the
+   * ScheduleTasks handling in connectMQTT()), optimistically reflects the result
+   * in the schedule_<weekday> settings fields, then publishes SET_SCHEDULE (or
+   * CLEAR_SCHEDULE when the task list is empty).
+   */
+  async writeWeekSchedule(tasks) {
+    this._pendingScheduleWrite = { key: normalizeTasks(tasks), since: Date.now() };
+    const fields = scheduleTasksToWeekFields(tasks);
+    Object.assign(this.settings, fields);
+    this.setSettings(fields).catch((err) => this.error('Failed to optimistically update schedule settings:', err));
+
+    const payload = tasks.length ? `SET_SCHEDULE ${JSON.stringify(tasks)}` : 'CLEAR_SCHEDULE';
+    await this.sendCommand(payload);
+  }
+
+  /**
+   * Flow action handler for set_week_schedule: applies a single time range to the
+   * selected days, overwriting the entire weekly schedule (see the flow card hint).
+   */
+  async setWeekScheduleFromFlow(days, fromRaw, toRaw) {
+    if (!Array.isArray(days) || !days.length) {
+      throw new Error('Select at least one day');
+    }
+    const start = parseTimeToMinutes(fromRaw);
+    const end = parseTimeToMinutes(toRaw);
+    if (start === null) throw new Error(`Invalid "from" time: "${fromRaw}". Use 24h HH:MM, e.g. 09:00`);
+    if (end === null) throw new Error(`Invalid "to" time: "${toRaw}". Use 24h HH:MM, e.g. 11:00`);
+    if (end <= start) throw new Error('"to" time must be after "from" time');
+
+    const task = {
+      days: [...days],
+      start: minutesToHHMM(start),
+      duration_minutes: end - start,
+    };
+    await this.writeWeekSchedule([task]);
   }
 
   /**

@@ -22,6 +22,7 @@
 const { promisify } = require('util');
 const Homey = require('homey');
 const MQTT = require('async-mqtt');
+const { scheduleTasksToWeekFields } = require('../../lib/schedule');
 
 const sleep = promisify(setTimeout);
 
@@ -202,6 +203,18 @@ module.exports = class MyDriver extends Homey.Driver {
       .registerRunListener(async (args) => {
         await args.device.sendCommand('GENERATE_LOOP_SIGNAL');
       });
+
+    // Reset cutting blade usage time counter
+    this.homey.flow.getActionCard('reset_blade_usage')
+      .registerRunListener(async (args) => {
+        await args.device.sendCommand('RESET_BLADE_USAGE');
+      });
+
+    // Set a single mowing time range on the selected days, overwriting the entire weekly schedule
+    this.homey.flow.getActionCard('set_week_schedule')
+      .registerRunListener(async (args) => {
+        await args.device.setWeekScheduleFromFlow(args.days, args.from, args.to);
+      });
   }
 
   /**
@@ -271,12 +284,16 @@ module.exports = class MyDriver extends Homey.Driver {
           }
           const serialNumber = mowerData && mowerData.SerialNumber ? mowerData.SerialNumber : `mower-${mac}`;
 
+          const scheduleFields = mowerData && Array.isArray(mowerData.ScheduleTasks)
+            ? scheduleTasksToWeekFields(mowerData.ScheduleTasks)
+            : {};
+
           const settings = {
             ...mqttSettings,
             manufacturer: mowerData && mowerData.Manufacturer ? mowerData.Manufacturer : 'Unknown',
             model: mowerData && mowerData.Model ? mowerData.Model : 'Unknown',
             serialNumber,
-            schedule: mowerData && mowerData.Schedule ? mowerData.Schedule : '-',
+            ...scheduleFields,
             // Set topic to the specific subtopic for this mower (base_topic/mac)
             topic: `${mqttSettings.topic}/${mac}`,
           };

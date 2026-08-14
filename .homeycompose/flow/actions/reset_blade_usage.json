@@ -1,0 +1,55 @@
+{
+  "id": "reset_blade_usage",
+  "title": {
+    "en": "Reset blade usage time",
+    "nl": "Reset mesgebruikstijd",
+    "de": "Messerlaufzeit zurücksetzen",
+    "fr": "Réinitialiser le temps d'utilisation de la lame",
+    "it": "Reimposta il tempo di utilizzo della lama",
+    "es": "Restablecer el tiempo de uso de la cuchilla",
+    "sv": "Återställ knivens användningstid",
+    "no": "Tilbakestill knivens brukstid",
+    "da": "Nulstil knivens brugstid",
+    "pl": "Zresetuj czas użytkowania ostrza",
+    "ru": "Сбросить время использования ножа",
+    "ko": "칼날 사용 시간 재설정",
+    "ar": "إعادة تعيين وقت استخدام الشفرة"
+  },
+  "titleFormatted": {
+    "en": "Reset blade usage time",
+    "nl": "Reset mesgebruikstijd",
+    "de": "Messerlaufzeit zurücksetzen",
+    "fr": "Réinitialiser le temps d'utilisation de la lame",
+    "it": "Reimposta il tempo di utilizzo della lama",
+    "es": "Restablecer el tiempo de uso de la cuchilla",
+    "sv": "Återställ knivens användningstid",
+    "no": "Tilbakestill knivens brukstid",
+    "da": "Nulstil knivens brugstid",
+    "pl": "Zresetuj czas użytkowania ostrza",
+    "ru": "Сбросить время использования ножа",
+    "ko": "칼날 사용 시간 재설정",
+    "ar": "إعادة تعيين وقت استخدام الشفرة"
+  },
+  "hint": {
+    "en": "Resets the cutting blade usage time counter. Use this after replacing the blade.",
+    "nl": "Reset de teller voor de gebruikstijd van het mes. Gebruik dit na het vervangen van het mes.",
+    "de": "Setzt den Zähler für die Messerlaufzeit zurück. Verwenden Sie dies nach dem Austausch des Messers.",
+    "fr": "Réinitialise le compteur de temps d'utilisation de la lame de coupe. À utiliser après avoir remplacé la lame.",
+    "it": "Reimposta il contatore del tempo di utilizzo della lama di taglio. Usalo dopo aver sostituito la lama.",
+    "es": "Restablece el contador de tiempo de uso de la cuchilla de corte. Úsalo después de reemplazar la cuchilla.",
+    "sv": "Återställer räknaren för klippknivens användningstid. Använd detta efter att ha bytt kniv.",
+    "no": "Tilbakestiller telleren for klippeknivens brukstid. Bruk dette etter at kniven er byttet.",
+    "da": "Nulstiller tælleren for klippeknivens brugstid. Brug dette efter udskiftning af kniven.",
+    "pl": "Resetuje licznik czasu użytkowania ostrza tnącego. Użyj tego po wymianie ostrza.",
+    "ru": "Сбрасывает счётчик времени использования режущего ножа. Используйте это после замены ножа.",
+    "ko": "절단 칼날 사용 시간 카운터를 재설정합니다. 칼날을 교체한 후 사용하세요.",
+    "ar": "يعيد تعيين عداد وقت استخدام شفرة القص. استخدم هذا بعد استبدال الشفرة."
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=mower"
+    }
+  ]
+}
