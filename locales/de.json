@@ -12,6 +12,8 @@
   },
   "device": {
     "connectionError": "MQTT-Verbindung verloren, Verbindung wird wiederhergestellt...",
-    "notSupportedByBridge": "Wird von der Bridge nicht unterstützt. Aktualisieren Sie Ihre GardenaMower-BLE-MQTT."
+    "notSupportedByBridge": "Wird von der Bridge nicht unterstützt. Aktualisieren Sie Ihre GardenaMower-BLE-MQTT.",
+    "mowPendingCharging": "Wartet auf Ladung",
+    "mowAlreadyPending": "Mähen steht bereits an. Der Mäher lädt zuerst auf."
   }
 }

@@ -12,6 +12,8 @@
   },
   "device": {
     "connectionError": "Соединение MQTT потеряно, переподключение...",
-    "notSupportedByBridge": "Не поддерживается мостом. Обновите ваш GardenaMower-BLE-MQTT."
+    "notSupportedByBridge": "Не поддерживается мостом. Обновите ваш GardenaMower-BLE-MQTT.",
+    "mowPendingCharging": "Ожидание зарядки",
+    "mowAlreadyPending": "Кошение уже ожидает. Косилка сначала завершит зарядку."
   }
 }

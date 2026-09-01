@@ -12,6 +12,8 @@
   },
   "device": {
     "connectionError": "Conexión MQTT perdida, reconectando...",
-    "notSupportedByBridge": "No compatible con el bridge. Actualiza tu GardenaMower-BLE-MQTT."
+    "notSupportedByBridge": "No compatible con el bridge. Actualiza tu GardenaMower-BLE-MQTT.",
+    "mowPendingCharging": "Esperando carga",
+    "mowAlreadyPending": "El corte ya está pendiente. El cortacésped termina de cargarse primero."
   }
 }

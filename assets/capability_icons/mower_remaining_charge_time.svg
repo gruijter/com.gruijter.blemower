@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 203.543 203.543" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 203.543 203.543">
+  <g>
+    <path fill-rule="evenodd" d="M15,52 L155,52 L155,152 L15,152 Z M27,64 L143,64 L143,140 L27,140 Z"/>
+    <path d="M157,82 L171,82 L171,122 L157,122 Z"/>
+    <path d="M97,70 L58,110 L86,110 L78,138 L117,98 L89,98 Z"/>
+  </g>
+</svg>

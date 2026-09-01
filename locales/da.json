@@ -12,6 +12,8 @@
   },
   "device": {
     "connectionError": "MQTT-forbindelse afbrudt, genforbinder...",
-    "notSupportedByBridge": "Understøttes ikke af broen. Opdater din GardenaMower-BLE-MQTT."
+    "notSupportedByBridge": "Understøttes ikke af broen. Opdater din GardenaMower-BLE-MQTT.",
+    "mowPendingCharging": "Venter på opladning",
+    "mowAlreadyPending": "Klipning afventer allerede. Plæneklipperen lader færdig først."
   }
 }

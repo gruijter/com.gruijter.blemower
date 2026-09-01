@@ -12,6 +12,8 @@
   },
   "device": {
     "connectionError": "Connessione MQTT persa, riconnessione in corso...",
-    "notSupportedByBridge": "Non supportato dal bridge. Aggiorna il tuo GardenaMower-BLE-MQTT."
+    "notSupportedByBridge": "Non supportato dal bridge. Aggiorna il tuo GardenaMower-BLE-MQTT.",
+    "mowPendingCharging": "In attesa di carica",
+    "mowAlreadyPending": "Il taglio è già in attesa. Il tosaerba termina prima la ricarica."
   }
 }

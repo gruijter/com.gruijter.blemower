@@ -1,0 +1,39 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Remaining Charge Time",
+    "nl": "Resterende Laadtijd",
+    "de": "Verbleibende Ladezeit",
+    "fr": "Temps de charge restant",
+    "it": "Tempo di ricarica rimanente",
+    "es": "Tiempo de carga restante",
+    "sv": "Återstående laddningstid",
+    "no": "Gjenværende ladetid",
+    "da": "Resterende opladningstid",
+    "pl": "Pozostały czas ładowania",
+    "ru": "Оставшееся время зарядки",
+    "ko": "남은 충전 시간",
+    "ar": "وقت الشحن المتبقي"
+  },
+  "units": {
+    "en": "min",
+    "nl": "min",
+    "de": "min",
+    "fr": "min",
+    "it": "min",
+    "es": "min",
+    "sv": "min",
+    "no": "min",
+    "da": "min",
+    "pl": "min",
+    "ru": "min",
+    "ko": "min",
+    "ar": "min"
+  },
+  "decimals": 0,
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "insights": false,
+  "icon": "/assets/capability_icons/mower_remaining_charge_time.svg"
+}

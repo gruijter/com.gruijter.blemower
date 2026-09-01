@@ -12,6 +12,8 @@
   },
   "device": {
     "connectionError": "MQTT-anslutning förlorad, återansluter...",
-    "notSupportedByBridge": "Stöds inte av bryggan. Uppdatera din GardenaMower-BLE-MQTT."
+    "notSupportedByBridge": "Stöds inte av bryggan. Uppdatera din GardenaMower-BLE-MQTT.",
+    "mowPendingCharging": "Väntar på laddning",
+    "mowAlreadyPending": "Klippning väntar redan. Gräsklipparen laddar färdigt först."
   }
 }

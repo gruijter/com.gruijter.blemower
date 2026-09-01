@@ -1,0 +1,22 @@
+{
+  "type": "string",
+  "title": {
+    "en": "Mow pending",
+    "nl": "Maaien in wacht",
+    "de": "Mähen ausstehend",
+    "fr": "Tonte en attente",
+    "it": "Taglio in attesa",
+    "es": "Corte pendiente",
+    "sv": "Klippning väntar",
+    "no": "Klipping venter",
+    "da": "Klipning afventer",
+    "pl": "Koszenie oczekuje",
+    "ru": "Кошение ожидает",
+    "ko": "잔디 깎기 대기 중",
+    "ar": "القص قيد الانتظار"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "icon": "/assets/capability_icons/mower_mow_pending.svg"
+}

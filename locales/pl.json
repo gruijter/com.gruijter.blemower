@@ -12,6 +12,8 @@
   },
   "device": {
     "connectionError": "Utracono połączenie MQTT, ponowne łączenie...",
-    "notSupportedByBridge": "Nieobsługiwane przez mostek. Zaktualizuj swój GardenaMower-BLE-MQTT."
+    "notSupportedByBridge": "Nieobsługiwane przez mostek. Zaktualizuj swój GardenaMower-BLE-MQTT.",
+    "mowPendingCharging": "Czeka na ładowanie",
+    "mowAlreadyPending": "Koszenie już oczekuje. Kosiarka najpierw kończy ładowanie."
   }
 }

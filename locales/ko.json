@@ -12,6 +12,8 @@
   },
   "device": {
     "connectionError": "MQTT 연결이 끊어졌습니다. 다시 연결하는 중...",
-    "notSupportedByBridge": "브릿지에서 지원하지 않습니다. GardenaMower-BLE-MQTT를 업데이트하세요."
+    "notSupportedByBridge": "브릿지에서 지원하지 않습니다. GardenaMower-BLE-MQTT를 업데이트하세요.",
+    "mowPendingCharging": "충전 대기 중",
+    "mowAlreadyPending": "잔디 깎기가 이미 대기 중입니다. 잔디 깎는 기계가 먼저 충전을 완료합니다."
   }
 }

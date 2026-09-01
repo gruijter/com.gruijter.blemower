@@ -12,6 +12,8 @@
   },
   "device": {
     "connectionError": "MQTT verbinding verloren, opnieuw verbinden...",
-    "notSupportedByBridge": "Niet ondersteund door bridge. Update je GardenaMower-BLE-MQTT."
+    "notSupportedByBridge": "Niet ondersteund door bridge. Update je GardenaMower-BLE-MQTT.",
+    "mowPendingCharging": "Wacht op opladen",
+    "mowAlreadyPending": "Maaien staat al in de wacht. De maaier laadt eerst op."
   }
 }

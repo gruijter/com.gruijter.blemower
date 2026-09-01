@@ -51,6 +51,15 @@ const FEATURE_STATUS_FIELDS = [
   'customMowDuration',
   'ScheduleTasks',
 ];
+// MowPending is deliberately NOT in the list above. It arrived with bridge v1.6.0, but
+// there is no v1.6.0-only command to guard with it — MOW has always worked. It is used
+// directly (see the mower_state listener) to refuse a second, pointless MOW, and stays
+// undefined on an older bridge so that command keeps going through unchanged.
+
+// A timestamp older than this is treated as "the mower has no value for this", not as a
+// real time in the past: mowers report 0 for an unset schedule, which older bridges
+// forwarded as 1970-01-01.
+const NO_VALUE_BEFORE_MS = Date.UTC(2000, 0, 1);
 
 module.exports = class MyDevice extends Homey.Device {
 
@@ -74,6 +83,10 @@ module.exports = class MyDevice extends Homey.Device {
 
       await this.initTimezone();
       await this.migrate();
+      // Seed from the capability so an app restart during a pending mow doesn't re-fire
+      // mow_deferred. Stays false until the first v1.6.0+ status arrives, which is also
+      // the correct value for an older bridge that can never report it.
+      this._mowPending = !!this.getCapabilityValue('mower_mow_pending');
       await this.connectMQTT();
       this.registerListeners();
 
@@ -308,18 +321,36 @@ module.exports = class MyDevice extends Homey.Device {
           // Determine if an active error is present
           const hasError = !!(data.LastError && data.LastError !== 'UNKNOWN' && data.LastError !== 'NO_ERROR' && data.LastError !== 'NONE');
 
-          // Update mower_state (picker: "mowing", "docked", "paused", "error")
+          // Update mower_state (picker: "mowing", "docked", "paused", "error").
+          // Mapped from Activity, the only field that says what the mower is actually
+          // doing; State only decides error/safety above. There is deliberately no
+          // State === 'IN_OPERATION' catch-all any more: it reported "mowing" for every
+          // activity not listed here, so a forced mow that is still topping up its
+          // battery in the dock (State IN_OPERATION, Activity CHARGING) showed as
+          // "Mowing" while the mower sat motionless. Anything not explicitly mowing or
+          // docked (NONE, STOPPED_IN_GARDEN, PAUSED, an activity a future firmware adds)
+          // falls back to 'paused' rather than claiming the mower is cutting grass.
+          //
+          // A pending mow reports 'paused', not 'docked', even though the mower is
+          // physically in the dock. Two reasons, and the second is the important one:
+          //  - 'docked' is indistinguishable from ordinary idle charging, while a queued
+          //    job that has not started is much closer to "paused" than to "parked".
+          //  - the picker is also the control. PARK (= SetOverrideParkUntilNextStart on
+          //    the bridge) is what actually cancels a forced mow, and it is only reachable
+          //    by selecting 'docked' — which the user cannot do while 'docked' is already
+          //    the current value. Reporting 'paused' keeps that abort available.
+          // Ordinary charging with nothing queued still reports 'docked', and on a bridge
+          // older than v1.6.0 mowPending is always false, so nothing changes there.
+          const mowPending = data.MowPending === true;
           let mowerState = 'paused';
           if (safetyStop || hasError) {
             mowerState = 'error';
-          } else if (data.Activity === 'MOWING') {
+          } else if (currentActivity === 'MOWING' || currentActivity === 'GOING_OUT') {
             mowerState = 'mowing';
-          } else if (data.Activity === 'PARKED' || data.Activity === 'GOING_HOME') {
-            mowerState = 'docked';
-          } else if (data.State === 'IN_OPERATION') {
-            mowerState = 'mowing';
-          } else if (data.State === 'PAUSED' || data.Activity === 'PAUSED') {
+          } else if (mowPending) {
             mowerState = 'paused';
+          } else if (currentActivity === 'CHARGING' || currentActivity === 'PARKED' || currentActivity === 'GOING_HOME') {
+            mowerState = 'docked';
           }
           this.setCapabilityValue('mower_state', mowerState).catch((err) => this.error(err));
 
@@ -352,43 +383,69 @@ module.exports = class MyDevice extends Homey.Device {
             this.setCapabilityValue('mower_state_text', data.State).catch((err) => this.error(err));
           }
 
-          // Update next_start_schedule (formatted string in Homey local timezone, e.g. "Jul 07 15:00")
+          // Update next_start_schedule (formatted string in Homey local timezone, e.g. "Jul 07 15:00").
+          // Three distinct cases, deliberately kept apart:
+          //  - no next start at all: bridge >= v1.6.0 sends null, older bridges sent the
+          //    1970 sentinel (the mower reports 0 while an override runs). Clear it, or a
+          //    stale time keeps sitting on screen claiming a start that will never come.
+          //  - a real, still-future start: show it.
+          //  - a real start that has just passed: leave the current value alone, the mower
+          //    simply hasn't refreshed it yet and the old time is still the best guess.
           if (data.NextStartSchedule !== undefined) {
             try {
-              const rawDate = new Date(data.NextStartSchedule);
-              if (!Number.isNaN(rawDate.getTime()) && rawDate.getTime() > Date.now() - 60000) {
-                // Round to nearest minute (e.g. 12:59:41 UTC -> 13:00:00 UTC)
-                const startDate = new Date(Math.round(rawDate.getTime() / 60000) * 60000);
-
-                let timeZone = this.timezone;
-                if (!timeZone && this.homey.clock && typeof this.homey.clock.getTimezone === 'function') {
-                  try {
-                    timeZone = await this.homey.clock.getTimezone();
-                  } catch (e) {
-                    timeZone = 'UTC';
-                  }
-                }
-
-                const parts = new Intl.DateTimeFormat('en-US', {
-                  timeZone: timeZone || 'UTC',
-                  month: 'short',
-                  day: '2-digit',
-                  hour: '2-digit',
-                  minute: '2-digit',
-                  hourCycle: 'h23',
-                }).formatToParts(startDate);
-
-                const partMap = {};
-                for (const p of parts) {
-                  partMap[p.type] = p.value;
-                }
-
-                const formatted = `${partMap.month} ${partMap.day} ${partMap.hour}:${partMap.minute}`;
+              const rawDate = data.NextStartSchedule === null ? null : new Date(data.NextStartSchedule);
+              const hasNextStart = rawDate !== null && !Number.isNaN(rawDate.getTime())
+                && rawDate.getTime() >= NO_VALUE_BEFORE_MS;
+              if (!hasNextStart) {
+                this.setCapabilityValue('next_start_schedule', null).catch((err) => this.error(err));
+              } else if (rawDate.getTime() > Date.now() - 60000) {
+                const formatted = await this.formatLocalTime(rawDate);
                 this.setCapabilityValue('next_start_schedule', formatted).catch((err) => this.error(err));
               }
             } catch (err) {
               this.error('Failed to parse NextStartSchedule:', err);
             }
+          }
+
+          // Update mower_mow_pending: a forced mow the mower accepted but has not acted
+          // on yet, because it is finishing its charge in the dock first. MowPending is
+          // absent on bridges older than v1.6.0 — leave the capability and the pending
+          // state untouched there, so nothing changes versus the previous release.
+          if (data.MowPending !== undefined) {
+            let startsAt = data.MowStartsAt ? new Date(data.MowStartsAt) : null;
+            if (startsAt !== null && Number.isNaN(startsAt.getTime())) startsAt = null;
+
+            let pendingText = null;
+            if (mowPending) {
+              // Not every mower reports a charging estimate, so MowStartsAt can legitimately
+              // be null while a mow is genuinely pending.
+              pendingText = startsAt
+                ? await this.formatLocalTime(startsAt)
+                : this.homey.__('device.mowPendingCharging');
+            }
+            this.setCapabilityValue('mower_mow_pending', pendingText).catch((err) => this.error(err));
+
+            const wasPending = this._mowPending;
+            this._mowPending = mowPending;
+            if (mowPending && !wasPending) {
+              this.triggerMowDeferred(data, pendingText, startsAt)
+                .catch((err) => this.error('mow_deferred trigger error:', err));
+            }
+          }
+
+          // Update mower_remaining_charge_time (minutes). The bridge only sends
+          // remainingChargingTime while charging, and only for mowers that report a usable
+          // estimate; MowPending tells the two "no value" reasons apart — absent means an
+          // old bridge (leave the capability alone), present means a v1.6.0+ bridge with
+          // nothing to report right now (null, so the tile shows no value at all rather
+          // than a misleading 0 minutes).
+          if (data.remainingChargingTime !== undefined) {
+            const chargeSecs = Number(data.remainingChargingTime);
+            if (!Number.isNaN(chargeSecs)) {
+              this.setCapabilityValue('mower_remaining_charge_time', Math.round(chargeSecs / 60)).catch((err) => this.error(err));
+            }
+          } else if (data.MowPending !== undefined) {
+            this.setCapabilityValue('mower_remaining_charge_time', null).catch((err) => this.error(err));
           }
 
           // Update mower_remaining_time (minutes, 0 when not mowing)
@@ -660,6 +717,14 @@ module.exports = class MyDevice extends Homey.Device {
     this.registerCapabilityListener('mower_state', async (value) => {
       this.log('mower_state set to:', value);
       if (value === 'mowing') {
+        // A forced mow is already queued and the mower is finishing its charge first.
+        // Sending MOW again does nothing observable, so say so (Homey shows this as a
+        // toast) instead of letting the user assume the second press had an effect.
+        // Only guards when the bridge actually reports MowPending — on an older bridge
+        // it stays undefined and the command goes through exactly as before.
+        if (this._mowPending === true) {
+          throw new Error(this.homey.__('device.mowAlreadyPending'));
+        }
         await this.sendCommand('MOW');
       } else if (value === 'docked') {
         await this.sendCommand('PARK');
@@ -936,6 +1001,78 @@ module.exports = class MyDevice extends Homey.Device {
       duration_minutes: end - start,
     };
     await this.writeWeekSchedule([task]);
+  }
+
+  /**
+   * Formats a Date as "Mon DD HH:MM" in the Homey local timezone, rounded to the
+   * nearest minute (e.g. 12:59:41 UTC -> "Jul 07 13:00"). Shared by
+   * next_start_schedule, mower_mow_pending and the mow_deferred flow tokens so every
+   * time the app shows reads identically.
+   */
+  async formatLocalTime(date) {
+    const rounded = new Date(Math.round(date.getTime() / 60000) * 60000);
+
+    let timeZone = this.timezone;
+    if (!timeZone && this.homey.clock && typeof this.homey.clock.getTimezone === 'function') {
+      try {
+        timeZone = await this.homey.clock.getTimezone();
+      } catch (e) {
+        timeZone = 'UTC';
+      }
+    }
+
+    const parts = new Intl.DateTimeFormat('en-US', {
+      timeZone: timeZone || 'UTC',
+      month: 'short',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      hourCycle: 'h23',
+    }).formatToParts(rounded);
+
+    const partMap = {};
+    for (const p of parts) {
+      partMap[p.type] = p.value;
+    }
+
+    return `${partMap.month} ${partMap.day} ${partMap.hour}:${partMap.minute}`;
+  }
+
+  /**
+   * Fires the mow_deferred trigger for a forced mow that is queued behind a charge.
+   * The override window starts the moment the command is sent, not when the mower
+   * leaves the dock, so the wait is taken straight out of the requested mowing time:
+   * a one-hour override issued at 17:40 that only starts mowing at 18:31 still ends at
+   * 18:40, leaving 9 minutes of actual cutting. Both halves are exposed as tokens so a
+   * flow can react (notify, or extend the duration) instead of the user finding out
+   * afterwards.
+   */
+  async triggerMowDeferred(data, pendingText, startsAt) {
+    const tokens = {
+      starts_at: pendingText,
+      override_ends_at: '',
+      delay_minutes: 0,
+      mow_minutes_left: 0,
+    };
+
+    const overrideStart = data.OverrideStartSchedule ? new Date(data.OverrideStartSchedule) : null;
+    const overrideDuration = Number(data.OverrideDuration);
+    const hasOverride = overrideStart !== null && !Number.isNaN(overrideStart.getTime())
+      && !Number.isNaN(overrideDuration) && overrideDuration > 0;
+    const overrideEnd = hasOverride ? new Date(overrideStart.getTime() + (overrideDuration * 1000)) : null;
+
+    if (overrideEnd) tokens.override_ends_at = await this.formatLocalTime(overrideEnd);
+
+    // Without a charging estimate the delay is unknown, so report the whole remaining
+    // override window as mowing time rather than inventing a start moment.
+    const mowingFrom = startsAt ? startsAt.getTime() : Date.now();
+    if (startsAt) tokens.delay_minutes = Math.max(0, Math.round((startsAt.getTime() - Date.now()) / 60000));
+    if (overrideEnd) tokens.mow_minutes_left = Math.max(0, Math.round((overrideEnd.getTime() - mowingFrom) / 60000));
+
+    this.log(`Mow deferred: starts at ${tokens.starts_at}, override ends ${tokens.override_ends_at || 'unknown'}, `
+      + `${tokens.delay_minutes} min charging first, ${tokens.mow_minutes_left} min mowing left`);
+
+    await this.driver.homey.flow.getDeviceTriggerCard('mow_deferred').trigger(this, tokens, {});
   }
 
   /**

@@ -1,4 +1,7 @@
 {
+  "1.3.0": {
+    "en": "Fixed mower showing as mowing while it is still charging in the dock. A mow waiting for the charge to finish now shows as paused, so it can be cancelled with dock. Added mow pending and remaining charge time. Added mow deferred flow trigger."
+  },
   "1.2.0": {
     "en": "Added set mowing schedule. Added reset blade usage. Migrated async-mqtt to mqtt."
   },

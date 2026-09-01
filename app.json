@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "com.gruijter.blemower",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "compatibility": ">=12.5.0",
   "sdk": 3,
   "brandColor": "#EC520D",
@@ -277,6 +277,128 @@
   "support": "https://github.com/gruijter/com.gruijter.blemower/issues",
   "flow": {
     "triggers": [
+      {
+        "id": "mow_deferred",
+        "title": {
+          "en": "Mowing was deferred until charged",
+          "nl": "Maaien is uitgesteld tot opgeladen",
+          "de": "Mähen wurde bis zum Aufladen verschoben",
+          "fr": "La tonte a été reportée jusqu'à la charge",
+          "it": "Il taglio è stato rinviato fino alla ricarica",
+          "es": "El corte se aplazó hasta la carga",
+          "sv": "Klippningen sköts upp till laddningen är klar",
+          "no": "Klippingen ble utsatt til ladingen er ferdig",
+          "da": "Klipningen blev udskudt, til opladningen er færdig",
+          "pl": "Koszenie zostało odłożone do naładowania",
+          "ru": "Кошение отложено до окончания зарядки",
+          "ko": "충전이 끝날 때까지 잔디 깎기가 연기됨",
+          "ar": "تم تأجيل القص حتى اكتمال الشحن"
+        },
+        "hint": {
+          "en": "Triggers when the mower accepts a mow command but stays in the dock to finish charging first. The override clock starts immediately, so the waiting time is taken off the requested mowing time.",
+          "nl": "Wordt geactiveerd als de maaier een maaiopdracht accepteert maar eerst in het dok blijft om op te laden. De overrideklok loopt direct, dus de wachttijd gaat af van de gevraagde maaitijd.",
+          "de": "Wird ausgelöst, wenn der Mäher einen Mähbefehl annimmt, aber zuerst in der Station lädt. Die Override-Uhr läuft sofort, die Wartezeit geht daher von der angeforderten Mähzeit ab.",
+          "fr": "Se déclenche lorsque la tondeuse accepte une commande de tonte mais reste à la base pour terminer sa charge. Le compteur de dérogation démarre aussitôt : le temps d'attente est déduit du temps de tonte demandé.",
+          "it": "Si attiva quando il tosaerba accetta un comando di taglio ma resta nel dock per completare la ricarica. Il timer dell'override parte subito, quindi l'attesa viene sottratta al tempo di taglio richiesto.",
+          "es": "Se activa cuando el cortacésped acepta una orden de corte pero permanece en la base para terminar de cargarse. El temporizador de anulación arranca de inmediato, así que la espera se descuenta del tiempo de corte solicitado.",
+          "sv": "Utlöses när gräsklipparen tar emot ett klippkommando men stannar i dockan för att ladda färdigt. Åsidosättningsklockan startar direkt, så väntetiden dras från den begärda klipptiden.",
+          "no": "Utløses når klipperen godtar en klippkommando, men blir stående i stasjonen for å lade ferdig. Overstyringsklokken starter med en gang, så ventetiden trekkes fra den forespurte klippetiden.",
+          "da": "Udløses, når plæneklipperen accepterer en klippekommando, men bliver i dokken for at lade færdig. Tilsidesættelsesuret starter med det samme, så ventetiden trækkes fra den ønskede klippetid.",
+          "pl": "Wyzwala się, gdy kosiarka przyjmuje polecenie koszenia, ale zostaje w doku, aby najpierw się naładować. Zegar wymuszenia rusza od razu, więc czas oczekiwania jest odliczany od żądanego czasu koszenia.",
+          "ru": "Активируется, когда косилка принимает команду кошения, но остаётся в доке, чтобы сначала зарядиться. Таймер переопределения запускается сразу, поэтому время ожидания вычитается из запрошенного времени кошения.",
+          "ko": "잔디 깎는 기계가 잔디 깎기 명령을 수락했지만 먼저 충전을 마치기 위해 도크에 머무를 때 트리거됩니다. 재정의 타이머는 즉시 시작되므로 대기 시간은 요청한 잔디 깎기 시간에서 차감됩니다.",
+          "ar": "يتم التشغيل عندما تقبل الجزازة أمر القص لكنها تبقى في المحطة لإكمال الشحن أولاً. يبدأ مؤقت التجاوز فوراً، لذا يُخصم وقت الانتظار من وقت القص المطلوب."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mower"
+          }
+        ],
+        "tokens": [
+          {
+            "name": "starts_at",
+            "type": "string",
+            "title": {
+              "en": "Starts at",
+              "nl": "Start om",
+              "de": "Startet um",
+              "fr": "Démarre à",
+              "it": "Inizia alle",
+              "es": "Comienza a las",
+              "sv": "Startar kl.",
+              "no": "Starter kl.",
+              "da": "Starter kl.",
+              "pl": "Rozpoczyna się o",
+              "ru": "Начнётся в",
+              "ko": "시작 시각",
+              "ar": "يبدأ في"
+            },
+            "example": "Sep 01 18:31"
+          },
+          {
+            "name": "override_ends_at",
+            "type": "string",
+            "title": {
+              "en": "Override ends at",
+              "nl": "Override eindigt om",
+              "de": "Override endet um",
+              "fr": "La dérogation se termine à",
+              "it": "L'override termina alle",
+              "es": "La anulación termina a las",
+              "sv": "Åsidosättningen slutar kl.",
+              "no": "Overstyringen slutter kl.",
+              "da": "Tilsidesættelsen slutter kl.",
+              "pl": "Wymuszenie kończy się o",
+              "ru": "Переопределение закончится в",
+              "ko": "재정의 종료 시각",
+              "ar": "ينتهي التجاوز في"
+            },
+            "example": "Sep 01 18:40"
+          },
+          {
+            "name": "delay_minutes",
+            "type": "number",
+            "title": {
+              "en": "Charging first (min)",
+              "nl": "Eerst opladen (min)",
+              "de": "Zuerst laden (Min.)",
+              "fr": "Charge d'abord (min)",
+              "it": "Prima in ricarica (min)",
+              "es": "Carga primero (min)",
+              "sv": "Laddar först (min)",
+              "no": "Lader først (min)",
+              "da": "Lader først (min)",
+              "pl": "Najpierw ładowanie (min)",
+              "ru": "Сначала зарядка (мин)",
+              "ko": "먼저 충전 (분)",
+              "ar": "الشحن أولاً (دقيقة)"
+            },
+            "example": 51
+          },
+          {
+            "name": "mow_minutes_left",
+            "type": "number",
+            "title": {
+              "en": "Mowing time left (min)",
+              "nl": "Resterende maaitijd (min)",
+              "de": "Verbleibende Mähzeit (Min.)",
+              "fr": "Temps de tonte restant (min)",
+              "it": "Tempo di taglio rimasto (min)",
+              "es": "Tiempo de corte restante (min)",
+              "sv": "Återstående klipptid (min)",
+              "no": "Gjenværende klippetid (min)",
+              "da": "Resterende klippetid (min)",
+              "pl": "Pozostały czas koszenia (min)",
+              "ru": "Осталось времени кошения (мин)",
+              "ko": "남은 잔디 깎기 시간 (분)",
+              "ar": "وقت القص المتبقي (دقيقة)"
+            },
+            "example": 9
+          }
+        ]
+      },
       {
         "id": "mower_activity_changed",
         "title": {
@@ -2899,7 +3021,9 @@
         "mower_activity",
         "mower_state_text",
         "next_start_schedule",
+        "mower_mow_pending",
         "mower_remaining_time",
+        "mower_remaining_charge_time",
         "mower_pitch",
         "mower_roll",
         "measure_battery",
@@ -4075,6 +4199,28 @@
       "uiComponent": "button",
       "icon": "/assets/capability_icons/mower_garage_enabled.svg"
     },
+    "mower_mow_pending": {
+      "type": "string",
+      "title": {
+        "en": "Mow pending",
+        "nl": "Maaien in wacht",
+        "de": "Mähen ausstehend",
+        "fr": "Tonte en attente",
+        "it": "Taglio in attesa",
+        "es": "Corte pendiente",
+        "sv": "Klippning väntar",
+        "no": "Klipping venter",
+        "da": "Klipning afventer",
+        "pl": "Koszenie oczekuje",
+        "ru": "Кошение ожидает",
+        "ko": "잔디 깎기 대기 중",
+        "ar": "القص قيد الانتظار"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/capability_icons/mower_mow_pending.svg"
+    },
     "mower_pitch": {
       "type": "number",
       "title": {
@@ -4134,6 +4280,45 @@
       "setable": true,
       "uiComponent": "button",
       "icon": "/assets/capability_icons/mower_radar_enabled.svg"
+    },
+    "mower_remaining_charge_time": {
+      "type": "number",
+      "title": {
+        "en": "Remaining Charge Time",
+        "nl": "Resterende Laadtijd",
+        "de": "Verbleibende Ladezeit",
+        "fr": "Temps de charge restant",
+        "it": "Tempo di ricarica rimanente",
+        "es": "Tiempo de carga restante",
+        "sv": "Återstående laddningstid",
+        "no": "Gjenværende ladetid",
+        "da": "Resterende opladningstid",
+        "pl": "Pozostały czas ładowania",
+        "ru": "Оставшееся время зарядки",
+        "ko": "남은 충전 시간",
+        "ar": "وقت الشحن المتبقي"
+      },
+      "units": {
+        "en": "min",
+        "nl": "min",
+        "de": "min",
+        "fr": "min",
+        "it": "min",
+        "es": "min",
+        "sv": "min",
+        "no": "min",
+        "da": "min",
+        "pl": "min",
+        "ru": "min",
+        "ko": "min",
+        "ar": "min"
+      },
+      "decimals": 0,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "insights": false,
+      "icon": "/assets/capability_icons/mower_remaining_charge_time.svg"
     },
     "mower_remaining_time": {
       "type": "number",

@@ -43,7 +43,9 @@ module.exports = class MyDriver extends Homey.Driver {
       'mower_activity',
       'mower_state_text',
       'next_start_schedule',
+      'mower_mow_pending',
       'mower_remaining_time',
+      'mower_remaining_charge_time',
       'mower_pitch',
       'mower_roll',
       'measure_battery',
@@ -88,6 +90,10 @@ module.exports = class MyDriver extends Homey.Driver {
 
     // Fires when a new mower error occurs (error != UNKNOWN)
     this.homey.flow.getDeviceTriggerCard('mower_error_occurred')
+      .registerRunListener(async () => true);
+
+    // Fires when a mow command is accepted but the mower finishes charging first
+    this.homey.flow.getDeviceTriggerCard('mow_deferred')
       .registerRunListener(async () => true);
 
     // --- CONDITIONS ---
