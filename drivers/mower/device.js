@@ -61,6 +61,13 @@ const FEATURE_STATUS_FIELDS = [
 // forwarded as 1970-01-01.
 const NO_VALUE_BEFORE_MS = Date.UTC(2000, 0, 1);
 
+// Backoff for rebuilding the MQTT client after a failed connection attempt. A bridge
+// reboot takes the broker with it when both run on the same host, and it can stay
+// unreachable for minutes, so back off instead of hammering it — but come back quickly
+// after a short blip.
+const RETRY_MIN_MS = 10 * 1000;
+const RETRY_MAX_MS = 5 * 60 * 1000;
+
 module.exports = class MyDevice extends Homey.Device {
 
   /**
@@ -91,6 +98,7 @@ module.exports = class MyDevice extends Homey.Device {
       this.registerListeners();
 
       this.restarting = false;
+      this.retryDelayMs = RETRY_MIN_MS;
       const lastColVal = this.getCapabilityValue('mower_collisions');
       this.lastCollisions = typeof lastColVal === 'number' ? lastColVal : undefined;
 
@@ -103,7 +111,16 @@ module.exports = class MyDevice extends Homey.Device {
       this.updateAvailability();
     } catch (error) {
       this.error(error);
-      this.restartDevice(60 * 1000).catch((err) => this.error(err));
+      // Clear the guard before retrying. It is only cleared further up, once the
+      // connection is up, so an onInit() that failed here (broker still unreachable
+      // because the bridge host is rebooting) used to leave restarting stuck at true —
+      // which made this very retry, and every later restartDevice() call, return
+      // immediately. The device then stayed disconnected until the app was restarted
+      // by hand, exactly the "no connection after a bridge reboot" symptom.
+      this.restarting = false;
+      const delay = this.retryDelayMs || RETRY_MIN_MS;
+      this.retryDelayMs = Math.min(delay * 2, RETRY_MAX_MS);
+      this.restartDevice(delay).catch((err) => this.error(err));
     }
   }
 
@@ -681,7 +698,17 @@ module.exports = class MyDevice extends Homey.Device {
       this.client
         .on('error', (error) => {
           this.error('MQTT Client Error:', error);
-          this.restartDevice().catch((err) => this.error(err));
+          this.updateAvailability();
+          // Socket-level errors are normal around a bridge/broker reboot: ECONNRESET on
+          // the way down, then ECONNREFUSED or EHOSTUNREACH on every attempt while the
+          // host boots. A keepalive timeout arrives here too. None of them are fatal —
+          // mqtt.js keeps retrying by itself every reconnectPeriod and re-subscribes on
+          // 'connect'. Ending the client here replaced that with a manual rebuild that
+          // had to succeed on its first try against a host that was usually still down.
+          // Only rebuild when the client has really ended and can never come back.
+          if (!this.client || this.client.disconnected) {
+            this.restartDevice().catch((err) => this.error(err));
+          }
         })
         .on('offline', () => {
           this.log('MQTT broker went offline');
@@ -712,6 +739,12 @@ module.exports = class MyDevice extends Homey.Device {
    * Register listeners for capabilities
    */
   registerListeners() {
+    // onInit() runs again on every reconnect, but the capability listeners registered on
+    // the first run are still attached to this same device instance. Registering them
+    // twice is at best pointless and at worst throws, which would abort the rest of the
+    // re-init.
+    if (this.listenersRegistered) return;
+    this.listenersRegistered = true;
     this.log('Registering capability listeners');
 
     this.registerCapabilityListener('mower_state', async (value) => {
