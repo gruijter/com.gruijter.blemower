@@ -157,7 +157,7 @@ module.exports = class MyDevice extends Homey.Device {
   /**
    * onAdded is called when the user adds the device, called just after pairing.
    */
-  async onAdded() {
+  onAdded() {
     this.log('MyDevice has been added');
   }
 
@@ -316,14 +316,11 @@ module.exports = class MyDevice extends Homey.Device {
   /**
    * onDeleted is called when the user deleted the device.
    */
-  async onDeleted() {
+  onDeleted() {
     this.log('MyDevice has been deleted');
     if (this.client) {
-      try {
-        await this.client.endAsync();
-      } catch (err) {
-        this.error('Error ending MQTT client on delete:', err);
-      }
+      this.client.endAsync()
+        .catch((err) => this.error('Error ending MQTT client on delete:', err));
     }
   }
 
@@ -1146,7 +1143,7 @@ module.exports = class MyDevice extends Homey.Device {
     if (!timeZone && this.homey.clock && typeof this.homey.clock.getTimezone === 'function') {
       try {
         timeZone = await this.homey.clock.getTimezone();
-      } catch (e) {
+      } catch {
         timeZone = 'UTC';
       }
     }
