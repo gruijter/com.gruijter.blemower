@@ -34,7 +34,7 @@
     {
       "type": "device",
       "name": "device",
-      "filter": "driver_id=mower"
+      "filter": "driver_id=mower&capabilities=mower_frost_protection"
     },
     {
       "type": "checkbox",

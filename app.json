@@ -1311,7 +1311,7 @@
           {
             "type": "device",
             "name": "device",
-            "filter": "driver_id=mower"
+            "filter": "driver_id=mower&capabilities=mower_frost_protection"
           }
         ]
       },
@@ -2232,7 +2232,7 @@
           {
             "type": "device",
             "name": "device",
-            "filter": "driver_id=mower"
+            "filter": "driver_id=mower&capabilities=mower_frost_protection"
           },
           {
             "type": "checkbox",
@@ -3421,6 +3421,26 @@
                 "ru": "Время производства",
                 "ko": "생산 시간",
                 "ar": "وقت الإنتاج"
+              },
+              "value": "-"
+            },
+            {
+              "id": "bridge_version",
+              "type": "label",
+              "label": {
+                "en": "Bridge Version",
+                "nl": "Bridgeversie",
+                "de": "Bridge-Version",
+                "fr": "Version du pont",
+                "it": "Versione del bridge",
+                "es": "Versión del bridge",
+                "sv": "Bryggversion",
+                "no": "Broversjon",
+                "da": "Broversion",
+                "pl": "Wersja mostka",
+                "ru": "Версия моста",
+                "ko": "브릿지 버전",
+                "ar": "إصدار الجسر"
               },
               "value": "-"
             }

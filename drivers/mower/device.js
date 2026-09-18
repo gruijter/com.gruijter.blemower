@@ -30,6 +30,7 @@ const {
   scheduleTasksToWeekFields,
   normalizeTasks,
 } = require('../../lib/schedule');
+const DeviceMigrator = require('../../lib/DeviceMigrator');
 
 const sleep = promisify(setTimeout);
 
@@ -68,6 +69,25 @@ const NO_VALUE_BEFORE_MS = Date.UTC(2000, 0, 1);
 const RETRY_MIN_MS = 10 * 1000;
 const RETRY_MAX_MS = 5 * 60 * 1000;
 
+// Bridge v1.8.0 is the first to leave frostSensorEnabled out on a mower without a frost
+// sensor. Older bridges filled it in from the lift sensor on every mower, so their
+// status says nothing about frost support. Only live polls count, not the retained
+// status re-delivered on every reconnect, and a single optional read timing out drops
+// the field for one poll, so it has to stay absent for several polls in a row.
+const FROST_BRIDGE_MIN_VERSION = '1.8.0';
+const FROST_MISSING_POLLS = 5;
+
+// Numeric compare of dotted versions, e.g. '1.10.0' > '1.8.0'.
+const compareVersions = (a, b) => {
+  const pa = String(a).split('.').map(Number);
+  const pb = String(b).split('.').map(Number);
+  for (let i = 0; i < Math.max(pa.length, pb.length); i += 1) {
+    const diff = (pa[i] || 0) - (pb[i] || 0);
+    if (diff) return diff;
+  }
+  return 0;
+};
+
 module.exports = class MyDevice extends Homey.Device {
 
   /**
@@ -81,6 +101,10 @@ module.exports = class MyDevice extends Homey.Device {
       this.commandTopic = `${this.settings.topic}/command`;
       this.bridgeOnline = undefined;
       this.mowerOnline = undefined;
+      // The bridge update notice goes to the timeline once per (re)start of the device,
+      // and again only if an even newer version turns up while it runs.
+      this.notifiedBridgeVersion = null;
+      this.frostMissingPolls = 0;
       // Status JSON fields actually seen from the bridge at least once, persisted so it
       // survives restarts. A command whose feature was added to the bridge after the
       // user's currently-running bridge version never has its field appear at all, so
@@ -96,6 +120,7 @@ module.exports = class MyDevice extends Homey.Device {
       this._mowPending = !!this.getCapabilityValue('mower_mow_pending');
       await this.connectMQTT();
       this.registerListeners();
+      this.registerFrostListener();
 
       this.restarting = false;
       this.retryDelayMs = RETRY_MIN_MS;
@@ -199,6 +224,77 @@ module.exports = class MyDevice extends Homey.Device {
   }
 
   /**
+   * Handles the retained <topic>/bridge payload, e.g.
+   * {"Version": "1.7.1", "LatestVersion": "1.8.0", "UpdateAvailable": true}.
+   * Published by bridge v1.7.0+, LatestVersion/UpdateAvailable by v1.8.0+.
+   */
+  handleBridgeInfo(info) {
+    if (!info || typeof info !== 'object') return;
+
+    const version = info.Version ? String(info.Version) : null;
+    if (version && this.settings.bridge_version !== version) {
+      this.log(`Bridge version changed from ${this.settings.bridge_version} to ${version}`);
+      this.setSetting('bridge_version', version);
+      // A bridge upgrade can drop status fields as well as add them (v1.8.0 stopped
+      // reporting frostSensorEnabled on mowers without a frost sensor), so relearn the
+      // supported fields from this bridge.
+      this.seenStatusFields.clear();
+      this.setStoreValue('seenStatusFields', [])
+        .catch((err) => this.error('Failed to persist seenStatusFields:', err));
+    }
+
+    const latest = info.LatestVersion ? String(info.LatestVersion) : null;
+    if (info.UpdateAvailable === true && latest && this.notifiedBridgeVersion !== latest) {
+      this.notifiedBridgeVersion = latest;
+      this.log('Bridge update available:', latest);
+      const excerpt = this.homey.__('device.bridgeUpdateAvailable', { version: latest });
+      this.homey.notifications.createNotification({ excerpt }).catch((err) => this.error(err));
+    }
+  }
+
+  /**
+   * Removes mower_frost_protection from a mower that has no frost sensor, and puts it
+   * back if the mower turns out to report one after all. Decided per live status from a
+   * v1.8.0+ bridge, see FROST_BRIDGE_MIN_VERSION.
+   */
+  updateFrostSupport(data, retained) {
+    if (retained || !data.BridgeVersion) return;
+    if (compareVersions(data.BridgeVersion, FROST_BRIDGE_MIN_VERSION) < 0) return;
+
+    const cap = 'mower_frost_protection';
+    const unsupported = this.getStoreValue('unsupportedCapabilities') || [];
+    const markedUnsupported = unsupported.includes(cap);
+
+    if (data.frostSensorEnabled !== undefined) {
+      this.frostMissingPolls = 0;
+      if (!markedUnsupported) return;
+      this.log('Mower reports a frost sensor after all, adding frost protection back');
+      this.setStoreValue('unsupportedCapabilities', unsupported.filter((c) => c !== cap))
+        .then(() => this.migrate())
+        .then(() => {
+          this.registerFrostListener();
+          this.updateAvailability();
+        })
+        .catch((err) => this.error(err));
+      return;
+    }
+
+    if (markedUnsupported) return;
+    this.frostMissingPolls += 1;
+    if (this.frostMissingPolls < FROST_MISSING_POLLS) return;
+
+    this.log(`No frost sensor reported in ${this.frostMissingPolls} polls, removing frost protection`);
+    this.seenStatusFields.delete('frostSensorEnabled');
+    this.setStoreValue('seenStatusFields', [...this.seenStatusFields])
+      .catch((err) => this.error('Failed to persist seenStatusFields:', err));
+    // Removing a capability never disturbs the order of the others, so the list is
+    // already what getCorrectCapabilities() gives and the next migrate() is a no-op.
+    this.setStoreValue('unsupportedCapabilities', [...unsupported, cap])
+      .then(() => (this.hasCapability(cap) ? this.removeCapability(cap) : null))
+      .catch((err) => this.error(err));
+  }
+
+  /**
    * onDeleted is called when the user deleted the device.
    */
   async onDeleted() {
@@ -260,7 +356,7 @@ module.exports = class MyDevice extends Homey.Device {
         this.client = null;
       }
 
-      const handleMessage = async (topic, message) => {
+      const handleMessage = async (topic, message, packet) => {
         try {
           const payloadStr = message.toString().trim();
 
@@ -275,6 +371,11 @@ module.exports = class MyDevice extends Homey.Device {
             this.mowerOnline = payloadStr === 'online';
             this.log(`Mower connectivity updated: ${payloadStr}`);
             this.updateAvailability();
+            return;
+          }
+
+          if (topic === `${this.settings.topic}/bridge`) {
+            this.handleBridgeInfo(JSON.parse(payloadStr));
             return;
           }
 
@@ -295,6 +396,7 @@ module.exports = class MyDevice extends Homey.Device {
                 .catch((err) => this.error('Failed to persist seenStatusFields:', err));
             }
           });
+          this.updateFrostSupport(data, packet && packet.retain);
 
           // Update customMowDuration if present in status JSON
           if (data.customMowDuration !== undefined) {
@@ -595,7 +697,7 @@ module.exports = class MyDevice extends Homey.Device {
           if (data.radarEnabled !== undefined) {
             this.setCapabilityValue('mower_radar_enabled', data.radarEnabled === 'ON').catch((err) => this.error(err));
           }
-          if (data.frostSensorEnabled !== undefined) {
+          if (data.frostSensorEnabled !== undefined && this.hasCapability('mower_frost_protection')) {
             this.setCapabilityValue('mower_frost_protection', data.frostSensorEnabled === 'ON').catch((err) => this.error(err));
           }
           if (data.sensorControlEnabled !== undefined) {
@@ -685,6 +787,10 @@ module.exports = class MyDevice extends Homey.Device {
           const mowerTopic = `${this.settings.topic}/mower`;
           this.log(`Subscribing to ${mowerTopic}`);
           await this.client.subscribeAsync(mowerTopic);
+
+          const bridgeTopic = `${this.settings.topic}/bridge`;
+          this.log(`Subscribing to ${bridgeTopic}`);
+          await this.client.subscribeAsync(bridgeTopic);
 
           this.log('MQTT subscriptions successful');
         } catch (error) {
@@ -787,13 +893,6 @@ module.exports = class MyDevice extends Homey.Device {
       await this.sendCommand(`RADAR_ENABLED ${payload}`);
     });
 
-    this.registerCapabilityListener('mower_frost_protection', async (value) => {
-      this.assertFieldSupported('frostSensorEnabled');
-      this.log('mower_frost_protection set to:', value);
-      const payload = value ? 'ON' : 'OFF';
-      await this.sendCommand(`FROST_SENSOR ${payload}`);
-    });
-
     this.registerCapabilityListener('mower_sensor_control', async (value) => {
       this.assertFieldSupported('sensorControlEnabled');
       this.log('mower_sensor_control set to:', value);
@@ -846,69 +945,45 @@ module.exports = class MyDevice extends Homey.Device {
   }
 
   /**
-   * Migrates capabilities automatically, enforcing the exact order defined in the driver
+   * Registered apart from registerListeners(): mower_frost_protection is removed from
+   * mowers without a frost sensor, and can come back while the device runs.
+   */
+  registerFrostListener() {
+    if (this.frostListenerRegistered || !this.hasCapability('mower_frost_protection')) return;
+    this.frostListenerRegistered = true;
+    this.registerCapabilityListener('mower_frost_protection', async (value) => {
+      this.assertFieldSupported('frostSensorEnabled');
+      this.log('mower_frost_protection set to:', value);
+      const payload = value ? 'ON' : 'OFF';
+      await this.sendCommand(`FROST_SENSOR ${payload}`);
+    });
+  }
+
+  /**
+   * Capabilities this device should have, in order: the driver's list minus the ones
+   * this mower has been found not to support (see updateFrostSupport()).
+   */
+  getCorrectCapabilities() {
+    const unsupported = this.getStoreValue('unsupportedCapabilities') || [];
+    return this.driver.deviceCapabilities.filter((cap) => !unsupported.includes(cap));
+  }
+
+  /**
+   * Migrates capabilities, enforcing getCorrectCapabilities() and its exact order.
+   * Leaves the device unavailable when it changed anything; the next availability
+   * update from MQTT clears that.
    */
   async migrate() {
+    // Also runs while the device is live (see updateFrostSupport()), so it can overlap
+    // with the one in onInit().
+    if (this.migrating) return;
+    this.migrating = true;
     try {
-      this.log(`Checking capability migration/order for ${this.getName()}`);
-      const targetCapabilities = this.driver.deviceCapabilities;
-
-      if (!targetCapabilities) {
-        this.error('No target capabilities defined on the driver, skipping migration.');
-        return;
-      }
-
-      let isMigrating = false;
-      let currentCapabilities = [...this.getCapabilities()];
-
-      for (let index = 0; index < targetCapabilities.length; index++) {
-        const targetCap = targetCapabilities[index];
-
-        if (currentCapabilities[index] !== targetCap) {
-          if (!isMigrating) {
-            isMigrating = true;
-            await this.setUnavailable('Device is migrating. Please wait!')
-              .catch((err) => this.error('Failed to set device unavailable during migration:', err));
-          }
-
-          // Remove all capabilities from this index to the end
-          const capLength = currentCapabilities.length;
-          for (let i = index; i < capLength; i++) {
-            const capToRemove = currentCapabilities[i];
-            this.log(`Removing capability: ${capToRemove}`);
-            await this.removeCapability(capToRemove)
-              .catch((err) => this.error(`Failed to remove capability ${capToRemove}:`, err));
-            await sleep(1000);
-          }
-          currentCapabilities = currentCapabilities.slice(0, index);
-
-          // Add the target capability
-          this.log(`Adding capability: ${targetCap}`);
-          await this.addCapability(targetCap)
-            .catch((err) => this.error(`Failed to add capability ${targetCap}:`, err));
-          currentCapabilities.push(targetCap);
-          await sleep(1000);
-        }
-      }
-
-      // Also remove any extra capabilities if current list is longer than target list
-      if (currentCapabilities.length > targetCapabilities.length) {
-        const capLength = currentCapabilities.length;
-        for (let i = targetCapabilities.length; i < capLength; i++) {
-          const capToRemove = currentCapabilities[i];
-          this.log(`Removing extra capability: ${capToRemove}`);
-          await this.removeCapability(capToRemove)
-            .catch((err) => this.error(`Failed to remove capability ${capToRemove}:`, err));
-          await sleep(1000);
-        }
-      }
-
-      if (isMigrating) {
-        await this.setAvailable()
-          .catch((err) => this.error('Failed to set device available after migration:', err));
-      }
+      await DeviceMigrator.migrateCapabilities(this, this.getCorrectCapabilities());
     } catch (error) {
       this.error('Capability migration failed:', error);
+    } finally {
+      this.migrating = false;
     }
   }
 

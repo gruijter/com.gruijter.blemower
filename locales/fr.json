@@ -14,6 +14,8 @@
     "connectionError": "Connexion MQTT perdue, reconnexion en cours...",
     "notSupportedByBridge": "Non pris en charge par le pont. Mettez à jour votre GardenaMower-BLE-MQTT.",
     "mowPendingCharging": "En attente de charge",
-    "mowAlreadyPending": "La tonte est déjà en attente. La tondeuse termine d’abord sa charge."
+    "mowAlreadyPending": "La tonte est déjà en attente. La tondeuse termine d’abord sa charge.",
+    "bridgeUpdateAvailable": "Une nouvelle version du pont BLE Mower MQTT est disponible : __version__. Veuillez mettre à jour votre pont",
+    "migrating": "L'appareil est en cours de migration. Veuillez patienter !"
   }
 }

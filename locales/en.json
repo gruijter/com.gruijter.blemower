@@ -14,6 +14,8 @@
     "connectionError": "MQTT connection lost, reconnecting...",
     "notSupportedByBridge": "Not supported by bridge. Update your GardenaMower-BLE-MQTT.",
     "mowPendingCharging": "Waiting to charge",
-    "mowAlreadyPending": "Mowing is already pending. The mower is finishing its charge first."
+    "mowAlreadyPending": "Mowing is already pending. The mower is finishing its charge first.",
+    "bridgeUpdateAvailable": "BLE Mower MQTT has a new bridge version available: __version__. Please update your bridge",
+    "migrating": "Device is migrating. Please wait!"
   }
 }

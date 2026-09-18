@@ -14,6 +14,8 @@
     "connectionError": "MQTT-tilkobling mistet, gjenoppretter tilkobling...",
     "notSupportedByBridge": "Støttes ikke av broen. Oppdater din GardenaMower-BLE-MQTT.",
     "mowPendingCharging": "Venter på lading",
-    "mowAlreadyPending": "Klipping venter allerede. Klipperen lader ferdig først."
+    "mowAlreadyPending": "Klipping venter allerede. Klipperen lader ferdig først.",
+    "bridgeUpdateAvailable": "BLE Mower MQTT har en ny broversjon tilgjengelig: __version__. Oppdater broen din",
+    "migrating": "Enheten migreres. Vennligst vent!"
   }
 }
