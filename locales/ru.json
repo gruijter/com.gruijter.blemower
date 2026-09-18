@@ -16,6 +16,7 @@
     "mowPendingCharging": "Ожидание зарядки",
     "mowAlreadyPending": "Кошение уже ожидает. Косилка сначала завершит зарядку.",
     "bridgeUpdateAvailable": "Для BLE Mower MQTT доступна новая версия моста: __version__. Пожалуйста, обновите мост",
+    "bridgeUpdateRequired": "Для BLE Mower MQTT доступна новая версия моста. Пожалуйста, обновите мост",
     "migrating": "Выполняется миграция устройства. Пожалуйста, подождите!"
   }
 }

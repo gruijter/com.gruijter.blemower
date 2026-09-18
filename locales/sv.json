@@ -16,6 +16,7 @@
     "mowPendingCharging": "Väntar på laddning",
     "mowAlreadyPending": "Klippning väntar redan. Gräsklipparen laddar färdigt först.",
     "bridgeUpdateAvailable": "BLE Mower MQTT har en ny bryggversion tillgänglig: __version__. Uppdatera din brygga",
+    "bridgeUpdateRequired": "BLE Mower MQTT har en ny bryggversion tillgänglig. Uppdatera din brygga",
     "migrating": "Enheten migreras. Vänta!"
   }
 }

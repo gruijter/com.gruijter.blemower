@@ -77,6 +77,10 @@ const RETRY_MAX_MS = 5 * 60 * 1000;
 const FROST_BRIDGE_MIN_VERSION = '1.8.0';
 const FROST_MISSING_POLLS = 5;
 
+// First bridge version that checks for its own updates (LatestVersion/UpdateAvailable).
+// An older bridge can't tell which version is newest, so the app only says there is one.
+const UPDATE_CHECK_BRIDGE_MIN_VERSION = '1.8.0';
+
 // Numeric compare of dotted versions, e.g. '1.10.0' > '1.8.0'.
 const compareVersions = (a, b) => {
   const pa = String(a).split('.').map(Number);
@@ -104,6 +108,7 @@ module.exports = class MyDevice extends Homey.Device {
       // The bridge update notice goes to the timeline once per (re)start of the device,
       // and again only if an even newer version turns up while it runs.
       this.notifiedBridgeVersion = null;
+      this.notifiedOldBridge = false;
       this.frostMissingPolls = 0;
       // Status JSON fields actually seen from the bridge at least once, persisted so it
       // survives restarts. A command whose feature was added to the bridge after the
@@ -253,6 +258,20 @@ module.exports = class MyDevice extends Homey.Device {
   }
 
   /**
+   * Posts a generic update notice to the timeline for a bridge too old to check for its
+   * own updates, once per (re)start of the device. BridgeVersion is in every status from
+   * v1.7.0; a status without it comes from an even older bridge.
+   */
+  checkOldBridge(data) {
+    if (this.notifiedOldBridge) return;
+    if (data.BridgeVersion && compareVersions(data.BridgeVersion, UPDATE_CHECK_BRIDGE_MIN_VERSION) >= 0) return;
+    this.notifiedOldBridge = true;
+    this.log('Bridge is too old to check for updates:', data.BridgeVersion || '< 1.7.0');
+    const excerpt = this.homey.__('device.bridgeUpdateRequired');
+    this.homey.notifications.createNotification({ excerpt }).catch((err) => this.error(err));
+  }
+
+  /**
    * Removes mower_frost_protection from a mower that has no frost sensor, and puts it
    * back if the mower turns out to report one after all. Decided per live status from a
    * v1.8.0+ bridge, see FROST_BRIDGE_MIN_VERSION.
@@ -397,6 +416,7 @@ module.exports = class MyDevice extends Homey.Device {
             }
           });
           this.updateFrostSupport(data, packet && packet.retain);
+          this.checkOldBridge(data);
 
           // Update customMowDuration if present in status JSON
           if (data.customMowDuration !== undefined) {
@@ -777,6 +797,12 @@ module.exports = class MyDevice extends Homey.Device {
 
       const subscribeTopics = async () => {
         try {
+          // Bridge first: a changed bridge version resets seenStatusFields, which has to
+          // happen before the retained status arrives and fills it again.
+          const bridgeTopic = `${this.settings.topic}/bridge`;
+          this.log(`Subscribing to ${bridgeTopic}`);
+          await this.client.subscribeAsync(bridgeTopic);
+
           this.log(`Subscribing to ${this.statusTopic}`);
           await this.client.subscribeAsync(this.statusTopic);
 
@@ -787,10 +813,6 @@ module.exports = class MyDevice extends Homey.Device {
           const mowerTopic = `${this.settings.topic}/mower`;
           this.log(`Subscribing to ${mowerTopic}`);
           await this.client.subscribeAsync(mowerTopic);
-
-          const bridgeTopic = `${this.settings.topic}/bridge`;
-          this.log(`Subscribing to ${bridgeTopic}`);
-          await this.client.subscribeAsync(bridgeTopic);
 
           this.log('MQTT subscriptions successful');
         } catch (error) {

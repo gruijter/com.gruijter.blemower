@@ -16,6 +16,7 @@
     "mowPendingCharging": "في انتظار الشحن",
     "mowAlreadyPending": "القص قيد الانتظار بالفعل. تنهي الجزازة الشحن أولاً.",
     "bridgeUpdateAvailable": "يتوفر إصدار جديد من الجسر لـ BLE Mower MQTT: __version__. يرجى تحديث الجسر",
+    "bridgeUpdateRequired": "يتوفر إصدار جديد من الجسر لـ BLE Mower MQTT. يرجى تحديث الجسر",
     "migrating": "جارٍ ترحيل الجهاز. يرجى الانتظار!"
   }
 }

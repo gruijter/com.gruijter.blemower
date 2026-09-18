@@ -16,6 +16,7 @@
     "mowPendingCharging": "Esperando carga",
     "mowAlreadyPending": "El corte ya está pendiente. El cortacésped termina de cargarse primero.",
     "bridgeUpdateAvailable": "Hay una nueva versión del bridge de BLE Mower MQTT disponible: __version__. Actualiza tu bridge",
+    "bridgeUpdateRequired": "Hay una nueva versión del bridge de BLE Mower MQTT disponible. Actualiza tu bridge",
     "migrating": "El dispositivo se está migrando. ¡Espera, por favor!"
   }
 }

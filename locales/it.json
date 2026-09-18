@@ -16,6 +16,7 @@
     "mowPendingCharging": "In attesa di carica",
     "mowAlreadyPending": "Il taglio è già in attesa. Il tosaerba termina prima la ricarica.",
     "bridgeUpdateAvailable": "È disponibile una nuova versione del bridge di BLE Mower MQTT: __version__. Aggiorna il tuo bridge",
+    "bridgeUpdateRequired": "È disponibile una nuova versione del bridge di BLE Mower MQTT. Aggiorna il tuo bridge",
     "migrating": "Migrazione del dispositivo in corso. Attendere!"
   }
 }

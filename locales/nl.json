@@ -16,6 +16,7 @@
     "mowPendingCharging": "Wacht op opladen",
     "mowAlreadyPending": "Maaien staat al in de wacht. De maaier laadt eerst op.",
     "bridgeUpdateAvailable": "BLE Mower MQTT heeft een nieuwe bridgeversie beschikbaar: __version__. Update je bridge",
+    "bridgeUpdateRequired": "BLE Mower MQTT heeft een nieuwe bridgeversie beschikbaar. Update je bridge",
     "migrating": "Apparaat wordt gemigreerd. Even geduld!"
   }
 }

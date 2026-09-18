@@ -16,6 +16,7 @@
     "mowPendingCharging": "Wartet auf Ladung",
     "mowAlreadyPending": "Mähen steht bereits an. Der Mäher lädt zuerst auf.",
     "bridgeUpdateAvailable": "Für BLE Mower MQTT ist eine neue Bridge-Version verfügbar: __version__. Bitte aktualisieren Sie Ihre Bridge",
+    "bridgeUpdateRequired": "Für BLE Mower MQTT ist eine neue Bridge-Version verfügbar. Bitte aktualisieren Sie Ihre Bridge",
     "migrating": "Gerät wird migriert. Bitte warten!"
   }
 }
